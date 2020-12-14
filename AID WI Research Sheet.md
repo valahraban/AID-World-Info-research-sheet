@@ -21,9 +21,11 @@ Remember was the first of these features implemented in the game. Glossing over 
 All of this consumes characters or as we will soon discuss tokens from the AI's `memory`. Anything that goes over the `memory` limitations will not be read by GPT-3 for the sake of producing new output. In regular use a single WI has a limit of 500 and remember has a limit of 1000 characters. On the plus side thus far no limits have been discovered on *how many* WI one can define. It's not recommended, but it is possible to define multiple WI with the same keys, essentially increasing the space by 500 chars on every iteration. AID is smart about using WI, but not about remember and updating remember constantly is tiresome - therefore many advanced users focus on producing high quality WI while foregoing longer remember pins. The limitations of GPT-3 and AID is why understanding and researching WI is of interest.
 
 A lot of research hasn't been done on worlds. They contain the same data structures, a lot of it being hidden from the player. Most WI enthusiasts prefer making their own custom scenarios. Some discoveries have been made to enhance the World experience. This is usually done through the `Name` field during character creation this being the main way of influencing how the World generates. You input your info into the `Name` field. This is most effective with json-like formats. For example if you put `[{"name":"Eve","theme":"pirate"}]` in the name, the World will name your character Eve, while giving the World a noticeably more pirate theme. Quoting what we know so far from a user named Gen.Alexander:
-```Prose names like "Bill the fallen paladin," "Jessica the necromancer," etc. affect World prompt generation too. But with JSON you can really cram a lot of stuff into it (and it's likely to include at least half of it in the prompt.) Like
+```
+Prose names like "Bill the fallen paladin," "Jessica the necromancer," etc. affect World prompt generation too. But with JSON you can really cram a lot of stuff into it (and it's likely to include at least half of it in the prompt.) Like
 [{"name":"Jessica","personality": "ambitious", "birthplace": "Waterdeep", "worships":{"Mystra":"godess of magic"},"relationship":{"Elminster":["teacher","boyfriend"]} }]
-I just tried "theme" for that yesterday and it seems to work too.```
+I just tried "theme" for that yesterday and it seems to work too.
+```
 
 
 ## Author's Notes specifics
@@ -36,8 +38,10 @@ The main character can also be defined in A/N vs memory `A/N: Main character: <s
 
 A/N: likes both style-describing nouns and adjectives. `strikingly elegant` makes the AI output more elegant prose than just `elegant`. This may also work for other words predicated with strikingly. `THEME:` is a word that can get the AI to focus on concepts and their attributes such as pirates or ninjas.
 An example of output generated with `strikingly elegant style`:
-```You look around.
-The sun softly kisses your exposed skin with her rays. You gently bask in her glory, raising your face towards her. Below, the plants softly sway in a gentle breeze as though worshipping her as well.```
+```
+You look around.
+The sun softly kisses your exposed skin with her rays. You gently bask in her glory, raising your face towards her. Below, the plants softly sway in a gentle breeze as though worshipping her as well.
+```
 Short list of useful A/N words: AUTHOR, WRITING STYLE (Writing style:grandiose), GENRE, THEME
 A/N: understands JSON too. So it's possible to do `A\N: [{"writing style":["descriptive", "elegant", "gritty"], "wording":["archaic", "Cockney accent"], "current state":"indoors"}]
 
@@ -80,32 +84,41 @@ One of the first formats commonly shared online was what the author calls the `B
 Here it bears mentioning that many users want to define `You` inside WI. There are caveats to this, especially in a heavier format like the above one. If you use `you` as a key this WI would likely fire every turn and make the AI focus strongly on things mentioned in this WI as well as constantly eating up space. This poses the risk of burying other WI. A potential alternative is using a key in the form of `AKA: You` alongside the name of the character you play as. Users should make personal decisions on what they value of their WI given the data we have on GPT-3, AID and WI experiments.
 
 Interest in WI formats blew up after people started sharing a version of JSON-based formatting based on Discord user Zaltys 🐍#5362 experimentation. Here we define `the pure JSON format`:
-```keys: AKA: YOU, Anon
-Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"],"eyes":{"eye-color":"brown"},"hair":{"hair-color":"dark brown","hair-length":"intermediate","hair-style":"spiky"},"relationships":{"orphan":"no relatives"},"body":{"physique":"average","height":"average-178cm","weight":"average-80kg"},"personality":["sarcastic","friendly","wishes he had a gf","plays AI dungeon"]}}]```
+```
+keys: AKA: YOU, Anon
+Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"],"eyes":{"eye-color":"brown"},"hair":{"hair-color":"dark brown","hair-length":"intermediate","hair-style":"spiky"},"relationships":{"orphan":"no relatives"},"body":{"physique":"average","height":"average-178cm","weight":"average-80kg"},"personality":["sarcastic","friendly","wishes he had a gf","plays AI dungeon"]}}]
+```
 + Super consistent, the AI understands it super well and sticks to it like a hawk
 + """Simple"""
 + No reports of leaking
 + Has stood the test of time even at times when the AI was unstable 
 + If you know how to write JSON you can describe more complex relationships and have the AI use them
 + Is starting to get early writing tools like https://aid-world-builder.ey.r.appspot.com
-- Painful to write and spell-check, use a linter/editor like jsonmate.com and validate with jsonlint.com or use the above tool
-- Consumes surprisingly many tokens, space wasted on "" and other symbols
-- Motivated research into other formats because it's good but has caveats
-- You're best off writing 'uglified' json because 'beautified' json has no benefits, spends more space and looks weird when you input it to WI
++ Painful to write and spell-check, use a linter/editor like jsonmate.com and validate with jsonlint.com or use the above tool
++ Consumes surprisingly many tokens, space wasted on "" and other symbols
++ Motivated research into other formats because it's good but has caveats
++ You're best off writing 'uglified' json because 'beautified' json has no benefits, spends more space and looks weird when you input it to WI
 
 Zaltys 🐍#5362 has developed many interesting formats and motivated the community to test different keywords in WI. Here's an earlier example of his kobold that worked well.
-```keys: Deekin, Scalesinger, Deekin Scalesinger
-Deekin Scalesinger:[Kobold/♂/<72cm>;ORIGIN<Deekin>:Ally from Neverwinter Nights games(CRPGs);APPEAR:Reptilian/orange-scaled/horns(nubs)/snout/legs(2)/eyes(brown/2)/arms(2)/tail(scaly)/wings(2/red/scaly);LACK:hair/ears;WORN:Bard clothes;MENTAL:Pessimist/creative/polite/kind/friendly/self-conscious;TRAITS<Deekin>:Musician/poet/bard/writer/raspy voice/hero/sorcerer/plays lute/beat Mephistopheles/bard-magic/former servant(of dragon:Tymofarrar)/"Yes, Deekin very kobold, last Deekin look in mirror."]```
+```
+keys: Deekin, Scalesinger, Deekin Scalesinger
+Deekin Scalesinger:[Kobold/♂/<72cm>;ORIGIN<Deekin>:Ally from Neverwinter Nights games(CRPGs);APPEAR:Reptilian/orange-scaled/horns(nubs)/snout/legs(2)/eyes(brown/2)/arms(2)/tail(scaly)/wings(2/red/scaly);LACK:hair/ears;WORN:Bard clothes;MENTAL:Pessimist/creative/polite/kind/friendly/self-conscious;TRAITS<Deekin>:Musician/poet/bard/writer/raspy voice/hero/sorcerer/plays lute/beat Mephistopheles/bard-magic/former servant(of dragon:Tymofarrar)/"Yes, Deekin very kobold, last Deekin look in mirror."]
+```
 Here we see many adaptations seen today. Various enclosures, removal of whitespace and other excess symbols. Having `."]` close to the end. Experiments from Zaltys and friends has shown that Griffin works the best if the character `.` is used close to the end of the WI. 
 
 Many users enjoyed experimenting with Deekin but Zaltys has since refined his format. The following is more recent Zaltys with the the character Mike Haggar.
-```keys: Mike, Haggar, Mike Haggar
-Mike Haggar:[Human/male/202cm/140kg. APPEARANCE<Haggar>:Stocky, muscular, hairy arms, hair(brown-hue), mustache(brown-hue). WORN:Eyeglasses, pants(green-color). TRAITS<Haggar>:Born in 1943, from Final Fight and Street Fighter games, former pro-wrestler, grew up on streets(of Metro City), Mayor of Metro City, just, incorruptible, fought Mad Gear gang & Skull Cross gang, fights gangs, "It's my job to keep Metro City safe!", hands-on, likes curry rice, friends(Cody, Guy), daughter(Jessica).]```
+```
+keys: Mike, Haggar, Mike Haggar
+Mike Haggar:[Human/male/202cm/140kg. APPEARANCE<Haggar>:Stocky, muscular, hairy arms, hair(brown-hue), mustache(brown-hue). WORN:Eyeglasses, pants(green-color). TRAITS<Haggar>:Born in 1943, from Final Fight and Street Fighter games, former pro-wrestler, grew up on streets(of Metro City), Mayor of Metro City, just, incorruptible, fought Mad Gear gang & Skull Cross gang, fights gangs, "It's my job to keep Metro City safe!", hands-on, likes curry rice, friends(Cody, Guy), daughter(Jessica).]
+```
 <Haggar> is used to remind and reinforce the AI all the data has to do with Haggar. () is reserved for associations, but can hold a list of details. Longer sentences do work well in simple encapsulation like this. Phrases inside quotations seem to inform the AI how the character speaks. Works as good as pure-JSON with most keywords the AI likes. 
+
 Based on experiments in these and similar formats, the community has found all-caps categories are good. APPEAR/BODY, WORN, MENTAL and TRAITS cover the main bases for most characters. LOOKS can also be used to replace APPEAR, especially if you're defining an object. SPEECH and "" can be used to reinforce speaking patterns, albeit with some inconsistency. `mute` in traits also works if going for a mute character. LACKS can be used to denote a thing the character doesn't have. LIKES/DISLIKES are good. Later on in the document we include a long list of CATEGORIES.
 
 Latest Zaltys.
-```Aarakocra:[Avian/150cm/42kg;APPEAR<Aarakocra>:Slim/feather-covered(brown-hue or white-hue/♂:colorful)/feathered head/2-eyes(keen)/tail-feathers/2-wings(big wingspan)/digitigrade legs(2/bird-feet/talons)/2-hands(clawed/5-fingers)/hooked beak(sharp);LACK<Aarakocra>: hair/ears/arms/breasts;MENTAL:Wise/honest/calm/benevolent;TRAITS<Aarakocra>:Prefer flying/lowtech tribal/hunters/scouts/adventurers(rare/rangers/druids)/no ownership/weapons(thrown)/live in mountains(isolationist)/claustrophobic.]```
+```
+Aarakocra:[Avian/150cm/42kg;APPEAR<Aarakocra>:Slim/feather-covered(brown-hue or white-hue/♂:colorful)/feathered head/2-eyes(keen)/tail-feathers/2-wings(big wingspan)/digitigrade legs(2/bird-feet/talons)/2-hands(clawed/5-fingers)/hooked beak(sharp);LACK<Aarakocra>: hair/ears/arms/breasts;MENTAL:Wise/honest/calm/benevolent;TRAITS<Aarakocra>:Prefer flying/lowtech tribal/hunters/scouts/adventurers(rare/rangers/druids)/no ownership/weapons(thrown)/live in mountains(isolationist)/claustrophobic.]
+```
 
 Next we take a detour to kimtaengsshi's testing before going into formats borne of experimentation. Results like these are a big motivator for being so particular with WI. He tested a bunch of WI-formats from the discord and analyzed their tokens to characters ratio with the following results:
 
@@ -121,51 +134,68 @@ Pseudo-JSON-kim (no parentheses): 402 chars, 135 tokens = 2.98 ch/tk
 The goal here is optimization. Full prose has the best character-ratio, but has all the caveats AID is known for. Many users love the output pure json gives, but it has some of the worst ratios and character usage. Zaltys results aren't much better although this can be attributed to heavy symbol and possibly unicode use. Kim's own minimized format is similar to Deekin without long sentences, but had similar ratio problems. At the bottom we see something interesting. A format called caveman that's far shorter than prose with similar character-ratios.
 
 Monky's solution to optimizing is what he calls the `caveman` format. A cursory look at an example will show us why:
-```keys:Chagra, initiate, apprentice
+```
+keys:Chagra, initiate, apprentice
 Chagra AKA 'Tusk': Orc she 20y.
 Chagra 220cm ht. 100kg hardy.
 Chagra green scar skin. Long brown hair.
 Chagra loyal careful outcast pranked Healing magic initiate coven.
 Chagra Hergea's daughter Friends You Renni.
-Chagra likes fruit veggies Hates meat cheese.```
+Chagra likes fruit veggies Hates meat cheese.
+```
 In this WI all fluff words have been removed. Still, testing has AI mention all the relevant details with very low risk of leaking into other characters. It is likely that the brutal efficiency of AI doesn't care about words like `is`. Users of the format feel that it sticks to the given information better than the base AI alone or untested prose. And so far no one has reported that the AI starts speaking caveman when using this. You should probably use highly descriptive inputs or an A/N: for making the AI write descriptive prose though.
 There are two good resources for this, Monky's test scenario and kim's caveman generator, both linked in order:
 https://play.aidungeon.io/main/scenarioView?publicId=558a8d40-2fbd-11eb-9239-8b8f17f7a2b0
 https://play.aidungeon.io/main/scenarioView?publicId=3f094990-2e40-11eb-b81d-a3d32aaa3e7a
 
 During experimentation on caveman Monky made important observations. When he used the caveman format extensively on Griffin he found if he didn't mention the character/key every 50 chars/15 tokens the AI would 'lose focus' and start describing random attributes outside of the WI. On Dragon the limit before he needed to start mentioning the key again was around 200 characters. Discoveries like these have led some users to believe the key should be reinforced at these intervals DEPENDING ON WHICH MODEL YOU USE. 
+
 TL;DR A maxed out Griffin WI should be ~10 50-character lines long, each line starting with the key. On Dragon this could be 2-3 lines each maximum 200 characters. 
 
 Hunter Rodrigez, Lazy and other users have been working with shortened formats motivated by JSON. Originally parentheses were removed perceived as unnecessary. Early tests suggest it works just as well as proper JSON, bearing in mind the tricks discussed above. The author would recommend pursuing variants of this format for a good balance between accurate details and token use. Originally people called this pseudo-JSON, but more accurately it is pseudo-prose. Token testing shows commas and brackets work as contextual linkers just like in regular grammar.
-```keys: Thea Smith
-[{name:Thea Smith,age:25y/o,♀,BODY:[toned,muscular,athletic],skin:[tanned],HEIGHT:[tall],BREASTS:[medium],HAIR:[Purple,very short,mohawk],EYES:[glowing,blue,heavy eyeliner],PERSONALITY:[calls you shorty,Punk,adventures,kind,rebellious],LIKES:[dancing,music,working out],relationship:{Tess:[little sister],Finn:[little brother],Beth:[Mother,Mom],Bob:[father,Dad]}}].```
+```
+keys: Thea Smith
+[{name:Thea Smith,age:25y/o,♀,BODY:[toned,muscular,athletic],skin:[tanned],HEIGHT:[tall],BREASTS:[medium],HAIR:[Purple,very short,mohawk],EYES:[glowing,blue,heavy eyeliner],PERSONALITY:[calls you shorty,Punk,adventures,kind,rebellious],LIKES:[dancing,music,working out],relationship:{Tess:[little sister],Finn:[little brother],Beth:[Mother,Mom],Bob:[father,Dad]}}].
+```
 
 `NOTES ON X` works as a WI format. As with all pseudo-prose formats it could be cavemanned. It's an effective and easy way to define fields of study like `alchemy`. While it works as a WI-format some users have reported leaking with it and it seems more useful/interesting as a test input for the AI.
-```keys: John Edgarton
-NOTES ON JOHN EDGARTON: current prime minister, stressed, morose, but ethical, keeping appearances for morale. Black bowler, tan overcoat, dirty shoes. Bald, large tummy, hairy mole on broad nose, brown sleepy eyes, sallow skin. Widower, has daughter (worries about her). Touches head when nervous (subconsciously). Paces constantly.```
+```
+keys: John Edgarton
+NOTES ON JOHN EDGARTON: current prime minister, stressed, morose, but ethical, keeping appearances for morale. Black bowler, tan overcoat, dirty shoes. Bald, large tummy, hairy mole on broad nose, brown sleepy eyes, sallow skin. Widower, has daughter (worries about her). Touches head when nervous (subconsciously). Paces constantly.
+```
 
 Onyx has also come up with interesting and reliable tricks. With RND we can actually have pseudo-random lists. Testing so far suggests with 10 members the list is completely consistent, more members or simple words make it output more random, but still conceptually related things.
-```keys: monsters, forest
-Many monsters live in the forest. [RND (monsters): slime, goblin, orc, Ent, giant carnivorous sloth, pixie, beholder.]``` alternatively
-```keys: goal, objective, quest
-RND (objectives): slay the dragon, rescue the princess, challenge the demon lord```
+```
+keys: monsters, forest
+Many monsters live in the forest. [RND (monsters): slime, goblin, orc, Ent, giant carnivorous sloth, pixie, beholder.]
+OR
+keys: goal, objective, quest
+RND (objectives): slay the dragon, rescue the princess, challenge the demon lord
+```
 
 Another one is `IF (action): THEN (things happen)` this is especially useful for creating custom spells or other conditional effects like the format suggests. 
-```keys: cursed book, (OR) open cursed book
-IF (open cursed book): THEN (the pages of the cursed book form into a face, shriek loudly and place a terrible curse on you)```
+```
+keys: cursed book, (OR) open cursed book
+IF (open cursed book): THEN (the pages of the cursed book form into a face, shriek loudly and place a terrible curse on you)
+```
 
 From his work we have a reliable and easy way to define locales especially when combined with data mentioned above. These get interesting when combined with other short WI.
-```keys: Rask
-Rask (kingdom): TERRAIN: tundra (full of ogres and giants), fertile land (southern). FEATURES: Wolfsholme (capital, walled city), primitive gunpowder weapons. CLIMATE: cold, snowy. RESOURCES: livestock, horses, furs, lumber. CITIZENS: humans, elves, giants, hardy, fierce, wield warhammers and axes, worship Nahr. RULER: Queen Cassandra.```
+```
+keys: Rask
+Rask (kingdom): TERRAIN: tundra (full of ogres and giants), fertile land (southern). FEATURES: Wolfsholme (capital, walled city), primitive gunpowder weapons. CLIMATE: cold, snowy. RESOURCES: livestock, horses, furs, lumber. CITIZENS: humans, elves, giants, hardy, fierce, wield warhammers and axes, worship Nahr. RULER: Queen Cassandra.
+```
 From recent experiments the community has discovered that defining locales like this may benefit from placing each category on a newline. Both methods are effective. 
 
 Zaltys has also made discoveries on how to reliably define the structure of a building. Sometimes the AI is finicky. As a category EXIT works better than EXITS. Directions are good categories, but specifically for architecture.
-```keys: library
-Library room: large room. EXIT: corridor (north), lounge (west), trophy room (southeast). FEATURES: Bookshelves (dusty tomes, esoteric, mythology, grimoires), man-eating plant (huge), spiral staircase (to second floor), chandelier (creepy).```
+```
+keys: library
+Library room: large room. EXIT: corridor (north), lounge (west), trophy room (southeast). FEATURES: Bookshelves (dusty tomes, esoteric, mythology, grimoires), man-eating plant (huge), spiral staircase (to second floor), chandelier (creepy).
+```
 
 Many sources confirm that in all versions of the AI newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. As of current version of this document `red-color` or `hair-color` for example do not seem to work as well anymore. Trying to fix this, the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even if it's against English grammar for example `verylonghair` or `platinumblondehair`. birb calls this smashing words. Combining these discoveries birb and Zaltys have had great results even on griffin with the following format.
 
-```keys: Rick, angry wizard
+```
+keys: Rick, angry wizard
 [TITLE(Rick):The angriest wizard that ever lived.
 RACE(Rick):human, wizard.
 APPEAR(Rick):old, tall, lanky, wrinkly, mullethair, verylonghair, grayhair, graybeard, messybeard.
@@ -173,19 +203,24 @@ EYES(Rick):orangeeyes, flamingorangeeyes.
 WORN(Rick):tatteredgrayrobes, pointywizardhat.
 LACK(Rick):anyshoes.
 MENTAL(Rick):furious, loud, irritated, unstable, complaining.
-HOBBIES(Rick):shoutingatkids, breakingwands, misusingmagic.]```
+HOBBIES(Rick):shoutingatkids, breakingwands, misusingmagic.]
+```
 
 There are still caveats and unknowns to this format. Original testing was done without [] but they are added here to prevent WI leaking especially on Griffin. It may be possible to remove `.` from the end of each line.`Flamingorangeeyes` and `tatteredgrayrobes` produced consistently desired results, but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If this becomes a thing please keep making references to Rick, angriest wizards or smashing words.
 
 
 ## Useful Testing Prompt
 The following is the testing scenario prompt birb has had some of his best WI testing results on. Before you reference the WI, you have to produce at least two outputs from the AI so you get GPT-3 results. You may alter these outputs for higher quality writing. Please do modify and form your own version of it. The trick is removing 'you' the main character from the story. God is only used as an easy stand-in. 
-```You are a God. You are omniscient and omnipotent. You don't interact with the world you have created, but you love watching it from afar. You use a crystal ball to view different characters and events unfold in the world below. As usual, you spend your time viewing your creation. You gaze through your crystal ball.```
+```
+You are a God. You are omniscient and omnipotent. You don't interact with the world you have created, but you love watching it from afar. You use a crystal ball to view different characters and events unfold in the world below. As usual, you spend your time viewing your creation. You gaze through your crystal ball.
+```
 
 
 ## Useful Categories
 With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among different formats. Here we share some categories that have proven very effective. The useful words will be provided as a list as their use is self-explanatory. We recommend experimentation, but these words have been chosen because they felt more effective than their synonyms. There's also some peculiarity here: the AI seems to prefer plural s to the 'do-s'. APPEAR is better than APPEARS and LACK is better than LACKS. But HOBBIES and POWERS are as good if not better than their singular forms.
+
 BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME
+
 Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger CATEGORIES. The AI picks up common traits just fine by their lonesome. TRAITS is a catch-all for when you don't need a big list on a single topic.
 
 The AI understands the concept of speech patterns and accent to some degree. There is no consistent method of activating it yet, but `SPEECH:` is one working category. `WORDING:` seems to work too. Writing style theme in author's notes can also give characters accent. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes).
