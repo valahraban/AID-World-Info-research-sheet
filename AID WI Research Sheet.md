@@ -58,12 +58,12 @@ An important thing we learned here is if your writing is highly efficient, you c
 
 
 ## Griffin vs Dragon
-Modern versions of AID Griffin and Dragon are both GPT-3. A lot of forums are full of misinformation on this and the author still isn't sure about the full story behind this. That being said there are different sizes of GPT-3. Griffin uses a subset of GPT-3 that is closer to the original 1.542 billion parameters used by the GPT-2. The full-sized GPT-3 that Dragon is based on has a whopping 175 billion parameters. This shows in the quality, consistency and most importantly *forgiveness* of the output. While Dragon loves details at least as much as Griffin does it'll be able to produce higher quality prose with less effort from the user. This shows especially in how differently it responds to WI you feed it. Some precursory research has been made into this - you can get roughly similar WI results on both models, but Griffin has quirks you have to keep in mind. These affect what kind of WI you write and will be discussed in the following sections.
+Modern versions of AID Griffin and Dragon are both GPT-3. Many forums still spread misinformation. This has been confirmed by the devs. That being said there are different sizes of GPT-3. Griffin uses a subset of GPT-3 that is closer to the original 1.542 billion parameters used by the GPT-2. The full-sized GPT-3 that Dragon is based on has a whopping 175 billion parameters. This shows in the quality, consistency and most importantly *forgiveness* of the output. While Dragon loves details at least as much as Griffin does it'll be able to produce higher quality prose with less effort from the user. This shows especially in how differently it responds to WI you feed it. Some precursory research has been made into this - you can get roughly similar WI results on both models, but Griffin has quirks you have to keep in mind. These affect what kind of WI you write and will be discussed in the following sections.
 An interesting thing to mention here - Your first prompt and the response to it by the AI are relatively unimportant as they are generated in *GPT-2*. Detailed WI is more important as the AI starts outputting quality content. With AID you should focus building on success or an interesting response to your input. Also if you are experimenting with new WI formats, keywords and categories, you might want to do the experimentation after 2 regular outputs from AID. Just make sure the writing is consistently high quality and the AI output should reward you for it.
 
 
 ## On certain characters
-Functionalities of certain characters have been found and described thanks to the development of `world info formats` but it's useful to discuss these beforehand. Their functionality can be somewhat verified through the GPT-2 tokenizer Colab. Some characters connect. The most important of these is -. `hair-color` or `red-color` are words that gets better results for colorization than any other method. `somecolor-hue` doesn't work well. Other characters have been tried for connecting words, but few show as much power. AID recognizes many separators. Letters , '' "" ; / | all separate words and concepts in rough degree of power. You would want to separate members of a list with , like in common grammar, but ; might be better for separating categories. () {} [] <> : are connectors. You can put lists inside all of them or use : to create a logical implication. For example it might be preferred to do a list like `MENTAL:[happy, go-lucky, energetic];` and define logical connections like AGE(25y) or sword(polished) the AI usually recognizes that the thing you're describing is 25 years old or that the sword is polished. Enclosures can be interchanged, but these are two commonly seen and powerful methods.
+Functionalities of certain characters have been found and described thanks to the development of `world info formats` but it's useful to discuss these beforehand. Their functionality can be somewhat verified through the GPT-2 tokenizer Colab. Some characters connect. The most important of these is -. `hair-color` or `red-color` are words that gets better results for colorization than other methods (changed as of December, use redcolor or redhue instead). `somecolor-hue` doesn't work as well. Other characters have been tried for connecting words, but few show as much power. AID recognizes many separators. Letters , '' "" ; / | all separate words and concepts in rough degree of power. You would want to separate members of a list with , like in common grammar, but ; might be better for separating categories. () {} [] <> : are connectors. You can put lists inside all of them or use : to create a logical implication. For example it might be preferred to do a list like `MENTAL:[happy, go-lucky, energetic];` and define logical connections like AGE(25y) or sword(polished) the AI usually recognizes that the thing you're describing is 25 years old or that the sword is polished. Enclosures can be interchanged, but these are two commonly seen and powerful methods.
 ALL OF THE ABOVE IS RELATIVE AND CAN BE CHANGED IF YOU TRAIN YOUR STORY BY USING THESE CHARACTERS DIFFERENTLY IN YOUR WI
 
 
@@ -113,7 +113,7 @@ Mike Haggar:[Human/male/202cm/140kg. APPEARANCE<Haggar>:Stocky, muscular, hairy 
 ```
 <Haggar> is used to remind and reinforce the AI all the data has to do with Haggar. () is reserved for associations, but can hold a list of details. Longer sentences do work well in simple encapsulation like this. Phrases inside quotations seem to inform the AI how the character speaks. Works as good as pure-JSON with most keywords the AI likes. 
 
-Based on experiments in these and similar formats, the community has found all-caps categories are good. APPEAR/BODY, WORN, MENTAL and TRAITS cover the main bases for most characters. LOOKS can also be used to replace APPEAR, especially if you're defining an object. SPEECH and "" can be used to reinforce speaking patterns, albeit with some inconsistency. `mute` in traits also works if going for a mute character. LACKS can be used to denote a thing the character doesn't have. LIKES/DISLIKES are good. Later on in the document we include a long list of CATEGORIES.
+Based on experiments in these and similar formats, the community has found all-caps categories are good. APPEAR/BODY, WORN, MENTAL and TRAITS cover the main bases for most characters. LOOKS can also be used to replace APPEAR, especially if you're defining an object. SPEECH and "" can be used to reinforce speaking patterns, albeit with some inconsistency. `mute` in traits also works if going for a mute character. LACKS can be used to denote a thing the character doesn't have. LIKES/DISLIKES are good. Later on in the document we include a long list of CATEGORIES. Zaltys likes to write a lot of species from different series. He has written on discord that his most used categories are APPEAR, LACK, GRAB, MOV, MENTAL and TRAITS. For defining a type of character all these have purpose. Appear is self explanatory. Lack has to do what the characters can and can't do - a lamia without legs shouldn't be able to walk. Grab is their preferred way of interacting through appendages, a bird would use it's beak or talons, the lamia would use their hands or tail. Mov works for movement. Lamia would crawl/slither on top of their tails, slimes ooze other characters may do more imaginative things. Mental is traits of the mind, traits is more intrinsic physical or sensory traits.
 
 Latest Zaltys.
 ```
@@ -122,13 +122,21 @@ Aarakocra:[Avian/150cm/42kg;APPEAR<Aarakocra>:Slim/feather-covered(brown-hue or 
 
 Next we take a detour to kimtaengsshi's testing before going into formats borne of experimentation. Results like these are a big motivator for being so particular with WI. He tested a bunch of WI-formats from the discord and analyzed their tokens to characters ratio with the following results:
 
+
 Full prose (standard): 514 chars, 118 tokens = 4.36 ch/tk
+
 Pure JSON: 512 chars (-2), 172 tokens (+54) = 2.98 ch/tk
+
 Pure JSON (w/o spacing): 475 chars (-51), 138 tokens (+16) = 3.44 ch/tk
+
 Zaltys-Basic: 393 chars (-121), tokens 122 (+4) = 3.22 ch/tk
+
 Zaltys-Advanced: 358 chars (-156), 128 tokens (+10) = 2.8 ch/tk
+
 Monky-Modern: 352 chars (-162), 123 tokens (+3) = 2.86 ch/tk
+
 Monky-Caveman: 362 chars (-152), 87 tokens (-31) = 4.16 ch/tk
+
 Pseudo-JSON-kim (no parentheses): 402 chars, 135 tokens = 2.98 ch/tk
 
 The goal here is optimization. Full prose has the best character-ratio, but has all the caveats AID is known for. Many users love the output pure json gives, but it has some of the worst ratios and character usage. Zaltys results aren't much better although this can be attributed to heavy symbol and possibly unicode use. Kim's own minimized format is similar to Deekin without long sentences, but had similar ratio problems. At the bottom we see something interesting. A format called caveman that's far shorter than prose with similar character-ratios.
@@ -192,7 +200,7 @@ keys: library
 Library room: large room. EXIT: corridor (north), lounge (west), trophy room (southeast). FEATURES: Bookshelves (dusty tomes, esoteric, mythology, grimoires), man-eating plant (huge), spiral staircase (to second floor), chandelier (creepy).
 ```
 
-Many sources confirm that in all versions of the AI newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. As of current version of this document `red-color` or `hair-color` for example do not seem to work as well anymore. Trying to fix this, the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even if it's against English grammar for example `verylonghair` or `platinumblondehair`. birb calls this smashing words. Combining these discoveries birb and Zaltys have had great results even on griffin with the following format.
+Many sources confirm that in all versions of the AI newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. As of current version of this document `red-color` or `hair-color` for example do not seem to work as well anymore. Trying to fix this, the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even if it's against English grammar for example `verylonghair` or `platinumblondehair`. birb calls this smashing words. Combining these discoveries birb and Zaltys have had great results even on griffin with the following format (and it's subsequent update).
 
 ```
 keys: Rick, angry wizard
@@ -205,8 +213,17 @@ LACK(Rick):anyshoes.
 MENTAL(Rick):furious, loud, irritated, unstable, complaining.
 HOBBIES(Rick):shoutingatkids, breakingwands, misusingmagic.]
 ```
+```
+[Ritz[SPECIES:elf.]
+Ritz[BODY:female, 24y, shortstack, soft.]
+Ritz[EYES:aquamarine, sparkling.]
+Ritz[HAIR:platinumblonde, long, ponytail, bangs.]
+Ritz[WORN:white hooded druid robes, white lace garterbelt.]
+Ritz[MENTAL:soothingsmile, clumsy, knowledgeable, airheaded, bashful.]
+Ritz[TRAITS:easily embarrassed, innocent, druid, stutteryspeech.]]
+```
 
-There are still caveats and unknowns to this format. Original testing was done without [] but they are added here to prevent WI leaking especially on Griffin. It may be possible to remove `.` from the end of each line.`Flamingorangeeyes` and `tatteredgrayrobes` produced consistently desired results, but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If this becomes a thing please keep making references to Rick, angriest wizards or smashing words.
+There are still caveats and unknowns to this format. Original testing was done without [] but they are added here to prevent WI leaking especially on Griffin. It may be possible to remove `.` from the end of each line.`Flamingorangeeyes` and `tatteredgrayrobes` produced consistently desired results, but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If this becomes a thing please keep making references to Rick, angriest wizards or smashing words.
 
 
 ## Useful Testing Prompt
@@ -214,6 +231,7 @@ The following is the testing scenario prompt birb has had some of his best WI te
 ```
 You are a God. You are omniscient and omnipotent. You don't interact with the world you have created, but you love watching it from afar. You use a crystal ball to view different characters and events unfold in the world below. As usual, you spend your time viewing your creation. You gaze through your crystal ball.
 ```
+It's also particularly entertaining to make the AI generate inputs for many WI this way using the format `you created X this way because (Y reasons)`. Do bear in mind this is repetitive. 
 
 
 ## Useful Categories
@@ -224,6 +242,10 @@ BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE,
 Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger CATEGORIES. The AI picks up common traits just fine by their lonesome. TRAITS is a catch-all for when you don't need a big list on a single topic.
 
 The AI understands the concept of speech patterns and accent to some degree. There is no consistent method of activating it yet, but `SPEECH:` is one working category. `WORDING:` seems to work too. Writing style theme in author's notes can also give characters accent. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes).
+
+
+## Current Recommendation
+Here I try to suggest what WI format is most stable recently. This section is subject to heavy and frequent changes. The community is still experimenting with all of the above data. Most recent Zaltys which can always be found on the official AID Discord is considered stable. birb's Ritz example also provides very stable results. Caveman is especially good for published scenarios where players may want to add their own WI. Recent research on JSON shows it may be a red herring - the AI forms outputs based on grammatical associations. Meaning key immediately followed by category and traits is optimal for any format. JSON doesn't do anything 'different' to produce better results. Continue writing JSON if you like it, but don't feel compelled to invest in it. Alternatively, use the online worldbuilder to automatically output Zaltys or JSON for you. The dev is consistently pushing new features and taking feedback/requests on his project too.
 
 
 ## Other scenarios and scripts
