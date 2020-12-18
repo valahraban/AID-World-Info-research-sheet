@@ -1,12 +1,13 @@
 # AI Dungeon World Info Reference
-***
 
 
 ## Preamble
 Turn on word wrap to read this document. Perhaps the greatest addition to the AI Dungeon for generating high quality stories has been world info. Learning and figuring out how to use world info effectively is of great interest to many users: using it one can get vastly more consistent output from the AI and define terms that the pre-trained AI might otherwise have difficulty understanding. Features like `Remember` (pins) and `A/N:` (author's notes) will also be covered as they are heavily related and connected to world info. Everything here is of use to both free and premium users. The differences between griffin and dragon will be discussed as there are some differences one should be mindful of. Good world info can make griffin almost as good as dragon, but requires more attention and effort from the user. While world info is a powerful tool there are also caveats and concerns to using it effectively. With good world info the user can create any kind of scenario and a `world` of their own. All of this info is from users sharing notes and research on AID Discord and other fan communities. The information has been confirmed and peer-reviewed through sharing outputs which will be skipped for the sake of brevity. Special credit to kimtaengsshi for help and fact checking the technical details. Recently there have been rumors of WI 2.0 launching at an unknown future date. This document will require an overhaul after this comes to pass.
 
+Much of this information comes from and is shared with the community-run wiki and Discord. A link to the wiki will be provided where you can also find an invite to the Discord and other useful content: https://wiki.aidiscord.cc/wiki/Main_Page
 
-## Remember, world info, Author's Notes, Worlds and how the game treats each part
+
+## Remember, World Info, Author's Notes, Worlds and how the game treats each part
 Remember was the first of these features implemented in the game. Glossing over a lot of details, remember is a world info that gets constantly fed to the game after your every input. World info is like remember, but has user-defined key-words `keys` that after getting triggered make the game use them as input. Having this element of context makes world info less restricting to work with - after you're happy with it you can forget and leave it while things in remember require more frequent updating as the story progresses. History means old prompts written by you and the AI. The order the AI reads your input is in:
 
 + Summary										| Experimental feature to help devs
@@ -52,7 +53,9 @@ The character limitations mentioned in the previous section are ones imposed by 
 A few things have been learned from experience - common words and phrases like `hello` or `25y` get treated as a single token. White spaces are special - they often get rolled into words as is grammatically correct. An uncommon word like ` Enterprise` takes 1 token with the white space while `Enterprise` takes 2 tokens. Unicode emoji like `😃` and some special symbols are expensive, they cost 2 tokens per character. As we will discuss characters like `<>` `[]` are useful for WI, but tend to have a cost ratio of 1 token. There are also rare characters that the AI hates like `ù`. Experiments have shown that longer strings of symbols like `}}}` get rolled into one token.
 
 If you want to test out and learn more about GPT-2/3 tokens (they work the same) visit this link: https://colab.research.google.com/drive/1i1wXfc4SWDprHZuLTaMsgWPv6YwvlQ_I?usp=sharing#scrollTo=mlBq9zO67b2n
+
 Recently, kim has also made a tokenizer scenario/script you can use inside AID: https://play.aidungeon.io/main/scenarioView?publicId=6927d610-34b7-11eb-b8e1-c185d026672d
+
 NOTE: The information there is subject to become outdated as the devs have ways of tweaking how tokenization works. Also, scenario authors might sometimes hide their scenarios, usually as they get outdated and updated.
 An important thing we learned here is if your writing is highly efficient, you can get more tokens to play with than your character limit implies. Advanced users can bypass the regular world info character limit by writing their own JSON and importing it manually into AID. This makes it so that you can only delete letters from your oversized WI though and this method is generally not recommended.
 
@@ -99,25 +102,25 @@ Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"]
 + Motivated research into other formats because it's good but has caveats
 + You're best off writing 'uglified' json because 'beautified' json has no benefits, spends more space and looks weird when you input it to WI
 
-Zaltys 🐍#5362 has developed many interesting formats and motivated the community to test different keywords in WI. Here's an earlier example of his kobold that worked well.
+Zaltys 🐍#5362 has developed many interesting formats and motivated the community to test different keywords in WI. Here's an early example of his formatting that worked well for many users.
 ```
 keys: Deekin, Scalesinger, Deekin Scalesinger
 Deekin Scalesinger:[Kobold/♂/<72cm>;ORIGIN<Deekin>:Ally from Neverwinter Nights games(CRPGs);APPEAR:Reptilian/orange-scaled/horns(nubs)/snout/legs(2)/eyes(brown/2)/arms(2)/tail(scaly)/wings(2/red/scaly);LACK:hair/ears;WORN:Bard clothes;MENTAL:Pessimist/creative/polite/kind/friendly/self-conscious;TRAITS<Deekin>:Musician/poet/bard/writer/raspy voice/hero/sorcerer/plays lute/beat Mephistopheles/bard-magic/former servant(of dragon:Tymofarrar)/"Yes, Deekin very kobold, last Deekin look in mirror."]
 ```
 Here we see many adaptations seen today. Various enclosures, removal of whitespace and other excess symbols. Having `."]` close to the end. Experiments from Zaltys and friends has shown that Griffin works the best if the character `.` is used close to the end of the WI. 
 
-Many users enjoyed experimenting with Deekin but Zaltys has since refined his format. The following is more recent Zaltys with the the character Mike Haggar.
-```
-keys: Mike, Haggar, Mike Haggar
-Mike Haggar:[Human/male/202cm/140kg. APPEARANCE<Haggar>:Stocky, muscular, hairy arms, hair(brown-hue), mustache(brown-hue). WORN:Eyeglasses, pants(green-color). TRAITS<Haggar>:Born in 1943, from Final Fight and Street Fighter games, former pro-wrestler, grew up on streets(of Metro City), Mayor of Metro City, just, incorruptible, fought Mad Gear gang & Skull Cross gang, fights gangs, "It's my job to keep Metro City safe!", hands-on, likes curry rice, friends(Cody, Guy), daughter(Jessica).]
-```
-<Haggar> is used to remind and reinforce the AI all the data has to do with Haggar. () is reserved for associations, but can hold a list of details. Longer sentences do work well in simple encapsulation like this. Phrases inside quotations seem to inform the AI how the character speaks. Works as good as pure-JSON with most keywords the AI likes. 
-
-Based on experiments in these and similar formats, the community has found all-caps categories are good. APPEAR/BODY, WORN, MENTAL and TRAITS cover the main bases for most characters. LOOKS can also be used to replace APPEAR, especially if you're defining an object. SPEECH and "" can be used to reinforce speaking patterns, albeit with some inconsistency. `mute` in traits also works if going for a mute character. LACKS can be used to denote a thing the character doesn't have. LIKES/DISLIKES are good. Later on in the document we include a long list of CATEGORIES. Zaltys likes to write a lot of species from different series. He has written on discord that his most used categories are APPEAR, LACK, GRAB, MOV, MENTAL and TRAITS. For defining a type of character all these have purpose. Appear is self explanatory. Lack has to do what the characters can and can't do - a lamia without legs shouldn't be able to walk. Grab is their preferred way of interacting through appendages, a bird would use it's beak or talons, the lamia would use their hands or tail. Mov works for movement. Lamia would crawl/slither on top of their tails, slimes ooze other characters may do more imaginative things. Mental is traits of the mind, traits is more intrinsic physical or sensory traits.
-
-Latest Zaltys.
+Many users enjoyed experimenting with his early examples but Zaltys has since refined his format. The following is more recent variant of Zaltys with the D&D race Aarakocra.
 ```
 Aarakocra:[Avian/150cm/42kg;APPEAR<Aarakocra>:Slim/feather-covered(brown-hue or white-hue/♂:colorful)/feathered head/2-eyes(keen)/tail-feathers/2-wings(big wingspan)/digitigrade legs(2/bird-feet/talons)/2-hands(clawed/5-fingers)/hooked beak(sharp);LACK<Aarakocra>: hair/ears/arms/breasts;MENTAL:Wise/honest/calm/benevolent;TRAITS<Aarakocra>:Prefer flying/lowtech tribal/hunters/scouts/adventurers(rare/rangers/druids)/no ownership/weapons(thrown)/live in mountains(isolationist)/claustrophobic.]
+```
+Based on experiments in these and similar formats, the community has found all-caps categories are good. APPEAR/BODY, WORN, MENTAL and TRAITS cover the main bases for most characters. LOOKS can also be used to replace APPEAR, especially if you're defining an object. SPEECH and "" can be used to reinforce speaking patterns, albeit with some inconsistency. `mute` in traits also works if going for a mute character. LACKS can be used to denote a thing the character doesn't have. LIKES/DISLIKES are good. Later on in the document we include a long list of CATEGORIES. Zaltys likes to write a lot of species from different series. He has written on discord that his most used categories are APPEAR, LACK, GRAB, MOV, MENTAL and TRAITS. For defining a type of character all these have purpose. Appear is self explanatory. Lack has to do what the characters can and can't do - a lamia without legs shouldn't be able to walk. Grab is their preferred way of interacting through appendages, a bird would use it's beak or talons, the lamia would use their hands or tail. Mov works for movement. Lamia would crawl/slither on top of their tails, slimes ooze other characters may do more imaginative things. Mental is traits of the mind, traits is more intrinsic physical or sensory traits.
+
+As Zaltys keeps refining and changing up his format this document will update the latest version he has pinned on Discord. His most up to date revision (universal & condensed version for griffin) looks like this:
+```
+Mike Haggar:[Human(male, 202cm, 140kg). APPEARANCE<Haggar>:Stocky, muscular, big arms, hair(brown-hue), mustache(brown-hue). WORN:Eyeglasses, green pants. MENTAL<Haggar>: Just, incorruptible, hands-on, upbeat. TRAITS<Haggar>:Born in 1943, from Final Fight and Street Fighter games, ex pro-wrestler, grew up on streets(of Metro City), mayor of Metro City, fought Mad Gear & Skull Cross gangs, fights gangs, "It's my job to keep Metro City safe!", loves curry, friends(Cody, Guy), daughter(Jessica).]
+```
+```
+Mike Haggar:[Human(male|202cm|140kg);APPEAR<Haggar>:Stocky/muscular/thick arms/hair(brown)/mustache(brown);WORN:Eyeglasses(at work)/shoes/pants(green);MENTAL<Haggar>:Just/hands-on/upbeat/incorruptible;TRAITS<Haggar>:Born 1943/from Final Fight and Street Fighter games/ex pro-wrestler/grew up on streets(in Metro City)/mayor(Metro City)/fought Mad Gear & Skull Cross gangs/fights gangs/"It's my job to keep Metro City safe!"/loves curry rice/friends(Cody,Guy,Carlos(Brazilian))/daughter(Jessica).]
 ```
 
 Next we take a detour to kimtaengsshi's testing before going into formats borne of experimentation. Results like these are a big motivator for being so particular with WI. He tested a bunch of WI-formats from the discord and analyzed their tokens to characters ratio with the following results:
@@ -129,6 +132,8 @@ Pure JSON: 512 chars (-2), 172 tokens (+54) = 2.98 ch/tk
 
 Pure JSON (w/o spacing): 475 chars (-51), 138 tokens (+16) = 3.44 ch/tk
 
+Pseudo-JSON-kim (no parentheses): 402 chars, 135 tokens = 2.98 ch/tk
+
 Zaltys-Basic: 393 chars (-121), tokens 122 (+4) = 3.22 ch/tk
 
 Zaltys-Advanced: 358 chars (-156), 128 tokens (+10) = 2.8 ch/tk
@@ -137,11 +142,11 @@ Monky-Modern: 352 chars (-162), 123 tokens (+3) = 2.86 ch/tk
 
 Monky-Caveman: 362 chars (-152), 87 tokens (-31) = 4.16 ch/tk
 
-Pseudo-JSON-kim (no parentheses): 402 chars, 135 tokens = 2.98 ch/tk
+Worst-case-scenario birb: 387 chars, 160 tokens = 2.42 ch/tk
 
-The goal here is optimization. Full prose has the best character-ratio, but has all the caveats AID is known for. Many users love the output pure json gives, but it has some of the worst ratios and character usage. Zaltys results aren't much better although this can be attributed to heavy symbol and possibly unicode use. Kim's own minimized format is similar to Deekin without long sentences, but had similar ratio problems. At the bottom we see something interesting. A format called caveman that's far shorter than prose with similar character-ratios.
+The goal here is optimization. Full prose has the best character-ratio, but has all the caveats AID is known for. Many users love the output pure json gives, but it has some of the worst ratios and character usage. Zaltys results aren't much better although this can be attributed to heavy symbol and possibly unicode use. Kim's own minimized format is similar to Deekin without long sentences, but had similar ratio problems. Close to the bottom we see something interesting. A format called caveman that's far shorter than prose with similar character-ratios.
 
-Monky's solution to optimizing is what he calls the `caveman` format. A cursory look at an example will show us why:
+Monky's solution to optimizing is what he calls the `Caveman` format. Looking at an example will show us why:
 ```
 keys:Chagra, initiate, apprentice
 Chagra AKA 'Tusk': Orc she 20y.
@@ -151,7 +156,8 @@ Chagra loyal careful outcast pranked Healing magic initiate coven.
 Chagra Hergea's daughter Friends You Renni.
 Chagra likes fruit veggies Hates meat cheese.
 ```
-In this WI all fluff words have been removed. Still, testing has AI mention all the relevant details with very low risk of leaking into other characters. It is likely that the brutal efficiency of AI doesn't care about words like `is`. Users of the format feel that it sticks to the given information better than the base AI alone or untested prose. And so far no one has reported that the AI starts speaking caveman when using this. You should probably use highly descriptive inputs or an A/N: for making the AI write descriptive prose though.
+In this WI all fluff words have been removed. Still, testing has AI mention all the relevant details with very low risk of leaking into other characters. It is likely that the brutal efficiency of AI doesn't care about words like `is`. Users of the format feel that it sticks to the given information better than the base AI alone or untested prose. And so far no one has reported that the AI starts speaking caveman when using this. You should probably use highly descriptive inputs or an A/N: for making the AI write descriptive prose though. Worth noting is that Monky never uses commas when writing his style of Caveman.
+
 There are two good resources for this, Monky's test scenario and kim's caveman generator, both linked in order:
 https://play.aidungeon.io/main/scenarioView?publicId=558a8d40-2fbd-11eb-9239-8b8f17f7a2b0
 https://play.aidungeon.io/main/scenarioView?publicId=3f094990-2e40-11eb-b81d-a3d32aaa3e7a
@@ -166,7 +172,7 @@ keys: Thea Smith
 [{name:Thea Smith,age:25y/o,♀,BODY:[toned,muscular,athletic],skin:[tanned],HEIGHT:[tall],BREASTS:[medium],HAIR:[Purple,very short,mohawk],EYES:[glowing,blue,heavy eyeliner],PERSONALITY:[calls you shorty,Punk,adventures,kind,rebellious],LIKES:[dancing,music,working out],relationship:{Tess:[little sister],Finn:[little brother],Beth:[Mother,Mom],Bob:[father,Dad]}}].
 ```
 
-`NOTES ON X` works as a WI format. As with all pseudo-prose formats it could be cavemanned. It's an effective and easy way to define fields of study like `alchemy`. While it works as a WI-format some users have reported leaking with it and it seems more useful/interesting as a test input for the AI.
+`NOTES ON X` works as a WI format. As with all pseudo-prose formats it could be converted into Caveman. It's an effective and easy way to define fields of study like `alchemy`. While it works as a WI-format some users have reported leaking with it and it seems more useful/interesting as a test input for the AI.
 ```
 keys: John Edgarton
 NOTES ON JOHN EDGARTON: current prime minister, stressed, morose, but ethical, keeping appearances for morale. Black bowler, tan overcoat, dirty shoes. Bald, large tummy, hairy mole on broad nose, brown sleepy eyes, sallow skin. Widower, has daughter (worries about her). Touches head when nervous (subconsciously). Paces constantly.
@@ -223,7 +229,7 @@ Ritz[MENTAL:soothingsmile, clumsy, knowledgeable, airheaded, bashful.]
 Ritz[TRAITS:easily embarrassed, innocent, druid, stutteryspeech.]]
 ```
 
-There are still caveats and unknowns to this format. Original testing was done without [] but they are added here to prevent WI leaking especially on Griffin. It may be possible to remove `.` from the end of each line.`Flamingorangeeyes` and `tatteredgrayrobes` produced consistently desired results, but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If this becomes a thing please keep making references to Rick, angriest wizards or smashing words.
+There are still caveats and unknowns to this format. Original testing was done without [] but they are added here to prevent WI leaking especially on Griffin. It may be possible to remove `.` from the end of each line.`Flamingorangeeyes` and `tatteredgrayrobes` produced consistently desired results, but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. One caveat of this format is high token use. Another "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If this becomes a thing please keep making references to angry wizards or smashing words.
 
 
 ## Useful Testing Prompt
@@ -245,7 +251,12 @@ The AI understands the concept of speech patterns and accent to some degree. The
 
 
 ## Current Recommendation
-Here I try to suggest what WI format is most stable recently. This section is subject to heavy and frequent changes. The community is still experimenting with all of the above data. Most recent Zaltys which can always be found on the official AID Discord is considered stable. birb's Ritz example also provides very stable results. Caveman is especially good for published scenarios where players may want to add their own WI. Recent research on JSON shows it may be a red herring - the AI forms outputs based on grammatical associations. Meaning key immediately followed by category and traits is optimal for any format. JSON doesn't do anything 'different' to produce better results. Continue writing JSON if you like it, but don't feel compelled to invest in it. Alternatively, use the online worldbuilder to automatically output Zaltys or JSON for you. The dev is consistently pushing new features and taking feedback/requests on his project too.
+Here I try to suggest what WI format is most stable (providing predictable, consistent and high quality outputs) recently. This section is subject to heavy and frequent changes. The community is still experimenting with all of the above data. Most recent Zaltys which can always be found on the official AID Discord is considered stable. birb's examples also provide very stable results. Caveman is especially good for published scenarios where players may want to add their own WI. Recent research on JSON shows it may be a red herring; the AI forms outputs based on grammatical associations. Meaning key immediately followed by category and traits is optimal for any format. JSON doesn't do anything 'different' to produce better results. Continue writing JSON if you like it, but don't feel compelled to invest in it. Alternatively, use the online worldbuilder to automatically output Zaltys or JSON for you. The dev(uusu) is consistently pushing new features and taking feedback/requests on his project too. Link to his online app again: https://aid-world-builder.ey.r.appspot.com
+
+Here is what one very opinionated user from the Discord has to say on the formats:
+```
+From CrisAIcilian: Zaltys is better in every way, it's actually designed for its purpose. JSON is like Chinese medicine, goo of mumbo jumbo happens to contain three elements that had an effect (colon, comma, square brackets).
+```
 
 
 ## Other scenarios and scripts
