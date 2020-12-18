@@ -1,3 +1,19 @@
+- [AI Dungeon World Info Reference](#ai-dungeon-world-info-reference)
+  * [Preamble](#preamble)
+  * [Remember, World Info, Author's Notes, Worlds and how the game treats each part](#remember--world-info--author-s-notes--worlds-and-how-the-game-treats-each-part)
+  * [Author's Notes specifics](#author-s-notes-specifics)
+  * [Tokenization - understanding the true limitations as well as special characters](#tokenization---understanding-the-true-limitations-as-well-as-special-characters)
+  * [Griffin vs Dragon](#griffin-vs-dragon)
+  * [On certain characters](#on-certain-characters)
+  * [World Info Formatting](#world-info-formatting)
+  * [Useful Testing Prompt](#useful-testing-prompt)
+  * [Useful Categories](#useful-categories)
+  * [Current Recommendation](#current-recommendation)
+  * [Other scenarios and scripts](#other-scenarios-and-scripts)
+  * [Special Inputs | Commands](#special-inputs---commands)
+  * [Further Discussion](#further-discussion)
+
+
 # AI Dungeon World Info Reference
 
 
