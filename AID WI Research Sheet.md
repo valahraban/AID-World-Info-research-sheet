@@ -10,7 +10,7 @@
   * [Useful Categories](#useful-categories)
   * [Current Recommendation](#current-recommendation)
   * [Other scenarios and scripts](#other-scenarios-and-scripts)
-  * [Special Inputs | Commands](#special-inputs---commands)
+  * [Special Inputs Commands](#special-inputs-commands)
   * [Further Discussion](#further-discussion)
 
 
@@ -222,30 +222,19 @@ keys: library
 Library room: large room. EXIT: corridor (north), lounge (west), trophy room (southeast). FEATURES: Bookshelves (dusty tomes, esoteric, mythology, grimoires), man-eating plant (huge), spiral staircase (to second floor), chandelier (creepy).
 ```
 
-Many sources confirm that in all versions of the AI newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. As of current version of this document `red-color` or `hair-color` for example do not seem to work as well anymore. Trying to fix this, the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even if it's against English grammar for example `verylonghair` or `platinumblondehair`. birb calls this smashing words. Combining these discoveries birb and Zaltys have had great results even on griffin with the following format (and it's subsequent update).
-
+Many sources confirm that in all versions of the AI newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. As of current version of this document `red-color` or `hair-color` for example do not seem to work as well anymore. Trying to fix this, the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even if it's against English grammar for example `verylonghair` or `platinumblondehair`. birb calls this smashing words. Combining these discoveries birb and Zaltys have had great results even on griffin with the following format.
 ```
-keys: Rick, angry wizard
-[TITLE(Rick):The angriest wizard that ever lived.
-RACE(Rick):human, wizard.
-APPEAR(Rick):old, tall, lanky, wrinkly, mullethair, verylonghair, grayhair, graybeard, messybeard.
-EYES(Rick):orangeeyes, flamingorangeeyes.
-WORN(Rick):tatteredgrayrobes, pointywizardhat.
-LACK(Rick):anyshoes.
-MENTAL(Rick):furious, loud, irritated, unstable, complaining.
-HOBBIES(Rick):shoutingatkids, breakingwands, misusingmagic.]
-```
-```
-[Ritz[SPECIES:elf.]
-Ritz[BODY:female, 24y, shortstack, soft.]
-Ritz[EYES:aquamarine, sparkling.]
-Ritz[HAIR:platinumblonde, long, ponytail, bangs.]
-Ritz[WORN:white hooded druid robes, white lace garterbelt.]
-Ritz[MENTAL:soothingsmile, clumsy, knowledgeable, airheaded, bashful.]
-Ritz[TRAITS:easily embarrassed, innocent, druid, stutteryspeech.]]
+keys: Kawakaze, Kawaka
+[Kawaka[RACE:inumusume, inumimi.]
+Kawaka[EYES:icyblue-color.]
+Kawaka[HAIR:silver-color, longhair, sidebangs.]
+Kawaka[APPEAR:akita ears, akita tail, fit, skinny, sleek, appealing collarbone.]
+Kawaka[WORN:whitedress, blackpleatedminiskirt, longkimonosleeves, blackthighhighs.]
+Kawaka[MENTAL:kuudere, focused, concise, frigid.]
+Kawaka[TRAITS:professional, ice queen(can be melted), enjoys battle, bodyguard(to Nagato).]]
 ```
 
-There are still caveats and unknowns to this format. Original testing was done without [] but they are added here to prevent WI leaking especially on Griffin. It may be possible to remove `.` from the end of each line.`Flamingorangeeyes` and `tatteredgrayrobes` produced consistently desired results, but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. One caveat of this format is high token use. Another "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If this becomes a thing please keep making references to angry wizards or smashing words.
+The first iteration of this format was done on a character called Rick the Angriest Wizard that ever lived. With Rick we discovered traits like `flamingorangeeyes` work when smashed together. The example shown above puts every discovery and motivation behind it to use. Key followed by category and the traits makes AI very likely to mention them. Key on every line and using many lines makes the format work great even on Griffin. The character is given two keys, one for the actual name and a shorter one for the format. The race/species is defined thoroughly and afterwards the character can be given traits from a specific breed. The clothes are smashed with common color or trait followed by the cloth, something that has worked amazingly for birb. This format produces consistently desirable results with little leaking. Smashing words together is efficient but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. One caveat of this format is high token use. Another "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. The above example is 411 characters, 157 tokens so 2.62 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings).
 
 
 ## Useful Testing Prompt
@@ -259,11 +248,21 @@ It's also particularly entertaining to make the AI generate inputs for many WI t
 ## Useful Categories
 With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among different formats. Here we share some categories that have proven very effective. The useful words will be provided as a list as their use is self-explanatory. We recommend experimentation, but these words have been chosen because they felt more effective than their synonyms. There's also some peculiarity here: the AI seems to prefer plural s to the 'do-s'. APPEAR is better than APPEARS and LACK is better than LACKS. But HOBBIES and POWERS are as good if not better than their singular forms.
 
-BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME
+BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS
+
+Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
+
+Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enerprise, Enter` and use the shorter `Enter` as they key in your WI. When you mention Enterprise within the story, the AI will understand the key as referring to EVERY instance of the key used within said WI.
 
 Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger CATEGORIES. The AI picks up common traits just fine by their lonesome. TRAITS is a catch-all for when you don't need a big list on a single topic.
 
-The AI understands the concept of speech patterns and accent to some degree. There is no consistent method of activating it yet, but `SPEECH:` is one working category. `WORDING:` seems to work too. Writing style theme in author's notes can also give characters accent. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes).
+The AI understands the concept of speech patterns and accent to some degree. ~~There is no consistent method of activating it yet, but `SPEECH:` is one working category. `WORDING:` seems to work too.~~ Actually, `TRAITS:` is even better for this purpose, but remember to keep the most important trait first in your list. Writing style theme in author's notes can also give characters accent. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica. Below is a sample Zalty provided with the WI `Zack:[Male human. TRAITS: surfer, heavy accent(Jamaica).]`
+```
+QUOTES FROM ZACK:
+"Zis is a really bad time to be messin wit me mon!"
+"The waves, the wind and the sky, zey are all one like you and I, man."
+"I hope dat you don't mind some reggae music, man."
+```
 
 
 ## Current Recommendation
@@ -283,7 +282,7 @@ Scripts fall outside of the scope of this document as they can only be inserted 
 https://github.com/Zynj-git/AIDungeon
 
 
-## Special Inputs | Commands
+## Special Inputs Commands
 What are world infos if you can't utilize them? Here are some interesting and recommended `inputs` discovered by the community. A lot of them work in conjunction with objects you've defined into WI. If an input has a field surrounded by <> you don't need to type those container characters into AID. `Author's Note:` can also be used as an input to have the AI generate something interesting for you.
 List of useful A/N: words, link may go down in the future https://justpaste.it/9ofj1
 
@@ -341,8 +340,6 @@ List of useful A/N: words, link may go down in the future https://justpaste.it/9
 - This scene had the following effects on you for the following reasons:
 - Detailed/Verbose/Poetic Description ():
 - P.S./P.S.A.
-
-You will come to see following the advice of this document that () and : are really useful characters when utilized correctly.
 
 
 ## Further Discussion
