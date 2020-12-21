@@ -222,19 +222,9 @@ keys: library
 Library room: large room. EXIT: corridor (north), lounge (west), trophy room (southeast). FEATURES: Bookshelves (dusty tomes, esoteric, mythology, grimoires), man-eating plant (huge), spiral staircase (to second floor), chandelier (creepy).
 ```
 
-Many sources confirm that in all versions of the AI newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. As of current version of this document `red-color` or `hair-color` for example do not seem to work as well anymore. Trying to fix this, the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even if it's against English grammar for example `verylonghair` or `platinumblondehair`. birb calls this smashing words. Combining these discoveries birb and Zaltys have had great results even on griffin with the following format.
-```
-keys: Kawakaze, Kawaka
-[Kawaka[RACE:inumusume, inumimi.]
-Kawaka[EYES:icyblue-color.]
-Kawaka[HAIR:silver-color, longhair, sidebangs.]
-Kawaka[APPEAR:akita ears, akita tail, fit, skinny, sleek, appealing collarbone.]
-Kawaka[WORN:whitedress, blackpleatedminiskirt, longkimonosleeves, blackthighhighs.]
-Kawaka[MENTAL:kuudere, focused, concise, frigid.]
-Kawaka[TRAITS:professional, ice queen(can be melted), enjoys battle, bodyguard(to Nagato).]]
-```
+Many sources confirm that in all versions of the AI newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. As of current version of this document `red-color` or `hair-color` for example do not seem to work as well anymore. Trying to fix this, the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even if it's against English grammar for example `verylonghair` or `platinumblondehair`. birb calls this smashing words. With this discovery even traits like `flamingorangeeyes` are possible to get out consistently. birb is still experimenting and undergoing revision on his format, because while preliminary results were good, they broke on other scenarios.
 
-The first iteration of this format was done on a character called Rick the Angriest Wizard that ever lived. With Rick we discovered traits like `flamingorangeeyes` work when smashed together. The example shown above puts every discovery and motivation behind it to use. Key followed by category and the traits makes AI very likely to mention them. Key on every line and using many lines makes the format work great even on Griffin. The character is given two keys, one for the actual name and a shorter one for the format. The race/species is defined thoroughly and afterwards the character can be given traits from a specific breed. The clothes are smashed with common color or trait followed by the cloth, something that has worked amazingly for birb. This format produces consistently desirable results with little leaking. Smashing words together is efficient but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. One caveat of this format is high token use. Another "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. The above example is 411 characters, 157 tokens so 2.62 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings).
+During testing some discoveries were made. Smashing words together is efficient but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. One caveat of the format birb used is high token use. A "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If you encounter the AI shortening names excessively while using Caveman, you can start each newline with an empty whitespace ` ` to change how the name tokenizes.
 
 
 ## Useful Testing Prompt
@@ -248,7 +238,7 @@ It's also particularly entertaining to make the AI generate inputs for many WI t
 ## Useful Categories
 With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among different formats. Here we share some categories that have proven very effective. The useful words will be provided as a list as their use is self-explanatory. We recommend experimentation, but these words have been chosen because they felt more effective than their synonyms. There's also some peculiarity here: the AI seems to prefer plural s to the 'do-s'. APPEAR is better than APPEARS and LACK is better than LACKS. But HOBBIES and POWERS are as good if not better than their singular forms.
 
-BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS
+BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT
 
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
 
@@ -266,7 +256,7 @@ QUOTES FROM ZACK:
 
 
 ## Current Recommendation
-Here I try to suggest what WI format is most stable (providing predictable, consistent and high quality outputs) recently. This section is subject to heavy and frequent changes. The community is still experimenting with all of the above data. Most recent Zaltys which can always be found on the official AID Discord is considered stable. birb's examples also provide very stable results. Caveman is especially good for published scenarios where players may want to add their own WI. Recent research on JSON shows it may be a red herring; the AI forms outputs based on grammatical associations. Meaning key immediately followed by category and traits is optimal for any format. JSON doesn't do anything 'different' to produce better results. Continue writing JSON if you like it, but don't feel compelled to invest in it. Alternatively, use the online worldbuilder to automatically output Zaltys or JSON for you. The dev(uusu) is consistently pushing new features and taking feedback/requests on his project too. Link to his online app again: https://aid-world-builder.ey.r.appspot.com
+Here I try to suggest what WI format is most stable (providing predictable, consistent and high quality outputs) recently. This section is subject to heavy and frequent changes. The community is still experimenting with all of the above data. Most recent Zaltys which can always be found on the official AID Discord is considered stable. Caveman is stable and especially good for published scenarios where players may want to add their own WI. Onyx formats should be used to concepts they are applicable to.	 Recent research on JSON shows it may be a red herring; the AI forms outputs based on grammatical associations. Meaning key immediately followed by category and traits is optimal for any format. JSON doesn't do anything 'different' to produce better results. Continue writing JSON if you like it, but don't feel compelled to invest in it. Alternatively, use the online worldbuilder to automatically output Zaltys or JSON for you. The dev(uusu) is consistently pushing new features and taking feedback/requests on his project too. Link to his online app again: https://aid-world-builder.ey.r.appspot.com
 
 Here is what one very opinionated user from the Discord has to say on the formats:
 ```
@@ -293,6 +283,7 @@ List of useful A/N: words, link may go down in the future https://justpaste.it/9
 - Your POV:
 - Description of x:
 - X described by Y:
+- Do mode >examine/inspect X
 - Current scene as described by [author]/[writing style]
 - [character]'s secrets:
 - If only [character] knew
