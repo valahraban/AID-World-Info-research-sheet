@@ -243,7 +243,7 @@ BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE,
 
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
 
-Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enerprise, Enterpp` and use the shorter `Enter` as they key in your WI. This works better if the small key is a substring of the long name. You also want to use a substring that isn't easily confused with other words as is with this example.
+Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enterprise, Enterp` and use the shorter `Enterp` as they key in your WI. This works better if the small key is a substring of the long name. You also want to use a substring that isn't easily confused with other words as is with this example.
 
 Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger CATEGORIES. The AI picks up common traits just fine by their lonesome. TRAITS is a catch-all for when you don't need a big list on a single topic.
 
