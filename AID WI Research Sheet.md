@@ -226,13 +226,14 @@ Many sources confirm that in all versions of the AI newlines (pressing enter) is
 
 During testing some discoveries were made. Smashing words together is efficient but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you smash words together. For example `catears` gets tokenized as ca|tear|s. One caveat of the format birb used is high token use. A "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If you encounter the AI shortening names excessively while using Caveman, you can start each newline with an empty whitespace ` ` to change how the name tokenizes.
 
-
-## Useful Testing Prompt
-The following is the testing scenario prompt birb has had some of his best WI testing results on. Before you reference the WI, you have to produce at least two outputs from the AI so you get GPT-3 results. You may alter these outputs for higher quality writing. Please do modify and form your own version of it. The trick is removing 'you' the main character from the story. God is only used as an easy stand-in. 
+During testing we discovered characters can be forced to wear certain outfits with complete consistency. This format needs at least 2 WI the character being dressed and the custom outfit. This theory could be applied for customizing the appearance of any object in your game world. Example.
 ```
-You are a God. You are omniscient and omnipotent. You don't interact with the world you have created, but you love watching it from afar. You use a crystal ball to view different characters and events unfold in the world below. As usual, you spend your time viewing your creation. You gaze through your crystal ball.
+Lillie:[Human female. Her eyes are blue. Her hair is blonde. Her hairstyle is long twintails. WORN:{Nightfall Raiment}.]
 ```
-It's also particularly entertaining to make the AI generate inputs for many WI this way using the format `you created X this way because (Y reasons)`. Do bear in mind this is repetitive. 
+```
+[The Nightfall Raiment is a one-piece halterneck dress. The dress is in gothic lolita fashion. The Raiment has a black and white color-scheme. The Raiment has detached white sleeves and shows off the wearer's armpits. The bust and frills of the relatively long nightfall raiment dress are white while the rest of it is black. Kneehigh black leather boots are a part of the raiment.]
+```
+When you examine Lillie in the story and have the AI describe what she is wearing you will get an output like the following very consistently: `She's wearing a nightfall raiment. The dress consists of detached white sleeves and shows the armpits. The bust and the frills of the dress are white while the rest is black. Kneehigh boots are a part of the outfit.` When tested on other outfits >the clothing consists of | was a very good input to continue from for the story. This was demonstrated on Discord, but pictures will not be included as part of this document. The above example combines almost-Caveman with Zaltys. If you use a style like this, you must make it conform to your writing style. birb always wants the AI to describe the traits of the characters in the format `Her eyes are X color. Her hair is Y color in Z style.` This is why this type of WI works for his scenarios. Also, if the AI starts describing the clothing of the character before you get to ask what the character is wearing, it will usually output the wrong set of clothes. First the story must mention the name of the outfit, then it will use the correct WI to describe the clothes.
 
 
 ## Useful Categories
@@ -242,7 +243,7 @@ BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE,
 
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
 
-Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enerprise, Enter` and use the shorter `Enter` as they key in your WI. When you mention Enterprise within the story, the AI will understand the key as referring to EVERY instance of the key used within said WI.
+Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enerprise, Enterpp` and use the shorter `Enter` as they key in your WI. This works better if the small key is a substring of the long name. You also want to use a substring that isn't easily confused with other words as is with this example.
 
 Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger CATEGORIES. The AI picks up common traits just fine by their lonesome. TRAITS is a catch-all for when you don't need a big list on a single topic.
 
@@ -337,5 +338,5 @@ List of useful A/N: words, link may go down in the future https://justpaste.it/9
 As mentioned before AID is in constant development. Recently WI testing was disturbed, because updates to safe mode and tackling a long-standing caching bug caused issues with the AI especially on Griffin. As of current revision the dev team says this particular bug is now confined to server side and shouldn't affect new games the same way. Regardless, in the future situations might present where development makes experimentation slower. Make sure to export and catalog your WI so you can test them out when the AI feels stable enough to your liking.
 
 CREDITS: Everyone whose name has been mentioned here (you guys rock) and birb for compiling this. Everyone who shares their experiments and results to the general public.
-4chan has threads and guides too. Go there if you want their guides and sources, some of it is good especially for NSFW. The special inputs section especially benefited from their work. Happy Holidays.
+4chan has threads and guides too. Go there if you want their guides and sources, some of it is good especially for NSFW. The special inputs section especially benefited from their work. Merry Christmas (or whatever holiday you celebrate).
 All this information is free, community provided and now AGPLv3 licensed due to being hosted on github.
