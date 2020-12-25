@@ -84,7 +84,10 @@ An interesting thing to mention here - Your first prompt and the response to it 
 
 ## On certain characters
 Functionalities of certain characters have been found and described thanks to the development of `world info formats` but it's useful to discuss these beforehand. Their functionality can be somewhat verified through the GPT-2 tokenizer Colab. Some characters connect. The most important of these is -. `hair-color` or `red-color` are words that gets better results for colorization than other methods (changed as of December, use redcolor or redhue instead). `somecolor-hue` doesn't work as well. Other characters have been tried for connecting words, but few show as much power. AID recognizes many separators. Letters , '' "" ; / | all separate words and concepts in rough degree of power. You would want to separate members of a list with , like in common grammar, but ; might be better for separating categories. () {} [] <> : are connectors. You can put lists inside all of them or use : to create a logical implication. For example it might be preferred to do a list like `MENTAL:[happy, go-lucky, energetic];` and define logical connections like AGE(25y) or sword(polished) the AI usually recognizes that the thing you're describing is 25 years old or that the sword is polished. Enclosures can be interchanged, but these are two commonly seen and powerful methods.
-ALL OF THE ABOVE IS RELATIVE AND CAN BE CHANGED IF YOU TRAIN YOUR STORY BY USING THESE CHARACTERS DIFFERENTLY IN YOUR WI
+
+< and > are special characters. You may have noticed in do or say mode the AI always prefaces your inputs in the story with `>`. In AID the character is reserved for this purpose. You may have noticed that the AI *never* outputs < or > on its own. Since the information inside WI is handled differently we can still use any unicode letter inside it. In WI this can be used to our benefit as we will see when we discuss the Zaltys format.
+
+The GPT is an autoregressive transformer language model trained on English writing. Any particularities AID are have due to unique parameters set by the dev or habits learned from big datasets like fanfiction.net Characters like ! and ? aren't useful or interesting. They are only useful in conveying meanings they have within natural conversational English where they most often are employed in prose. The GPT isn't magic and it wasn't trained on programming languages.
 
 
 ## World Info Formatting
@@ -132,9 +135,7 @@ Many users enjoyed experimenting with his early examples but Zaltys has since re
 ```
 Aarakocra:[Avian/150cm/42kg;APPEAR<Aarakocra>:Slim/feather-covered(brown-hue or white-hue/♂:colorful)/feathered head/2-eyes(keen)/tail-feathers/2-wings(big wingspan)/digitigrade legs(2/bird-feet/talons)/2-hands(clawed/5-fingers)/hooked beak(sharp);LACK<Aarakocra>: hair/ears/arms/breasts;MENTAL:Wise/honest/calm/benevolent;TRAITS<Aarakocra>:Prefer flying/lowtech tribal/hunters/scouts/adventurers(rare/rangers/druids)/no ownership/weapons(thrown)/live in mountains(isolationist)/claustrophobic.]
 ```
-Based on experiments in these and similar formats, the community has found all-caps categories are good. APPEAR/BODY, WORN, MENTAL and TRAITS cover the main bases for most characters. LOOKS can also be used to replace APPEAR, especially if you're defining an object. SPEECH and "" can be used to reinforce speaking patterns, albeit with some inconsistency. `mute` in traits also works if going for a mute character. LACKS can be used to denote a thing the character doesn't have but it isn't as consistent as other categories. LIKES/DISLIKES are good. Later on in the document we include a long list of CATEGORIES. Zaltys likes to write a lot of species from different series. He has written on discord that his most used categories are APPEAR, LACK, GRAB, MOV, MENTAL and TRAITS. For defining a type of character all these have purpose. Appear is self explanatory. Lack has to do what the characters can and can't do - a lamia without legs shouldn't be able to walk. Grab is their preferred way of interacting through appendages, a bird would use it's beak or talons, the lamia would use their hands or tail. Mov works for movement. Lamia would crawl/slither on top of their tails, slimes ooze other characters may do more imaginative things. Mental is traits of the mind, traits is more intrinsic physical or sensory traits.
-
-As of resent testing, there can be variant categories of defining what a character is wearing or has on their person. Citation from Zaltys: `Based on a brief test, I'd say that INV and EQUIP are both superior to WORN. EQUIP seems to very slightly beat INV, but that might just be random chance. Needs more testing.` INV and EQUIP work similarly and can be used to define the types of equipment a RPG character would carry on top of the usual stuff like clothes.
+Based on experiments in these and similar formats, the community has found all-caps categories are good. APPEAR/BODY, WORN, MENTAL and TRAITS cover the main bases for most characters. LOOKS can also be used to replace APPEAR, especially if you're defining an object. SPEECH and "" can be used to reinforce speaking patterns, albeit with some inconsistency. `mute` in traits also works if going for a mute character. LACKS can be used to denote a thing the character doesn't have but it isn't as consistent as other categories. LIKES/DISLIKES are good. Later on in the document we include a long list of CATEGORIES. Zaltys likes to write a lot of species from different series. He has written on discord that his most used categories are APPEAR, LACK, GRAB, MOV, MENTAL and TRAITS. For defining a type of character all these have purpose. Appear is self explanatory. Lack has to do what the characters can and can't do - a lamia without legs shouldn't be able to walk. Grab is their preferred way of interacting through appendages, a bird would use it's beak or talons, the lamia would use their hands or tail. Mov works for movement. Lamia would crawl/slither on top of their tails, slimes ooze other characters may do more imaginative things. Mental is traits of the mind, traits is more intrinsic physical or sensory traits. INV and EQUIP work similarly to one another as alternatives to WORN and can be used to define the types of equipment a RPG character would carry on top of the usual stuff like clothes. WORN is better at handling style like `goth` clothing.
 
 As Zaltys keeps refining and changing up his format this document will update the latest version he has pinned on Discord. His most up to date revision (universal & condensed version for griffin) looks like this:
 ```
@@ -143,6 +144,25 @@ Mike Haggar:[Human(male, 202cm, 140kg). APPEARANCE<Haggar>:Stocky, muscular, big
 ```
 Mike Haggar:[Human(male|202cm|140kg);APPEAR<Haggar>:Stocky/muscular/thick arms/hair(brown)/mustache(brown);WORN:Eyeglasses(at work)/shoes/pants(green);MENTAL<Haggar>:Just/hands-on/upbeat/incorruptible;TRAITS<Haggar>:Born 1943/from Final Fight and Street Fighter games/ex pro-wrestler/grew up on streets(in Metro City)/mayor(Metro City)/fought Mad Gear & Skull Cross gangs/fights gangs/"It's my job to keep Metro City safe!"/loves curry rice/friends(Cody,Guy,Carlos(Brazilian))/daughter(Jessica).]
 ```
+The AI is good at overwriting preset associations as long as your WI works. On Zaltys format the community has succeeded in writing interesting recipes. For some reason the AI seems very good at describing recipes. This is another example of an indicator helping the AI understand WI better. Example from Mono:
+```
+Siren:[A popular drink;DESCRIPT<Siren>:Sapphire-colored/silvery bubbles/sprig of mint/smells alcoholic/tastes like rusty metal;EFFECTS<Siren>:Inspires drinker to dance.]
+
+> You describe the siren to Severn.
+"It's a drink," you say, "a sapphire-colored liquid with silvery bubbles that smells of alcohol and tastes like rusty metal."
+"Sounds poisonous," says Severn.
+"No. Not at all. It's delicious."
+"You've had it before?" asks Severn.
+You nod.
+
+> You tell him about the side effects.
+"It inspires people to dance," you say, "my sides hurt after I've had it."
+"What else?" asks Severn.
+"That's it," you say.
+"That's all of it?" asks Severn, "no other effects?"
+You shake your head.
+```
+
 
 Next we take a detour to kimtaengsshi's testing before going into formats borne of experimentation. Results like these are a big motivator for being so particular with WI. He tested a bunch of WI-formats from the discord and analyzed their tokens to characters ratio with the following results:
 
@@ -245,7 +265,7 @@ Now that the category `EQUIP:` is confirmed working with clothes and other inven
 ## Useful Categories
 With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among different formats. Here we share some categories that have proven very effective. The useful words will be provided as a list as their use is self-explanatory. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. There's also some peculiarity here: the AI seems to prefer plural s to the 'do-s'. APPEAR is better than APPEARS and LACK is better than LACKS. But HOBBIES and POWERS are as good if not better than their singular forms.
 
-BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE, EFFECT (the two former are for character status like being dirty or sleepy).
+BODY, APPEAR (APPE), LOOKS, WORN (STYLE/FASHION), MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE/EFFECT(character status like being dirty, sleepy or ill).
 
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
 
@@ -263,7 +283,7 @@ QUOTES FROM ZACK:
 
 
 ## Current Recommendation
-Here I try to suggest what WI format is most stable (providing predictable, consistent and high quality outputs) recently. This section is subject to heavy and frequent changes. The community is still experimenting with all of the above data. Most recent Zaltys which can always be found on the official AID Discord is considered stable. Caveman is stable and especially good for published scenarios where players may want to add their own WI. Onyx formats should be used to concepts they are applicable to.	 Recent research on JSON shows it may be a red herring; the AI forms outputs based on grammatical associations. Meaning key immediately followed by category and traits is optimal for any format. JSON doesn't do anything 'different' to produce better results. Continue writing JSON if you like it, but don't feel compelled to invest in it. Alternatively, use the online worldbuilder to automatically output Zaltys or JSON for you. The dev(uusu) is consistently pushing new features and taking feedback/requests on his project too. Link to his online app again: https://aid-world-builder.ey.r.appspot.com
+Here I try to suggest what WI format is most stable (providing predictable, consistent and high quality outputs) recently. This section is subject to heavy and frequent changes. The community is still experimenting with all of the above data. Most recent Zaltys which can always be found on the official AID Discord is considered stable. Caveman is stable and especially good for published scenarios where players may want to add their own WI. Onyx formats should be used to concepts they are applicable to.	 Recent research on JSON shows it may be a red herring; the AI forms outputs based on grammatical associations. Meaning key immediately followed by category and traits is optimal for any format. JSON doesn't do anything 'different' to produce better results. Continue writing JSON if you like it, but don't feel compelled to invest in it. Alternatively, use the online worldbuilder to automatically output Zaltys or JSON for you. The dev(uusu) is consistently pushing new features and taking feedback/requests on his project too. Keep in mind the online worldbuilder uses javascript and stores information on a server if those things concern you (but remember AID the game does this too). Link to uusu's online app again: https://aid-world-builder.ey.r.appspot.com
 
 Here is what one very opinionated user from the Discord has to say on the formats:
 ```
