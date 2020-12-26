@@ -1,3 +1,5 @@
+# AI Dungeon World Info Reference
+
 - [AI Dungeon World Info Reference](#ai-dungeon-world-info-reference)
   * [Preamble](#preamble)
   * [Remember, World Info, Author's Notes, Worlds and how the game treats each part](#remember--world-info--author-s-notes--worlds-and-how-the-game-treats-each-part)
@@ -11,9 +13,6 @@
   * [Other scenarios and scripts](#other-scenarios-and-scripts)
   * [Special Inputs Commands](#special-inputs-commands)
   * [Further Discussion](#further-discussion)
-
-
-# AI Dungeon World Info Reference
 
 
 ## Preamble
@@ -47,8 +46,8 @@ I just tried "theme" for that yesterday and it seems to work too.
 
 
 ## Author's Notes specifics
-Let's discuss `A/N:` which is sold as a premium feature - the way it automatically works is extremely convenient. But all it really does is insert a line of text into the input the AI takes `Author's Note: Some details like mood about this story` and has a short character limit of 200. Discovering this special input and how heavily it affected output is why it was added. But even as a free user, you can manually add Author's Notes in your story. With manual A/Ns you have much more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Editor's Note is another interesting take on the concept by the community. For paid users there exists a script that can replace the paid `A/N:` with an `E/N:`. Research suggests that A/N: can be used to reinforce the style of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. The following is a longer A/N: using some tricks and reinforcing style.
-`[Author's note: This novel has no plot twists. Author: H. P. Lovecraft. Writing style: narrative, in the style of H. P. Lovecraft. Genre: Lovecraftian horror. The pacing is deliberate and the writing pays vivid attention to detail.]`
+Let's discuss `A/N:` which is sold as a premium feature - the way it automatically works is extremely convenient. But all it really does is insert a line of text into the input the AI takes `Author's Note: Some details like mood about this story` and has a short character limit of 200. Discovering this special input and how heavily it affected output is why it was added. But even as a free user, you can manually add Author's Notes in your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Editor's Note is another interesting take on the concept by the community. For paid users there exists a script that can replace the paid `A/N:` with `E/N:`. Research suggests that A/N: can be used to reinforce the style (rather style in general) of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
+`[Author's note: This novel is esoteric and descriptive. Author: Terry Pratchett. Writing style:  Metafiction, in the style of Deadpool. Genre: Witty, talkative.]`
 
 Switching focus is easy, but may require extra use of alter afterwards to make sure the AI understands what you want. This style of A/N: is best used manually written into the story (although you can change your global A/N whenever you want - this being another recommended trick).
 `[Author's note: The story now follows Mary's perspective.]` or `[Author's note: We now switch focus on Mary.]`
@@ -60,8 +59,16 @@ An example of output generated with `strikingly elegant style`:
 You look around.
 The sun softly kisses your exposed skin with her rays. You gently bask in her glory, raising your face towards her. Below, the plants softly sway in a gentle breeze as though worshipping her as well.
 ```
-Short list of useful A/N words: AUTHOR, WRITING STYLE (Writing style:grandiose), GENRE, THEME
+Short list of useful A/N words: AUTHOR, WRITING STYLE (Writing style:grandiose), GENRE, THEME, STORYLINE
 A/N: understands JSON too. So it's possible to do `A\N: [{"writing style":["descriptive", "elegant", "gritty"], "wording":["archaic", "Cockney accent"], "current state":"indoors"}]
+
+Some users have been experimenting with A/N for doctoring output and specifically managing randomness. Lower randomness is more consistent and predictable as it makes the AI's predictions more deterministic, but this comes at the expense of it feeling 'more dumb', hence higher randomness being desirable for verbosity. According to CricAIcilian `This novel has no plot twists, it follows a linear storyline.` is a very effective phrase to include in A/N to increase consistency. This way his stories can stay on track even at 1.3 randomness. He finds that `Writing style:` and `Genre:` are useful categories to use most of the time. Writing style improves writing, genre works like a mini-prompt. A user named Erin has written and shared cool stories at 1.4 randomness using similar tricks. More useful notes on writing A/N from Cris:
+```
+"Author:" is added when you want to do a convincing real author (combined with "Writing style: literary, author-name.) "Setting:" "Theme:" "Subject:" have their uses, depends on the content. "Title:" works at least on LOTR and "gone with the wind". Didn't test other titles. Famous ones should work. Has to be a real title, "star wars" is not a title, it's a movie franchise. The writing styles, most don't work on Griffin.
+Only the descriptive-branch works on Griffin. "descriptive" works, "narrative" and another one I can't remember (according to Zaltys) also works on Griffin.
+```
+
+Reminder - while less effective, non-premium users can benefit from emulating Author's Notes on Griffin! A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
 
 
 ## Tokenization - understanding the true limitations as well as special characters
@@ -129,7 +136,7 @@ Zaltys 🐍#5362 has developed many interesting formats and motivated the commun
 keys: Deekin, Scalesinger, Deekin Scalesinger
 Deekin Scalesinger:[Kobold/♂/<72cm>;ORIGIN<Deekin>:Ally from Neverwinter Nights games(CRPGs);APPEAR:Reptilian/orange-scaled/horns(nubs)/snout/legs(2)/eyes(brown/2)/arms(2)/tail(scaly)/wings(2/red/scaly);LACK:hair/ears;WORN:Bard clothes;MENTAL:Pessimist/creative/polite/kind/friendly/self-conscious;TRAITS<Deekin>:Musician/poet/bard/writer/raspy voice/hero/sorcerer/plays lute/beat Mephistopheles/bard-magic/former servant(of dragon:Tymofarrar)/"Yes, Deekin very kobold, last Deekin look in mirror."]
 ```
-Here we see many adaptations seen today. Various enclosures, removal of whitespace and other excess symbols. Having `."]` close to the end. Experiments from Zaltys and friends has shown that Griffin works the best if the character `.` is used close to the end of the WI. 
+Here we see many adaptations seen today. Various enclosures, removal of whitespace and other excess symbols. Having `."]` close to the end. Experiments from Zaltys and friends has shown that Griffin works the best if the character `.` is used close to the end of the WI. The use of names inside WI bears mentioning here. Recently the community has noticed the AI has a tendency of creating random nicknames off certain names. Especially `Zirc` tends to turn into Zirbles or `Maverick` tends to turn into Mav. This mangling of names can be prevented by closing the name/key inside a pair of `''`. The apostrophe specifically is a good character for this. It is preferable to avoid doing this when you can, use this trick when you notice the AI is mangling your names. Zaltys examples are usually based on names the AI recognizes well enough hence them not featuring apostrophes. 
 
 Many users enjoyed experimenting with his early examples but Zaltys has since refined his format. The following is more recent variant of Zaltys with the D&D race Aarakocra.
 ```
@@ -258,9 +265,10 @@ Lillie:[Human female. Her eyes are blue. Her hair is blonde. Her hairstyle is lo
 ```
 [The Nightfall Raiment is a one-piece halterneck dress. The dress is in gothic lolita fashion. The Raiment has a black and white color-scheme. The Raiment has detached white sleeves and shows off the wearer's armpits. The bust and frills of the relatively long nightfall raiment dress are white while the rest of it is black. Kneehigh black leather boots are a part of the raiment.]
 ```
-When you examine Lillie in the story and have the AI describe what she is wearing you will get an output like the following very consistently: `She's wearing a nightfall raiment. The dress consists of detached white sleeves and shows the armpits. The bust and the frills of the dress are white while the rest is black. Kneehigh boots are a part of the outfit.` When tested on other outfits >the clothing consists of | was a very good input to continue from for the story. This was demonstrated on Discord, but pictures will not be included as part of this document. The above example combines almost-Caveman with Zaltys. If you use a style like this, you must make it conform to your writing style. Zaltys calls the uncatergorized part of his format the indicator. This is usually details like sex species and age. In the Lillie example species, sex and colors were indicators. birb always wants the AI to describe the traits of the characters in the format `Her eyes are X color. Her hair is Y color in Z style.` This is why this type of WI works for his scenarios. Also, if the AI starts describing the clothing of the character before you get to ask what the character is wearing, it will usually output the wrong set of clothes. First the story must mention the name of the outfit, then it will use the correct WI to describe the clothes.
+When you examine Lillie in the story and have the AI describe what she is wearing you will get an output like the following very consistently: `She's wearing a nightfall raiment. The dress consists of detached white sleeves and shows the armpits. The bust and the frills of the dress are white while the rest is black. Kneehigh boots are a part of the outfit.` When tested on other outfits >the clothing consists of | was a very good input to continue from for the story. This was demonstrated on Discord, but pictures will not be included as part of this document. The above example combines almost-Caveman with Zaltys. If you use a style like this, you must make it conform to your writing style. Zaltys calls the uncategorized part of his format the indicator. This is usually details like sex species and age. In the Lillie example species, sex and colors were indicators. birb always wants the AI to describe the traits of the characters in the format `Her eyes are X color. Her hair is Y color in Z style.` This is why this type of WI works for his scenarios. Also, if the AI starts describing the clothing of the character before you get to ask what the character is wearing, it will usually output the wrong set of clothes. First the story must mention the name of the outfit, then it will use the correct WI to describe the clothes.
 
 Now that the category `EQUIP:` is confirmed working with clothes and other inventory it would be possible to use the above example to come up with custom named weapons for your characters, write WI for the custom weapons and have the AI invoke their traits reliably.
+
 
 ## Useful Categories
 With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among different formats. Here we share some categories that have proven very effective. The useful words will be provided as a list as their use is self-explanatory. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. There's also some peculiarity here: the AI seems to prefer plural s to the 'do-s'. APPEAR is better than APPEARS and LACK is better than LACKS. But HOBBIES and POWERS are as good if not better than their singular forms.
