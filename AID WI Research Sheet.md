@@ -1,6 +1,6 @@
-# AI Dungeon World Info Reference
+# AI Dungeon World Info Research & Reference
 
-- [AI Dungeon World Info Reference](#ai-dungeon-world-info-reference)
+- [AI Dungeon World Info Research & Reference](#ai-dungeon-world-info-research-&-reference)
   * [Preamble](#preamble)
   * [Remember, World Info, Author's Notes, Worlds and how the game treats each part](#remember--world-info--author-s-notes--worlds-and-how-the-game-treats-each-part)
   * [Author's Notes specifics](#author-s-notes-specifics)
@@ -377,5 +377,6 @@ CREDITS: Everyone whose name has been mentioned here (you guys rock) and birb fo
 
 4chan has threads and guides too. Go on /vg/ and search for /aidg/ if you want their guides and sources, some of it is good especially for NSFW. The special inputs section especially benefited from their work. Prompts collections exist online but are not provided here due to their NSFW nature. Below is a link to the Anonymous resources & guides, please cross-reference their work with ours:
 https://rentry.co/ResourcesAndGuides
+https://guide.aidg.club
 
 All this information is free, community provided and now AGPLv3 licensed due to being hosted on github. Happy New Year.
