@@ -376,7 +376,6 @@ As mentioned before AID is in constant development. WI testing was difficult in 
 CREDITS: Everyone whose name has been mentioned here (you guys rock) and birb for compiling this. Everyone who shares their experiments and results to the general public. aidiscord-wiki and the Discord itself which can be found through links.
 
 4chan has threads and guides too. Go on /vg/ and search for /aidg/ if you want their guides and sources, some of it is good especially for NSFW. The special inputs section especially benefited from their work. Prompts collections exist online but are not provided here due to their NSFW nature. Below is a link to the Anonymous resources & guides, please cross-reference their work with ours:
-https://rentry.co/ResourcesAndGuides
 https://guide.aidg.club
 
 All this information is free, community provided and now AGPLv3 licensed due to being hosted on github. Happy New Year.
