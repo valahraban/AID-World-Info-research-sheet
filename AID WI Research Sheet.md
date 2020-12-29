@@ -1,4 +1,25 @@
-# AI Dungeon World Info Research & Reference
+# AI Dungeon World Info Research and Reference
+- [AI Dungeon World Info Research and Reference](#ai-dungeon-world-info-research-and-reference)
+  * [Preamble](#preamble)
+  * [Recommendations or the TLDR](#recommendations-or-the-tldr)
+  * [Remember WorldInfo AuthorsNotes Worlds and how the game treats each part](#remember-worldinfo-authorsnotes-worlds-and-how-the-game-treats-each-part)
+  * [Griffin vs Dragon](#griffin-vs-dragon)
+  * [Tokenization - understanding limitations and special characters](#tokenization---understanding-limitations-and-special-characters)
+  * [On certain characters](#on-certain-characters)
+  * [Authors Notes specifics](#authors-notes-specifics)
+  * [World Info and Formats](#world-info-and-formats)
+    + [JSON Format](#json-format)
+    + [Zaltys Formats](#zaltys-formats)
+    + [Useful Categories](#useful-categories)
+    + [Monky Caveman Format](#monky-caveman-format)
+    + [Onyx Formats](#onyx-formats)
+    + [birb research](#birb-research)
+    + [Misc Tips](#misc-tips)
+    + [character-to-token ratio tests](#character-to-token-ratio-tests)
+    + [Worlds Specific Tips](#worlds-specific-tips)
+  * [Other Scenarios and Scripts](#other-scenarios-and-scripts)
+  * [Special Inputs Commands](#special-inputs-commands)
+  * [Ending Notes](#ending-notes)
 
 
 ## Preamble
@@ -18,7 +39,7 @@ From CrisAIcilian: Zaltys is better in every way, it's actually designed for its
 ```
 
 
-## Remember, World Info, Author's Notes, Worlds and how the game treats each part
+## Remember WorldInfo AuthorsNotes Worlds and how the game treats each part
 Remember was the first of these features implemented in the game. This segment goes into technical details so you may want to skip it if you're here for World Info formats, but it is very important if you want to understand AID as a tool and it's limits. Grossly simplified remember is a world info that gets constantly fed to the game after your every input. World info is like remember, but has user-defined key-words `keys` that after getting triggered make the game use them as part of the context. Keys use string-matching which will be important later. Having this element of context makes world info less restricting to work with because when you're happy with it you can forget and leave it while things in remember require more frequent attention and updates as the story progresses. History means old prompts written by you and the AI. The order the AI reads your input is in:
 
 + Summary										| Experimental feature to help devs
@@ -46,7 +67,7 @@ AID contains multiple machine learning models the primary ones being Griffin and
 An interesting thing to mention here: your first prompt and the response to it by the AI are relatively unimportant as they are generated in *GPT-2*. Detailed WI is more important as the AI starts outputting quality content. With AID you should focus building on success or an interesting response to your input. Also if you are experimenting with new WI formats, keywords and categories, you might want to do the experimentation after 2 regular outputs from AID. Just make sure the writing is consistently high quality (with good use of alter) and the following output should reward you for it. This is especially true when you're testing new WI which you should do in a testing scenario before adding it to the main scenarios you play. Many times in Discord we've found when users had problems, they had past inputs in history or typos in the WI that were confusing the AI. Note: we are not telling users to doctor their testing data, we're telling them to test thoroughly and make sure they aren't confusing the AI with flawed history.
 
 
-## Tokenization: understanding limitations and special characters
+## Tokenization - understanding limitations and special characters
 The character limitations mentioned in the previous section are ones imposed by the devs of AID. They are quite sensible, plenty for generating good stories, not bankrupting Latitude and not horribly far off from the true limitations of GPT-3 that both models now run on. For a machine learning transformer to read an input it must first be tokenized into a form the model understands. GPT-3 has a hard limit of 2048 tokens. It won't read more at once. Devs have access to 2048 tokens, the users are given 1024 per input. But as you've noticed, you have more words to work with that the AI clearly understands. Tokens are just the way data is encoded into the machine learning model; during training, common words became recognized and encoded into an efficient form, sometimes even a large word gets recognized as 1 token. From kim's research, depending on how a world info is defined, the counts average to 2-4 characters per token meaning you get to use at least double the characters of the tokens you really have hence why a commonly mentioned character limit is 2048. 
 
 A few things have been learned from experience; common words and phrases like `hello` or `25y` get treated as a single token. White spaces are special because they often get rolled into words as is grammatically correct. An uncommon word like ` Enterprise` takes 1 token with the white space while `Enterprise` takes 2 tokens. Unicode emoji like `😃` and some special symbols are expensive, they cost 2 tokens per character. As we will discuss characters like `<>` `[]` are useful for WI, but tend to have a cost ratio of 1 token. There are also rare characters that the AI hates like `ù`. Experiments have shown that longer strings of symbols like `}}}` get rolled into 1 token.
@@ -66,7 +87,7 @@ Functionalities of certain characters have been found and described thanks to th
 The GPT is an autoregressive transformer language model trained on English writing. Any particularities AID are have due to unique parameters set by the dev or habits learned from big datasets like fanfiction.net. Characters like ! and ? aren't useful or interesting. They are only useful in conveying meanings they have within natural conversational English where they most often are employed in prose. The GPT isn't magic and it wasn't trained on programming languages. The fascinating thing is algorithms and linguistic expression have many things in common by happenstance.
 
 
-## Author's Notes specifics
+## Authors Notes specifics
 Let's discuss the premium feature `A/N:` first. If you're looking to inject flavor into the AI's outputs A/N will be your first and probably most efficient stop. It is a worthwhile for the convenience, yet it's usefulness is not entirely restricted to premium users with our advice. What A/N does is  it insert a line of text into the history the AI reads e.g. `Author's Note: Some details like mood about this story.` exactly 3 newlines up. On the scenario screen it has a 150 character limit, but the in-built maximum limit is 300 characters according to kim's LMI testing and community experiences.
 
 Discovering manual Author's Note inputs during dev testing and how heavily it affected output is why it was added to the core game. Even as a free user you can manually add Author's Notes into your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Editor's Note is another interesting take on the concept by the community. For paid users there exists a script that can replace the paid `A/N:` with `E/N:`. Research suggests that A/N: can be used to reinforce writing style even of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
@@ -284,7 +305,7 @@ When you examine Lillie in the story and have the AI describe what she is wearin
 Now that the category `EQUIP:` is confirmed working with clothes and other inventory it would be possible to use the above example to come up with custom named weapons for your characters, write WI for the custom weapons and have the AI invoke their traits reliably.
 
 
-### Misc tips
+### Misc Tips
 Hunter, Lazy and other users have been working with shortened formats motivated by JSON. Originally parentheses were removed perceived as unnecessary. Early tests suggest it works just as well as proper JSON, bearing in mind the tricks discussed above. The author would recommend pursuing variants of this format for a good balance between accurate details and token use. Originally people called this pseudo-JSON, but more accurately it is pseudo-prose. Token testing shows commas and brackets work as contextual linkers just like in regular grammar.
 ```
 keys: Thea Smith
