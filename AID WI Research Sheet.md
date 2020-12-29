@@ -154,6 +154,7 @@ The many things we have learned about using JSON inside WI can be summarized wit
 + You're best off writing minified JSON because styled/linted JSON has no benefits, uses more memory space and looks weird when you paste it into WI or inside the proper JSON-file
 + In Discord community testing reduced JSON without quotation marks produced mostly similar quality output
 + Has online production tools like https://aid-world-builder.ey.r.appspot.com (thanks uusu)
+
 JSON has its uses. If you're already using it feel free to continue doing so. If it looks frightening, don't feel obliged to invest learning it. The consensus of the author and the users he cites is other formats serve specific needs better plus we now have the online world builder. 
 
 
