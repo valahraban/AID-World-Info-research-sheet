@@ -381,9 +381,13 @@ Ultimately these are academic justifications. Every time I've seen their papers,
 Think about what AID is and is officially sold as: The non-linear infinite text adventure where you choose your adventure with the application (the GPT-3 based model) being the dungeon master. Everything about that tells you it must be designed to be random (temperate in ML terms) to achieve its goal. On premium you get some limited control over this. WI writers to try to control or restrict this randomness by defining WI where certain objects are given traits the author desires to remain universal. Zynj's jsonthing has achieved this goal to a surprising degree of accuracy by overwriting the WI-location and adding new features into it. Regardless, most of AID's scripts are set up in a way to increase variability and reduce repetition while also maintaining GPT-3's natural writing aspect. Since it is a text adventure, during training heavy weight/bias was given to CYOA style sources like chooseyourstory.com(official words from devs). This can be inferred from characters like Blooded's Count Grey being such a common sight in random AID stories.
 
 Here we must borrow from and paraphrase a few public documents:
+
 http://gptprompts.wikidot.com/intro:logprobs
+
 https://github.com/cloveranon/Clover-Edition/blob/master/gpt2generator.py
+
 https://github.com/cloveranon/Clover-Edition/blob/master/config.ini
+
 https://aidungeon.featureupvote.com/suggestions/102773/repetition-penalty-similar-to-what-the-clover-edition-fork-had
 
 We go up in reverse order. Official statements confirm that the online AID features repetition penalty that was originally introduced in forks of the open source implementation. Despite being GPT-2 and basically dead Clover-Edition is featured because it has the easiest to demonstrate example of this. The `config.ini` explains roughly what the penalty does and how it can be set. Within the `gpt2generator.py` you can see the scripts that relate to repetition penalty(ctrl+f 'rep'). The benefit of this is discouraging the AI from looping. It may or may not effect retry, but you have to understand the source code(if it's available) to ascertain this. Modern AID does all of this API-side and is undocumented. The point remains that AID output generation is: Temperate, non-deterministic *and* has a repetition penalty. Ever wondered why you got your colors right on first two rerolls, then the rerolls got worse? This is likely why.
