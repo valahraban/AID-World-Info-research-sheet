@@ -18,7 +18,7 @@
     + [character-to-token ratio tests](#character-to-token-ratio-tests)
     + [Worlds Specific Tips](#worlds-specific-tips)
   * [Other Scenarios and Scripts](#other-scenarios-and-scripts)
-  * [Why user sample testing is mostly a waste of time] (#why-user-sample-testing-is-mostly-a-waste-of-time)
+  * [Why user sample testing is mostly a waste of time](#why-user-sample-testing-is-mostly-a-waste-of-time)
   * [Special Inputs Commands](#special-inputs-commands)
   * [Ending Notes](#ending-notes)
 
@@ -28,7 +28,7 @@ If you're using a text editor turn on word wrap to read this document. Perhaps t
 
 A friendly reminder: This document isn't authoritative and doesn't pretend to be so in any section. It is a compilation of the community's collective and shared experience, primarily through the official AID Discord and burrowing publicly available material from other fan-run communities. Originally it was the author's personal notes and should be treated as such. This means the evidence and advice is anecdotal and should be treated as such. Citations are shared with permission from the users. Most of them can be found as messages on Discord, but pictures will not be provided on git due to the unreliability of image hosting. Attempts have been made to explain which practices show the most promise. Everything has been repeatedly tested inside AID scenarios and the tools provided to us by developers and scripters. You will have to take the author's word on it for the peer-reviewing process. Outputs will mostly be skipped for the sake of brevity as they can be tested inside AID. 
 
-The focus of the document is being re-evaluated. In the near future a category might be added explaining why binomial testing of language transformers (by humans) is mostly a waste of time especially in the case of AID.
+OpenAI and consequently or on their own Latitude like pushing a lot of stealth updates into the back-end. As of New Years symbol heavy formats may behave inconsistently due to this. Please understand the plight of both the devs and WI enthusiasts.
 
 Special credit to kimtaengsshi for help and fact checking the technical details. This document will contain data kim has confirmed through monitoring LMI and other techniques which the author finds trustworthy. Much of this information comes from and is shared with the community-run wiki and Discord. A link to the wiki will be provided where you can also find an invite to the Discord and other useful content: https://wiki.aidiscord.cc/wiki/Main_Page
 
@@ -470,4 +470,4 @@ As mentioned before AID is in constant development and flux of change. Changes t
 4chan has threads and guides too. They have been beneficial and entertaining to the author. Go on /vg/ and search for /aidg/ if you want their guides and sources, some of it is good especially for NSFW. The special inputs section benefited greatly from their work. Prompts collections exist online but are not provided here due to their NSFW nature. Below is a link to the Anonymous resources & guides, please cross-reference their work with ours:
 https://guide.aidg.club
 
-CREDITS: Everyone whose name has been mentioned here (you guys rock), the many AID related communities and the author for compiling this. Everyone who shares their experiments and results online. Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links. Happy New Year.
+CREDITS: Everyone whose name has been mentioned here (you guys rock), the many AID related communities and the author for compiling this. Everyone who shares their experiments and results online. Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links. Is it 2021 or is 2020 continuing?
