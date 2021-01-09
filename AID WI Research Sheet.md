@@ -165,7 +165,7 @@ JSON has its uses. If you're already using it feel free to continue doing so. If
 
 
 ### Zaltys Formats
-Zaltys 🐍#5362 has developed many interesting formats and motivated the community to test different keywords in WI. Here's an early example of his formatting that worked well for many users.
+Right now this document isn't updated to include latest discord formats. Research is being done daily. All brackets can be replaced with `<>`. Instead of defining colors like `brunette-hair` it is recommended you do `hair:<color>` or `blondehair` at the moment. Zaltys 🐍#5362 has developed many interesting formats and motivated the community to test different keywords in WI. Here's an early example of his formatting that worked well for many users.
 ```
 keys: Deekin, Scalesinger, Deekin Scalesinger
 Deekin Scalesinger:[Kobold/♂/<72cm>;ORIGIN<Deekin>:Ally from Neverwinter Nights games(CRPGs);APPEAR:Reptilian/orange-scaled/horns(nubs)/snout/legs(2)/eyes(brown/2)/arms(2)/tail(scaly)/wings(2/red/scaly);LACK:hair/ears;WORN:Bard clothes;MENTAL:Pessimist/creative/polite/kind/friendly/self-conscious;TRAITS<Deekin>:Musician/poet/bard/writer/raspy voice/hero/sorcerer/plays lute/beat Mephistopheles/bard-magic/former servant(of dragon:Tymofarrar)/"Yes, Deekin very kobold, last Deekin look in mirror."]
@@ -286,7 +286,7 @@ Library room: large room. EXIT: corridor (north), lounge (west), trophy room (so
 
 
 ### birb research
-Many sources confirm that newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. Sometimes `red-color` or `hair-color` may refuse to work consistently. In an attempt to fix this the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even when grammatically incorrect. For example:`verylonghair`,`platinumblondehair`, `tatteredgrayrobes`. birb calls this smashing words. With this discovery even traits like `flamingorangeeyes` are possible to get out consistently. birb is still experimenting and undergoing revision on both of his formats, because while preliminary results were good, they broke on long scenarios. The angriest wizard that ever lived is provided for historic purposes:
+Many sources confirm that newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like () is good for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. Sometimes `red-color` or `hair-color` may refuse to work consistently. In an attempt to fix this the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even when grammatically incorrect. For example:`verylonghair`,`platinumblondehair`, `tatteredgrayrobes`. birb calls this smashing words another term for it is word mashup. With this discovery even traits like `flamingorangeeyes` are possible to get out consistently. birb is still experimenting and undergoing revision on both of his formats, because while preliminary results were good, they broke on long scenarios. The angriest wizard that ever lived is provided for historic purposes:
 ```
 keys: Rick,the angriest wizard that ever lived
 [TITLE(Rick):The angriest wizard that ever lived;
