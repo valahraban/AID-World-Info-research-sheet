@@ -1,0 +1,124 @@
+Caveman 2.0 AKA Neanderthal
+
+	This is a dissection of the Neanderthal format's structure and tricks from a 15 token line that provides some basic stats on Alexandria that govern her physical makeup, and have an effect on how she will be represented by AID. I will provide a point by point breakdown of the ins and outs of every detail of this format. If you are not interested in this information or it is nonsensical babble to you, feel free to use the notes just below to get the essentials for the format.
+
+	The short of it: Neanderthal makes increased use of formatting marks like introductory spaces for each line as well as the first term mentioned within the brackets, as well as bracket encapsulation with a period at the very end of each 'line', followed by a new-line (this is when you hit enter to start a new line for the uninitiated). The basic formula is this; 
+	'Space Subject Colon Open-Bracket Space Term Term Term Term Term Comma Compound-Term Close-Bracket Period New-Line'. Use commas to separate complex concepts. Continue adding or condensing terms as necessary/desired within 15 token limit. To ensure you are under the 15 token limit, a good rule of thumb is to avoid going over 50 characters and use only absolutely necessary punctuation marks. For advanced users there is a tool called a 'tokenizer' that will tell you with good accuracy exactly how a given set of words is turned into the tokens AID uses, which will be discussed later.
+	To visualize what this looks like, here is an example line for a character template;
+	 Alexandria:[ Age 29 human she 150cm height 75kg strong tough thin].
+
+	The long of it:
+	The AI recieves a 'tokenized' version of this line for processing that looks like this;
+	[' Alexandria', ':[', ' Age', ' 29', ' human', ' she', ' 150', 'cm', ' height', ' 75', 'kg', ' strong', ' tough', ' thin', '].']
+	You can see it is basically separating everything it thinks is an individual term so that it can process it. Griffin, sadly, tends to lose track of what term is related to what subject once too many tokens separate them, so 'Alexandria' and 'thin' would be very likely to disassociate from eachother if any more info was put between them. It could still get the output right, but it might also start assigning the descriptions to other characters or miss putting them in when Alexandria is being described by the AI, leading to a confusing output. Dragon is much more robust and can handle about 60 tokens/200 characters but can also handle Griffin's formatting, so I recommend Griffin level formatting since it is flexible and Dragon level formatting can break down when the AI is toggled to Griffin. Classic's formatting needs will be covered later on but I do not consider it a priority or common use case.
+	From here, simply scale it up until you've got the amount of info you feel you need for the character. Notice I said need, not want. You have a precious small amount of space to work with in the area AI Dungeon offers, so *only include what you actually need from the character* to enjoy their representation!
+	Here are a few different sized entries for Alexandria to demonstrate different levels of detail.
+
+	Background NPC;
+	 Alexandria:[ Age 29 human she tall strong thin brave knight, your ally]. - contains just enough info to give some basic personality and behavior along with simple physical description and what their relation is to the story, in this case Alexandria is an ally of yours who happens to be a brave knight. This won't hold up on close inspection, as the hair / eyes / face / other details will be changed by the AI on different attempts, but it is enough for an unimportant side character or minion that you at least want the AI to remember. I recommend keeping some form of age, species(particularly in adventures with non-human sentient species), gender, proportions, and body type to keep the AI from going *too crazy* with it, but exact things like Age 29 aren't strictly necessary, and 'Middle aged' or 'Young adult' etc. work just fine if you don't feel like getting specific.
+
+	Regular NPC;
+	 Alexandria:[ Age 29 human she tall strong thin brave knight, your ally]. 
+	 Alexandria:[ Has Blackflame rune sword, steel armor, healing potion, amulet]. - Adding a second line is expensive but adds a little extra wiggle room to play with. You can choose what to do here, like building on their appearance to increase consistency, embellish their behaviors or bonds to others, or as in this example add things they have, equipment, items, etc. in order to indirectly influence how they act. Alexandria might heal her or someone else's wounds with her healing potion, absorb a deadly blow with her steel armor, or strike down a foe with her Blackflame rune sword, or muse about the amulet she wears potentially without any additional prompting from you. Note the lines are separated with a 'new line' which helps the AI separate the description into descrete chunks for its review.
+
+	Complex NPC;
+	 Alexandria:[ Age 29 human she tall strong thin brave knight, your ally]. 
+	 Alexandria:[ Has Blackflame rune sword, steel armor, healing potion, amulet].
+	 Alexandria:[ Long red hair, fair skin, narrow green eyes, clean]. - This should make their description very consistent as well as add additional behavioral anchors for the AI to pull on. Notice how we're squeezing every token out of each line? This is because each new line eats a minimum of 4 tokens - one for the subject, one for the initial colon/bracket combo, one for at least one included term inside the brackets, and one for the closing bracket/period combo. Efficiency is king here, but to comfort any concerns, getting around 12 tokens is not terribly inefficient, and it's somewhat easy to get a sense for 12-15 token lines after some practice. Keep in mind the rule of thumb - 50 characters, only necessary punctuation, and you should be in the 12-15 token ballpark.
+
+	From here, the sky's the limit (well, not really. The 1386 character count for remember/WI/Summary is the limit. If you want to do an adventure with yourself and one very detailed companion NPC, I'd recommend up to 8 or so lines (~400 characters) for yourself and a similar amount for your companion NPC, but keep in mind any locations, objects, factions, etc will have precious little room to work with to be represented and in this scenario you should REALLY keep additional NPC's, places, things, concepts, factions, etc down to a single line or they'll get lost and cause you frustration and fruitless rerolls. If you like the Summary feature, keep in mind it's about ~500 characters, so if you combine whatever you have in Remember with a 500 character summary, your WI's you expect to be triggered under most circumstances will need to be less than that 1386 minus that total.
+
+	Lastly, I'll show off two huge entries so you can get a look at the high level of detail that is possible.
+
+	Super Complex NPC ~ 630 characters (new lines count for 2 characters, will need to be split across 2 or more WI entries with matching or relevant keywords to trigger depending on what you want to be triggered and when.)
+	 Alexandria:[ Age 29 human she 152cm height 74kg strong tough thin].
+	 Alexandria:[ Has Blackflame rune sword, steel plate mail armor, amulet].
+	 Alexandria:[ Long red hair, fair skin, narrow green eyes, clean].
+	 Alexandria:[ Your ally, serves Baron Gerald, worship war deity Herako].
+	 Alexandria:[ Has three healing potions, resurrection scroll, green cloak, dagger].
+	 Alexandria:[ Likes meatpie ale dancing fighting, hates gambling greed wizards dragons].
+	 Alexandria:[ Veteran tactical planner, quick wit jokes silver tongue, adventurous bold].
+	 Alexandria:[ Lives Brun Village, husband Eric, mother of Susan and Timothy].
+
+	Super Complex MC ~ 540 characters (main character AKA you, wilkl need to be split across 2 entries or entered into remember, which is preferable for your main character - though some of the lines could go into WI with appropriate keywords to trigger instead.)
+	 You:[ Named Helena, age 247 elf she 152cm height 58kg].
+	 You:[ Have blood red shortsword, magic longbow, leather armor].
+	 You:[ Short blond hair, tan skin, big blue eyes, alert].
+	 You:[ Serve no Lord, alias 'Ghost', worship nature deity Luna].
+	 You:[ Have fireball wand, vanishing ring, magic bag, treasure map].
+	 You:[ Like beef stew wine music forests, hate cities thieves deceit goblins].
+	 You:[ Quiet deadly rogue, dry humor, daring skilled thief, adventurous].
+	 You:[ Live wilderness, no spouse or children, trained wolf named Snap].
+
+	Formatting logic breakdown:
+	 Alexandria:[ Age 29 human she 150cm height 75kg strong tough thin].
+	The entry starts with a space, as this reduces the odds the name 'Alexandria', or whichever name you use, will tokenize poorly and for whatever reason be split into multiple tokens, as is a common problem with many names and causes the AI to resort to shorter nicknames very often when this issue occurs. The colon and opening bracket primarily serve to prevent leaks (there are 2 types of leaks, format leaking into the AI's output and traits leaking between characters, this is targetted at the second type of leak), and due to how punctuation/symbols tokenize the inclusion of brackets only costs one token compared to earlier Caveman format which is now more leak-prone (as the ending bracket and period also only cost one token, and would be represented as a token cost for the standard ending period in caveman anyways). Age 29 will imply adult behavior in a human, she enforces gender, height is reinforced with the word 'height' to keep it from deciding that she's 150cm wide and an arbitrary height (it happens), weight fortunately only needs kg. Afterwards follow some descriptive terms to help seed the desired language when she is described. Alexandria should be rendered as an in-shape, tidy, combat ready character due to the language included. 
+
+	Extra notes: Generally things like categories had no effect on likelihood of a correct attribute or description occurring, however they can be used to steer troublesome characteristics. For instance, if a character has non-humanoid geometry, Limbs: or Traits: may be good as the opening term in a bracket but be aware this is costly in tokens. Fortunately, you can double down on identical categories in additional lines, just keep in mind a character that is very long is very unlikely to often or always render faithfully if it is competing with other WI's or a loaded up remember field. Going shorter than 15 tokens does not seem to confer any additional accuracy benefits either (at least on Griffin and Dragon, I haven't felt like testing Classic but it is possible it could benefit Classic).
+
+	So far general accuracy on Griffin shows a range of about 60%-80% accuracy given 20 'attempts' to get characteristics to output successfully. Keep in mind, this means outputs like 'black hair with red tips' count for a character set up with 'long red hair'. Usually these half-successes are rare, but sometimes can be troublesome. If in doubt, elaborate a little further on the detail that is having issues. If the AI keeps fighting you, try implementing it in a different way. Keep in mind it's almost always better to tell the AI what to do, instead of what not to do, and the AI has freedom to add any level of detail on top of whatever you provide, so it'll never be 100% perfect. Griffin testing was done with full history context(ie gameplay), summary, and 2 Super Complex level characters to ensure their traits did not bleed over onto eachother outside of Griffin's general range of accuracy. Use of scripts such as Zynj's EWIJSON greatly increase the efficacy of formatting accuracy even on Griffin, and you can get to 85%-95% effectiveness with proper implementation (which is at this time beyond the scope of this guide, sorry! Zynj just did big updates to it and best practices are being shaken down at time of writing).
+
+	I tested my format with 20 tests for 5 attributes for each character on Griffin (so 200 tests) and measured accuracy. I did not do 200 tests on Dragon, only 50 (5 tests for 5 attributes x 2 characters), and found the rates to be consistent with what has been laid out so far. At this point I feel they extract the maximum amount of available accuracy in each model, and while in ideal use you can steer the AI to what you want it to cover and reroll, I decided to provide snippets of continuous output with no steering for each model to give an idea what the formats are evoking even when competing with context and another character.
+
+	Example Griffin outputs w/o scripts (hit enter on story mode 6 times, no rerolls on full context + WI + summary), Griffin has a tendency to get repetetive without user input but it also makes a good listing of how it views a lot of the traits in situations where it happened. Overall very good considering, and would be better where the player can reroll. Scripting *vastly* improves things here, and normal gameplay allows the reader to steer Griffin a bit better - still, it stays more or less on topic and doesn't leak format into output or swap many attributes between characters that it has triggered.
+A VERBOSE DESCRIPTION OF YOU FOLLOWS:
+Your name is Helena and you are 247 years old Elf. You have long blond hair and blue eyes. You are currently 170cm tall, with a complex body type- your chest is B cup, your hips are C cup, and your bum is a heart shape. You have long slender legs and large feet. You have a raven tattoo on your shoulder, and two tribal snakes on your back. You are wearing leather, studded dog collars, and a ring. You worship the nature deity, Luna.
+You are being held against your will in a tower by an evil wizard. He has trapped you in the tower after you stole an item for him. You must escape the wizard by gathering items, which will enable you to overcome his magic. You have a large map with several circles on it. Each circle represents a room in the tower, and each room has a number of items listed next to it. These items will enable you to unlock the door to the room.
+You have no weapons, but you have a large Wolf which you are skilled in controlling. The wolf will enable you to sneak up on some items, but not others. You must also decide what you need in order to escape.
+
+A VERBOSE DESCRIPTION OF ALEXANDRIA FOLLOWS:
+Alexandria has long red hair and fair skin. Her breasts are C-cups and her waist is small. Her ass is wonderful and her thighs are fit. She has light blue eyes and a pretty face.
+Her body is covered in light blue tattoos of roses and vines. These cover her arms, legs, back, shoulders, and chest. They are pretty and feminine, but still show she is a warrior.
+She has a thin but strong body.
+She has a nice smile and a great laugh.
+She is adventurous, bold, and loves to laugh.
+She is level-headed and prefers planning ahead.
+She is a great thinker and introspective, but also enjoys opening up to others.
+She is loyal and protects those she cares about.
+Alexandria loves her island home and the freedom to do as she pleases.
+She can be a great fighter and a terrible shot.
+She is stubborn and hard-headed.
+She has a sense of humor and sees the lighter side of things.
+She is affectionate and warm.
+She loves the outdoors and the company of animals.
+She has a playful side.
+She is courageous.
+She is honest and trustworthy.
+
+	Dragon, being far more capable than Griffin, has little trouble with these characters and an accuracy level of around 80-90% without scripting, and frankly while it will never be perfect, scripting can raise it higher and is worthwhile.
+
+	Example outputs from Dragon w/o scripts (hit enter on story mode 6 times, no rerolls on full context + WI + summary), some errors, but very accurate considering WI and remember are fairly weak compared to Griffin. 60 output length, 1.0 randomness.
+A VERBOSE DESCRIPTION OF YOU FOLLOWS:
+You are a tall, slender elven woman with long blond hair and blue eyes. Your face is narrow and angular, your ears pointy and your eyes sharp. You have a long, narrow nose and thin lips that form a natural smile. You have a narrow forehead, high cheekbones and a narrow chin. You have a long neck, slim shoulders, slim arms and slender hands. Your body is slender and lean, with narrow hips and slim thighs. You have small, perky breasts and a narrow waist. Your arms and legs are long and lean, with slender hands and feet. Your skin is tanned and flawless.
+You wear a leather skirt that stops mid-thigh, exposing your long, narrow elf legs. You have a simple black leather corset that squeezes your small bosom to raise them a bit, and pushes them together. You wear tall black boots that go up to your knees and are laced up the front. Over this you wear a black cloak with a deep hood, which helps keep you concealed in the darkness. At your hips you wear two silver daggers in identical leather sheaths that you bought years ago. They have silver blades and intricate patterns and runes etched into the blade. You also have a small ring with a clear, black jewel mounted on it that you wear on your right index finger. You also have a tiny silver hoop that goes in your left nose.
+You are the perfect example of an elven woman.
+
+A VERBOSE DESCRIPTION OF ALEXANDRIA FOLLOWS:
+Alexandria's body is muscular and strong. Her thighs, in particular, are as thick as most woman's waists. Her arms are long and powerful and you can see the muscles in her chest. Her body is covered in tattoos of wolves, skulls, and naked women. Her long red hair falls down her shoulders and her green eyes pierce you with their intensity.
+She is wearing a steel plated suit of armor, and boots. A large belt around her waist carries a double-edged steel sword, a hatchet, and a hammer. A long dirk hangs out from her right boot and a bucksaw hangs at her left hip. A crossbow-like weapon is slung across her back. Her powerful build and protective gear make her a formidable warrior.
+She moves with power and grace. Her eyes are constantly watching everything, missing nothing. She never seems to blink and her gaze pierces your mind and your soul.
+She approaches you and puts her hands on your shoulders, then moves them down your body, as if she is searching you for weapons.
+She looks at you and smiles wickedly.
+
+	For giggles, here is a sample from Classic, I'll make no notes because Classic is a whole different ballgame than Griffin and Dragon, but it's neat to see that it can track some of it despite its weird stilted patterns and that it doesn't leak the format.
+A VERBOSE DESCRIPTION OF YOU FOLLOWS:
+You are Helena. Your mother died when you were young and you have never been able to find happiness. When you were sixteen, your father left you and went off to fight in the war. He was killed shortly afterwards by a goblin horde that had been terrorizing the countryside for years. Your older sister, Jennifer, was taken in by relatives who raised her as a daughter of nobility. She married a knight and lived happily ever after.
+
+Your younger brother Michael was born two years later. He grew up with his mother until he turned eighteen and then she died too. Your younger sister, Megan, took him in and raised him as her own son. They have three children together. Two sons and a daughter.
+
+Megan has always wanted to be like your father; she wants to serve the kingdom of Arat with honor and glory.
+You want to be like your mother, you love the outdoors and being out in the sun.
+
+You both have a strong sense of duty and honor. You both have an intense hatred for traitors and those who betray their country. You both respect strength above all else.
+You both have a deep love for each other.
+You both have a strong sense of loyalty and friendship. You both share secrets with one another. You both care deeply about your family and loved ones. You two are very close and will do anything to protect them from harm.
+You both have a strong sense of justice and fairness. You both have a deep fear of injustice and cruelty. You two are very loyal to your friends and allies.
+You both have a strong sense of faith in the gods, especially Luna.
+
+A VERBOSE DESCRIPTION OF ALEXANDRIA FOLLOWS:
+Alexandria is beautiful. Her body is tanned and toned. Her face is full lips, bright green eyes, a mouth filled with teeth that would make a vampire jealous, long black eyelashes and dark eyebrows. She has an hourglass figure with flat stomachs and round breasts. Armor covers most of her body except for her arms and hands. The top half of her body is covered by a cloak. A dagger hangs from her hip. Her hips are arched and her ass is perky. She wears tight jeans, boots and a loose shirt. She holds a small vial of liquid in each hand.
+
+She has muscles everywhere. Her chest is broad and firm. Her abs are defined and her belly is round. She has a tattoo of a pair of wings on her left shoulder blade, a rose in the center and two hearts above it, both surrounded by circles. She has pierced ears, nose and lips. Her lips curve upwards slightly when she laughs. Her chin is thin and her jaw is strong.
+
+Her hair falls down to her shoulders, falling past her waist and covering her lower abdomen. It is red and falls in waves over her upper back. She wears a silver necklace with three golden rings around her neck. Her fingers are long and slender. Her nails are sharp and pointy, almost like claws.
+
