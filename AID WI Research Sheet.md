@@ -267,7 +267,8 @@ It is worth checking out birb's research section for tips that relate to Caveman
  Alexandria:[ Has Blackflame rune sword, steel armor, healing potion, amulet].
  Alexandria:[ Long red hair, fair skin, narrow green eyes, clean].
 ```
-It looks like a mixture of Zaltys and Caveman. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer 50 characters/15 tokens to maintain focus.
+It looks like a mixture of Zaltys and Caveman. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below we provide the full dissection of Neanderthal written personally by Monky.
+https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/Neanderthal_Unscripted_Results_by_Monky.txt
 
 
 ### Onyx Formats
