@@ -1,0 +1,87 @@
+// Original script by kimtaengsshi updated November 15 2020
+// Republished by birb with the author's permission
+// Supports 3 input commands Genre: Writing Style: AN:
+// The commands replace the defaults. AN: adds a postfix behind 'This novel lacks plot twists.'
+// Input Modifier
+const refreshAuthorsNote = () => {
+  state.memory.authorsNote = 'Genre: '.concat(state.authorsNote.genre, '. Writing Style: ', state.authorsNote.writingStyle, '. This novel lacks plot twists.', state.authorsNote.postfix);
+  state.message = '[Editor\'s note: '.concat(state.memory.authorsNote, ']');
+};
+ 
+const modifier = (text) => {
+  let inputText = text;
+  let toStop = false;
+  if (history.length == 0) {
+    state.authorsNote = {
+      genre: 'Fiction',
+      writingStyle: 'Elegant, sophisticated',
+      postfix: ''
+    };
+    refreshAuthorsNote();
+  }
+  if (inputText.includes('AN:') || inputText.includes('Genre: ') || inputText.includes('Writing Style: ')) {
+    if (inputText.includes('AN:')) {
+      state.authorsNote.postfix = inputText.split('AN:')[1];
+    } else if (inputText.includes('Genre: ')) {
+      state.authorsNote.genre = inputText.split('Genre: ')[1];
+    } else {
+      state.authorsNote.writingStyle = inputText.split('Writing Style: ')[1];
+    }
+    refreshAuthorsNote();
+    inputText = '';
+    toStop = true;
+  }
+  
+  return {
+    text: inputText,
+    stop: toStop
+  };
+};
+ 
+ 
+// Context Modifier
+minWordsFromFront = 100;
+ 
+const modifier = (text) => {
+  let memText = text.slice(0, info.memoryLength);
+  let storyText = text.slice(info.memoryLength);
+  
+  let splitText = storyText.split('[Author\'s note:');
+  let mergedText = '';
+  if (splitText.length > 1) {
+    let preText = splitText[0];
+    let postText = splitText[1].slice(splitText[1].indexOf(']') + 2);
+    mergedText = preText.concat(postText);
+  } else {
+    mergedText = splitText[0];
+  }
+  
+  let editorNote = '[Editor\'s note: '.concat(state.memory.authorsNote, ']');
+  let lines = mergedText.split('\n');
+  let isAdded = false;
+  storyText = lines.pop();
+  while (lines.length > 0) {
+    if (!isAdded && storyText.split(/\s+/).length >= minWordsFromFront) {
+      storyText = editorNote.concat('\n', storyText);
+      isAdded = true;
+    }
+    storyText = lines.pop().concat('\n', storyText);
+  }
+  if (!isAdded) {
+    storyText = editorNote.concat('\n', storyText);
+  }
+  
+  let contextText = memText.concat(storyText);
+  if (contextText.length > info.maxChars) {
+    let excessLen = contextText.length - info.maxChars;
+    for (i = excessLen - 1;;++i) {
+      if (/\s+/.test(contextText[i])) {
+        contextText = contextText.slice(i+1);
+        break;
+      }
+    }
+    contextText = contextText.trimStart();
+  }
+  
+  return { text: contextText };
+};
