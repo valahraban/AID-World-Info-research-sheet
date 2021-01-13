@@ -99,7 +99,7 @@ The GPT is an autoregressive transformer language model trained on English writi
 ## Authors Notes specifics
 Let's discuss the premium feature `A/N:` first. If you're looking to inject flavor into the AI's outputs A/N will be your first and probably most efficient stop. It is a worthwhile for the convenience, yet it's usefulness is not entirely restricted to premium users with our advice. What A/N does is  it insert a line of text into the history the AI reads e.g. `Author's Note: Some details like mood about this story.` exactly 3 newlines up. On the scenario screen it has a 150 character limit, but the in-built maximum limit is 300 characters according to kim's LMI testing and community experiences.
 
-Discovering manual Author's Note inputs during dev testing and how heavily it affected output is why it was added to the core game. Even as a free user you can manually add Author's Notes into your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Editor's Note is another interesting take on the concept by the community. For paid users there exists a script that can replace the paid `A/N:` with `E/N:`. Research suggests that A/N: can be used to reinforce writing style even of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
+Discovering manual Author's Note inputs during dev testing and how heavily it affected output is why it was added to the core game. Even as a free user you can manually add Author's Notes into your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Editor's Note is another interesting take on the concept by user gnurro. Research suggests that A/N: can be used to reinforce writing style even of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
 ```
 [Author's note: This novel is esoteric and descriptive. Author: Terry Pratchett. Writing style:  Metafiction, in the style of Deadpool. Genre: Witty, talkative.]
 ```
@@ -180,7 +180,7 @@ Mike Haggar:[Human<male, 202cm, 140kg>. APPEARANCE<Haggar>:Stocky, muscular, big
 + Categories must be typed in UPPER CAPS, with the exact spelling.
 + Including the name after the categories helps Griffin parse the entry.
 + Other useful categories include MOV (for movement-types, such as 'slithering'), GRAB (for object manipulation, such as 'talons', 'beak', or 'coiling'), ORIGIN (for birthplace, game of origin, etc).
-+ If you need to add age, use age(<num>) in same section as weight/height.
++ If you need to add age, use age<num> in same section as weight/height.
 + All of it goes into single WI entry with no line breaks, under a keyword such as haggar.
 
 We also have an alternate advanced format specifically designed for Griffin. It saves space inside the WI and context, but is both harder to read and write.
@@ -216,9 +216,9 @@ You shake your head.
 
 ### Useful Categories
 With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among many different formats. Here we share some categories that have proven useful. The category words will be provided as a list as their use is self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. The long list of categories:
-
+```
 APPEAR, BODY, LOOKS, WORN(STYLE/FASHION), INV, EQUIP, MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY/GEO, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE/EFFECT(character status like being dirty, sleepy or ill), SEE, BIOME, FLORA (must match the biome), CREATE
-
+```
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
 
 The AI tends to be very literal-minded. TRAITS is the usually agreed upon god-category where you can put any attribute of an object. But the AI seems to treat it like the *nature* of said thing. The best example of this is the trait `cool`. In order to get a character to have a `cool` personality it must go in MENTAL. Inside TRAITS it might make the character literally `radiate cold` instead. The same is suspected of traits like `hotheaded`. Also, uncommon or complicated concepts like fauna do not work well as categories. `TRAITS: Fauna<species>` works better.
@@ -267,7 +267,7 @@ It is worth checking out birb's research section for tips that relate to Caveman
  Alexandria:[ Has Blackflame rune sword, steel armor, healing potion, amulet].
  Alexandria:[ Long red hair, fair skin, narrow green eyes, clean].
 ```
-It looks like a mixture of Zaltys and Caveman. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below we provide the full dissection of Neanderthal written personally by Monky.
+It looks like a mixture of Zaltys and Caveman. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below we provide the full dissection of Neanderthal written personally by Monky:
 https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/Neanderthal_Unscripted_Results_by_Monky.txt
 
 
@@ -331,7 +331,7 @@ Now that the category `EQUIP:` is confirmed working with clothes and other inven
 ### Misc Tips
 More tips and tricks that fall out of larger headers will be added here as they are discovered. `NOTES ON X` has been used by some as a WI before, but most feel it serves better as a remember pin or an input for the story. CrisAIcilian has discovered `Character sheet - ` as an effective header for WI, using an otherwise Zaltys-like format together with it in his test character. After roughly 100 rolls he claimed to achieve a 70% success rate on his character traits & actions being mentioned correctly as long as the story input features new letters instead of being a simple `continue`. The author speculates this could be a good way to define something akin to `you` for those interested. All of the random experimentation and associated pictures can be found on Discord as the author remains unconvinced to the relevancy of testing inside AID.
 
-Earlier in the document we mentioned Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the script) `EN behaves more like tooltips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. The author might provide a script written by gnurro in the future. You might have to manually combine it with other scripts.
+Earlier in the document we mentioned Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the script) `EN behaves more like tooltips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily. 
 
 
 ### Character-to-token ratio tests
@@ -451,7 +451,7 @@ What are world infos if you can't utilize them? Here are some interesting and re
 - List of story actions:
 - Description of [new character]:
 - You take a look at the form, it reads:
-- X gives a lengthy monologue about Y
+- [character] gives a lengthy monologue about [topic]
 - Advice from the voices in your head:
 - Rationale:
 - Hours later...
