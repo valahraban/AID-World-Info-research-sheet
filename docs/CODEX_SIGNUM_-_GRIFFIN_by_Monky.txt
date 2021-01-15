@@ -1,0 +1,1659 @@
+Griffin understanding of symbols from the POV of an author (these may or may not be accurate/useful but strong trends indicate a possible higher chance of an actual association)
+
+Running sets of 12 because of 1 output + 2 rerolls per entry for efficiency.
+
+NOTE: Most of what comes after the first 15 or so words is probably garbage for each entry but the AI sometimes includes examples that *might* be useful. It overuses the term symbol here because the scenario is literally this:
+
+This is a description of various symbols and how an author interprets them.
+Use the  symbol to
+
+with a symbol added between 'the' and 'symbol'. My best guess is it means 'thing' or 'definition' when it says things like "use this symbol to define a symbol", ie; use symbol y to define x but I wouldn't put too much stock in that. The MAIN purpose of this is to identify trends and what the AI thinks of as strong and weak symbols and what function they might have.
+
+--------------------------------------
+!
+-----1
+Use the ! symbol to introduce a new term.
+-----2
+Use the ! symbol to add a new category and/or new description.
+The Cataclysm occurred in the fall of the year 2012. It has been about 5 years since that time.
+The average temperature has been about 32 degrees Farenheit.
+There is a relative humidity of about 65 percent.
+-----3
+Use the ! symbol to show interest in the topic being discussed.
+-----4
+Use the ! symbol to add your own interpretation in the comments.
+This is a description of various symbols and how an author interprets them.
+Use the !!! symbol to add your own interpretation in the comments.
+-----5
+Use the ! symbol to bring up a help sheet.
+-----6
+Use the ! symbol to post a message to the class.
+-----7
+Use the ! symbol to add your own description.
+-----8
+Use the ! symbol to indicate that explained text is present in this description.
+! This description explains why this symbol or this item is present in this way.
+-----9
+Use the ! symbol to direct the reader to some other text that helps clarify a particular subject.
+-----10
+Use the ! symbol to represent an author's commentary in the text.
+-----11
+Use the ! symbol to start the macro and the # symbol to stop it. The name of the macro is the first line and afterwards you can add as many lines as you like.
+-----12
+Use the ! symbol to discuss the following:
+----- ANALYSIS: Most common trends are introducing or interpreting topics/terms/descriptions/commentary of interest. (low confidence)
+--------------------------------------
+@
+-----1
+Use the @ symbol to address the symbol in the list. Sometimes you may see a double @--this signifies that the symbol is addressed twice.
+You can order the symbols in different ways. This is done by using different "keys" to look for variations in the list. The keys are explained below.
+-----2
+Use the @ symbol to create your own symbols and interpret them however you want.
+""""""""""""""""""""""""
+-----3
+Use the @ symbol to reply to a comment.
+Use the # symbol to reply to a specific comment.
+-----4
+Use the @ symbol to add a comment to the symbol.
+You can use the following format to insert a comment:
+Symbol Name: Comment
+It is currently allowed to use spaces in the name, but not between the characters of the name.
+-----5
+Use the @ symbol to add your own interpretation.
+This book may have been written by a "native", or by a "foreigner" writing about "the natives".
+The natives may not have anything to do with each other.
+-----6
+Use the @ symbol to reply to the message.
+Use the !
+-----7
+Use the @ symbol to add your own description.
+This is a list of numerous symbols and how they are interpreted by the authors. It is not a 'definitive' list; it is a list which groups symbols together according to how they are commonly interpreted.
+-----8
+Use the @ symbol to create your own symbols.
+@ I have no idea what this means.
+-----9
+Use the @ symbol to add your own interpretations in the "Your Own Experience" section at the end.
+Go to the next page...
+-----10
+Use the @ symbol to add your own.
+-----11
+Use the @ symbol to add your own descriptions.
+-----12
+Use the @ symbol to reply to a message.
+----- ANALYSIS: Most common trends are to reply or to add a description which may mean it has no idea of the function as an author would use it. (mid confidence)
+--------------------------------------
+§
+-----1
+Use the § symbol to add a new section
+-----2
+Use the § symbol to add a description of the symbol you are describing (with a link to a suitable image if one exists). You can also add a note about your own personal feelings about the symbol if you wish.
+-----3
+Use the § symbol to add a description of your own.
+-----4
+Use the § symbol to add a new section.
+-----5
+Use the § symbol to add a new section
+Go to History
+-----6
+Use the § symbol to start a new symbol.
+Place the appropriate description in italicized bold to describe the symbol.
+Perhaps use an example from the work or the artist's life to explain your findings.
+-----7
+Use the § symbol to mark redirects.
+-----8
+Use the § symbol to add a description Add a comment
+Related posts
+-----9
+Use the § symbol to add more information. Please don't assume the reader knows what these symbols mean.
+Please link any names to their headers.
+-----10
+Use the § symbol to add a new section.
+-----11
+Use the § symbol to provide a longer explanation of the symbol's meaning.
+-----12
+Use the § symbol to link to a specific section of the article.
+-----ANALYSIS: Seems to indicate a section marker or header marker (mid confidence)
+--------------------------------------
+⋅
+-----1
+Use the ⋅ symbol to denote additions.
+Use the − symbol to denote subtractions.
+Use : to denote multiplications or divisions by 0.
+Use † to denote whether two events are simultaneous or consecutive.
+Use ‡ to denote whether two events are related or not.
+-----2
+Use the ⋅ symbol to indicate multiplication.
+Use the × symbol to indicate multiplication.
+Use the ƒ symbol to indicate fission.
+Use the ƒ symbol to indicate fission.
+Use the ‿ symbol to indicate fusion.
+Use the ‿ symbol to indicate fusion.
+-----3
+Use the ⋅ symbol to indicate that the following text is a restatement of the previous statement or something else important. Do not type the ⋅ symbol in.
+-----4
+Use the ⋅ symbol to represent "and" in a logical series.
+This is a description of various symbols and how an author interprets them.
+Use the "←" and "→" symbols to link related items.
+-----5
+Use the ⋅ symbol to provide a visual cue to the reader about what is being discussed. When done properly, this can make it easier for the reader to follow along and understand the topic at hand.
+-----6
+Use the ⋅ symbol to represent a sequence.
+Greater than symbol (≡) is used to call attention to the fact that these symbols represent the author's thoughts, opinions and interpretations of the character descriptions.
+-----7
+Use the ⋅ symbol to indicate a thought.
+These are the characters that actually make up the story.
+They can be in any order though it's probably easier to read them left to right.
+-----8
+Use the ⋅ symbol to indicate the duration of time during which an action occurs.
+Use "&" to link two characters who are talking to each other.
+In monologs, italicize the words of the character speaking.
+Use "..."
+-----9
+Use the ⋅ symbol to represent addition.
+Use the + symbol to represent addition.
+Use the − symbol to represent subtraction.
+Use the × symbol to represent multiplication.
+Use the ÷ symbol to represent division.
+Use the † symbol to represent multiplication and division.
+-----10
+Use the ⋅ symbol to clarify meaning.
+Use the "You Are Here" to lead the reader from one set of symbols to another.
+Using a combination of these techniques, you can create meaningless but evocative writing.
+-----11
+Use the ⋅ symbol to indicate a ratio.
+Use the ‡ symbol to indicate a percentage, except when it would be used to indicate a fraction, such as ⋄ or ‖.
+This symbol means "and" unless otherwise stated.
+This symbol means "but not", unless otherwise stated.
+-----12
+Use the ⋅ symbol to indicate that the reader should mentally multiplicate the chart entry by the number in parenthesis.
+Use the symbol next to the entry to indicate that the reader should pay particular attention to that phrase.
+Follow each symbol with a numbered explanation.
+-----ANALYSIS: AI seems to have no idea what it means and throws random stuff. Some trend toward math or logic but it doesn't stay consistent, meaning it likely does not truly have a way to use the symbol. (high confidence)
+--------------------------------------
+#
+-----1
+Use the # symbol to mark the beginning of a description.
+Use the * symbol to mark that a term or phrase needs more explanation.
+Use the ? symbol to mark that you're still thinking about what you want to add to the description.
+-----2
+Use the # symbol to indicate a comment. Please do not use the symbols in a way that would affect an AI reading the book. An AI would not interpret them as comments, they were only created to make a human like me more readable.
+Use headings to format your text.
+-----3
+Use the # symbol to add your own comments.
+-----4
+Use the # symbol to comment on the chart.
+-----5
+Use the # symbol to refer to the book on that page, i.e. "#Fantasy: Tolkien". This will take you to a page of search results.
+-----6
+Use the # symbol to mark the beginning of a comment. Fields with dashes are required fields, other fields are recommended.
+All authors should follow the same basic code formatting, anything else will be fixed by the bot.
+-----7
+Use the # symbol to keep track of how many times a symbol has been used in the story.
+-----8
+Use the # symbol to mark up the rest of the symbols that will appear in this section.
+-----9
+Use the # symbol to create a link to another symbol.
+-----10
+Use the # symbol to separate the symbol from the rest of the text.
+This is the Nokolak symbol for "war."
+Use the * symbol to mark that the symbol has been explained in the text.
+-----11
+Use the # symbol to mark symbols that you have made up yourself.
+-----12
+Use the # symbol to mark up text in the source file that describes the different symbols.
+-----ANALYSIS: Seems to consistently think of it as a symbol definition marker which is a bit redundant. May be useful for defining/reinforcing symbols? (high confidence)
+--------------------------------------
+$
+-----1
+Use the $ symbol to start a paragraph.
+Other punctuation marks include the period, which is used at the end of sentences; the comma, which is used to separate phrases and set off elements in lists; and the less common interrogation point and dot.
+Use the ?
+-----2
+Use the $ symbol to indicate a direct quotation from the text.
+Use the " symbol to indicate something not in the original text but supplied by the translators.
+Use the " symbol to indicate an allusion, or reference to another work.
+-----3
+Use the $ symbol to indicate a direct quote from the story. Use the "quotation" symbol (single left-pointing angle) to indicate a description of the symbol.
+-----4
+Use the $ symbol to indicate a direct quote from the book. Use the "ins" and "ex" tags for commentary by you, or Insights by another Book Bud. Don't forget the links to other resources where you can find more information.
+Happy writing!
+-----5
+Use the $ symbol to represent an author's note about a passage, or the text that is italicized.
+Explanation of symbols:
+
+The ":" symbol signifies that the following text is an author's note (which you can read if you click on it).
+The "^"
+-----6
+Use the $ symbol to refer to the number of the symbol in the list.
+-----7
+Use the $ symbol to refer to the Big Red Devil.
+Use the % symbol to refer to the Screaming Mimi.
+Use the # symbol to refer to the Pirate Ghost Ship.
+Use the & symbol to refer to the Howling Banshee.
+-----8
+Use the $ symbol to denote a passage of fantasy and the % symbol for a passage of science fiction.
+This is a description of the various symbols and how an author interprets them.
+Use $ to denote a passage of science fiction and % to denote a passage of fantasy.
+-----9
+Use the $ symbol to indicate that the entry is part of a glossary.
+The entry consists of one or more lines describing the symbol.
+Use appropriate punctuation and complete sentences.
+-----10
+Use the $ symbol to denote a direct quotation from the book.
+Use the % character to indicate a thought or speculation of the author.
+Use the ^ symbol to indicate a line from a play.
+Use the _ character to indicate language that the author has made up or implied.
+-----11
+Use the $ symbol to indicate anything your character would identify with a $ sign, such as money or craft supplies. You could also use the $ symbol to indicate your name if you're not sure about how to write something.
+Use the % symbol to indicate your character's relationship to something.
+-----12
+Use the $ symbol to refer to the character currently at that location.
+Use the % symbol to refer to the symbol of the main story.
+Use the & symbol to refer to digressive subplots.
+Use the ' symbol to refer to a footnote.
+-----ANALYSIS: Seems to refer a lot to direct quotes, may be useful for denoting speech or specific phrasings to trigger spells or passphrases or specific descriptions (high confidence)
+--------------------------------------
+%
+-----1
+Use the % symbol to denote a percentage.
+-----2
+Use the % symbol to denote a direct quote from the book. Unless otherwise noted, the author's view on the symbol is in italics.
+-----3
+Use the % symbol to indicate a percentage of how a character feels. Doesn't matter if you don't agree with the number, just use it as a guide. A number like "100% happy" means that the writer thinks the character is exactly 100% happy.
+-----4
+Use the % symbol to denote percentages.
+Underline (single line) = Link to another part of the Wikia using the link displayed in purple, carrying over previous links from pages you've visited.
+Blank Space = Create your own article or section to carry over previous links from pages you've visited.
+-----5
+Use the % symbol to introduce a character that is not present in some known classes. This can be the main character, or an important secondary character, or even a minor one like a servant or pet. If needed, describe their physical appearance (including their clothing), occupation, and general behavior.
+-----6
+Use the % symbol to delineate text that is directly spoken by a character in the story.
+Italicize words that are being emphasized by the author, making them stand out from the rest of the text.
+-----7
+Use the % symbol to comment or note about something you are reading.
+-----8
+Use the % symbol to expand the list of symbols and find more detailed information.
+-----9
+Use the % symbol to denote a theory or belief.
+-----10
+Use the % symbol to denote a percentage.
+Use the Â symbol to denote a sound a word makes in the original language.
+Use the Ã symbol to denote an alternative spelling of the word.
+-----11
+Use the % symbol to denote a percentage.
+Italicized words are the thoughts of the character at the moment.
+Blue words are independent action, green words are related to other characters, red words are violence or death.
+Green words with yellow borders contain warnings.
+-----12
+Use the % symbol to denote a percentage.
+Use the ~ symbol to denote a thought or feeling expressed by the character.
+Modifiers are words that describe the situation, place or mood the character is in. Use these sparingly and only after closely examining the surrounding text.
+-----ANALYSIS: Seems to have a good understanding of percentage symbol meaning percentage but seems to also lean toward meaning italics or how a character feels (medium confidence)
+--------------------------------------
+^
+-----1
+Use the ^ symbol to mark a key word or name that should be the main focus of the section.
+Use the _ symbol to mark a sub topic within a section.
+-----2
+Use the ^ symbol to indicate a space reserved between words. Put a * before sections you want to highlight.
+The ^ symbol is used for a section break in the book.
+Underline means italicize.
+-----3
+Use the ^ symbol to show a direct quote from the book.
+Use the % symbol to show an opinion or theory on the symbols.
+-----4
+Use the ^ symbol to mark the beginning of a new section and the $ symbol to mark the end.
+-----5
+Use the ^ symbol to add your own description to a particular symbol.
+Click to submit your review of this Svelk symbol.
+-----6
+Use the ^ symbol to mark authors who's works have influenced this work. Some of these symbols indicate whether the material is considered common knowledge , myth,or obscure.
+Use the * symbol to mark alternate names for frequently encountered creatures. These names are not necessarily the actual name the creature, it simply indicates commonly known names.
+-----7
+Use the ^ symbol to add a new symbol and explain it.
+You can also use the ^ and & symbols to add or remove parts of descriptions. For example, you could change:
+...
+-----8
+Use the ^ symbol to mark symbols that you think are very important or interesting. Use the symbol
+(/) to help sort out the descriptions.
+^menu^ ^history^
+The History of the Wizard
+^new window^
+Why not make a new window showing a list of the history of the wizard?
+-----9
+Use the ^ symbol to mark symbols that are direct speech
+The '^' is the only punctuation mark that looks like a speech bubble.
+Put a '?' in front of symbols that are not direct speech.
+?
+-----10
+Use the ^ symbol to add your own comments.
+One of the many symbols that you will see is the idea of a key. There are several different interpretations of what a key means. This symbol will be explained in the next part of this series.
+-----11
+Use the ^ symbol to indicate that the following text includes a literal translation of the symbol in question.
+The second part of this section will give you a description of what the symbols mean and how to use them.
+-----12
+Use the ^ symbol to note changes from the original source.
+-----ANALYSIS: Seems all over the place but has a trend toward being a symbol for defining symbols. (low confidence)
+--------------------------------------
+&
+-----1
+Use the & symbol to add a new category
+Click the grey area to add texts (New page will be created)
+Paste your description of a symbol from this list
+Click the Create button
+Your description of a symbol will now be on this list
+-----2
+Use the & symbol to add comments about symbols. use the # symbol to create a random symbol.
+You are not allowed to directly link to images on this page. You are however allowed to embed images for use on your page. This requires giving credit to the artist.
+-----3
+Use the & symbol to add your own idea of the symbols.
+-----4
+Use the & symbol to add more symbols to the list.
+-----5
+Use the & symbol to add your own descriptions here.
+Try to make your descriptions of symbols match the image of each one as closely as possible. Do not copy and paste text directly from other sources.
+-----6
+Use the & symbol to add your own descriptions of the symbols.
+-----7
+Use the & symbol to add more symbols to the list.
+You can also find symbols on other pages too, such as this one here.
+-----8
+Use the & symbol to add a new category.
+This is a description of various artists and how they create their work.
+-----9
+Use the & symbol to add your own descriptions, & the * symbol to allow someone else to add a description if they are using this material.
+Leave all other symbols as they are in the image.
+-----10
+Use the & symbol to add your own descriptions.
+-----11
+Use the & symbol to add a new topic to the list.
+Use the * symbol to reply to the current topic.
+-----12
+Use the & symbol to add an interpretation in the comments area
+Use the # symbol to note that the interpretation has been changed in the first comment area
+Please note that the interpretations within these comment sections are personal, and may or may not be consistent with what other people have said about these symbols, and you shouldn't just
+-----ANALYSIS: Seems to have a very strong association with adding descriptions to a list. Possibly useful for multiple attributes or qualities for one subject. (high confidence)
+--------------------------------------
+*
+-----1
+Use the * symbol to add a new symbol. Parameters for symbols should be added after the '=' sign and before the explanation of that symbol.
+-----2
+Use the * symbol to indicate a direct quote from the book. Use the † symbol to indicate a place where an author's thoughts or opinions have been added. Use the ‡ symbol to indicate an explanation or analysis by the page number following it.
+-----3
+Use the * symbol to signify a generic description of how an author might use a symbol. For example, ~ means the symbol has two possible interpretations.
+Use the ' and * symbols together to submit a description of how two or more authors might use the symbol.
+-----4
+Use the * symbol to indicate all are linked in the same way. For example, *EMOT means all emotions are linked.
+Use the + symbol to indicate two or more are linked in the same way. For example, =ATTACK means two emotions are required to attack.
+-----5
+Use the * symbol to indicate those symbols and terms that are constant.
+Use the † symbol to indicate those symbols or terms that are not constant.
+Use the # symbol to indicate an example of how symbols and terms are used.
+Use the ? symbol to indicate a glossary term.
+-----6
+Use the * symbol to create notes.
+What does this symbol mean?
+How would you describe this symbol?
+.
+-----7
+Use the * symbol to indicate a website link.
+Use the † symbol to indicate a physical object (such as a gnome buried in the ground).
+-----8
+Use the * symbol to indicate the symbol itself.
+The "?" symbol indicates a symbol that the author did not list but shows in his/her work (usually because they are using symbols that were not in the original work).
+-----9
+Use the * symbol to add a new explanation. Use the ‡ symbol to remove an explanation.
+-----10
+Use the * symbol to indicate that the symbol is a modern creation or interpretation. Number of dots indicates the number of that element in the vision.
+-----11
+Use the * symbol to add a new symbol.
+Click here for more information about AARCS.
+-----12
+Use the * symbol to create a link to another symbol.
+Use the "create a link" button above to create a link to this symbol.
+You can use these symbols in any combination.
+The links above will open a Spanish translation of this definition in a new window.
+-----ANALYSIS: This one is pretty up in the air, but seems to have at least a light trend toward a note or an explanation. (low confidence)
+--------------------------------------
+(
+-----1
+Use the ( symbol to indicate a direct quote from the book. A parenthetical comment follows the quote.
+-----2
+Use the ( symbol to add your own description.
+Click here to return to the main menu.
+-----3
+Use the ( symbol to add a new entry.
+Use the ) symbol to remove an entry.
+-----4
+Use the ( symbol to mark this definition as complete.
+Use the ( symbol to mark this definition as complete.
+Use the ( symbol to mark this definition as complete.
+-----5
+Use the ( symbol to mark a hint or clarification that will help you match symbols to their descriptions.
+Use the?), symbol to mark an answer to a hint.
+Don't forget that you can always e-mail your answers for our scoring system.
+-----6
+Use the ( symbol to add a new entry.
+A helpful ( HOW TO USE THE DICTIONARY OF SYMBOLS AND INTERPRETATIONS ) section explains the usage. Copy and paste the text in an editor, then save the file.
+-----7
+Use the ( symbol to separate multiple descriptions and the to mark the end of a list.
+Use the to separate different items on a list.
+-----8
+Use the ( symbol to indent the following description.
+Use the ) symbol to indent the following description.
+Use ( and ) to indent the following description.
+Use the ( and ) to indent the following description.
+-----9
+Use the ( symbol to mark the beginning of a new heading, put the name of the symbol in (parentheses), and list its meaning after it. A list of symbols and the way they are named can be found here, if you don't know how to do this yet.
+-----10
+Use the ( symbol to add your own description.
+Add a New Symbol
+You can also add your own descriptions of these symbols. Click here to add yours.
+This is a list of various symbols and how an author interpreted them. Use the ( symbol to add your own explanation.
+-----11
+Use the ( symbol to denote spoilers.
+! Use the # symbol to denote spoilers.
+-----12
+Use the ( symbol to a place where you want to add additional text and italicize it. To make a heading use the ( followed by the heading text and then ) . These are used for subsections.
+-----ANALYSIS: All over the place again but seems to again mark descriptions. (low confidence)
+--------------------------------------
+)
+-----1
+Use the ) symbol to add notes between the symbols.
+Symbol: Modern
+Meaning: The symbol implies that you have a lot of power and magic in your life. Most likely, you are either an accomplished magician or in the process of becoming one.
+This is a combination of two symbols.
+-----2
+Use the ) symbol to add more information about symbols.
+-----3
+Use the ) symbol to note that this passage is a description of the symbol, not the symbol's meaning.
+-----4
+Use the ) symbol to comment or expand on the canonical description of a symbol. For example you could write:
+) represents a dog
+This is a description of various symbols and how an author interprets them.
+Use the ) symbol to comment or expand on the canonical description of a symbol.
+-----5
+Use the ) symbol to add information about a symbol. If you want to use "H" as a shorthand for "human", then you would put "8) H = 8 humans".
+Put one statement about a symbol after the other without any spaces in between.
+-----6
+Use the ) symbol to note things you don't understand.I'll explain later.
+-----7
+Use the ) symbol to add extra information about symbols.
+Add a description of your own to the symbols you are familiar with.
+Use the radio button to choose which type of symbol you are, for example, a person, object or landscape.
+Choose a colour.
+-----8
+Use the ) symbol to indicate thoughts.
+
+(NOTE: You can type these characters directly above the text or use the online version on my website.
+-----9
+Use the ) symbol to direct the reader to another passage.
+-----10
+Use the ) symbol to add additional notes.
+-----11
+Use the ) symbol to add an author's comments about their own ideas about the symbol. You can also link to external sites that have more detailed information about the symbol.
+-----12
+Use the ) symbol to group items so they can be replaced with other symbols or text.
+Use the # symbol to create a new heading.
+-----ANALYSIS: Similar to (, kind of another 'indicate symbol meaning' but result 5 has an interesting format that may be worth attempting. (low confidence)
+--------------------------------------
+_
+-----1
+Use the _ symbol to add your own comment. This is a description of various symbols and how an author interprets them.
+Use the _ symbol to add your own comment. This is a description of various symbols and how an author interprets them.
+Use the _ symbol to add your own comment.
+-----2
+Use the _ symbol to replace words or parts of words.
+The link you create will show all the words that have been replaced.
+-----3
+Use the _ symbol to add your own descriptions.
+-----4
+Use the _ symbol to insert your own notes about the symbol. For example, the bulma symbol maybe notes that it looks like a pyramid.
+-----5
+Use the _ symbol to add comments about the symbol. For example:
+This is what the eye looks like in this game.
+This is what the eye looks like in this book.
+This is what the eye looks like in this movie.
+-----6
+Use the _ symbol to specify a non-important symbol.
+Use the - symbol to specify an important symbol (or part of one).
+The = symbol is used to indicate whether something (such as a particular character or scene) fits with the surrounding text.
+-----7
+Use the _ symbol to signify a blank space where the author has left something to be filled in by the reader.
+The names of deities and demons are ALL written in italic. This is to differentiate them from regular words or names.
+-----8
+Use the _ symbol to add your own descriptions.
+-----9
+Use the _ symbol to add your personal notes.
+Back to the main table of contents.
+The book is currently in a proofing stage, so it's subject to change.
+-----10
+Use the _ symbol to clarify the meaning.
+Use this to make the reader think about a certain topic.
+Include three of these for each quotation.
+-----11
+Use the _ symbol to add a note about the symbol. For example, the circled dot with a line coming out of it (Radical 1) is called a "circular". It is usually used for mathematics, the circumference of a circle
+Use the __ to explain what the symbol means.
+-----12
+Use the _ symbol to add your own comments.
+In the original, you won't find the comments you just added. You will, however, see the lines below. What you won't see is a list of what characters matched for those lines.
+-----ANALYSIS: My take on this is that it thinks of it as a 'blank spot' to be filled in. Might be able to use it for randomizing results? (low confidence)
+--------------------------------------
+-
+-----1
+Use the - symbol to separate symbols and explain how each symbol is interpreted in the passage. For example:
+The - symbol is interpreted as meaning that the first two lines of the stanza describe something that is moving slowly.
+-----2
+Use the - symbol to signify that this quotation is out of context and does not accurately describe the passage as a whole.
+Use the * symbol to signify that the author's comments are in direct conflict with the passage as a whole.
+-----3
+Use the - symbol to signify a negative trait.
+Use the = symbol to signify a trait of a god or demigod.
+The # symbol is used for thoughts or private conversations between characters.
+The & symbol is used for thoughts or private conversations between characters in monologues.
+-----4
+Use the - symbol to note something that doesn't comply with the rules. Explain why in the comment section below.
+, = Shares the same meaning as an equal sign except it is used for metaphors and symbolic expressions.
+-----5
+Use the - symbol to indicate a negative statement.
+This is a description of various symbols and how an author interprets them.
+Use the % symbol to indicate a walk through a maze.
+This is a description of various symbols and how an author interprets them.
+-----6
+Use the - symbol to represent an author's personal opinion.
+A double exclamation point (!!!) means that the symbol's denotation can vary widely between authors.
+-----7
+Use the - symbol to signify a negative designation; for example, -type III immune cell would mean that the author believes that the cell is of the type III immune cell.
+-----8
+Use the - symbol to indicate a non-western symbol.
+Use the - symbol to indicate a non-catholic symbol.
+Use the number-symbol to indicate a number of people.
+-----9
+Use the - symbol to represent that this is a passage from a book that was cut out of the text. If a book has several passages marked as -, it is usually because the author felt several passages should be combined into one.
+The ^ symbol is used to mark an actual line in the book.
+-----10
+Use the - symbol to indicate a blank space and the # symbol for handwriting.
+Use the ˜ symbol to indicate a portion of the text that was underlined in the original text.
+-----11
+Use the - symbol to indicate a photo here. Use the - symbol to indicate a photo here.
+-----12
+Use the - symbol to indicate that you do not agree with the description of the symbol.
+Use the question mark symbol to indicate that you don't know how the symbol is used.
+-----ANALYSIS: Has a strong association with 'negative' description, but the association seems loose. (low confidence)
+--------------------------------------
+`
+-----1
+Use the ` symbol to add a new symbol to the list.
+-----2
+Use the ` symbol to create links to related material on this page. (The creation process can be initiated from the menu above.
+-----3
+Use the ` symbol to represent the symbol you are describing.
+-----4
+Use the ` symbol to add your interpretations.
+-----5
+Use the ` symbol to create a new topic. Use theearmory to access ideas.
+-----6
+Use the ` symbol to add a new symbol.
+Use the ' symbol to delete a symbol.
+-----7
+Use the ` symbol to create a link to a picture.
+-----8
+Use the ` symbol to addition notes. These notes are for you and no one else.
+There is also a short explanation of the image. You can ignore these if you want.
+This image is usually a representation of the object or idea it portrays.
+Use the = for Balance.
+-----9
+Use the ` symbol to add a new one.
+-----10
+Use the ` symbol to add your own personal description.
+See an error? Say so on the talk page and it'll get fixed.
+-----11
+Use the ` symbol to enter a description of the symbol you see below.
+You enter:
+An "Ouroboros", a snake or dragon eating its own tail. The symbol can be found in both Western and Eastern religions. It represents an eternal cycle in creation, life, death and rebirth.
+-----12
+Use the ` symbol to add your own descriptions to the symbols above.
+-----ANALYSIS: seems to focus on generic 'add a description of a symbol' output. (medium confidence)
+--------------------------------------
+~
+-----1
+Use the ~ symbol to insert the name of the symbol. For example, it could be interpreted as:
+~:snake
+Writing "~:snake"
+-----2
+Use the ~ symbol to add your own notes about the symbol.
+Add a description of what the symbol means to you.
+~
+Use the ~ symbol to add your own notes about the symbol.
+-----3
+Use the ~ symbol to add your own comments about the symbol. A ~ sign tells the reader that the following comment is added by someone else and should not be taken as fact.
+When the symbols are interpreted as intended they make very interesting stories, it is amazing how simple some of them are.
+-----4
+Use the ~ symbol to indicate a link to an external site (other Wikia).
+"desc" refers to the description on that page.
+You can help the Guild Wars Wiki by creating and/or contributing to these descriptions.
+-----5
+Use the ~ symbol to add a note.
+Please do not assume the note is about something else in the book.
+You can add up to 4 notes.
+-----6
+Use the ~ symbol to create a heading. Use the # symbol to create a subheading.
+Here you can add some words about the symbol.
+-----7
+Use the ~ symbol to comment anything discussed in the book. You can also add websites or citations to your comments.
+-----8
+Use the ~ symbol to create a link to more detailed information.
+-----9
+Use the ~ symbol to add your own notes about a symbol.
+You also have notes about the book in general
+Any new symbols appearing??
+Well you have your ideas but you are wondering if anyone has actually made something similar before.
+Nevermind, you remember what the Meliodas forum was called.
+-----10
+Use the ~ symbol to create a hyperlink to further discussion of the topic.
+NOTE: Many symbols are specific to certain types of writing. You may find a different set of access keys in lecture notes, handouts, or in the textbook.
+-----11
+Use the ~ symbol to indicate a direct quote from the book. Use the ~~~~ symbol to indicate a general quote that is not from a specific place.
+Use the ~~~ symbol to indicate an image of something in the book.
+-----12
+Use the ~ symbol to comment out a line. These lines will not be compiled.
+Use the # symbol to comment out a block of code. When this occurs, the code will be removed from the file, but the line number on which the comment was placed will remain. This allows you to insert temporary debugging code.
+-----ANALYSIS: Add heading/ and name /add link seem to be pretty prevalent, may be useful for linking name of subject and descriptions? (medium confidence)
+--------------------------------------
++
+-----1
+Use the + symbol to add a new symbol to the list.
+-----2
+Use the + symbol to add your own interpretation.
+The Vampire Chronicles by:
++ by: Anne Rice
+The Vampire Lestat, Prince of the City of Dis, Vampire: The MOST powerful Vampire ever.
+-----3
+Use the + symbol to add a new comment.
+Use the - symbol to remove a old comment.
+Use the * symbol to delete several comments.
+Use the / symbol to display a log of all the comments.
+-----4
+Use the + symbol to add a new symbol.
+Use the - symbol to remove a symbol.
+Use the reset button to return to the original symbols.
+-----5
+Use the + symbol to add your own definition.
+-----6
+Use the + symbol to add to the list, use the - symbol to remove from the list, use the # symbol to add a comment about a symbol, use the ^ symbol to add a cross reference, use the & symbol to add a link to another page, use the % symbol to indicate a error
+%C
+-----7
+Use the + symbol to add your own interpretations.
+"And your name is…"
+"Abel," you say.
+You wince as the old man stares at you.
+-----8
+Use the + symbol to add a new one.
+Note: all symbols used are explained fully in the tome.
+-----9
+Use the + symbol to represent a wide interpretation.
+Use the , symbol to represent a literal interpretation. This means the author literally means what is written.
+Use the - symbol to represent an opposite meaning.
+-----10
+Use the + symbol to add a new one, remove one from the list, or change the order of the existing ones.
+-----11
+Use the + symbol to add a new symbol and explain it.
+Use the - symbol to remove a symbol and explain why you removed it.
+-----12
+Use the + symbol to add your own personal interpretation of the symbol.
+Please type your name so we can credit you.
+-----ANALYSIS: Seems to be another generic 'add symbol/definition of symbol' one. (high confidence)
+--------------------------------------
+=
+-----1
+Use the = symbol to create your own descriptions of the symbols you see.
+You really enjoy this activity and you're excited to share your enthusiasm for it with your teacher and peers.
+-----2
+Use the = symbol to add your own comment.
+This is a description of various symbols and how an author interprets them.
+Use the = symbol to add your own comment.
+This is a description of various symbols and how an author interprets them.
+Use the = symbol to add your own comment.
+-----3
+Use the = symbol to add your own interpretation.
+A circle broken by an 'X'. The circle represents eternity, order and harmony. The 'X' indicates that something has been destroyed.
+-----4
+Use the = symbol to add your own personal comments to a given description.
+Please do not reproduce the content of this site without permission.
+-----5
+Use the = symbol to create a code.
+Make sure you understand the context in which the sign appears before making a code!
+(Remember: For each character in the code, there is a picture, and for each picture there is a character. Put the two together to get the complete message.
+-----6
+Use the = symbol to create your own descriptions of how you think the symbols should be interpreted. Do this for each symbol in the text.
+For example, in the first sentence, what does it mean that the woman is "wearing a mask of sorrow.
+-----7
+Use the = symbol to add one or more symbols.
+Use the # symbol to create your own symbols.
+-----8
+Use the = symbol to add your own descriptions.
+Click here to go back to the main Symbol and Artwork List.
+-----9
+Use the = symbol to add your own comment about the symbol.
+You can also use several different curly braces to create a list of symbols. In that case, place a line between each of the symbols.
+-----10
+Use the = symbol to add your own interpretation in italics.
+-----11
+Use the = symbol to link two or more items
+Use the 'n' symbol to create a new item
+If you have any questions, see me before the start of class.
+-----12
+Use the = symbol to add your own personal description of the image
+Do NOT try to make it seem like your own creation.
+Be aware that ALL descriptions should be in your native language of Français. We do not accept descriptions in any other language.
+-----ANALYSIS: Similar to many others, 'use your own description/add your own description'. (medium confidence)
+--------------------------------------
+|
+-----1
+Use the | symbol to divide sections.
+1. The circle has many varied interpretations, but in the system this book describes the circle is a symbol of self-referencing: you are the island.
+2.
+-----2
+Use the | symbol to indicate a range: for example, 3-6 would be three to six.
+Add italicized words to get a better idea of the setting of the story.
+-----3
+Use the | symbol to divide sections, or | section headings.
+-----4
+Use the | symbol to divide symbols. No symbol is a whole bunch.
+Use the * symbol to separate one interpretation from another.
+-----5
+Use the | symbol to separate each part of the description.
+-----6
+Use the | symbol to divide up the different symbols.
+-----7
+Use the | symbol to define terms.
+Please note:
+The first usage of any reference in this wiki will be on the respective page of the symbol.
+-----8
+Use the | symbol to divide symbols and describe them separately
+Use the - (hyphen) symbol to denote words that might not make sense in English but are explanations by the author
+-----9
+Use the | symbol to divide up long passages. Use the - symbol to indicate a missing passage of pre-defined length. Use ' for a passage of numbers.
+Use * for a passage that is deliberately author made up.
+-----10
+Use the | symbol to split the description into two parts.
+Use the ~ symbol to describe how much humor the creator thinks their interpretation is. A very funny setting is not as serious as a tragic one. A setting that is not humorous will likely be boring to many.
+-----11
+Use the | symbol to define separate sections and use the
+-----12
+Use the | symbol to divide sections.
+The | symbol ties together two sections, and a separator within a section.
+-----ANALYSIS: Strong separator symbol, seems likely a good candidate for preventing bleed between characters or traits like black hair | green eyes (high confidence)
+--------------------------------------
+\
+-----1
+Use the \ symbol to continue on to another \ symbol.
+NOTE: What you type in notepad will appear on screen and will create a new page in your "Notes" section.
+Do Not Delete This Page.
+-----2
+Use the \ symbol to start a new line.
+Delete the text between the tags to create your own.
+-----3
+Use the \ symbol to start a new line and add more descriptions.
+-----4
+Use the \ symbol to split the description into two parts.
+Use the & symbol to link two symbols together (open image in new tab to see this). Click on the symbols to get a description and interpretation.
+Interpretations are provided for the reader to decide their own feelings about the symbols.
+-----5
+Use the \ symbol to indicate you are taking a break.
+-----6
+Use the \ symbol to start a new line in your answer.
+-----7
+Use the \ symbol to start a new line. *italic*streets\ with markings\
+The description begins with an *italic* on the first word of the first line. It is followed by two forward slashes, and then the word streets with markings.
+-----8
+Use the \ symbol to start a new line.
+To insert a bullet, use the * symbol.
+Add a period at the end of each line except the last.
+-----9
+Use the \ symbol to insert a newline in the description.
+Use the - symbol to indicate a description line break.
+-----10
+Use the \ symbol to divide up the sections. Be sure to include the heading and the section description at the beginning and end of the file, respectively.
+-----11
+Use the \ symbol to start a new line.
+To indent a line, press the Tab key. To unindent a line, press the Shift key and the Tab key simultaneously.
+-----12
+Use the \ symbol to start a new line and indent the rest of the lines by pressing the Tab key.
+You will normally enter the symbols and how they are used in the story, then press Save. After this, you will need to edit this file, using a text editor.
+-----ANALYSIS: Definitely sees it as a 'new line' symbol, which may be useful for causing new lines to occur or isolating parts of a description from other parts. (high confidence)
+--------------------------------------
+/
+-----1
+Use the / symbol to chat with other readers
+Use the 6 and 9 keys to swap between reading the text and listening to an English description
+Additionally, this is a system. If you like, you may use it in any way you wish. A system is just something you use to get around.
+-----2
+Use the / symbol to separate multiple comments, use the * symbol to indicate that there is more than one comment on a certain topic and use the # symbol to indicate where you left off reading in a book.
+First of all... Welcome to the Abyss!
+-----3
+Use the / symbol to message me in-game and leave a message on the description.
+' (A spiral) - spiral can be good or bad, depending on the spiral and how it's being used in the story.
+-----4
+Use the / symbol to reply.
+-----5
+Use the / symbol to represent your thoughts.
+Use the * symbol to denote a thought that has been previously expressed. Often it makes the other characters' thoughts visible, and can be used to quickly look through previous pages for a specific thought.
+-----6
+Use the / symbol to comment on the symbols. Let's say you are writing a story where a "c" is a clue. You draw a circle with a line through it and write (clue).
+You can use any comments you like.
+-----7
+Use the / symbol to interrupt other people in the conversation. This turns everything into notes being written by you. If there is a discussion going on about symbols, you can join in by typing your own comments.
+Funny how this didn't exist a couple years ago.
+-----8
+Use the / symbol to reply to a message.
+/r/popular is a good resource for writing prompts.
+-----9
+Use the / symbol to separate multiple symbols.
+Delete a symbol by using the ' symbol before a space and the symbol you wish to remove.
+Add a symbol to the story by starting a new line with the symbol, leaving a space after it, and then writing what it symbolizes.
+-----10
+Use the / symbol to denote a nod to the reader, with the text right before it being the nod, the text after it being the wink, and everything in between being the eyebrow.
+-----11
+Use the / symbol to comment on this code block.
+-----12
+Use the / symbol to talk to people about symbols.
+/ It's not on the map.
+/ You see a symbol here. What does it look like?
+/ Looks pretty dangerous.
+/ Yeah, it's pretty dark...
+/ It's dark and scary! Run!
+/ HOLD IT!
+-----ANALYSIS: Seems to relate to commenting but also separating chains of symbols. Might mean it is useful for adding multiple separate properties to a subject. (medium confidence)
+--------------------------------------
+?
+-----1
+Use the ? symbol to get a list of other symbols.
+-----2
+Use the ? symbol to get a list of all symbols, and more about each symbol.
+-----3
+Use the ? symbol to get a list of all pages that refer to this one.
+-----4
+Use the ? symbol to get a list of all symbols and details.
+-----5
+Use the ? symbol to get a help entry.
+-----6
+Use the ? symbol to get a list of all available explanations.
+-----7
+Use the ? symbol to get a list of all page numbers in this chapter.
+-----8
+Use the ? symbol to get a list of additional interpretations.
+-----9
+Use the ? symbol to get a list of all symbols and details about them.
+! -- Inscription not yet deciphered.
+-----10
+Use the ? symbol to see an explanation of the symbol.
+-----11
+Use the ? symbol to get assistance from an encyclopedia
+You can also try searching for another topic using the search field to your right.
+-----12
+Use the ? symbol to get a list of all symbols, then click on one to get an explanation.
+-----ANALYSIS: Seems to have a heavy bias to 'get info from a list' so it may work to relate lists of attributes to a subject. (high confidence)
+--------------------------------------
+<
+-----1
+Use the < symbol to add your own interpretation or modify the descriptions of existing symbols. You may also reference the glossary of symbols to find details on a specific symbol.
+-----2
+Use the < symbol to add text.
+-----3
+Use the < symbol to add a new row to the table and use the first letter of the new symbol to name the row.
+-----4
+Use the < symbol to add your own explanation of the symbol above
+Rope around
+The word "Symbol" is misspelled in this article. Use 'Symbols' instead.
+-----5
+Use the < symbol to start a new topic.
+-----6
+Use the < symbol to represent a symbol that relates to a word in the text. For example, the word "hound" is found near the leading of a picture of three dogs. The symbol would then look like this:
+Follow the instructions and complete the remaining pages in the test.
+-----7
+Use the < symbol to add your own interpretation.
+Just as this area is for you to describe what the symbols on the page mean to you, this is also a space for others to do the same.
+-----8
+Use the < symbol to mark a private conversation to yourself.
+Use the # symbol to mark a public conversation that you are both free to join in on.
+Use the & symbol to mark a secret conversation that you only share with the specific person you want to communicate with.
+-----9
+Use the < symbol to add your own description.
+Use the • symbol to add your own description.
+-----10
+Use the < symbol to add your own interpretation.
+-----11
+Use the < symbol to add a new entry.
+Celtic Cross
+A variation of the cross looks similar to what most Christians believe a cross should look like.
+Same goes for the other variations (Greek, Latin, etc.
+-----12
+Use the < symbol to add a new symbol and use the symbol selector to choose the symbol.
+-----ANALYSIS: Seems to hint at adding context to a symbol (low confidence)
+--------------------------------------
+>
+-----1
+Use the > symbol to add a new category or use the
+-----2
+Use the > symbol to separate the different parts of a description. It should look something like this:
+Colors are red.
+Is is red.
+It is red.
+It is red.
+It is red.
+It is red.
+-----3
+Use the > symbol to divide contents.
+Use the | symbol to separate symbols and their interpretations.
+-----4
+Use the > symbol to separate different symbols in the description. Place a string of spaces around the description and use line breaks to make it easier to read. Press Enter after each sentence to create a new line.
+What does this mean?
+-----5
+Use the > symbol to separate each description.
+-----6
+Use the > symbol to advance to the next description.
+-----7
+Use the > symbol to mark important words, and add a reference to symbols if you draw them yourself.
+Use the ~~~ symbol to mark a passage you wrote.
+Use the !!! symbol to mark a passage that had a strong emotional impact on you.
+-----8
+Use the > symbol to add your own interpretation of the symbol. Click on a new line to add your own.
+This section displays the various interpretations of the symbol sequentially.
+-----9
+Use the > symbol to divide items and add new ones.
+Use the ■ symbol to indicate text that the user should read.
+Use the ― symbol to indicate that the text or item continues in the next page.
+Use the '' symbol to indicate a picture that can be used in place of text.
+-----10
+Use the > symbol to branch off to a new segment.
+-----11
+Use the > symbol to divide sections, and the
+-----12
+Use the > symbol to go back.
+-----ANALYSIS: Seems to denote ending/separating sections and heading to the next one. Might be a key component in the functionality of Zaltys format and useful for pointing to important info. (high confidence)
+--------------------------------------
+,
+-----1
+Use the , symbol to add a new entry, and be sure to explain the symbols used. The key to good writing is communication. Good luck!
+-----2
+Use the , symbol to add a description of your own.
+-----3
+Use the , symbol to add a new comment.
+-----4
+Use the , symbol to add a new section to the list
+Use a: symbol to start a new sub head
+-----5
+Use the , symbol to add your own comments about the symbol. For example, changes the symbol to mean "danger". To view the actual glyph, see here:
+You can also click on the image for a larger version.
+Please help make this wiki better by editing this page. Thank you!
+-----6
+Use the , symbol to add entries.
+Adding...
+-----7
+Use the , symbol to add the symbol you want to this list.
+There are many ways to do this. You could:
+Feel free to add any descriptions for symbols that are missing them.
+-----8
+Use the , symbol to add your own description.
+The , symbol indicates where an interpretation may vary between fiction and non-fiction. Use the key at the bottom to know when to use which type of entry.
+-----9
+Use the , symbol to enter a new word.
+Use the or symbol to enter a new word.
+Use the = symbol to enter a new sentence.
+Use the # symbol to add a note.
+-----10
+Use the , symbol to add a new entry, and use the . symbol to view an existing one.
+-----11
+Use the , symbol to add a new entry.
+Use the to remove an entry.
+Use the edit button to change the description of an entry.
+-----12
+Use the , symbol to add a new entry.
+Use the to remove an entry.
+-----ANALYSIS: 'add a new entry/add to an entry' seems like pretty expected use of a comma. (high confidence)
+--------------------------------------
+.
+-----1
+Use the . symbol to indicate any item or place that did not actually appear in this tale, but is an interpretation of the symbols used.
+.s-. means "seen".
+.f-. means "followed".
+.c-. means "could not tell, it was dark".
+.c..
+-----2
+Use the . symbol to continue and the ^ symbol to view all symbols at once.
+^]
+An "atmospheric view" of a scene, showing characters' feelings through symbols.
+Use the . symbol to continue and the ^ symbol to view all symbols at once.
+-----3
+Use the . symbol to add your own thoughts
+Feel free to discuss these interpretations in the comments section.
+-----4
+Use the . symbol to indicate a new topic.
+You can add tips at the bottom of this page or elsewhere in the .
+Traditionally, there are people, called seers, who can see and interpret these symbols.
+-----5
+Use the . symbol to denote a direction. Used for roads. E.g. 10....10
+N.#
+Use the # symbol to denote a space between sentences within a description. Very useful when you see a lot of commas in your text.
+P.
+-----6
+Use the . symbol to add a new line
+. 
+- Name: The Rising Sun
+- American History: The original flag used by the Meiji government was white with a red disk in the center. It later became the flag of the Empire of Japan.
+-----7
+Use the . symbol to add a new symbol and . to remove one.
+-----8
+Use the . symbol to mark a text passage you have already read.
+Use the Setting of the novel to answer the questions that follow.
+-----9
+Use the . symbol to add a new row.
+Use the . symbol to add a new column.
+-----10
+Use the . symbol to add symbols.
+-----11
+Use the . symbol to add a new category
+Use the # symbol to add a new sub category
+Add symbols you think are used in the story as well, if you think there are references to them.
+Confused about where the Story is taking place?
+-----12
+Use the . symbol to mark alternative spellings for the same word. Spell it out if you think it's important how you say something.
+Use the % symbol to mark notes of sarcasm.
+Use the ^ symbol to mark things that might be offensive to re-read.
+-----ANALYSIS: Moderate relation to add new row/continue to next part/start new topic, good for separating descriptive elements in formatting or preceding newlines most likely. (high confidence)
+--------------------------------------
+:
+-----1
+Use the : symbol to add your own interpretations.
+-----2
+Use the : symbol to add your own symbol.
+You get a list of several symbols.
+-----3
+Use the : symbol to interrupt symbols. Use the # symbol to observe the use of a single symbol by another author.
+Use the ^ symbol to comment on a single symbol. You may also use the ^ symbol to comment on the usage of a symbol by another author.
+-----4
+Use the : symbol to go back to the previous page...
+About the Artist
+I am a retired English teacher with a B.S. in Education from California State University, Sacramento. I love to read and write poetry, and have been doing so off and on since college.
+-----5
+Use the : symbol to group symbols.
+-----6
+Use the : symbol to start a new heading. Use the
+number symbol (#) to number paragraphs. Use the
+horizontal rule (sometimes called an "h2") to create a subhead. Use
+the "END" symbol to end headers.
+-----7
+Use the : symbol to start a new heading
+Leave a message at the tone. One of the operators will ring you back.
+You receive a letter in return. Please do not eat or drink anything before or during your visit. Also, take care when exiting the lift as it is quite a jolt.
+-----8
+Use the : symbol to jump to the symbol description that applies to what you are reading. Pressing ENTER will take you back to the previous page.
+-----9
+Use the : symbol to divide up the text to separate symbols into logical groups.
+-----10
+Use the : symbol to separate multiple tags from each other.
+This is a description of various symbols and how an author interprets them.
+Use the : symbol to separate multiple tags from each other.
+This is a description of various symbols and how an author interprets them.
+-----11
+Use the : symbol to start a new heading. Use the | symbol to separate different symbols.
+-----12
+Use the : symbol to add your own description. You can also add authors and books in a similar way.
+-----ANALYSIS: Seems to be strong for creating a header and for grouping things that go together with that heading. (high confidence)
+--------------------------------------
+;
+-----1
+Use the ; symbol to denote a symbol that is not a real one, but an interpretation of the real one. The real meanings are in parenthesis.
+By the way, this is not meant to be a complete list of all symbols, just a beginning list.
+-----2
+Use the ; symbol to separate each symbol.
+-----3
+Use the ; symbol to separate entries and the ~ symbol to separate entries within entries. Synonyms can be listed after the original word under the synonym section.
+Add entries as you gain more insight about the symbols used.
+-----4
+Use the ; symbol to add your own thoughts on the symbols.
+-----5
+Use the ; symbol to separate each symbol.
+; Name of Symbol: Name of the author who created this symbol.
+Name of the author who created this symbol. Name of the Work: The name of the work in which the symbol first appeared.
+The name of the work in which the symbol first appeared.
+-----6
+Use the ; symbol to group items in a list.
+Use the " symbol to start a thought and a space to separate multiple paragraphs.
+"If you make any attempt to go back to where you came from, they will find out and destroy you for your treachery.
+-----7
+Use the ; symbol to separate each explanation with new lines.
+-----8
+Use the ; symbol to separate each description.
+-----9
+Use the ; symbol to separate each element in the list of symbols.
+Note: The descriptions are mainly from symbolic (dream) interpretation books.
+-----10
+Use the ; symbol to separate multiple symbols.
+-----11
+Use the ; symbol to separate the different parts of a list. Do not use the hyphen-minus (or underscore) symbol to divide a list into parts. To number items in a list, use numbers alone. Do not use letters to number items in a list.
+-----12
+Use the ; symbol to separate paragraphs.
+Use the
+symbol to begin a new section in your description.
+Descriptions can be very long, so use indentation to make it easier to read. You can also add extra info blocks before and after the description, using the code below.
+-----ANALYSIS: Seems to be a strong separator, in tandem with colons might be very powerful formatting. (high confidence)
+--------------------------------------
+"
+-----1
+Use the " symbol to indicate that the following text is an extract from a related work.
+-----2
+Use the " symbol to start a new section.
+The " is the symbol for light and is often used in fiction to represent a flash of light.
+The " is the symbol for fire and is often used in fiction to represent a fire.
+-----3
+Use the " symbol to add a new entry.
+Use the pick axe to add an entry called "Symbol: Pick axe".
+Use the arrow to move the "Symbol: Arrow" entry up one row.
+Use the black book to add the text "Black book entries".
+-----4
+Use the " symbol to note items on the list that are your own.
+Use the " symbol to note items on the list that are not on the list but you wish to add.
+Use the " symbol to indicate items on the list that are in the list but you find inaccurate or misleading.
+-----5
+Use the " symbol to refer to yourself. To refer to another character, use the symbol before and after the name (Cory for example would be "Cory the Knight").
+Use the " symbol to denote locations.
+Use the " symbol to denote a thought.
+Use the "@"
+-----6
+Use the " symbol to indicate a character displays a strong emotion. Use the code for your operating system in place of "Windows-1255".
+^A character's facial features and posture may not accurately convey his emotions; use the code to change it to your local settings.
+-----7
+Use the " symbol to indicate a new section.
+Use the symbol to indicate a characterization symbol. It has two parts: first, what kind of person is this? The more traits listed, the more vivid and three-dimensional the character. Second, how does the character deal with what is happening?
+-----8
+Use the " symbol to help you easily identify the type of symbol it is.
+-----9
+Use the " symbol to indicate words or parts of words that the scribe heard as a command, but it is not clear if the scribe actually understood the command. Words that look similar to commands are given the same treatment.
+-----10
+Use the " symbol to help tell the story or start a new section of the description.
+-----11
+Use the " symbol to link lists.
+Spur, like the letter "S", is an irregularly curved line that points towards the inside of a curve.
+It is used as a symbol for omya.
+-----12
+Use the " symbol to signify a direct quote from the work in question.
+-----ANALYSIS: Weak connections to quotes, moderate link to starting new sections. May be useful for differentiating sections. (moderate confidence)
+--------------------------------------
+'
+-----1
+Use the ' symbol to add a new line
+-----2
+Use the ' symbol to denote a character thinks something is their fault. An angle bracket ' means a character assumes something. A question mark ' means a character questions something. A speech-bubble ' means a thought that the narrator is having, but not a character.
+-----3
+Use the ' symbol to create your own symbols and add them to this list.
+-----4
+Use the ' symbol to describe - The first and last letters of each sentence is the same.
+-----5
+Use the ' symbol to denote a use of the word ' used as a name.
+Use the ' symbol to denote a metonymy.
+Use the ' symbol to denote synecdoche.
+Use the ' symbol to denote hyperbole.
+Use the ' symbol to denote metaphor.
+-----6
+Use the ' symbol to indicate a defined word.
+Use the ' symbol to indicate an open word, which may have various definitions that the reader can supply.
+-----7
+Use the ' symbol to mark passages which were written by the symbols in the document.
+Use the ' symbol to mark divine names.
+The ' symbol indicates a passage is an explanation of the symbols used in the story.
+-----8
+Use the ' symbol to indicate a pause in a sentence for emphasis.
+Usually these are used for questions and exclamations, but sometimes at the beginning of a sentence to indicate thoughts or theories.
+The '? mark indicates a sentence fragment that could be complete or incorrect.
+-----9
+Use the ' symbol to indicate a new section.
+Use the 3' and 9' symbols to indicate subsections. Use the 3' symbol to indicate a new subsection.
+Use the ʹ symbol to indicate a new sentence.
+-----10
+Use the ' symbol to indicate symbols. Do NOT use the symbol in the template to indicate a description.
+-----11
+Use the ' symbol to create a new entry.Use the ' symbol to create a new entry.Use the ' symbol to create a new entry.
+Use the ' symbol to create a new entry.Use the ' symbol to create a new entry.Use the ' symbol to create a new entry.
+-----12
+Use the ' symbol to add a new entry. Do this for each symbol that you find in the book.
+When you are finished, you may continue to the next chapter.
+-----ANALYSIS: Seems to have a relationship to names or changing emphasis in text, consistent with other findings outside this codex (moderate confidence)
+--------------------------------------
+{
+-----1
+Use the { symbol to represent a direct speech inside a quotation.
+Use the ' prefix or suffix to indicate tone of an author.
+The hyperlink will take you to another page about that subject.
+-----2
+Use the { symbol to add information about a symbol. Add the following between the setting and the first action.
+The author describes the symbolic meaning of:
+The description can include words, numbers, or both.
+Use the symbol to add an exclamation mark to the end of a sentence.
+-----3
+Use the { symbol to add more information about the symbol.
+-----4
+Use the { symbol to add your own comments about a symbol. Do not use the symbol itself in the comment section. Use the HTML formatting for your text.
+For example...
+-----5
+Use the { symbol to add your own comment.
+-----6
+Use the { symbol to create a new heading.
+Use the semicolon symbol to create a new list item.
+Use the pound sign symbol to create a note item.
+-----7
+Use the { symbol to create a table for the symbols, and add them to the beginning of the chapter. Also, a good chapter title is something like "The Dorna Keepsakes of Lady Gerald".
+You also need a fair bit of world building.
+-----8
+Use the { symbol to add a new section to the description.
+Use the | symbol to add a new section to the description.
+Use the # symbol to add a new section to the description.
+-----9
+Use the { symbol to insert a break between symbols.
+Use the ‘ symbol to separate series of symbols for easier reading.
+Use the # symbol at the beginning of a line to indicate a script reference.
+Do not forget to always add spaces between characters in descriptions.
+-----10
+Use the { symbol to add your own comments about the symbol. They will be outside the symbols context and may be deleted without edit conflicts. They will also appear in blue.
+You can also click on the button in the bottom right of the screen to add your own interpretations of symbols. This will create a "comment"
+-----11
+Use the { symbol to insert text that an author added, or removed.
+In general, this is the description of a symbol and how an author uses it.
+Use the # symbol to mark these as "placeholdings" for symbols not yet in the list.
+-----12
+Use the { symbol to divide up the description.
+Use the | symbol to show a new item has been added.
+Some authors use different color codes to indicate different types of items. These are TBD.
+-----ANALYSIS: Seems to be treated as a separator or literal quote insertion. (medium confidence)
+--------------------------------------
+}
+-----1
+Use the } symbol to end a paragraph.
+Use a # symbol to start a new heading for a subchapter.
+Use a + symbol to start a new section in your document.
+-----2
+Use the } symbol to start a new paragraph.
+}
+He rapped softly but surely on the metal door, and heard a light, faint voice call out.
+Who has enabled the door? William wondered. The old man had a key, but William did not hear him enter.
+-----3
+Use the } symbol to finish off a description block.
+-----4
+Use the } symbol to mark the end of a list.
+Underline the importance of a particular item.
+Bold a key piece of information.
+-----5
+Use the } symbol to start a new paragraph.
+Use the * symbol to start a speech bubble.
+Use the ! symbol to start a shout bubble.
+Use the # symbol to start a footnote.
+Use the % symbol to start a comment.
+-----6
+Use the } symbol to start a new line in case the line feed inside the text is not wide enough.
+-----7
+Use the } symbol to start a new passage of text. Use the | symbol to send the reader to another passage of text.
+The symbols in this book may have different meanings to different people. The meaning is worked out through usage and discussion.
+-----8
+Use the } symbol to mark the end of a section.
+Use the # symbol to mark a note.
+-----9
+Use the } symbol to end a list.
+Use the | symbol to begin a new list.
+You can also use the less formal, but more artistic, roundtalk.
+-----10
+Use the } symbol to wrap text to several lines.
+When you're done, you might want to save your file, which is found under the "Symbols" menu. That's it! You should be able to use this file with any other game where there are symbols, like Notepad or Wordpad.
+-----11
+Use the } symbol to indicate that something follows is a comment. Commentaries are not part of the original work, and are therefore not protected by the same copyright laws. Comments should be used for important suggestions for improvement, personal interpretations of the work, or as a place to rant.
+-----12
+Use the } symbol to wrap text to the next line.
+-----ANALYSIS: Has a VERY strong association with ending lists/starting new sections, likely to function as a powerful separator. (high confidence)
+--------------------------------------
+[
+-----1
+Use the [ symbol to add your own description.
+...
+-----2
+Use the [ symbol to add your own description.
+-----3
+Use the [ symbol to create a spacer.
+Use the ] symbol to end one description and begin another.
+-----4
+Use the [ symbol to add your own description.
+Type the name of the symbol in quotes when adding a new one.
+-----5
+Use the [ symbol to add your own interpretation to the list.
+-----6
+Use the [ symbol to create a new topic and tell us more about this symbol.
+-----7
+Use the [ symbol to mark a word or passage that needs further explanation.
+A ~ means the passage contains a symbol or term the author believes should be defined.
+A = means the passage contains an associated idea stated in the text.
+There are many approaches to analyzing a text.
+-----8
+Use the [ symbol to add your own description.
+-----9
+Use the [ symbol to add a new line
+Use the ] symbol to end a description and add another line
+Press "space" to continue
+See a word you don't know?
+-----10
+Use the [ symbol to mark symbols that are not part of the standard system, use the ] symbol to mark interpretations that follow commonly accepted meanings, but differ from the standard system and use the ^ symbol to mark alternative interpretations. A superscript number indicates how many times the symbol has been used to indicate a certain meaning.
+-----11
+Use the [ symbol to add your own descriptions.
+You can either leave the field blank or type in your own description of the symbol.
+This is a description of various symbols and how an author interpreted them. Use the
+symbol to add your own descriptions.
+-----12
+Use the [ symbol to add something to this page. Use the { symbol to add more pages to this section. Use the | symbol to create a new section. Please do not forget to put tags at the beginning of your pages.
+-----ANALYSIS: Seems to function as a pretty strong 'new line/new description follows this' symbol which is promising for encapsulation. (high confidence)
+--------------------------------------
+]
+-----1
+Use the ] symbol to add your own personal touch to the symbols.
+-----2
+Use the ] symbol to go to the next section.)
+A]][
+The above symbol is called an opening parenthesis. It is used in pairs to introduce a series of mathematical statements and is one of the most important symbols in mathematics. It is also the first mathematical symbol you will learn.
+-----3
+Use the ] symbol to add your own description.
+]
+This is a description of various symbols and how an author interprets them.
+Use the ] symbol to add your own description.
+-----4
+Use the ] symbol to skip to the next section]
+-----5
+Use the ] symbol to link directly to the relevant passage.
+-----6
+Use the ] symbol to go to the next page.
+-----7
+Use the ] symbol to divide sections and add content.
+-----8
+Use the ] symbol to end a list.
+-----9
+Use the ] symbol to go to the next section.
+Use the symbol to return to the Literature Page.
+-----10
+Use the ] symbol to indicate a pause in thought.Zissler will speak directly to the reader in third person omniscient, but will shift between different characters' thoughts in the first person.He includes descriptions of settings, but these are often omitted from the extract.
+-----11
+Use the ] symbol to interrupt a word. Pressing the key causes a list of suggested similar words to be displayed at the bottom of the screen.
+Use the # key to highlight all of the text in the current screen and then press the key to apply boldface type to the highlighted text.
+The '?
+-----12
+Use the ] symbol to mark key turns in the action. These turns are when something significant happens and your attention is drawn to the passage. Use the * symbol to mark important passages and where the author's thoughts and explanations enter the text.
+-----ANALYSIS: Seems to be a somewhat strong "go to next list/section/page" but seems somewhat ambiguous too. (moderate confidence)
+--------------------------------------
+[]
+-----1
+Use the [] symbols to jot down your thoughts on the subject.
+A few things have come to my mind while reading this passage:
+There are 3 types of images used here
+The first type is the concrete, physical descriptions of things.
+-----2
+Use the [] symbols to add your own to the list and create a new symbol.
+After creating a symbol, you can add a description of it for other users to read.
+You can also merge symbols together by putting one after another in between the [] symbols.
+-----3
+Use the [] symbols to indicate alternative spellings for the symbol.
+Italic text indicates a symbol for which there is no standard spelling.
+-----4
+Use the [] symbols to provide the missing information needed to complete the description.
+Note: this is not an actual test, just a exercise to improve your understanding of the different types of symbols.
+-----5
+Use the [] symbols to mark alternative possible explanations. For example, the first editor could have meant the first symbol, the second an ] symbol or the third a { symbol.
+-----6
+Use the [] symbols to link similar symbols.
+-----7
+Use the [] symbols to link related symbols.
+For example, the first related symbol is the Eye of Providence, which represents the god providence. The second related symbol is the Masonic Square and Compass, which represents a building where Masons meet.
+-----8
+Use the [] symbols to define your own.
+-----9
+Use the [] symbols to note what each part of the image is. For example, you might note that one looks like a simple cross, or a plus, or a table, or a spear, or a pink frothing at the mouth, etc.
+-----10
+Use the [] symbols to link related subjects in a chain and the + symbols to add new symbols.
+-----11
+Use the [] symbols to fill in the blanks.
+The woman's dress is made of lace.
+The sky is blue.
+The sun is hot.
+The woman is young.
+She looks happy.
+She is sad.
+She is frightened.
+She is excited.
+-----12
+Use the [] symbols to provide commentary to specific parts of the text
+Put important or interesting words in bold.
+-----ANALYSIS: Definitely seems to be a 'put linked stuff inside here' set. (high confidence)
+--------------------------------------
+()
+-----1
+Use the () symbols to add your own notes about the symbols or the stories.
+-----2
+Use the () symbols to add information about the symbols. For example, you could put "is a vampire's coffin." on the first line, then add another section saying, "Some vampires are cloaked in religious iconography, like crosses or the Sankt-Christoph-Kreuz." on a second line.
+-----3
+Use the () symbols to add your comments about the symbols.
+The story "The Lost Dutchman's Mine" is a good example of this archetypal story. All these symbols are mentioned in the story.
+-----4
+Use the () symbols to add information about the writing on the page.
+-----5
+Use the () symbols to write the name of the character in the box.
+Use the * symbol to mark a line that is not part of the description of the symbol.
+-----6
+Use the () symbols to add information about the symbol when you describe it.
+-----7
+Use the () symbols to add information about the symbol. Fill in any gaps with your own words or foreign phrases. You can also use the * to mark missing words or phrases.
+-----8
+Use the () symbols to add information about the symbol. Add as much information as you like about the symbols and their interpretation. For example, you can add a joke that the symbol looks like a pig asking the question " HI YA TILL WE MEET AGAIN? "
+-----9
+Use the () symbols to add your own notes about the symbols.
+-----10
+Use the () symbols to add information about the author's personal feelings about the symbol.
+If this were a realist work, where would you place it on the plot scale?
+-----11
+Use the () symbols to add your own description/analysis of the symbols above
+-----12
+Use the () symbols to add your own comments about the symbols. The comments will be used to generate the image for the posts so thought should be given as to what the symbols mean.
+-----ANALYSIS: Seems to be another 'add information about the symbol' one, might be a weaker version of [] (low confidence)
+--------------------------------------
+{}
+-----1
+Use the {} symbols to insert the actual text describing the symbols. The text {Symbol description} should be replaced with the actual symbol description.
+
+Answer: D
+
+Difficulty: Hard
+Time: 5-10 Minutes
+You have decided to go to a magic show.
+-----2
+Use the {} symbols to add your own commentary on the symbols.
+Add links to your commentary on the web. Link to images on Pixabay. Link to information on Wikipedia. Link to relevant videos on YouTube.
+-----3
+Use the {} symbols to insert your text.
+-----4
+Use the {} symbols to describe the symbol itself.
+Now, use the symbols to describe your mood.
+-----5
+Use the {} symbols to insert text or choose from one of the following:
+-----6
+Use the {} symbols to insert text into the description. Black text indicates what the author considers to be the "normal" meaning of a symbol, red indicates an "unstable" or alternate meaning, and blue indicates an outright "miracle" meaning.
+-----7
+Use the {} symbols to insert the names of the authors and books.
+-----8
+Use the {} symbols to create your own descriptions.
+-----9
+Use the {} symbols to mark a pause in the text.
+Add details to enhance the reader's understanding.
+-----10
+Use the {} symbols to create your own descriptions and share them with the community.
+-----11
+Use the {} symbols to insert the symbols and words from the lists into the description.
+You have a few symbols to choose from. Pick the ones that best describe the way you see the symbols.
+-----12
+Use the {} symbols to mark off what you think the symbols mean.
+Then link in a description of how the average person in the story would interpret them. You do not need to explain your own interpretations.
+-----ANALYSIS:  Seems similar to parenthesis and [], 'put stuff in here to relate to the thing being defined' (moderate confidence)
+--------------------------------------
+""
+-----1
+Use the "" symbols to help break up the lengthy descriptions. Also, italicize or underline words that are of note.
+Want to help the wiki AND learn at the same time?
+-----2
+Use the "" symbols to direct the reader to important information in the article. Use the "key" symbols to direct the reader to the defined Key Terms.
+-----3
+Use the "" symbols to add explanatory text.
+-----4
+Use the "" symbols to direct the reader to other parts of the description.
+Make sure all your research is in the description.
+Do not use ALL CAPS, italics or any fancy typefaces.
+Do not include your name or web address in the description; these are for references only.
+-----5
+Use the "" symbols to add content that you created yourself or from sources at your disposal.
+-----6
+Use the "" symbols to create your own list and explanations.
+What do you think these symbols mean?
+-----7
+Use the "" symbols to add your own notes about a symbol.
+Then, place the symbols in the correct order using the instructions on this page. Once you have placed them in the right order you will get an answer.
+For example, if the answer is "A"
+-----8
+Use the "" symbols to add a description.
+Notice that some symbols have multiple meanings.
+-----9
+Use the "" symbols to add a description of what the symbols mean to you.The "." after each one indicates there may be more than one option, but only one has been written for now. The "?" after the first indicates that there is some debate about the meaning.
+-----10
+Use the "" symbols to describe the symbols as found in the book.
+-----11
+Use the "" symbols to add comments about the symbols above. Use the "-" symbol to indicate a comment that needs the symbol above it to be deleted.
+-----12
+Use the "" symbols to indicate that there is more information after a certain passage.
+These symbols indicate the removal of content from the original book and the addition of content in the box.
+These symbols indicate the use of magic or other supernatural forces.
+-----ANALYSIS: Seems like a suprisingly strong competitor to [] but may be overly literal in formatting. Might be worth exploration. Suggestion from AI in #11 is interesting for negation and might be worthwhile too. (high confidence)
+--------------------------------------
+''
+-----1
+Use the '' symbols to add your own notes, it will make the information more summarizable. There are 4 types of symbols:
+! A note from the editor, do not copy.
+~ A link to a type of symbol you can add.
+* A comment which is streightforward text.
+-----2
+Use the '' symbols to add your opinion about the symbol. For example,
+Use the code below to put your contribution on the page.
+-----3
+Use the '' symbols to add more details to an already described topic.
+Use the '' symbols to add more details to an already described topic.
+Use the '' symbols to add more details to an already described topic.
+-----4
+Use the '' symbols to add text to the image.
+This is a description of various symbols and how an author interprets them.
+Use the ''' symbols to add text to the image.
+This is a description of various symbols and how an author interprets them.
+-----5
+Use the '' symbols to add your own description.
+-----6
+Use the '' symbols to add text to the respective sections.
+-----7
+Use the '' symbols to add your description.
+!
+-----8
+Use the '' symbols to add text describing the symbols. If there is a long text, use the code in italic to add it to this description.
+For more information or clarification on any of the following, see the glossary of terms or Wikipedia.
+This list is almost certainly incomplete.
+-----9
+Use the '' symbols to add another black section. As you make each new section, remember to add a '' in front of it so we can tell what agent was used on it!
+You are done with the symbols.
+You have added the symbols used to make this file.
+-----10
+Use the '' symbols to add descriptions of the symbols you see in this image:
+-----11
+Use the '' symbols to add text to the image.
+-----12
+Use the '' symbols to add your own commentary about the symbols or the source of the symbol. For other meanings of some of the symbols, see the end of this page or Wikipedia. To view the original source of the symbol (if you are reading the book), see the end of this book or Wikipedia.
+-----ANALYSIS: Perhaps a less aggressive version of quotes, might have some utility. (high confidence)
+--------------------------------------
+-----1
+-----2
+-----3
+-----4
+-----5
+-----6
+-----7
+-----8
+-----9
+-----10
+-----11
+-----12
+-----ANALYSIS:
+--------------------------------------
+-----1
+-----2
+-----3
+-----4
+-----5
+-----6
+-----7
+-----8
+-----9
+-----10
+-----11
+-----12
+-----ANALYSIS:
+--------------------------------------
+-----1
+-----2
+-----3
+-----4
+-----5
+-----6
+-----7
+-----8
+-----9
+-----10
+-----11
+-----12
+-----ANALYSIS:
+--------------------------------------
+-----1
+-----2
+-----3
+-----4
+-----5
+-----6
+-----7
+-----8
+-----9
+-----10
+-----11
+-----12
+-----ANALYSIS:
+--------------------------------------
+-----1
+-----2
+-----3
+-----4
+-----5
+-----6
+-----7
+-----8
+-----9
+-----10
+-----11
+-----12
+-----ANALYSIS:
+--------------------------------------
+-----1
+-----2
+-----3
+-----4
+-----5
+-----6
+-----7
+-----8
+-----9
+-----10
+-----11
+-----12
+-----ANALYSIS:

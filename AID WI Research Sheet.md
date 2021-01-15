@@ -268,7 +268,7 @@ It is worth checking out birb's research section for tips that relate to Caveman
  Alexandria:[ Long red hair, fair skin, narrow green eyes, clean].
 ```
 It looks like a mixture of Zaltys and Caveman. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below we provide the full dissection of Neanderthal written personally by Monky:
-https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/Neanderthal_Unscripted_Results_by_Monky.txt
+https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Neanderthal_Unscripted_Results_by_Monky.txt
 
 
 ### Onyx Formats
@@ -332,6 +332,46 @@ Now that the category `EQUIP:` is confirmed working with clothes and other inven
 More tips and tricks that fall out of larger headers will be added here as they are discovered. `NOTES ON X` has been used by some as a WI before, but most feel it serves better as a remember pin or an input for the story. CrisAIcilian has discovered `Character sheet - ` as an effective header for WI, using an otherwise Zaltys-like format together with it in his test character. After roughly 100 rolls he claimed to achieve a 70% success rate on his character traits & actions being mentioned correctly as long as the story input features new letters instead of being a simple `continue`. The author speculates this could be a good way to define something akin to `you` for those interested. All of the random experimentation and associated pictures can be found on Discord as the author remains unconvinced to the relevancy of testing inside AID.
 
 Earlier in the document we mentioned Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the script) `EN behaves more like tooltips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily. 
+
+CrisAIcilian is developing alternative methods. Thus far the format looks like Zaltys with few additions/variations and utilizes WI and remember heavily. This is for use without scripting, parts of the format rely on the proper ordering of each data type. This is what his most recent format from Discord looks like.
+```
+WI section-
+(III)
+<Personal Profile of Vilze>
+Vilze:[Appearance<A>:blue horns & skin, white hair, yellow eyes, black wings. Wear<B>:nothing. Mentalities<C>:troublemaker, loud, Lazy, Easy-going. Relationships<D>:hates angels(especially Archangel Izrafiel),dislikes Isabella's rules, many friends(Meiling<succubi>). Traits<E>:grew up in hell, pokes fun at everyone, wild life style(parties). Vilze is 178 cm tall.]
+Above are facts on the female demon Vilze.
+#
+RM section -
+(II)
+<Your Personal Profile>
+You:[Name<A>:name, alias Jack. Gender<B>:?. Age<C>: ?. Ethnicity<D>: ?. Nationality<E>: ?. Appearance<F>:a few pimples are on your face, etc. Trait<G>: ?. You are 170 cm tall.]
+Above are facts regarding yourself.
+#
+The RM section that leads the History context -
+(I)
+<The Story>
+Calendar: November 17, 2017.
+The current location: a hotel room in Washington D.C.
+The current event: You're sitting in a chair.
+```
+The lines mentioning sections are comments, don't insert them into WI/remember. The main difference to Zaltys is using Roman numerals in descending order and replacing key reinforcement with ABC et. al. Experiments on Discord show similar efficiency to the older formats discussed above. The benefit of the WI is saving space while the benefit of the remember section is having the AI better remember what traits are associated with you plus keeping track of your current scene or the `<story>`. birb and Zaltys still recommend you use uppercase categories. Citation from Zaltys on why we use uppercase categories.
+```
+Problem with propercase categories is that if you load several WIs, the AI will be hesitant to use those words (because of the repetition penalty). The uppercase avoids that, and also makes it less likely that the AI starts copying the style into output. Not much of a problem for 'Traits' since that's unlikely to appear in the output anyway, but might be a problem for 'relationship' or 'wear*'.
+```
+After we discovered that GPT3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside APPEAR is the most effective method of denoting a lack of human legs so far.
+
+This test is completely anecdotal, but Zaltys has consistently outputted what AID Dragon thinks about certain special symbols.
+```
+SYMBOL MEANINGS:
+§ - Major importance, or something you really shouldn't overlook
+§ - Important Info
+⋅ - Stressed/Emphasized
+```
+Additional hypothesis from Monky's testing. Monky has outputted what he calls a CODEX in Griffin, a document that will be shared within this repository.
+```
+Use the * symbol to indicate all are linked in the same way. For example, *EMOT means all emotions are linked.
+Use the + symbol to indicate two or more are linked in the same way. For example, =ATTACK means two emotions are required to attack.
+```
 
 
 ### Character-to-token ratio tests
