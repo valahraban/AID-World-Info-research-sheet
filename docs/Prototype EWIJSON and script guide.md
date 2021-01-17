@@ -32,10 +32,10 @@ https://regex101.com
 
 Zynj's wiki contains many examples and ideas on how to start using the script. Some of them may be even more advanced than the methods discussed in this document. For now we will discuss two tricks rolled into one example. It is possible to use any other WI format together with EWIJSON. Thanks to EWIJSON WI being close to your inputs, it's also the best way to define `you` inside AID at the moment. Example on how to achieve this alongside synonyms for your name:
 ```
-KEYS								|		ENTRY
+KEYS		|		ENTRY
 yourname.character		|		yourname:[Zaltys or Neanderthal format stuff using you as the noun.]
 yourname._synonyms		|		(your|full name|nicknames|titles)
-REMEMBER					|		Your name is yourname. The rest of the remember continues...
+REMEMBER		|		Your name is yourname. The rest of the remember continues...
 ```
 
 ## Credits
