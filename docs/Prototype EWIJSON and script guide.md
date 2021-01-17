@@ -11,10 +11,13 @@ This guide focuses on Zynj's AI Dungeon script EWIJSON and primarily on using it
 - GPT3 has a hard cap of 1024 tokens for AID users, 2048 for the devs
 ```
 EWIJSON and the wiki written by Zynj can be found at:
+
 https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON/release
+
 https://github.com/Zynj-git/AIDungeon/wiki/EWIJSON
 
 Other useful scripts exist as well and will be mentioned. STARSTRUCK has written a userscript for Tampermonkey/Greasemoney that can be combined with any AID specific script for the purpose of modifying the UI and adding artwork from https://www.artbreeder.com/ . The script can be found at:
+
 https://gitlab.com/STARSTRUCK/ai-dungeon-userscripts
 
 
@@ -24,14 +27,15 @@ To use a script in AID you must first write or install it. Either download the 4
 
 ## Using EWIJSON
 Reading Zynj's wiki will get you set up on the basics and how to write WI using EWIJSON. Usually this is done inside the scenario you're playing. The main purpose of EWIJSON is introducing regular expression (regexp) functionality inside AID and by default pulling any key written using EWIJSON recognized formats right next to the key in the context towards the front of the fresh context. With the use of attributes you can place your triggered WI wherever you want in the context. Any regular style WI won't be called by EWIJSON and will function identically to how it would inside vanilla AID. These functionalities make it the swiss-army-knife of scripts, allowing you to achieve any kind of text editing that can be done using JavaScript standard ECMAScript regexp. For checking your regexp syntax the author recommends using the following site:
+
 https://regex101.com
 
 Zynj's wiki contains many examples and ideas on how to start using the script. Some of them may be even more advanced than the methods discussed in this document. For now we will discuss two tricks rolled into one example. It is possible to use any other WI format together with EWIJSON. Thanks to EWIJSON WI being close to your inputs, it's also the best way to define `you` inside AID at the moment. Example on how to achieve this alongside synonyms for your name:
 ```
-KEYS                              |   ENTRY
-yourname.character        |   yourname:[Zaltys or Neanderthal format stuff using you as the noun.]
-yourname._synonyms      |   (your|full name|nicknames|titles)
-REMEMBER                    |   Your name is yourname. The rest of the remember continues...
+KEYS								|		ENTRY
+yourname.character		|		yourname:[Zaltys or Neanderthal format stuff using you as the noun.]
+yourname._synonyms		|		(your|full name|nicknames|titles)
+REMEMBER					|		Your name is yourname. The rest of the remember continues...
 ```
 
 ## Credits
