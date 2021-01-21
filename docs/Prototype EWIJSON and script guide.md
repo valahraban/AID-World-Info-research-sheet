@@ -32,11 +32,25 @@ https://regex101.com
 
 Zynj's wiki contains many examples and ideas on how to start using the script. Some of them may be even more advanced than the methods discussed in this document. For now we will discuss two tricks rolled into one example. It is possible to use any other WI format together with EWIJSON. Thanks to EWIJSON WI being close to your inputs, it's also the best way to define `you` inside AID at the moment. Example on how to achieve this alongside synonyms for your name:
 ```
-KEYS				|		ENTRY
-yourname.character		|		yourname:[Zaltys or Neanderthal format stuff using you as the noun.]
-yourname._synonyms		|		(your|full name|nicknames|titles)
-REMEMBER			|		Your name is yourname. The rest of the remember continues...
+KEYS				|	ENTRY
+yourname.character		|	yourname:[Zaltys or Neanderthal format stuff using you as the noun.]
+yourname._synonyms		|	(your|full name|nicknames|titles)
+REMEMBER			|	Your name is yourname. The rest of the remember continues...
 ```
+
+## Im a complete noob and scared but EWIJSON interests me
+First consider if you even need or want the script. Every little bit of the tool is consistently formed around it's designed purpose - to dynamically and with relatively low effort manage your WI on the fly through your input field. As long as you have good memory and have understood how regexp works you can easily manage all your WI related data structures from the input field. Its designed to be object-oriented for the purpose of being pseudo-dynamic. If you use a lot of WI and you tweak them often EWIJSON is perfect for you, if this isn't you, you might even prefer using regular old WI. While it can't automatically change the objects for now, you can change any object whenever you want and get immediately changed results from the output. 
+
+Before we continue keep in mind that the AI reads strings in the context and matches them with the keys inside your WI definitions. Then, the entry of the matched key gets inserted in a certain place which is as far back down the context as possible in vanilla. In EWIJSON the match is by default inserted immediately above the matching key in context. This can further be manipulated with EWI attributes.
+
+Say you have `John.character` and assign permanent traits to this group. It would do good to leave the clothing out of the intended permanent group. You might want to change his wardrobe later right? So inside your WI you define `key: John.character.worn entry: pajamas`. After John wakes up and gets ready to work he will get dressed. After this is done we update the subroup with through inputs with `/set John.character.worn business suit`. Following this example you've updated the entry for the former object to be `business suit`. If you ask the AI what John is wearing, it will be a description of some type of business suit.
+
+`._synonyms` is combined with regexp to easily define multiple synonyms for your object. From a WI the author has defined we have `faun girl._synonyms` to define every key the AI recognizes for this root. In entry we have the regexp `(faun|satyr).*(girls?|females?|woman|lady)`. This makes every faun or satyr followed by the female nouns synonymous with `faun girl` from earlier. Then you can describe how you want this species to appear like inside your game with a key like `faun girl.species` with the entry containing your desired description.
+
+`_synonyms` at the front is the same concept, but for objects you haven't whitelisted. The author has thus far noticed this is the best way to define sexual dimorphism, secrets or other booleans. Binaries or configurations of a singular concept that are drastically different. Species is whitelisted, but female isn't then we define key `_synonyms.draph.species.female` with entry `(draph).*(females?|woman|women|lady)|(female|woman|lady).*(draphs?)`. When the AI recognizes that the word draph is preceded or followed by the female nouns, the WI containing the information will be triggered which we have defined in `draph.species.female`.
+
+This isn't even going into the EWI attributes. For those you have to think what you want in terms of manipulating the position or visibility of your WI inside the context. #[d] is used to match the key then place the entry in front of or after the match. #[p=x] tells the AI how many lines *down* in the context you want the matched entry. The other attributes you can research on Zynj's wiki. You'll figure out how to use them if you need them.
+
 
 ## Credits
 Zynj for writing EWIJSON, updating it frequently and educating people on how to use it. STARSTRUCK for his artdungeon.user.js. Latitude for making scripting free. birb for writing this. 

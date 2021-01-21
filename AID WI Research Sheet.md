@@ -71,7 +71,7 @@ With scripting it's possible to circumvent the regular ordering of each element.
 ## Griffin vs Dragon
 AID contains multiple machine learning models the primary ones being Griffin and Dragon with Lovecraft being a later seasonal addition. Modern versions of AID Griffin and Dragon are both GPT-3. This has been confirmed by the devs on twitter, discord and other public forums such as their medium. That being said there are different sizes of GPT-3. Griffin uses a subset of GPT-3 that is closer to the original 1.542 billion parameters used by the GPT-2. The full-sized GPT-3 that Dragon is based on has a whopping 175 billion parameters. This shows in the quality, consistency and most importantly *forgiveness* of the model and the output it produces. Both models love a detailed and consistent context, but Dragon is more forgiving in terms of formatting. This shows especially in how differently it responds to WI you feed it. Griffin has quirks you have to be mindful of. These affect what kind of WI you write and will be discussed in the following sections.
 
-It used to be that the first prompt and response were generated in *GPT-2* but this is no longer the case, it depends on what model you use. If there is a populated prompt, the first output will be in whatever model you're using. Only a completely empty prompt would be GPT-2. So at minimum put something in your prompts. This is official information from Alan. Both detailed history and WI are important for training the AI for your scenario and getting what you want out of it. Either redo until the writing looks high quality enough to your liking or spice it up with attentive alters, the key to enjoying AID is building on success.
+It used to be that the first prompt and response were generated in *GPT-2* but this is no longer the case, it depends on what model you use. If there is a populated prompt, the first output will be in whatever model you're using. Only a completely empty prompt would be GPT-2. So at minimum put something in your prompts. This is official information from Alan. Both detailed history and WI are important for training the AI for your scenario and getting what you want out of it. Either redo until the writing looks high quality enough to your liking or spice it up with attentive alters, the key to enjoying AID is building on 	success.
 
 
 ## Tokenization - understanding limitations and special characters
@@ -217,7 +217,7 @@ You shake your head.
 ### Useful Categories
 With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among many different formats. Here we share some categories that have proven useful. The category words will be provided as a list as their use is self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. The long list of categories:
 ```
-APPEAR, BODY, LOOKS, WORN(STYLE/FASHION), INV, EQUIP, MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY/GEO, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE/EFFECT(character status like being dirty, sleepy or ill), SEE, BIOME, FLORA (must match the biome), CREATE
+APPEAR, BODY, LOOKS, WORN(STYLE/FASHION), INV, EQUIP, MENTAL, LIKES, DISLIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY/GEO, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE/EFFECT(character status like being dirty, sleepy or ill), SEE, BIOME, FLORA (must match the biome), CREATE, FACTS, STATUS
 ```
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
 
@@ -226,6 +226,28 @@ The AI tends to be very literal-minded. TRAITS is the usually agreed upon god-ca
 `SEE:` is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need TRAITS. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACKS:eyes;SEE:blind;` has produced the most consistent Zaltys format blind characters. Research continues into creating mutes albeit TRAITS works decently.
 
 Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enterprise, Enterp` and use the shorter `Enterp` as they key in your WI. This works better if the small key is a substring of the long name. You also want to use a substring that isn't easily confused with other words as is with this example. This may be more difficult and less worth your time if you use scripts.
+
+`STATUS:` is a surprisingly useful category for varied topics. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon, but it's not a completely consistent category for this purpose.
+
+`SUMMARY:` is a strong and versatile category for making literal NPCs for quest chains or defining points of interest you want described consistently. It can even reference previously used categories, making it even better than TRAITS in some cases.  Can be shortened as `SUMM:`
+
+```
+SUMMARY:Jamaican/grew up on streets, Output:
+He grew up in Jamaica with his rich parents. When he was 16, he was on vacation in Hawaii and decided to stay there when his parents left without him. He learned how to surf and just bummed around the island for a while. He eventually ran out of money, so he started working at a surf shop and selling some of his paintings on the side.
+```
+```
+Zak:[sentient continent<gigantic>. MENT<Zak>:upbeat/cool/loyal;SUMMARY<Zak>:Sentient landmass/living continent/mostly forest&taiga/can float.] Output:
+
+Zak appears as a massive continent with a thick green forest canopy covering most of it. The bright sun shines through the leaves creating dancing lights that brighten up the otherwise dark green expanse. It is a beautiful, massive thing drifting in the sky, mostly covered in trees and plains with mountains here and there.
+Zak is the only sentient landmass in Raajhanaa that is not a nation. That's because it is a living being, and capable of controlled flight, though it is currently limited to within the bounds of the Raajhanaan sky. It is quite ancient, and it is unknown how it came to be sentient, though there are many myths and legends surrounding it.
+Its anatomy is as varied as the landscape, and just like a regular body, different parts of it have different specialised organs that allow it to survive.
+PERSONALITY (Zak):
+Zak is just an overall calm, cool and collected being. Doesn't really get angry at things, though it has a healthy respect for gravity (no pun intended). It loves exploring, seeing new sights and visiting foreign places.
+```
+With SUMM:
+```
+Zak is a sentient floating continent. It is about the size of Eurasia, and can fly around at will, although it cannot currently fly very high or very fast. It is mostly covered in forests and taiga, although it has some large plains, and several mountain ranges. It is currently inhabited by a few tribes of stone age humans.
+```
 
 Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger categories. The AI picks up common traits just fine by their lonesome. TRAITS is a catch-all for when you don't need a big list on a single topic.
 
@@ -525,4 +547,4 @@ As mentioned before AID is in constant development and flux of change. Changes t
 4chan has threads and guides too. They have been beneficial and entertaining to the author. Go on /vg/ and search for /aidg/ if you want their guides and sources, some of it is good especially for NSFW. The special inputs section benefited greatly from their work. Prompts collections exist online but are not provided here due to their NSFW nature. Below is a link to the Anonymous resources & guides, please cross-reference their work with ours:
 https://guide.aidg.club
 
-CREDITS: Everyone whose name has been mentioned here (you guys rock), the many AID related communities and the author for compiling this. Everyone who shares their experiments and results online. Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links. Kanye West is divorcing his wife for a trap and a whole lot of sociopolitical shenaningans are going on. Looks like 2021 will be a wild year. See You Space Cowboy.
+CREDITS: Everyone whose name has been mentioned here (you guys rock), the many AID related communities and the author for compiling this. Everyone who shares their experiments and results online. Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links. 2021 is already a wild year. See You Space Cowboy.
