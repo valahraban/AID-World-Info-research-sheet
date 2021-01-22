@@ -1,0 +1,461 @@
+*****First test scenario - > everything is in context to ensure the AI can grasp the concept.***** This is using the 'minimum viable entry' that I could make that would successfully avoid legs, feet, walking, running, and other leg including/implying outcomes. I cut out ones that failed to describe anything related to the prompt (as this is a low context scenario Griffin loves to just go "Guess I'll do whatever I want.").
+
+This is a description of various symbols and how an author interprets them.
+
+:[ Francine ● 'serpentine ophiomorphic locomotion'];
+:[ Francine ● 'lower half single python tail length 6m'];
+:[ Francine ● 'lateral undulation across surfaces upon belly'];
+
+Please describe Francine's movement as she enters a room:
+-----1
+Francine moves serpentine, as she makes her way slowly across the room. She ushers her head and upper body forward before twisting her pelvis and moving her tail along.
+
+-----2
+She scurries through the room, looking around cautiously.
+
+-----3
+Francine enters a room and moves with elegance and style.
+
+-----4 - partial fail, mentions limbs but not specifically legs or walking.
+Francine is a serpentine being. While she appears to have four limbs, each with two digits, in reality, her body is made up of individual muscle and tendon structures connected together into one unit that allow her to move in nearly any direction.
+
+-----5 - partial fail, tries to describe body as ' many thin long strands' that can move independently - AKA tentacles.
+Francine moves like a snake, slithering across the floor. It's not entirely clear where one moment her body ends and the other begins. Her body is composed of many thin but long strands that, independent of each other, can twist and turn in different directions.
+
+-----6
+Francine is an unusual shape-shifter (she has the ability to change her body into any small, non-living object she chooses). She can move around at incredible speeds and at great depths underwater, using a form of locomotion somewhat like a snake.
+
+-----7 - partial fail, goes off the rails.
+Francine appears to have no legs as such, but rather a smooth uninterrupted area of creamy white, goose-flesh skin. It seems that her entire body is a single vast expanse of flesh.
+
+-----8
+Francine as described before seems to move in a serpentine motion, but this movement could be interpreted as a wave "bounce" on a liquid medium (which might explain the strange motion).
+
+-----9
+Francine slowly enters through the doorway and stops, making a hissing sound.
+
+Nothing happens.
+
+Francine slowly exits through the doorway and stops, making a hissing sound.
+
+-----10 - partial fail, sauropod limbs are tail/neck/legs.
+Francine enters the room, her skin seeming to glow slightly in the dimly lit temple. You see a half dozen rubbery sauropod limbs upon her back, and with a hiss she slithers upon the ground toward you.
+
+-----11
+Francine enters slowly, moving her head around the room, sniffing at various points. She slowly moves towards you from the left of the entrance as she begins to lift her tail above the floor. It slithers along the ground for a few seconds before starting to go up.
+
+-----12
+Francine snakes her way through the doorway, her belly undulating side to side. She's a large snake.
+
+Francine's body language and movement as you first meet:
+
+As she enters the room, her body undulates slightly as if breathing.
+
+-----13
+Francine's presence in the room feels like it's causing a toxic cloud. Her motions are serpentine and they appear to make her glide rather than walk.
+
+-----14 - failure, mentions walking in.
+Francine walks in slowly, with her snake-like locomotion, although she undulates along her body in places.
+She slowly passes between the people gathered there, staring at them with her large, snake-like eyes.
+
+-----15 - partial fail, mentions limbs.
+Francine slithers to the floor, her body twisting unnaturally to move. Her skin begins to ripple, her eyes turning from blue to red, her nose changing shape and her limbs extending.
+
+-----16
+Francine propels herself forward with the undulating motion of her body.
+
+-----17
+Francine moves about quite sinuously, not like a snake. The way she glides across the floors.
+
+-----18
+Francine enters the room.
+
+The light reflecting on her scales and her movements are what cause that lovely green sheen. You don't notice it as much when she moves slowly the other direction. You notice it a lot more when she begins twisting and turning that body.
+
+-----19
+Francine moves like a snake, slithering in and out of the door, her two forked tongues flickering in and out.
+
+-----20
+Francine moves gracefully and quietly, like a serpent.
+
+-----21 - partial fail, mentions standing still
+Francine slowly enters the room, her body making a slight hissing sound due to the lateral undulations she is creating across her belly.
+
+She stands still for a moment, before beginning to slowly creep forward with her head turned to one side as if paying particular attention to the walls in every direction.
+
+-----22
+Francine's movement is slow and serpentine.
+
+She is not swimming, but gliding over the surface of the water.
+She appears to glide over the surface of the water by twisting and bending her body in various ways so that she moves in a sinuous fashion across the surface.
+
+-----23
+Francine glides through the door, her body undulating slightly from side to side.
+
+What does Francine look like while she is gliding through the room?
+
+Her eyes are closed, and her serpentine body writhes around.
+
+-----24
+Francine enters a room, twisting and coiling herself up to fit through the doorway. She extends her head and upper body, then lowers herself forward and backward to test the space.
+She's coming at you, head down, as you open the door with a click.
+
+-----Count: 6 partial fails and one fail out of 24 attempts with only non sequiturs/nonsense responses filtered out.
+
+*****Second test scenario: Full context and the format is entered into WI, but there are no competing WI to cause leaks.***** I used a simple medieval fantasy adventure prompt and got to full context, then introduced Francine, attempting to observe her movement. Had a lot of duds where nothing regarding movement was mentioned, but they were mixed between 'she's a vampire/succubus/buxom lass' and 'she is definitely a serpent', the latter was dominant so that is a good sign.
+
+Context over 3300 characters;
+
+You are Helena, a witch living on the edge of the medieval kingdom of Larion. You have a wand and a pet alligator named Chompy. As you sit in your swamp hut mixing a magical potion, you hear a knock at the door. You open it and see a tall man in a hooded cloak. "Hello," he says with a mixture of fear and terror in his eyes. You grab your wand and utter the first spell that comes to mind.
+
+Chompy the alligator has other plans. You don't even see it, but when the alligator bites the man's leg he loses his balance and falls backwards. As he tries to stand up, you cast a blast of lightning at him, killing him instantly.
+
+You sit down to think about what you should do next.
+You decide to siphon the slain man's soul into a crystal to power your magic as you let Chompy devour him, but not before checking him for anything useful. You find a lot of gold coins in his pockets that are quickly placed into your reserves.
+You hold aloft your soul crystal, uttering an incantation and flicking your wand to capture the soul of the man as Chompy bites into his corpse. Soon, the soul is secured and you have enough energy to get yourself settled in this new development.
+As you look upon the man's soul in your crystal, you see he was a knight of some renown and was fond of the drink. You smile as you remember your mission to get his soul.
+You return to mixing your magical potion, a potion of summoning. As you call upon the spirits within, you wonder what creature you should get.
+You thumb through a codex on mythical and magical entities that you could try to summon with your potion, hoping to get the one you want to help you.
+
+You consider a few creatures. One is a minotaur. The beast would be around two or three stories tall and heavily armored with a greatsword as its main weapon. Another would be a mancybara, a creature similar to a minotaur, but with a wilder nature. The third would be a chimera, a fantastic beast with the body of a lion, the head of a snake and the tail of a dragon, which could breathe fire.
+You decide not to choose just yet, and instead settle down for a meal of boiled toads.
+Suddenly, Chompy makes a noise.
+"Come to Mama," you sing, licking your lips. Chompy does indeed come over to you as you feed him bits of flesh from the dead knight.
+You enjoy your meal of boiled frogs as Chompy finishes off the remains of the dead knight, and then moves onto other prey.
+You send Chompy out to patrol around your hut as you begin to meditate. Chances are, he's going to catch something now that he's exposed to human flesh.
+Suddenly, Chompy returns, with a small furry creature in his mouth. He drops it at your feet and looks at you expectantly.
+Upon inspecting the creature, you find out it is a...
+"A rat?" you think to yourself. "Why would Chompy bring me a rat?" You immediately know that this is some sort of portent.
+You slice open the rat's innards to take a reading of its entrails. It appears that this will do you no good, as you see nothing lying within. Yet, you are sure that something is going on here.
+Meditating upon the portent of the dead rat, you come to the conclusion that this is a sign.
+You look out your window to see that it is indeed raining, which is rather unusual for this time of year. Shrugging, you get dressed and exit your hut.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home.
+
+-----1 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is indeed a serpentine creature, with a long neck and a body that is very beautiful, even if you don't find her particularly charismatic.
+"Well, I'm glad to see you," you say. "You're soaking."
+"I know," Francine replies.
+
+-----2 - failure, mentions walks.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. The way her hips move as she walks...the flare of her buttocks...it is all you can do to stop yourself from...
+"Are you OK?" Francine suddenly asks, noticing your perusal of her figure.
+
+-----3 - failure, mentions legs as a body part.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Then, you realize...
+"SHE'S A SNAKE."
+You have seen pictures and images of snakes before, and yet you've never seen anything quite like this. Her skin is that of a snake, although she has a human's arms and legs attached to it.
+
+-----4 - partial failure, mentions 'salamander' and 'succubus' both which can be assumed to be legged.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She moved gracefully, like a….
+"A salamander?" you think to yourself. "It can't be. She's a succubus, not a salamander!"
+As you watch her movements, you realize that she is indeed a succubus.
+
+-----5 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She moves with a serpentine grace that you find very alluring, even from this pretty girl that you've recently met.
+As she enters your home, she looks around as if searching for something. Then, her eyes settle upon yours.
+"Have you seen my dog?" she asks.
+
+-----6
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. The raven-haired woman moves with stealth and grace, immediately luring you with her beauty.
+"What are you doing here?" you ask. "Not that it matters, but I thought you were dead."
+"I'm not," Francine says.
+
+-----7
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is very different from your previous companions. Where they moved awkwardly and never seemed to do the right thing, she moves with a grace that you never saw in an Amazon. She gives you a smile as she enters, and eyes your sword as she moves to sit upon your bed.
+
+-----8 partial success, flowing serpent movement
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home.
+She is flowing and free, unlike the stiff movements of your previous visitors. This woman carries herself with grace and poise, seemingly oblivious to the elements.
+You watch as she approaches you, her eyes looking at you in a way no other's have.
+
+-----9 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is indeed a serpentine creature, moving with grace and speed.
+
+-----10 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is indeed a serpentine being, moving with grace and flicks of her tail revealing a cool mint scent.
+You place your hand on her back as she sits down, and as your hand meets her warm skin, she hisses slightly. You stop yourself from yelping as well.
+
+-----11 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You notice her movement is rather serpentine.
+"Are you the rain?" you ask.
+"I am the carrier of the rain," Francine replies.
+"Can you get it to stop?"
+"I am not the rain maker.
+
+-----12 failure, mentions walks.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is indeed the perfect mate, a beautiful woman with green eyes and long curly red hair. Her wince as she walks permits her to be very limber as you notice, but you are not so superficial to focus upon that.
+
+-----13 partial success, flowing serpent movement
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. It is almost as if she is flowing towards you.
+
+-----14 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her skin is tight and her movements are serpentine.
+"I've come for your help," she says, her voice like music. Her voice seems to entice you into doing her bidding.
+"We're going to stop this war," she continues.
+
+-----15
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is an elegant woman, and she seems to be moving with a great deal of grace as she enters your home. She turns towards you, looking at you with her bright green eyes. You notice a beautiful silver necklace around her neck, which catches the light of the candlelight.
+
+-----16 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You notice that she is using her serpentine body to move around your small home.
+"You've come at a good time," you say. "The village is being troubled by a beast. A dragon, I think."
+"Dragon?" Francine repeats.
+
+-----17 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You watch as her serpentine body slithers across the floor, before she speaks.
+"Hello there," she says. "Are you the one they call the Nightmare Tyrant?"
+"I am."
+"I've heard much about you.
+
+-----18
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You find her movements and appearance rather alluring.
+"Hello," she says.
+"Hello," you reply, staring at her figure.
+"So, I'm guessing you brought me here to kill me?" she asks.
+"Well, not immediately,"
+
+-----19
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You notice she moves with grace and ease, like a... well, like a dancer. You watch as she tosses her hair out of her face before speaking to you.
+"So tell me, Sir Kit. What brings a fine fellow like you to this God forsaken island?"
+
+-----20
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She has grown into a lovely young woman. You watch as she moves with grace and elegance as she heads to your small kitchen area. She is, as always, wearing the outfit you gave her.
+You wonder how she is faring in the service of the Vampire Lestat.
+
+-----21
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You can't take your eyes off her as she moves with such grace and beauty. You remember the first time you saw her, and you knew that you were destined to do... something... with her.
+"Hello," she says. "How are you today?
+
+-----22
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You find her movements comely, and you wonder if she has a similar effect on the rest of the male population.
+She smiles as she sees you, and you find that particular facial expression extremely alluring. It is the sort of expression you'd see upon a deer caught in headlights.
+
+-----23 partial fail, doesn't mention anything really but then brings up zebra, which can imply legs.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She moves with the grace of a...
+You look at her skin and see that she has stripes down one side of her body, like a zebra.
+"So..." she says, shrugging her shoulders. "You decided to accept my challenge?
+
+-----24 partial fail, amorphous creature of water is probably playing off of serpentine but is too vague to be desirable.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is an amorphous creature of water, and as she moves through the rain she becomes more defined, until you find yourself staring at a beautiful young woman.
+"So do you like my new form?" Francine asks.
+
+-----Count: 8 success, 2 partial success, 3 fails, 3 partial fails (and a ton of rerolls that didn't mention movement at all)
+
+*****Third scenario: Added info for a character to remember so it would be closer to the front and more likely to cause leaks. I described the MC as follows in remember with a reasonable trailing line and kept the same prior context;
+
+:[ Helena ● 'arachnid eight legged locomotion'];
+:[ Helena ● 'lower half spider thorax and abdomen 8m'];
+:[ Helena ● 'walking crawling and skittering on spider legs'];
+You are a witch named Helena and you have a pet alligator named Chompy. You are in your hut welcoming your guest, Francine.
+
+-----1
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is a woman of ample bosom and a slender waist, yet her movements are graceful.
+"I've come to accept your quest," she says. "I hope you'll permit me inside your home."
+
+-----2 possible success? politician, snake? Nahhh
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You notice that she seems to move like a politician, which strikes you as odd, as you have never seen a politician before. Then again, you've been living alone for the past twenty years...
+You motion Francine into your chair and sit down in another one opposite to her.
+
+-----3
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You watch her body language as she speaks with you and note her facial expression, which is one of interest.
+Soon, the pair of you sit together in your hut, eating a meal of salted pork.
+
+-----4
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. From what you can see, she moves with the grace of a dancer.
+
+-----5 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is indeed a serpentine creature, with her head at about the height of your waist and her eyes looking directly at you. She moves gracefully as she sits in front of you, her own entrails reading as an aura of poisonous gas around her.
+"You're here..."
+
+-----6
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You find that you do not find her movements repellent this time.
+She sits down in your main seat and watches as you meditate. You wonder what she will do next, as she seems to be contemplating you.
+
+-----7 partial failure, mentions stepping into the doorway, implying feet/legs.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. It is indeed a lovely sight to behold.
+As she steps into the light of the doorway, you see that she is unmistakably a snake person.
+
+-----8 failure, mentioned walking.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her walk is sinuous and graceful. Her face is that of a deer in headlights, and for some reason you find this quite attractive. Soon, the two of you are conversing.
+You bring up the topic of the rat, and how it seems to be some sort of portent.
+
+-----9 partial failure, 'steps inside'.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home.
+Hmmm... A sorceress, sure enough. A young girl, and pretty from what you can see. She smells like flowers, too.
+"Nice hut," she says as she steps inside. She looks around and smiles. "This is a nice home."
+"Thanks,"
+
+-----10 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is like some kind of serpentine creature, looping around your legs and moving at your side.
+Soon, the two of you are chatting about this and that.
+
+-----11 failure, mentioned walking.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her hips sway as she walks, and her head is thrown back in a way that reveals her throat. Wow.
+"Francine."
+"H..." she starts, but stops as she notices how much you've matured. Her eyes dart around, not knowing what to do.
+
+-----12
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Something is definitely off...
+"Thank you for the offer, but I really have to get back home..." Francine says as she moves towards you. "But it was nice seeing you again."
+You stare at her face, certain that you've seen her before somewhere.
+
+-----13 partial success - sits implies movement.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is indeed a serpentine creature as her track record attests.
+She sits before you on your bed. "I have come to collect my reward," she says. "The job was a simple one, after all."
+You nod. "You're here about the reward.
+
+-----14 partial success, swimming through a tunnel implies serpentine movement to an extent.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home.
+"How did you get in here?" you ask.
+"I swam," she explains, "Through the tunnel."
+"Tunnel?
+
+-----15 fail, walks.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her hips sway as she walks, and her ass wiggles as she walks. Once again, you are struck by the realization that you are a grown man and still find this woman very attractive. Rather than dwell on it, you invite her inside to dry off from the rain.
+
+-----16 fail, walks. Hips seem to be a common denominator.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her hips sway as she walks, and you feel attracted to her.
+"You look very pretty today," you tell her.
+"Thank you," she replies, with a cute, formal etiquette. "You're looking very handsome yourself."
+
+-----17
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Watching her moving about, you take in her beauty. She has a beauty that could only be matched by Helena and Dasha, if my last encounters with them are any indication.
+Soon, the three of you are having a meal in your dining area.
+
+-----18
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You do not find her movements attractive.
+After she sits down, you immediately begin to speak.
+"What is it that you want?" you ask. "How can I help you?"
+"You can't," she says, "but he can."
+
+-----19
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You notice she is a tall, curvy, raven-haired beauty. She strikes a pose, doing a kind of swirl with her hips, as if she's a professional dancer or something.
+"Nice hut," she says.
+
+-----20 fail, legs/walks.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. From the way she walks, moves her head and her tail, you can tell that it's the same Francine you went to school with.
+Soon, she sits cross-legged in front of you, and smiles at you warmly.
+
+-----21
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Unease fills you as you watch her move. The creature's physical appearance is unimpressive. It has soft features, short black hair and brown eyes. It seems harmless. Yet, something about it... makes your skin crawl. You cannot pin down what exactly it is.
+
+-----22 partial success. Sinuous is one of the most common serpent movement descriptors, but not a direct hit.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You find her movements to be... Sinuous.
+You approach her and see that her body is moving in perfect synchronization with the movements of her head. It is then that you notice her eyes: two red gems, each as bright as the sun.
+
+-----23
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You find her movement to be very... appropriate.
+"So, Helena." Francine says, as she glances around the interior of your home. "You're a witch, correct?"
+"Yes.
+
+-----24 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You know she is a snake, but she manages to move with a grace that you didn't expect.
+Soon, the two of you are sitting in your longhouse and talking. You learn that Francine is on a quest to slay the dragon hiding at the summit of a mountain.
+
+-----Count: 3 successes, 3 partial successes (not counting politician jab), 5 fails, 2 partial fails. No bleeds from Helena spider attributes to Francine serpent attributes.
+
+***** Fourth Scenario - removing parts from Francine's description to determine effect; I basically removed one of the three lines to see how it affected output results, as a proof that the three line approach is the minimum amount for redefining this behavior for Griffin against its biases.
+
+-----1
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home.
+"How do you do?" Francine says. Her movements are elegant and graceful. "I have come here to tell you that you may be in grave danger."
+
+-----2 Serpent Success
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is very... serpentine, as you've come to expect from the other witches. She is, too: in addition to being a very tall woman, she is also very attractive. Indeed, there is something about her that reminds of the succubi you've heard about.
+-----3
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Hmmm...
+Francine moves around your hut, inspecting it and you with interest.
+"So, do you have any weapons around here?" she asks. "I'm only looking for a place to crash for the night."
+
+-----4
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Slender with a curvy figure, she moves to you in a sensual manner. She has long raven hair and striking green eyes.
+"Well met," she smiles.
+"And well met, I'm sure," you respond.
+
+-----5 fail - mentions having/moving on four legs/being a harpy.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You notice that she has the same four legs as Chompy and move in a similar fashion. Yet, she is not a minotaur.
+"You're a kit," you say. "A harpy."
+"Yes," she says. "I've come for your aid."
+
+-----6 partial fail, mentions 'gait' and big cats implying legs.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. It's the same graceful gait of a... how do you say it… a lion? No, a panther. A big one.
+Suddenly, she emits a roar, which has a distinctive shrieking sound to it.
+
+-----7 partial success - sinewy strongly implies snake motion.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her movements are sinewy and primal. Yet, she is without the trappings of clothing you are used to seeing.
+
+-----8 partial fail - stroll implies walking.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. You realize that she is covered in mud and grass, some of it sticking to her fur.
+"I was taking a leisurely stroll in the forest, when I saw you," Francine explains, as if she were going to explain why she was dirty.
+
+-----9 fail - slinking implies catlike movement, mentions being an alligator and similar to a chimera.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. In fact, she is slinking, and you realize that she has a faint resemblance to a...
+You shudder as you realize that the alligator that has just entered your hut is in fact a chimera.
+
+-----10 fail - walks.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home.
+"Have a seat on my couch while I prepare something to drink."
+You watch her ass as she walks away. As you study the structure of it, you notice there is something strange about it... it looks reptilian.
+
+-----11 fail - trots, furry.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She looks so cute as she trots inside.
+Soon, you are looking out the rain and feeling rather nice as you sit in a warm hut with a cute furry girl. Everything is perfect.
+Suddenly, you feel something wet on your ear. It is Chompy.
+
+-----12 fail - 'serpentine walk' close but no cigar.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She's certainly a bit different from Helena. She has a very... serpentine walk, rather than a strut.
+Soon, the two of you are alone and you have a chat with Francine. It transpires that she's also a witch.
+
+-----13 fail legs/walks
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She has large breasts for a woman her size, which bounce as she walks. Her legs are shapely and Adonis would jealous of the thighs this woman has.
+You invite her to sit in the chair before you and sit on the sofa.
+
+-----14
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She has a grace and familiarity about her movements that is in stark contrast with the clumsy shamble of a sot.
+As Francine is shaking rain from her cloak, you realize that this is most likely the best time to question her.
+
+-----15 partial fail, gait strongly implies walking/legs.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. It's the same mincing gait you remember from when you met her, back when she was still a witch.
+She moves towards you, licking her lips in a seductive manner, as she crosses her arms.
+"I'm here Francine."
+"Hello Helena,"
+
+-----16 fail - walks.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. The woman is definitely an attractive one. She walks with a sway in her step that is easy on the eyes, and you have to admit that you find her quite pleasant looking.
+"Thank you for inviting me inside," she says once she sits down.
+"You're welcome,"
+
+-----17 Serpent Success.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is indeed a beautiful woman, though you find her movements to be a bit too serpentine today. She must have sensed your hesitation, for she attempts to reassure you.
+"Don't worry," she says. "It's just this dress."
+
+-----18 Serpent Success.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She approaches you with the grace of a serpent.
+"Looks like we both had the same idea." She smiles, her fangs shining in the moonlight.
+
+-----19
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is certainly a beautiful creature and you feel a stirring within as she moves towards you.
+However, she begins to speak.
+"Hello, Helena."
+
+-----20
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her hips sway as she walks and her bust stretches the fabric of her dress as she breathes. Her hair is tied up into something resembling a crown, which only drives the impression that you're having that you're with a princess.
+
+-----21
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. Her body language is most curious, and definitely not that of a sane woman.
+She sits in a corner of the room, and you sit opposite her. She looks at you expectantly, as if you are going to say something.
+
+-----22 fail, walks.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She is a vision with her white hair and snow-white skin. Her blue dress flows as she walks, and you are drawn to her like a moth to a flame.
+
+-----23 fail, feet and.... bouncing ball movement?
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home. She moves like a bouncing ball, rolling in place until she gets close enough to touch you.
+Touching you... That reminds you, you should ask her some questions. Yet, for now, you watch as she enters your home and lands upon her feet.
+
+-----24 partial fail - standing implies legs.
+As you step outside, you see Francine before you. You invite Francine into your hut and watch how she moves as she enters your home.
+"Have a seat."
+You gesture to the chair in front of you, only to find that she is already standing next to it.
+"Have I caught you in a dreary, rainy day?" she asks.
+
+-----Count 3 successes, 1 partial success, 9 fails, 4 partial fails (over HALF of movement mentions had a fail of some kind, scant few successes with just ONE line missing).

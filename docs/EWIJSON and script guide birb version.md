@@ -2,7 +2,7 @@
 
 
 ## Preamble
-This guide focuses on Zynj's AI Dungeon script EWIJSON and primarily on using it for manipulating World Info and the context. This guide is in the prototyping stage and is intended to motivate someone more dedicated to write an advanced guide on how to better utilize it's many useful features. It is assumed that you've already read most of the AID research sheet and understand how most of AID's context works. To recap:
+This guide focuses on Zynj's AI Dungeon script EWIJSON and primarily on using it for manipulating World Info and the context. This guide is intended to motivate someone more dedicated to write an advanced guide on how to better utilize it's many useful features. This guide works as an introductory bootcamp to get you started. It is assumed that you've already read most of the AID research sheet and understand how most of AID's context works. To recap:
 ```
 - Max. input character length: 2772
 - Max. Summary length: 500
@@ -22,7 +22,7 @@ https://gitlab.com/STARSTRUCK/ai-dungeon-userscripts
 
 
 ## Installing EWIJSON
-To use a script in AID you must first write or install it. Either download the 4 json files from Zynj's github or acquire a release zip through the official AID Discord channel #scripting. As of writing it is on version 1.1.7. From inside the AID UI go to the menu > my stuff > make scenario > scripts. Usually this is where you write/develop your own scripts. For a release of EWIJSON we press the upwards arrow and import the zip or the json files. After this is done and you see the code inside shared library, input modifier, context modifier and output modifier the script(s) is ready to be used only within this scenario. You must repeat this for every scenario you wish to use scripts with.
+To use a script in AID you must first write or install it. Either download the 4 json files from Zynj's github or acquire a release zip through the official AID Discord channel #scripting. As of writing it is on version 1.1.9. From inside the AID UI go to the menu > my stuff > make scenario > scripts. Usually this is where you write/develop your own scripts. For a release of EWIJSON we press the upwards arrow and import the zip or the json files. After this is done and you see the code inside shared library, input modifier, context modifier and output modifier the script(s) is ready to be used only within this scenario. You must repeat this for every scenario you wish to use scripts with.
 
 
 ## Using EWIJSON
@@ -50,6 +50,18 @@ Say you have `John.character` and assign permanent traits to this group. It woul
 `_synonyms` at the front is the same concept, but for objects you haven't whitelisted. The author has thus far noticed this is the best way to define sexual dimorphism, secrets or other booleans. Binaries or configurations of a singular concept that are drastically different. Species is whitelisted, but female isn't then we define key `_synonyms.draph.species.female` with entry `(draph).*(females?|woman|women|lady)|(female|woman|lady).*(draphs?)`. When the AI recognizes that the word draph is preceded or followed by the female nouns, the WI containing the information will be triggered which we have defined in `draph.species.female`.
 
 This isn't even going into the EWI attributes. For those you have to think what you want in terms of manipulating the position or visibility of your WI inside the context. #[d] is used to match the key then place the entry in front of or after the match. #[p=x] tells the AI how many lines *down* in the context you want the matched entry. The other attributes you can research on Zynj's wiki. You'll figure out how to use them if you need them.
+
+
+### The Ultra Condensed Numbered Point Edition
+If this doesn't help you, I can't help you. This is the complete standard workflow for defining things in EWIJSON.
+1. Decide on a WI. Character or location for starters. Decide on initial attribute for your characters. `.character` is good. We will now create everything though the input field, or `>`
+2. Set your first character. Let's go with John. `/set John.character John`. Here, .character denotes the name.
+3. John needs more traits. Let's go with clothes and mental first. `/set John.character.worn business suit`. He now wears a business suit defined under a new entry. We repeat for `/set John.character.mental workaholic` because John loves his job. Now we could repeat this for what his workplace is...
+4. John has a full name. We want the AI to understand this. We do `_synonyms` which also means `_conditions`. We do `/set John._synonyms (John Doe|The Workaholic|John The Workaholic)`. Now the AI recognizes his full name and titles. John Doe implies => John.<object> and calls the entry for that WI.
+5. Manually edit your whitelist or do `/set _whitelist. character,worn,mental`
+6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`
+6.1. Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.
+7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Salaryman just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.
 
 
 ## Credits
