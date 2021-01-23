@@ -355,45 +355,41 @@ More tips and tricks that fall out of larger headers will be added here as they 
 
 Earlier in the document we mentioned Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the script) `EN behaves more like tooltips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily. 
 
-CrisAIcilian is developing alternative methods. Thus far the format looks like Zaltys with few additions/variations and utilizes WI and remember heavily. This is for use without scripting, parts of the format rely on the proper ordering of each data type. This is what his most recent format from Discord looks like.
+CrisAIcilian is developing an alternative format focusing on consistency and scene building. Thus far the format looks like Zaltys with few additions/variations and utilizes both WI and Remember heavily. This is exclusively for use without scripting, parts of the format rely on the proper ordering of each data type. Cris explains what the format does with comments inside the example he has provided. This is what his most recent format from Discord looks like:
 ```
-WI section-
-(III)
-<Personal Profile of Vilze>
-Vilze:[Appearance<A>:blue horns & skin, white hair, yellow eyes, black wings. Wear<B>:nothing. Mentalities<C>:troublemaker, loud, Lazy, Easy-going. Relationships<D>:hates angels(especially Archangel Izrafiel),dislikes Isabella's rules, many friends(Meiling<succubi>). Traits<E>:grew up in hell, pokes fun at everyone, wild life style(parties). Vilze is 178 cm tall.]
-Above are facts on the female demon Vilze.
-#
-RM section -
-(II)
+// The WI section (put this in WI) -
+⑶	// This unicode number, and its positioning, dramatically improves the AI's ability to process info. Theory: the positioning of this number makes the entry less list, more like a "chapter", the AI gets more creative and will utilize traits it normally would rather ignore.}
+<Personal Profile of Vilze>	// This adds extra identification, and was added to combat leak.}
+Vilze:[Description<A>:blue horns & skin, white hair, yellow eyes, black wings; she is without genitals; Vilze is 178 cm tall. Wear<B>:nothing. Mentality<C>:troublemaker, loud, lazy, easy-going. Relationship<D>:hates angels(especially Archangel Izrafiel),dislikes Isabella's rules, many friends(Meiling<succubus>). Trait<E>:grew up in hell, pokes fun at everyone, wild life style(parties).]	// Don't change the structure. Spread categories over multiple lines for example, will render the "Above are facts.." less effective.}
+Above are facts on the female demon Vilze.	// Don't alter this sentence, adding "The" at the front for example, makes it less effective.}
+#	// Separator, important.}
+// The /remember section (in /remember) -
+⒇
 <Your Personal Profile>
-You:[Name<A>:name, alias Jack. Gender<B>:?. Age<C>: ?. Ethnicity<D>: ?. Nationality<E>: ?. Appearance<F>:a few pimples are on your face, etc. Trait<G>: ?. You are 170 cm tall.]
+You:[Name<A>:?, alias Jack. Gender<B>:?. Age<C>:?. Ethnicity<D>:?. Nationality<E>:?. Description<F>:skinny, etc; you're 170 cm tall. Appearance<G>:freckles etc.]
 Above are facts regarding yourself.
 #
-The RM section that leads the History context -
-(I)
+// The /remember section that leads the story context (also in /remember) -
+⑴	// I just feel arranging the two numbers this way is better, with no hard evidence behind it.}
 <The Story>
-Calendar: November 17, 2017.
-The current location: a hotel room in Washington D.C.
+Calendar: November 17, 2017.	// No ABC in this section, ever. The AI will pay too much attention to it and output "You're still sitting."}
+The current location: in a hotel room in Washington D.C.
 The current event: You're sitting in a chair.
 ```
-The lines mentioning sections are comments, don't insert them into WI/remember. The main difference to Zaltys is using Roman numerals in descending order and replacing key reinforcement with ABC et. al. Experiments on Discord show similar efficiency to the older formats discussed above. The benefit of the WI is saving space while the benefit of the remember section is having the AI better remember what traits are associated with you plus keeping track of your current scene or the `<story>`. birb and Zaltys still recommend you use uppercase categories. Citation from Zaltys on why we use uppercase categories.
+
+Experiments on Discord show similar efficiency to the older formats discussed above. In some ways it may be better, like sticking on to the scene you have created through the combined use of mentioned WI and remember. The caveat is how strictly the `#` letter is utilized, slightly restricting your writing and making it incompatible with scripting although this is intentional. Scripts like EWIJSON likely don't work as well with formats using newlines anyways. The important thing is to make deliberate choices on your formatting across the board and making them play nice with any scripts you're interested in using.
+
+Through the document and in the above example we've noticed some WI authors like to write categories using lowercase categories. In the past birb and Zaltys recommended you use uppercase categories. Citation from Zaltys on why we use uppercase categories:
 ```
 Problem with propercase categories is that if you load several WIs, the AI will be hesitant to use those words (because of the repetition penalty). The uppercase avoids that, and also makes it less likely that the AI starts copying the style into output. Not much of a problem for 'Traits' since that's unlikely to appear in the output anyway, but might be a problem for 'relationship' or 'wear*'.
 ```
-After we discovered that GPT3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside APPEAR is the most effective method of denoting a lack of human legs so far.
+After recent experiments with scenario and category generation scenarios it turns out different types of categories have different weights. For the scenarios tested the AI did much better with Author's Notes when the lowercase category `writingstyle:` was used instead of a previous popular category `Writing Style:`. More discoveries need to be made on this end.
 
-This test is completely anecdotal, but Zaltys has consistently outputted what AID Dragon thinks about certain special symbols.
-```
-SYMBOL MEANINGS:
-§ - Major importance, or something you really shouldn't overlook
-§ - Important Info
-⋅ - Stressed/Emphasized
-```
-Additional hypothesis from Monky's testing. Monky has outputted what he calls a CODEX in Griffin, a document that will be shared within this repository.
-```
-Use the * symbol to indicate all are linked in the same way. For example, *EMOT means all emotions are linked.
-Use the + symbol to indicate two or more are linked in the same way. For example, =ATTACK means two emotions are required to attack.
-```
+After we discovered that GPT3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside APPEAR was an effective way of making making the AI realize some character lag legs, but better alternatives have been worked out like ¬legs `¬` being the unicode symbol for negation. It's also easier on tokens than the middle dot.
+
+The biggest and most thorough testing on symbols has been done by Monky and he has provided us with two documents for Griffin and Dragon he calls the CODEX_SIGNUM. These and many other useful user-provided documents can be found in the docs section:
+https://github.com/valahraban/AID-World-Info-research-sheet/tree/main/docs/
+
 
 
 ### Character-to-token ratio tests
