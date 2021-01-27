@@ -14,6 +14,7 @@
     + [Monky Formats](#monky-formats)
     + [Onyx Formats](#onyx-formats)
     + [birb research](#birb-research)
+	+ [CrisAi research](#crisai-research)
     + [Misc Tips](#misc-tips)
     + [character-to-token ratio tests](#character-to-token-ratio-tests)
     + [Worlds Specific Tips](#worlds-specific-tips)
@@ -100,7 +101,7 @@ The GPT is an autoregressive transformer language model trained on English writi
 ## Authors Notes specifics
 Let's discuss the premium feature `A/N:` first. If you're looking to inject flavor into the AI's outputs A/N will be your first and probably most efficient stop. It is a worthwhile for the convenience, yet it's usefulness is not entirely restricted to premium users with our advice. What A/N does is it insert a line of text into the history the AI reads e.g. `Author's Note: Some details like mood about this story.` exactly 3 newlines up. On the scenario screen it has a 150 character limit, but the in-built maximum limit is 300 characters according to kim's LMI testing and community experiences.
 
-Discovering manual Author's Note inputs during dev testing and how heavily it affected output is why it was added to the core game. Even as a free user you can manually add Author's Notes into your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Editor's Note is another interesting take on the concept by user gnurro. Research suggests that A/N: can be used to reinforce writing style even of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
+Discovering manual Author's Note inputs during dev testing and how heavily it affected output is why it was added to the core game. Even as a free user you can manually add Author's Notes into your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Research suggests that A/N: can be used to reinforce writing style even of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
 ```
 [Author's note: This novel is esoteric and descriptive. Author: Terry Pratchett. Writing style:  Metafiction, in the style of Deadpool. Genre: Witty, talkative.]
 ```
@@ -125,7 +126,7 @@ Some users have been experimenting with A/N for doctoring output and specificall
 "Author:" is added when you want to do a convincing real author (combined with "Writing style: literary, author-name.) "Setting:" "Theme:" "Subject:" have their uses, depends on the content. "Title:" works at least on LOTR and "gone with the wind". Didn't test other titles. Famous ones should work. Has to be a real title, "star wars" is not a title, it's a movie franchise. The writing styles, most don't work on Griffin.
 Only the descriptive-branch works on Griffin. "descriptive" works, "narrative" and another one I can't remember (according to Zalty) also works on Griffin.
 ```
-Reminder: while less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or create their own variant. A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
+Reminder: while less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or even insert any string they want in a specific part of the context. A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
  
 
 ## World Info and Formats
@@ -216,11 +217,23 @@ You shake your head.
 
 
 ### Useful Categories
-With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among many different formats. Here we share some categories that have proven useful. The category words will be provided as a list as their use is self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. The long list of categories:
+With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among many different formats. Here we share some categories that have proven useful and take a deep dive into explaining the quirks of UPPERCASE categories. You can use Propercase or lowercase categories, their use is just less distinguished from natural writing and they follow the same tokenization scheme. UPPERCASE is good because it clearly distinguishes the category word from the list associated with it. UPPERCASE tokenizes differently and the effectiveness of especially the shorter forms is determined by how easily AID distinguishes it from other words and their tokens. 
+
+Here we have a picture of some common UPPERCASE category basis and their tokenization: https://files.catbox.moe/avn9j4.png
+
+This is the reason Zaltys and other enthusiasts picked APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. Based on experience we can give another recommendation. Ending an UPPERCASE word with an I is a bad idea, because the AI finds the word too ambiguous. In general avoid ending shortened categories with vowels. Tokenizations like TRA may be exceptions. You should experiment with a fresh scenarios. When a WI format author tells you a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results were bad with evidence to support this.
+
+Different authors prefer using different cases for categorization. In the past birb and Zaltys recommended you use uppercase categories. Citation from Zaltys on why we use uppercase categories:
 ```
-APPEAR, BODY, LOOKS, WORN(STYLE/FASHION), INV, EQUIP, MENTAL, LIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY/GEO, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE/EFFECT(character status like being dirty, sleepy or ill), SEE, BIOME, FLORA (must match the biome), CREATE, FACTS, STATUS, LOOT
+Problem with propercase categories is that if you load several WIs, the AI will be hesitant to use those words (because of the repetition penalty). The uppercase avoids that, and also makes it less likely that the AI starts copying the style into output. Not much of a problem for 'Traits' since that's unlikely to appear in the output anyway, but might be a problem for 'relationship' or 'wear*'.
 ```
-Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, IZENS, PERSONA
+After recent experiments with scenario and category generation scenarios it turns out different types of categories have different weights. For the scenarios tested the AI did much better with Author's Notes when the lowercase category `writingstyle:` was used instead of a previously popular category `Writing Style:`. More focused research needs to be made on this end.
+
+UPPERCASE category words will be provided as a list. Their use is mostly self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. The long list of categories:
+```
+APPEAR, BODY(only good for humanoids), LOOKS, WORN(STYLE/FASHION), INV, EQUIP, MENTAL, LIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY/GEO, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE(character status like being dirty, sleepy or ill), EFFECT(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, FACTS, STATUS, LOOT, BANNED,
+```
+Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, CITIZ, PERSONA, BANN
 
 The AI tends to be very literal-minded. TRAITS is the usually agreed upon swiss-army knife category where you can put any attribute of an object. But the AI seems to treat it like the *nature* of said thing. The best example of this is the trait `cool`. In order to get a character to have a `cool` personality it must go in MENTAL. Inside TRAITS it might make the character literally `radiate cold` instead. The same is suspected of traits like `hotheaded`. Also, uncommon or complicated concepts like fauna do not work well as categories. `TRAITS: Fauna<species>` works better.
 
@@ -228,12 +241,11 @@ The AI tends to be very literal-minded. TRAITS is the usually agreed upon swiss-
 
 Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enterprise, Enterp` and use the shorter `Enterp` as they key in your WI. This works better if the small key is a substring of the long name. You also want to use a substring that isn't easily confused with other words as is with this example. This may be more difficult and less worth your time if you use scripts.
 
-`STATUS:` is a surprisingly useful category for varied topics. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon, but it's not a completely consistent category for this purpose.
+`STATUS:` is a surprisingly useful category for varied topics. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon, but it's not a completely consistent category for this purpose. `STATE:mute` seems to be better for the purpose of muteness.
 
 `LOOT:` works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
 
 `SUMMARY:` is a strong and versatile category for making literal NPCs for quest chains or defining points of interest you want described consistently. It can even reference previously used categories, making it even better than TRAITS in some cases.  Can be shortened as `SUMM:`
-
 ```
 SUMMARY:Jamaican/grew up on streets, Output:
 He grew up in Jamaica with his rich parents. When he was 16, he was on vacation in Hawaii and decided to stay there when his parents left without him. He learned how to surf and just bummed around the island for a while. He eventually ran out of money, so he started working at a surf shop and selling some of his paintings on the side.
@@ -325,7 +337,7 @@ Library room: large room. EXIT: corridor (north), lounge (west), trophy room (so
 
 
 ### birb research
-Many sources confirm that newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like ~~() is good~~ used to be for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. Sometimes `red-color` or `hair-color` may refuse to work consistently. In an attempt to fix this the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even when grammatically incorrect. For example:`verylonghair`,`platinumblondehair`, `tatteredgrayrobes`. birb calls this smashing words the more correct term being mashup. With this discovery even traits like `flamingorangeeyes` are possible to get out consistently. birb is still experimenting and undergoing revision on both of his formats, because while preliminary results were good, they broke on long scenarios. The angriest wizard that ever lived is provided for historic purposes (now outdated due to `()` being weaker than before replace with `<>`):
+Many sources confirm that newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like ~~() is good~~ used to be for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. Sometimes `red-color` or `hair-color` may refuse to work consistently. In an attempt to fix this the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even when grammatically incorrect. For example:`verylonghair`,`platinumblondehair`, `tatteredgrayrobes`. birb calls this smashing words the more correct term being mashup. With this discovery even traits like `flamingorangeeyes` are possible to get out consistently. birb is still experimenting and undergoing revision on both of his formats, because while preliminary results were good, they broke on long scenarios. Also note that the following format is basically Zaltys with newlines and commas (and predates catnip). The angriest wizard that ever lived is provided for historic purposes (now outdated due to `()` being weaker than before replace with `<>`):
 ```
 keys: Rick,the angriest wizard that ever lived
 [TITLE(Rick):The angriest wizard that ever lived;
@@ -353,10 +365,8 @@ https://files.catbox.moe/9dibjo.gif
 Now that the category `EQUIP:` is confirmed working with clothes and other inventory it would be possible to use the above example to come up with custom named weapons for your characters, write WI for the custom weapons and have the AI invoke their traits reliably.
 
 
-### Misc Tips
-More tips and tricks that fall out of larger headers will be added here as they are discovered. `NOTES ON X` has been used by some as a WI before, but most feel it serves better as a remember pin or an input for the story. CrisAIcilian has discovered `Character sheet - ` as an effective header for WI, using an otherwise Zaltys-like format together with it in his test character. After roughly 100 rolls he claimed to achieve a 70% success rate on his character traits & actions being mentioned correctly as long as the story input features new letters instead of being a simple `continue`. The author speculates this could be a good way to define something akin to `you` for those interested. All of the random experimentation and associated pictures can be found on Discord as the author remains unconvinced to the relevancy of testing inside AID.
-
-Earlier in the document we mentioned Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the script) `EN behaves more like tooltips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily. 
+### CrisAI research
+CrisAIcilian is a user from discord who has been developing methods for manipulating context, mostly for the purposes of maintaining consistency and staying on scene even with a high randomness value of 1.3. Now his research is robust and long enough to get it's own section. CrisAIcilian has discovered `Character sheet - ` as an effective header for WI, using an otherwise Zaltys-like format together with it in his test character. After roughly 100 rolls he claimed to achieve a 70% success rate on his character traits & actions being mentioned correctly as long as the story input features new letters instead of being a simple `continue`. The author speculates this could be a good way to define something akin to `you` for those interested. All of the random experimentation and associated pictures can be found on Discord.
 
 CrisAIcilian is developing an alternative format focusing on consistency and scene building. Thus far the format looks like Zaltys with few additions/variations and utilizes both WI and Remember heavily. This is exclusively for use without scripting, parts of the format rely on the proper ordering of each data type. Cris explains what the format does with comments inside the example he has provided. This is what his most recent format from Discord looks like:
 ```
@@ -382,17 +392,14 @@ The current event: You're sitting in a chair.
 
 Experiments on Discord show similar efficiency to the older formats discussed above. In some ways it may be better, like sticking on to the scene you have created through the combined use of mentioned WI and remember. The caveat is how strictly the `#` letter is utilized, slightly restricting your writing and making it incompatible with scripting although this is intentional. Scripts like EWIJSON likely don't work as well with formats using newlines anyways. The important thing is to make deliberate choices on your formatting across the board and making them play nice with any scripts you're interested in using.
 
-Through the document and in the above example we've noticed some WI authors like to write categories using lowercase categories. In the past birb and Zaltys recommended you use uppercase categories. Citation from Zaltys on why we use uppercase categories:
-```
-Problem with propercase categories is that if you load several WIs, the AI will be hesitant to use those words (because of the repetition penalty). The uppercase avoids that, and also makes it less likely that the AI starts copying the style into output. Not much of a problem for 'Traits' since that's unlikely to appear in the output anyway, but might be a problem for 'relationship' or 'wear*'.
-```
-After recent experiments with scenario and category generation scenarios it turns out different types of categories have different weights. For the scenarios tested the AI did much better with Author's Notes when the lowercase category `writingstyle:` was used instead of a previous popular category `Writing Style:`. More discoveries need to be made on this end.
+
+### Misc Tips
+Thanks to scripting we can insert lines anywhere in context(history) now. One of the earlier implementations of this was Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the original script) `EN behaves more like tooltips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily with the key: `.#[p=3` and the entry containing whatever you want to insert 3 lines before your next action.
 
 After we discovered that GPT3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside APPEAR was an effective way of making making the AI realize some character lag legs, but better alternatives have been worked out like ¬legs `¬` being the unicode symbol for negation. It's also easier on tokens than the middle dot.
 
 The biggest and most thorough testing on symbols has been done by Monky and he has provided us with two documents for Griffin and Dragon he calls the CODEX_SIGNUM. These and many other useful user-provided documents can be found in the docs section:
 https://github.com/valahraban/AID-World-Info-research-sheet/tree/main/docs/
-
 
 
 ### Character-to-token ratio tests
@@ -450,6 +457,10 @@ https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON/re
 https://github.com/Zynj-git/AIDungeon/wiki/EWIJSON
 
 Protip on convenient scripting and scenario writing. Write one completely empty base scenario in your stuff. Include all the scripts and WI you like to use in all your scenarios in it. When you run this scenario, you will be asked to write a starting prompt. Use this scenario as your testing ground for scripts and scenarios. When you're happy and everything seems stable, you can copy everything from this scenario into a new scenario, where you can write the actual prompt and new extended WI with less of a hassle.
+
+This is a popular thing among some people too. It's just Zaltys and so doesn't receive more discussion. The base categories might have bad so tokens so you might want to double check with the tokenizer and edit the python script. 
+https://play.aidungeon.io/main/scenarioView?playPublicId=b04ee800-4e55-11eb-b281-4bc9134dd6df
+https://github.com/SimpleBallgag/CAT-NIP-Formater (NSFW images github warning)
 
 
 ## Obsoleted Methods
