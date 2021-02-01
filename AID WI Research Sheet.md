@@ -356,7 +356,7 @@ Smashing words together is efficient but there is ALWAYS a risk of the AI misint
 
 During testing we discovered characters can be forced to wear certain outfits with complete consistency. This format needs at least 2 WI the character being dressed and the custom outfit. This theory could be applied for customizing the appearance of any object in your game world. Example.
 ```
-Lillie:[Human female. Her eyes are blue. Her hair is blonde. Her hairstyle is long twintails. WORN:{Nightfall Raiment}.]
+Lillie:[Human female. Her eyes are blue. Her hair is blonde. Her hairstyle is long twintails. WORN:<Nightfall Raiment>.]
 ```
 ```
 [The Nightfall Raiment is a one-piece halterneck dress. The dress is in gothic fashion. The Raiment has a black and white color-scheme. The Raiment has detached white sleeves and shows off the wearer's armpits. The bust and frills of the relatively long nightfall raiment dress are white while the rest of it is black. Kneehigh black leather boots are a part of the raiment.]
@@ -454,7 +454,7 @@ Not all users have the same imagination, language skills or amount of time for c
 https://play.aidungeon.io/main/scenarioView?playPublicId=913fd250-cc8f-11ea-aa35-1f790f909406  
 https://play.aidungeon.io/main/scenarioView?playPublicId=1b604670-33df-11eb-abb1-03ac45f1d495
 
-Scripts are finally free for all users! Creating or editing a script also requires knowledge on coding. A user named Zynj is working on some of the biggest scripts that may help WI-users. Below is his public git. It now contains all his scripts ready for at least beta-level public use. JSONthing has been for a long time praised by premium users as drastically increasing the consistency of their outputs. This has now been combined with Zynj's EWI to form EWIJSON which can be found in the `AID-Script-Examples` directory. This is extremely recommended by Discord users despite the extra tedium scripting introduces. Zynj has also provided wiki-format documentation.
+Scripts are finally free for all users! Creating or editing a script also requires knowledge on coding. A user named Zynj is working on some of the biggest scripts that may help WI-users. Below is his public git. It now contains all his scripts ready for at least beta-level public use. JSONthing has been for a long time praised by premium users as drastically increasing the consistency of their outputs. This has now been combined with Zynj's EWI to form EWIJSON which can be found in the `AID-Script-Examples` directory. This is extremely recommended by Discord users despite the extra tedium scripting introduces. Zynj has also provided wiki-format documentation.  
 https://github.com/Zynj-git/AIDungeon  
 https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON/release  
 https://github.com/Zynj-git/AIDungeon/wiki/EWIJSON
