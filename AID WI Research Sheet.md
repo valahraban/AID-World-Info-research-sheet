@@ -19,6 +19,7 @@
     + [character-to-token ratio tests](#character-to-token-ratio-tests)
     + [Worlds Specific Tips](#worlds-specific-tips)
   * [Other Scenarios and Scripts](#other-scenarios-and-scripts)
+  * [Writing Tools](#writing-tools)
   * [Obsoleted Methods](#obsoleted-methods)
   * [Special Inputs Commands](#special-inputs-commands)
   * [Ending Notes](#ending-notes)
@@ -311,18 +312,18 @@ https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Neand
 
 
 ### Onyx Formats
-Onyx has come up with interesting and reliable tricks for specialized uses. With RND we can actually have pseudo-random lists. Testing so far suggests with 10 members the list is completely consistent, more members or simple words make it output more random, but still conceptually related things. This works better on Dragon, but the concept can be used to invoke lists of names on Griffin. All Onyx formats still work, just remember to replace `()` with `<>`.
+Onyx has come up with interesting and reliable tricks for specialized uses. With RND we can actually have pseudo-random lists. Testing so far suggests with less than 10 members the list usually stays consistent, more members or simple words make it output more random, but still conceptually related things. This works better on Dragon, but the concept can be used to invoke lists of names on Griffin. Updated January 2021. If any example has `()` replace them with `<>`.
 ```
 keys: monsters, forest
-Many monsters live in the forest. [RND (monsters): slime, goblin, orc, Ent, giant carnivorous sloth, pixie, beholder.]
+Many monsters live in the forest. [RND<monsters>: slime, goblin, orc, Ent, giant carnivorous sloth, pixie, beholder.]
 OR
 keys: goal, objective, quest
-RND (objectives): slay the dragon, rescue the princess, challenge the demon lord
+RND<objectives>: slay the dragon, rescue the princess, challenge the demon lord
 ```
-Another one is `IF (action): THEN (things happen)` this is especially useful for creating custom spells or other conditional effects like the format suggests. 
+Another one is `IF<action>: THEN<things happen>` this is especially useful for creating custom spells or other conditional effects like the format suggests. 
 ```
-keys: cursed book, (OR) open cursed book
-IF (open cursed book): THEN (the pages of the cursed book form into a face, shriek loudly and place a terrible curse on you)
+keys: cursed book,open cursed book
+IF<open cursed book>: THEN<the pages of the cursed book form into a face, shriek loudly and place a terrible curse on you.>
 ```
 From his work we have a reliable and easy way to define locales especially when combined with data mentioned above. These get interesting when combined with other short WI.
 ```
@@ -450,31 +451,46 @@ Since this document shares some scenarios for testing purposes more bear mention
 https://play.aidungeon.io/main/scenarioView?publicId=6a344070-2a58-11eb-9973-ef0c0f08ab62
 
 Not all users have the same imagination, language skills or amount of time for creating scenarios. Maybe you're lacking ideas but have a general idea for a testing scenario to test your new WIs with. AID user LaPapaya has created a public tag-based scenario generator. You should still use retry and alter but it has worked well for the author. Linked also is a later variant made by perroquit.
-https://play.aidungeon.io/main/scenarioView?playPublicId=913fd250-cc8f-11ea-aa35-1f790f909406
+https://play.aidungeon.io/main/scenarioView?playPublicId=913fd250-cc8f-11ea-aa35-1f790f909406  
 https://play.aidungeon.io/main/scenarioView?playPublicId=1b604670-33df-11eb-abb1-03ac45f1d495
 
 Scripts are finally free for all users! Creating or editing a script also requires knowledge on coding. A user named Zynj is working on some of the biggest scripts that may help WI-users. Below is his public git. It now contains all his scripts ready for at least beta-level public use. JSONthing has been for a long time praised by premium users as drastically increasing the consistency of their outputs. This has now been combined with Zynj's EWI to form EWIJSON which can be found in the `AID-Script-Examples` directory. This is extremely recommended by Discord users despite the extra tedium scripting introduces. Zynj has also provided wiki-format documentation.
-https://github.com/Zynj-git/AIDungeon
-https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON/release
+https://github.com/Zynj-git/AIDungeon  
+https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON/release  
 https://github.com/Zynj-git/AIDungeon/wiki/EWIJSON
 
 Protip on convenient scripting and scenario writing. Write one completely empty base scenario in your stuff. Include all the scripts and WI you like to use in all your scenarios in it. When you run this scenario, you will be asked to write a starting prompt. Use this scenario as your testing ground for scripts and scenarios. When you're happy and everything seems stable, you can copy everything from this scenario into a new scenario, where you can write the actual prompt and new extended WI with less of a hassle.
 
-This is a popular thing among some people too. It's just Zaltys and so doesn't receive more discussion. The base categories might have bad so tokens so you might want to double check with the tokenizer and edit the python script. 
-https://play.aidungeon.io/main/scenarioView?playPublicId=b04ee800-4e55-11eb-b281-4bc9134dd6df
-https://github.com/SimpleBallgag/CAT-NIP-Formater (NSFW images github warning)
+
+## Writing Tools
+AI Dungeon is all about manipulating context. At the end of the day the goal of the player is to have a more fun text adventure while ideally spending less time tweaking his world infos or scripts. Or maybe he's a less verbose writer but is able to produce good content through use of >do and >say. Below are listed resources to help you spend less time troubleshooting your WI or to spice up your inputs.
+
+Litscape has many word tools. The most immediately useful ones for WI enthusiasts are words starting and ending with. This search is used to find categories that are less likely to confuse the AI.  
+https://www.litscape.com/words/litscape_default_word_list.html  
+
+Relatedwords is a service that finds, well, words related to each other through algorithms and online databases. Good for closely related concepts. Their network also contains other language meta-searchers you may find useful.  
+https://relatedwords.org
+
+Quillbot paraphraser is of some arguable usefulness. Creative mode might be the most interesting for tweaking inputs. The premium costs money and free users can only tweak 700 characters at once. You can click words or phrases to have the tool suggest alternatives.  
+https://quillbot.com
+
+Power thesaurus is an almost excessive thesaurus containing synonyms, antonyms and definitions for words. It has an addon for chromium-based and firefox browsers that birb uses. Provided is a link to their homepage.  
+https://www.powerthesaurus.org
+
+Scripts like EWIJSON require the user learns regexp. birb did this in a week of playing with EWIJSON and reading zynj's wiki so tutorials are not included. A linter is very useful though for both learning and production. Use ECMAScript(JavaScript) mode only.  
+https://regex101.com
 
 
 ## Obsoleted Methods
 This section covers methods WI enthusiasts have used in the past but are no longer recommended. For example earlier Zaltys formats are included here for historic reasons. This is so we leave a record and can reference things we used to do if OpenAI or Latitude revert any changes they've made on the back-end.
 
-Title: Symbol use
-Updated 10 Jan 2021:
+Title: Symbol use  
+Updated 10 Jan 2021:  
 `-` `'-'` and `()` are no longer effective. They are treated more like math symbols by the AI now. Onyx has done extensive testing on the Discord to showcase the AI's creative math abilities. 
 https://files.catbox.moe/8y17ji.png
 
-Title: Legacy Zaltys Deekin & Aarakocra 
-Updated 10 Jan 2021:
+Title: Legacy Zaltys Deekin & Aarakocra  
+Updated 10 Jan 2021:  
 ```
 keys: Deekin, Scalesinger, Deekin Scalesinger
 Deekin Scalesinger:[Kobold/♂/<72cm>;ORIGIN<Deekin>:Ally from Neverwinter Nights games(CRPGs);APPEAR:Reptilian/orange-scaled/horns(nubs)/snout/legs(2)/eyes(brown/2)/arms(2)/tail(scaly)/wings(2/red/scaly);LACK:hair/ears;WORN:Bard clothes;MENTAL:Pessimist/creative/polite/kind/friendly/self-conscious;TRAITS<Deekin>:Musician/poet/bard/writer/raspy voice/hero/sorcerer/plays lute/beat Mephistopheles/bard-magic/former servant(of dragon:Tymofarrar)/"Yes, Deekin very kobold, last Deekin look in mirror."]
@@ -483,8 +499,8 @@ Deekin Scalesinger:[Kobold/♂/<72cm>;ORIGIN<Deekin>:Ally from Neverwinter Night
 Aarakocra:[Avian(150cm/42kg). APPE<Aarakocra>:Slim/feather-covered(♀:brown-hue or white-hue/♂:colorful)/feathered head/2-eyes(keen)/tail-feathers/2-wings(big wingspan)/digitigrade legs(2/bird-feet/talons)/2-hands(clawed/5-digits)/hooked-beak(sharp);LACK<Aarakocra>: hair/ears/arms/breasts;MENT:Wise/honest/calm/benevolent;TRAITS<Aarakocra>:Prefer flying/lowtech tribal/hunters/scouts/adventurers(rare/rangers/druids)/no ownership/javelins(weapons)/live in mountains(isolationist)/claustrophobic.]
 ```
 
-Title: Old style categories with heavy encapsulation
-Updated 10 Jan 2021 (original from Nov 2020):
+Title: Old style categories with heavy encapsulation  
+Updated 10 Jan 2021 (original from Nov 2020):  
 Hunter, Lazy and other users have been working with shortened formats motivated by JSON. Originally parentheses were removed perceived as unnecessary. Early tests suggest it works just as well as proper JSON, bearing in mind the tricks discussed above. The author would recommend pursuing variants of this format for a good balance between accurate details and token use. Originally people called this pseudo-JSON, but more accurately it is pseudo-prose. Token testing shows commas and brackets work as contextual linkers just like in regular grammar.
 ```
 keys: Thea Smith
