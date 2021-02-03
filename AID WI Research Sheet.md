@@ -88,6 +88,8 @@ If you want to test out and learn more about GPT-2/3 tokens (they work the same)
 
 kim has also made a tokenizer scenario/script you can use inside AID: https://play.aidungeon.io/main/scenarioView?publicId=6927d610-34b7-11eb-b8e1-c185d026672d
 
+It can not be understated what an important tool the tokenizer has been for WI enthusiasts. Thanks to it we have a fairly good idea why certain words work as poorly as they do and a legitimate information-based argument for why this is the case. If the document talks about word or character tokens, they were ran through the tokenizer colab or scenario alongside synonyms or longer compound words containing it.
+
 Any section of this document discussing tokenization has been verified with either of the above tools.
 
 
@@ -132,7 +134,7 @@ Only the descriptive-branch works on Griffin. "descriptive" works, "narrative" a
 Reminder: while less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or even insert any string they want in a specific part of the context. A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
  
 
-## World Info and Formats
+## World Info and Formatting
 The section most users will be interested in. For the longest time users of AID were writing WI in pure prose. It helped things, but things remained inconsistent especially with how fickle Griffin tends to be. Users started researching using different letters and sentence structures. Some people even tried coding inside WI or getting AID to code for them. After some time, users shared their results and many came to the shared conclusion that deliberate `world info formatting` leads to more desirable outcomes. These became known as `world info formats`. Some goals of structuring WI include:
 
 + Reducing randomness (or later adapted into a RND generator)
@@ -144,15 +146,19 @@ The section most users will be interested in. For the longest time users of AID 
 + Formats can be mixed and matched for different tasks; characters, new verbs/actions, locales and regions might each have an optimal format that better suits the user's needs
 + Breakdown: sloppy WI and sloppy writing can lead to the AI 'losing focus' faster and forgetting about what you're trying to tell it with WI (occurs faster in regular stories)
 
-One of the first formats commonly shared online was what the author calls the `Ben format` popularized on Reddit by a user curious_nekomimi in August 2020. Every newline would have the key of the WI usually a character and every sentence would be followed by a newline. This raised public awareness of reinforcing the AI with WI. A simple prose format like this can get the AI to be mindful of most attributes assigned to said character or object. But it tends to be heavy on used-up characters and especially Griffin might start mixing up actors from different WI together.
+One of the first formats commonly shared online was popularized on Reddit by a user curious_nekomimi in August 2020. The format had no common name, but each new line of the example started with Ben so that's what people usually called it. Every newline would start with the key being mentioned and every sentence would be followed by a newline. This raised public awareness of reinforcing the AI with WI. A simple prose format like this can get the AI to be mindful of most attributes assigned to said character or object. But it tends to be heavy on used-up characters and especially Griffin might start mixing up actors from different WI together, now called leaking.
 
 Here it bears mentioning that many users want to define `you` inside WI. There are caveats to this, especially in a heavier format like the above one. If you use `you` as a key this WI would likely fire every turn and make the AI focus strongly on things mentioned in this WI as well as constantly eating up space. This poses the risk of burying other WI. Users should make personal decisions on what they value of their WI and scenarios.
 
-Thus far the best method of handling `you` has been developed for use through scripts like JSONthing or EWIJSON. This script relies on defining objects. You can define keyword `you.character` with the entry `You (John)`. It also has a function `you._synonyms` that lets you define `(John|John Doe|protagonist|player|hero)`, making you and John synonyms. This concept could be burrowed for script-free WI but as of now no standard way of defining you exists.
+Thus far the best method of handling `you` has been developed for use through scripts like JSONthing or EWIJSON. This script relies on defining objects. You can define keyword `you.character` with the entry `You (John)`. It also has a function `you._synonyms` that lets you define `(John|John Doe|protagonist|player|hero)`, making you and John synonyms. This concept could be burrowed for script-free WI but as of now there is no common way most people use to define `you`. Often this information is placed in the remember pin.
+
+Nowadays the author advises against coercing or wasting time on naming more formats. A format is only a syntax or style of writing WI and each individual is unique as a writer. Originally the names were used to distinguish between people sharing notes but doing very distinct things. Over time as said people shared their notes, the formats have gone back to converging as the community started adopting common practices that were found to be universally useful such as encapsulating in brackets, ending with a dot, using categories and using `<>` around lists or focus points. There's also good old prose that still works on dragon if you're a skilled writer. Frankly, the naming attempts I've seen recently (outside of the document) are moronic, as they do not even describe what the syntax is trying to achieve or is based on. Zaltys with heavy `<>` use looks like XML so it would be accurate to call it the XML syntax. Another user is experimenting with a format that's literally Prolog-programming language adapted to AID and appropriately calls it Prolog. It is much more effective to build a lexicon on the building blocks of a good WI than waste time on silly name nonsense. 
+
+Fun fact: `format` works as a keyword inside Author's Notes to 
 
 
-### JSON Format
-WI can be exported and imported out of AID as JSON files. What we discuss here is something different. Interest in WI formats blew up after people started publicly sharing anecdotes of JSON-like WI based on Discord user Zaltys 🐍#5362 experimentation. Here we define `the pure JSON format`:
+### JSON Formatting
+WI can be exported and imported out of AID as JSON files. What we discuss here is something different. Interest in WI formats blew up after people started publicly sharing anecdotes of a JSON-like WI format having great results in August. Many people did private research at the time but Zaltys 🐍#5362 is often credited with the public interest. Here we define `the pure JSON format`:
 ```
 keys: AKA: you,Anon
 Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"],"eyes":{"eye-color":"brown"},"hair":{"hair-color":"dark brown","hair-length":"intermediate","hair-style":"spiky"},"relationships":{"orphan":"no relatives"},"body":{"physique":"average","height":"average-178cm","weight":"average-80kg"},"personality":["sarcastic","friendly","wishes he had a gf","plays AI dungeon"]}}]
@@ -170,11 +176,11 @@ The many things we have learned about using JSON inside WI can be summarized wit
 + In Discord community testing reduced JSON without quotation marks produced mostly similar quality output
 + Has online production tools like https://aid-world-builder.ey.r.appspot.com (thanks uusu)
 
-JSON has its uses. If you're already using it feel free to continue doing so. If it looks frightening, don't feel obliged to invest learning it. The consensus of the author and the users he cites is other formats serve specific needs better plus we now have the online world builder. 
+JSON had its uses. If you're already using it feel free to continue doing so. If it looks frightening, don't feel obliged to invest learning it. Uusu's world builder still exists to easily write JSON-format WI online. Most WI users have moved on to using other methods specialized for their purposes. 
 
 
 ### Zaltys Formats
-Zaltys 🐍#5362 has developed many interesting formats and motivated the community to test different keywords in WI. This document will be updated to reflect his latest and most recommended format variants with some explanation of his goals and motivations. First we have standard Zaltys that works with any model.
+Zaltys 🐍#5362 has developed many interesting formats and spurred the community to try many different things out with the tools AID provides us. Because originally there were few enthusiasts trying unique tricks with the world entry screen, Zaltys distinct style of formatting text became simply known as Zaltys and was adopted so people immediately knew what was being discussed. This document will be kept up to date with the most recommended format variants of Zaltys with some explanation of his goals and motivations. First we have standard Zaltys that works with any model.
 ```
 Mike Haggar:[Human<male, 202cm, 140kg>. APPEARANCE<Haggar>:Stocky, muscular, big arms, hair<brown>, mustache<brown>; MENTAL<Haggar>: Just, upright, direct, upbeat; WORN:Eyeglasses, pants:<green>; TRAITS<Haggar>:Born in 1943, from Final Fight and Street Fighter games, ex prowrestler, grew up on streets in Metro City, mayor of Metro City, fought Mad Gear & Skull Cross gangs, fights gangs, "It's my job to keep Metro City safe!", loves curry, friends:<Cody, Guy>, daughter:<Jessica>.]
 ```
@@ -193,7 +199,7 @@ We also have an alternate advanced format specifically designed for Griffin. It 
 Mike Haggar:[Human<male/202cm/140kg>;APPE<Haggar>:Stocky&muscular/bigarms/brown<shorthair&mustache>;MENT<Haggar>:Just/direct/upbeat/hardy/upright;WORN:Eyeglasses<at work>/brownboots&greenpants/bandolier;TRA<Haggar>:Born 1943/from:<Final Fight&Street Fighter> games/ex:prowrestler/grew up on streets<in Metro City>/mayor<Metro City>/fought gangs:<Mad Gear&Skull Cross>/fights gangs/"It's my job to keep Metro City safe!"/loves:curry&rice/friends:<Cody&Guy&Carlos:from Brazil>/daughter:<Jessica>.]
 ```
 
-Zaltys combines most WI writing trick the community has discovered into one very efficient package. One caveat would be how strictly you have to follow the pattern to guarantee functionality.
+Zaltys combines most WI writing tricks the community has discovered into one very efficient package. One caveat would be how strictly you have to follow the pattern to guarantee functionality.
 
 Based on experiments and accumulating experience the community has found all-caps categories are useful. Later on in the document we discuss categories in depth and include a long list of them that have been discovered to be useful for any WI format desiring to utilize them.
 
@@ -277,9 +283,33 @@ QUOTES FROM ZACK:
 "I hope dat you don't mind some reggae music, man."
 ```
 
+### Personality Keywords
+Character behaviors and personalities deserve their own category. One of the biggest goals of WI is getting the AI to remember `how` a character is and output their behavior consistently. To this end we need behavioral keywords. This section is entirely dedicated to personality-related keywords that the community has either discovered to work exceptionally well towards certain ends or keywords that are disappointingly weak.
+
+For category-based formatting `MENTAL:` used to be the most commonly used keyword for listing out a character's mentality, personality and behavior. Recently we found `MIND:` works better towards this end in all aspects while also being a shorter word.
+
+First we mention the special cases that you may want to avoid due to tokenization issues. AID has been known to be notoriously bad at negatives. For example the community has known for a long time that `White hates apples` is a better alternative to `White dislikes apples` as the AI doesn't seem to respect the intent of the latter statement at all. Words starting with dis- or un- rarely get respected by the AI due to tokens and how bad it's with negative prefixes. -less is a suffix that works somewhat better, but isn't recommended if you have synonyms known to be more explicit or to have unique tokens.
+
+Long and growing list of behavioral keywords in no particular order. There are too many to list, these are just some common useful ones as well as some commonly tried keywords you might want to avoid. The basis of a good personality trait is something strong and focused the AI has a strong unique association for. Broad words like good or evil aren't very useful, when the behavior is what we are after. 
+
+`cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath extremist traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely in turns them into otaku collectors.
+
+Continuing with the bad guy theme the seven sins all work. `glutton(ous), lust(ful), greedy/avaritious, envious, slothful, proud` all work. Wrath is the exception and doesn't produce satisfying results, but can easily be replaced with `angry&cruel`. Based on research with the angriest wizard that ever lived, anger related tags especially `the angriest` are effective.
+
+`horny, stoic, apathetic, wry, clever, witty, addicted` all do exactly what you'd expect out of them, they work good. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended effect. `judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character. 
+
+The combination of `anxious, nervous` with `SUMM: "h-he...llo"` is very interesting, it's one of the cutest and most appealing ways of creating a timid character that stutters a lot in dialogue. 
+
+Below is an example of AID taking a large selection of MIND keywords and producing something very interesting out of them:
+```
+Zak:[Human male. MIND<Zak>:secretive/dangerous/manipulative/stoic/callous/servile/polite.]
+Zak is a middle-age, balding man with brown hair and dark eyes. He wears a black overcoat and small, wire-rimmed glasses. He is of average height and build.
+Zak has a very serious look on his face most of the time and he rarely, if ever, smiles. His eyes are constantly darting around, as if he mistrusts everything and everyone. Despite his serious demeanor, he is very polite, although in a very formal, stoic way. He always speaks in a very respectful tone, even to those who are not as educated as he is or when talking about something distasteful.
+```
+
 
 ### Monky Formats
-Optimization and consistency are major goals for WI-experimenters. Monky's solution to many isseus with WI is what he calls the `Caveman` format. Looking at an example will show us why:
+Optimization and consistency are major goals for WI-experimenters. Monky was one of the first users to focus on this and his solution to many issues with WI is what he calls the `Caveman` format. Looking at an example will show us why:
 ```
 keys:Chagra, initiate, apprentice
 Chagra AKA 'Tusk': Orc she 20y.
@@ -289,26 +319,27 @@ Chagra loyal careful outcast pranked Healing magic initiate coven.
 Chagra Hergea's daughter Friends You Renni.
 Chagra likes fruit veggies Hates meat cheese.
 ```
-In this WI all words lacking semantic value (content meaning) have been removed. Still, testing has AI mention all the relevant details with very low risk of leaking into other things defined with WI. It is likely that the brutal efficiency of AI doesn't care about words like `is`. Users of the format feel that it sticks to the given information better than the base AI alone or untested prose. And so far no one has reported that the AI starts speaking caveman when using this. If issues like this do occur they can always be solved with alter or retry. You should probably use highly descriptive inputs or an A/N: for making the AI write descriptive prose though. Worth noting is that Monky never uses commas when writing his style of Caveman.
+In this WI all words lacking semantic value (content meaning) have been removed. Still, testing has AI mention all the relevant details with very low risk of leaking into other things defined with WI. It is likely that the brutal efficiency of AI doesn't care about words like `is`. Users of the format feel that it sticks to the given information better than the base AI alone or untested prose. And so far no one has reported that the AI starts speaking caveman when using this. If issues like this do occur they can always be solved with alter or retry. You should use highly descriptive inputs or an A/N: (now free with scripting) to make the AI write descriptive prose anyways. Worth noting is that Monky never used commas when writing his style of Caveman.
 
 Colors are one detail the WI has frequent problems getting right. Monky claims that he gets good results on caveman for results just stating the color and what it is for. A verbose example of monky defining adjectives to describe his character (typically the main character) is as follows `Alisha long dark brown silky shiny wavy hair.`
 
-There are two good resources for this format, Monky's test scenario and kim's caveman generator, both linked in order:
+There are two good resources for caveman, Monky's test scenario and kim's caveman generator, both linked in order:
 https://play.aidungeon.io/main/scenarioView?publicId=558a8d40-2fbd-11eb-9239-8b8f17f7a2b0
 https://play.aidungeon.io/main/scenarioView?publicId=3f094990-2e40-11eb-b81d-a3d32aaa3e7a
 
-During experimentation on caveman Monky made important observations. When he used the caveman format extensively on Griffin he found if he didn't mention the character/key every 50 characters/15 tokens the AI would 'lose focus' and start describing random attributes outside of the WI. On Dragon the limit before he needed to start mentioning the key again was around 200 characters. Discoveries like these have led some users to believe the key should be reinforced at mentioned intervals depending on which model you use.
+During experimentation on caveman Monky made important observations. When he used the caveman format extensively on Griffin he found if he didn't mention the character/key every 50 characters/15 tokens the AI would 'lose focus' and start describing random attributes outside of the WI. On Dragon the limit before he needed to start mentioning the key again was around 200 characters. Discoveries like these have led some users to believe the key should be reinforced at the specified intervals depending on which model you use.
 
-TL;DR A maxed out Griffin Caveman WI should be ~10 50-character lines long, each line starting with the key. On Dragon this could be 2-3 lines each maximum 200 characters. 
+TL;DR A maxed out Griffin Caveman WI should be ~10 50-character lines long, each line starting with the key. On Dragon this could be 2-3 lines each maximum 200 characters. It should also be noted that Monky formats achieve some of the best character/token ratios if you're interested in that.
 
-It is worth checking out birb's research section for tips that relate to Caveman use as well. Monky has developed a second format based off Caveman. It's called Caveman 2.0 or more affectionately `the Neanderthal Format`. Monky himself has authored a thorough write-up on the format and it's merits which is provided in this repository as a supplementary material, much thanks for his hard work. Below is a sample Neanderthal WI.
+Caveman is perhaps the most forgiving basis for a format. It plays well with many tricks discovered later like mashing up words or pointing to them with `<>`. Monky has developed a second format based off Caveman. This is affectionately called `the Neanderthal Format` or just plain Neanderthal. Monky himself has authored a thorough write-up on the format and it's merits which is provided in this repository as a supplementary material, much thanks for his hard work. Below is a sample Neanderthal WI.
 ```
  Alexandria:[ Age 29 human she tall strong thin brave knight, your ally]. 
  Alexandria:[ Has Blackflame rune sword, steel armor, healing potion, amulet].
  Alexandria:[ Long red hair, fair skin, narrow green eyes, clean].
 ```
-It looks like a mixture of Zaltys and Caveman. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below we provide the full dissection of Neanderthal written personally by Monky:
+It clearly still looks like caveman, but now including commas, symbols and implementing enclosure tricks first seen with Zaltys. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below is the full dissection of Neanderthal written by Monky:
 https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Neanderthal_Unscripted_Results_by_Monky.txt
+Users should write using any format they enjoy but by now Neanderthal is greatly recommended in part due to how easy it is to integrate other methods with it. With birb's observations some issues with EWIJSON were resolved and now Neanderthal is a format that plays very nicely with it.
 
 
 ### Onyx Formats
@@ -328,14 +359,23 @@ IF<open cursed book>: THEN<the pages of the cursed book form into a face, shriek
 From his work we have a reliable and easy way to define locales especially when combined with data mentioned above. These get interesting when combined with other short WI.
 ```
 keys: Rask
-Rask (kingdom): TERRAIN: tundra (full of ogres and giants), fertile land (southern). FEATURES: Wolfsholme (capital, walled city), primitive gunpowder weapons. CLIMATE: cold, snowy. RESOURCES: livestock, horses, furs, lumber. CITIZENS: humans, elves, giants, hardy, fierce, wield warhammers and axes, worship Nahr. RULER: Queen Cassandra.
+Rask<kingdom>: TERRAIN: tundra<full of ogres and giants>, fertile land<southern>. FEATURES: Wolfsholme<capital, walled city>, primitive gunpowder weapons. CLIMATE: cold, snowy. RESOURCES: livestock, horses, furs, lumber. CITIZENS: humans, elves, giants, hardy, fierce, wield warhammers and axes, worship Nahr. RULER: Queen Cassandra.
 ```
 From further testing the community has discovered that defining locales like this may benefit from placing each category on a newline. Both methods are effective. 
+
+One day during just playing the game like regular Onyx happened upon impressive categories and keywords that could be used as input or inside Author's Notes to direct the AI:
+```
+Writing style (deaf, visual descriptions): [The sunlight was streaming from the sky and on to his head. He had a surfboard under his arm. His nose was like a little ski slope for the snow to go down. His eyes were blue, like a crystal clear pool of water. The sand felt warm and soft beneath his feet.
+```
+```
+Writing style (blind, auditory descriptions): [Sounds came to his ears. The pounding of the surf. A seabird crying overhead. The warm caress of the sun on his skin. The tingling taste of salt in the air. The smell of fish and honey. The feel of wet sand slipping between his toes. The sound of a gentle breeze blowing through his hair. The sheen of those scales, like pearl in the sun. The roughness of that scaly skin, like the bark of an ancient redwood tree.
+```
+Visual and auditory descriptions seem to be the important part. The output is fancy enough to definitely consider as their own lines at the bottom of remember or integrated into A\N.
 
 Zaltys has also made discoveries on how to semi-reliably define the structure of a building. These are listed with Onyx as an expansion of his concept. As a category EXIT works better than EXITS. Directions are good categories, but specifically for architecture.
 ```
 keys: library
-Library room: large room. EXIT: corridor (north), lounge (west), trophy room (southeast). FEATURES: Bookshelves (dusty tomes, esoteric, mythology, grimoires), man-eating plant (huge), spiral staircase (to second floor), chandelier (creepy).
+Library room: large room. EXIT: corridor<north>, lounge<west>, trophy room<southeast>. FEATURES: Bookshelves<dusty tomes, esoteric, mythology, grimoires>, man-eating plant<huge>, spiral staircase<to second floor>, chandelier<creepy>.
 ```
 
 
@@ -393,15 +433,15 @@ The current location: in a hotel room in Washington D.C.
 The current event: You're sitting in a chair.
 ```
 
-Experiments on Discord show similar efficiency to the older formats discussed above. In some ways it may be better, like sticking on to the scene you have created through the combined use of mentioned WI and remember. The caveat is how strictly the `#` letter is utilized, slightly restricting your writing and making it incompatible with scripting although this is intentional. Scripts like EWIJSON likely don't work as well with formats using newlines anyways. The important thing is to make deliberate choices on your formatting across the board and making them play nice with any scripts you're interested in using.
+Experiments on Discord show similar efficiency to the older formats discussed above. In some ways it may be better, like sticking on to the scene you have created through the combined use of mentioned WI and remember. The caveat is how strictly the `#` letter is utilized, slightly restricting your writing and making it incompatible with scripting although this is intentional. Scripts like EWIJSON likely don't work as well with formats using newlines anyways. The important thing is to make deliberate choices on your formatting across the board and making them play nice with any scripts you're interested in using. Cris has expressed interest in improving his formatting and supporting new users on discord. He also worked on a prompt method called the `Character Generator 3000` that didn't end up getting a scenario released by birb's understanding, 
 
 
 ### Misc Tips
-Thanks to scripting we can insert lines anywhere in context(history) now. One of the earlier implementations of this was Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the original script) `EN behaves more like tooltips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily with the key: `.#[p=3` and the entry containing whatever you want to insert 3 lines before your next action.
+Thanks to scripting we can insert lines anywhere in context(history) now. One of the earlier implementations of this was Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the original script) `EN behaves more like tool tips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily with the key: `.#[p=3]` and the entry containing whatever you want to insert 3 lines in front of your next action.
 
-After we discovered that GPT3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside APPEAR was an effective way of making making the AI realize some character lag legs, but better alternatives have been worked out like ¬legs `¬` being the unicode symbol for negation. It's also easier on tokens than the middle dot.
+After we discovered that GPT3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside APPEAR was an effective way of making making the AI realize some character lag legs, but better alternatives have been worked out like ¬legs `¬` being the unicode symbol for negation. It's also easier on tokens than the middle dot. The conjunction symbol `∧` is great for separating traits, but keeping them associated with the same origin. The equivalent symbol `⇔` is great for making the AI understand that an entity or name is equivalent to another another entity or even a group of traits.
 
-The biggest and most thorough testing on symbols has been done by Monky and he has provided us with two documents for Griffin and Dragon he calls the CODEX_SIGNUM. These and many other useful user-provided documents can be found in the docs section:
+The biggest and most thorough testing on symbols has been done by Monky and he has provided us with two documents for Griffin and Dragon he calls the CODEX_SIGNUM. We also have a second document for unassorted random research. These and many other useful user-provided documents can be found in the docs section:
 https://github.com/valahraban/AID-World-Info-research-sheet/tree/main/docs/
 
 
@@ -433,7 +473,9 @@ From Monky: using prose descriptions for griffin is like trying to get a drunk g
 
 
 ### Worlds Specific Tips
-Worlds is the latest feature and as such has received the least amount of experimentation. Thankfully worlds works mostly likely a regular scenario containing the same data structures while a lot of it may be hidden from the player. Worlds have more thorough input fields at the beginning and settings akin to sub-scenarios. Most WI enthusiasts prefer making their own custom scenarios. The world experience can be improved by adding your own WI or with a world-specific prompt trick. This is usually done through the `Name:` field during character creation this being the main way of influencing how the World generates. You input your info into the `Name:` field. This is most effective with JSON-like formats. For example if you put `[{"name":"Eve","theme":"pirate"}]` in the name, the World will name your character Eve, while giving the World a noticeably more pirate feel. Quoting what we know so far from a user named Gen.Alexander:
+Worlds remains as the feature that has received the least amount of research. Frankly speaking as a WI-enthusiast at least the default worlds aren't very interesting. Their writers included long entries that clearly get cut off by the entry when you view the WI screen. The community respectfully requests the people in charge of Worlds fix this and other issues that may be present. People who still enjoy Worlds, please continue doing so and maybe use the following tricks.
+
+Thankfully worlds works mostly likely a regular scenario containing the same data structures while a lot of it may be hidden from the player. Worlds have more thorough input fields at the beginning and settings akin to sub-scenarios. The world experience can be improved by adding your own WI or with a world-specific prompt trick. This is usually done through the `Name:` field during character creation this being the main way of influencing how the World generates. You input your info into the `Name:` field. This is most effective with JSON-like formats. For example if you put `[{"name":"Eve","theme":"pirate"}]` in the name, the World will name your character Eve, while giving the World a noticeably more pirate feel. Quoting what we know so far from a user named Gen.Alexander:
 ```
 Prose names like "Bill the fallen paladin," "Jessica the necromancer," etc. affect World prompt generation too. But with JSON you can really cram a lot of stuff into it (and it's likely to include at least half of it in the prompt.) Like
 [{"name":"Jessica","personality": "ambitious", "birthplace": "Waterdeep", "worships":{"Mystra":"godess of magic"},"relationship":{"Elminster":["teacher","boyfriend"]} }]
@@ -444,6 +486,7 @@ Xaxas is a world of peace and prosperity. It is a land in which all races live t
 
 You are Jessica, a female human mage from the northern human nation of Waterdeep. You've come to Uruk to meet your boyfriend, Elminster, who previously taught you magic in Waterdeep. You've been secretly practising magic in your spare time and have recently come to the conclusion that you want to dedicate your life to becoming a great mage and opening a school of magic in Waterdeep.
 ```
+Based on Alexander's experiences, the author can cautiously suggest that every keyword trick we've discovered should work with the `Name:` field, affecting how your World is generated. All WI provided with a World stay the same for every play-through though. 
 
 
 ## Other Scenarios and Scripts
@@ -482,14 +525,18 @@ https://regex101.com
 
 
 ## Obsoleted Methods
-This section covers methods WI enthusiasts have used in the past but are no longer recommended. For example earlier Zaltys formats are included here for historic reasons. This is so we leave a record and can reference things we used to do if OpenAI or Latitude revert any changes they've made on the back-end.
+This section covers methods WI enthusiasts have used in the past but are no longer recommended. For example earlier Zaltys formats are included here to keep a historic archive. This is so we leave a record and can reference things we used to do if OpenAI or Latitude revert any changes they've made on the back-end.
+
+Title: `TRAITS:` category  
+Updated 1 Feb 2021:  
+Important enough to warrant an entry of its own. Citation from Zaltys since he popularized TRAITS in the first place: "I honestly can't think of any use for TRAITS now that we have SUMM. SUMM does the exact same job better." birb believes we may have an unknown use for traits and that people can use it if they desire, but most category users we talk to nowadays prefer SUMM.
 
 Title: Symbol use  
 Updated 10 Jan 2021:  
 `-` `'-'` and `()` are no longer effective. They are treated more like math symbols by the AI now. Onyx has done extensive testing on the Discord to showcase the AI's creative math abilities. 
 https://files.catbox.moe/8y17ji.png
 
-Title: Legacy Zaltys Deekin & Aarakocra  
+Title: Legacy Zaltys Deekin & Aarakocra late 2020 edition
 Updated 10 Jan 2021:  
 ```
 keys: Deekin, Scalesinger, Deekin Scalesinger
@@ -501,7 +548,7 @@ Aarakocra:[Avian(150cm/42kg). APPE<Aarakocra>:Slim/feather-covered(♀:brown-hue
 
 Title: Old style categories with heavy encapsulation  
 Updated 10 Jan 2021 (original from Nov 2020):  
-Hunter, Lazy and other users have been working with shortened formats motivated by JSON. Originally parentheses were removed perceived as unnecessary. Early tests suggest it works just as well as proper JSON, bearing in mind the tricks discussed above. The author would recommend pursuing variants of this format for a good balance between accurate details and token use. Originally people called this pseudo-JSON, but more accurately it is pseudo-prose. Token testing shows commas and brackets work as contextual linkers just like in regular grammar.
+Hunter, Lazy and other users have been working with shortened formats motivated by JSON. Originally parentheses were removed being perceived as unnecessary. Early tests suggest it works just as well as proper JSON, bearing in mind the tricks discussed above. The author would recommend pursuing variants of this format for a good balance between accurate details and token use. Originally people called this pseudo-JSON, but more accurately it is pseudo-prose. Token testing shows commas and brackets work as contextual linkers just like in regular grammar.
 ```
 keys: Thea Smith
 [{name:Thea Smith,age:25y/o,♀,BODY:[toned,muscular,athletic],skin:[tanned],HEIGHT:[tall],BREASTS:[medium],HAIR:[Purple,very short,mohawk],EYES:[glowing,blue,heavy eyeliner],PERSONALITY:[calls you shorty,Punk,adventures,kind,rebellious],LIKES:[dancing,music,working out],relationship:{Tess:[little sister],Finn:[little brother],Beth:[Mother,Mom],Bob:[father,Dad]}}].
@@ -509,7 +556,7 @@ keys: Thea Smith
 
 
 ## Special Inputs Commands
-What are world infos if you can't utilize them? Here are some interesting and recommended `inputs` discovered by the community. A lot of them work in conjunction with objects you've defined into WI. If an input has a field surrounded by <> you don't need to type those container characters into AID. `Author's Note:` can also be used as an input to have the AI generate something interesting for you.
+Why write all this world info if we can't utilize them? Here are some interesting and recommended `inputs` discovered by the community, mostly aidg.club and people from 4chan. Some methods were modified and edited in by the author. A lot of them work in conjunction with things you've defined into WI. 
 
 - Name:"Text"
 - List of X:
@@ -575,4 +622,4 @@ As mentioned before AID is in constant development and flux of change. Changes t
 4chan has threads and guides too. They have been beneficial and entertaining to the author. Go on /vg/ and search for /aidg/ if you want their guides and sources, some of it is good especially for NSFW. The special inputs section benefited greatly from their work. Prompts collections exist online but are not provided here due to their NSFW nature. Below is a link to the Anonymous resources & guides, please cross-reference their work with ours:
 https://guide.aidg.club
 
-CREDITS: Everyone whose name has been mentioned here (you guys rock), the many AID related communities and the author for compiling this. Everyone who shares their experiments and results online. Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links. 2021 is already a wild year. See You Space Cowboy.
+CREDITS: Everyone whose name has been mentioned here, the many AID related communities and the author for compiling this. Everyone who shares their experiments and results online. Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links. 2021 is a wild year. See You Space Cowboy.

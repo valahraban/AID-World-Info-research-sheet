@@ -44,8 +44,8 @@ Don't expect much out of the methods mentioned here. The failure of respecting m
 Also giving the character the trait `silent` tends to make them deaf instead, I don't even know, just AID things. According to the guy testing this kind of mute character the presence of silent traits also made other characters use sing language more often. I don't know, it's AID, deal with it.
 
 
-### The WILSON format
-WILSON is a joke (yet highly effective) format born in Discord after taking the discovery that OpenAI taught the model to do logic and maths to the logical extreme. WILSON stands for World Info Logic Scripting Object Notation. This means representing WI as a freakish mixture of programming language conventions and logic symbols. No one has used it unironically yet, but early testing suggests logical functions are extremely effective for defining entities. A philosophy major needs to codify WILSON into a proper format with standard notation before it can be included in the research sheet. Example from birb:
+### Logic and logic symbols
+Onyx did testing on math in AID after the January update. It was discovered that somehow OpenAI taught the model how to do some logic and maths. Some users then took these concepts to the extreme. Many examples have been shared on Discord where 'equations' of logic symbols were highly effective at defining entities. One suggested term for this has been World Info Script Object Notation. If you want a better understanding of what's going on with the below examples, go read about 'tautology logic symbols'. Qweepa example provided by birb, BABA by Mr. Accountant:
 ```
 DEF:<Qweepa>:[ Qweepa ⇔ <mammal∧<bunny&lemming_hybrid>fluffy∧blob_shaped∧secret_evil∧wings_cherub∧herbivore<¬good¬carnivore>>.]
 ```
