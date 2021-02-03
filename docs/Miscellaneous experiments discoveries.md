@@ -4,8 +4,19 @@ This document contains research done on the Discord in completely random order. 
 ## Miscellanneous WI research
 The following are the problems, tips and solutions in no particular order. Don't expect this document to be organized or to make any sense out of context.
 
+
+### Prose Problems
+Prose is great. WI enthusiasts would like other AID players to know that they don't have anything against prose. It's simply that reaching certain goals is easier outside of the tools given to us by prose alongside there being many people in this world who are good at coding or logic, but less so at writing English for novella. Due to OpenAI's and AID's training data, prose is bad at doing certain statements we understand in natural writing. For example Onyx and other users have found that function words like `have` and `has` have only weak effect. These denote ownership, not adding content meaning to the phrase. If you say `Bob has` that could mean any number of things, not the concept we want to explicitly explain to the AI.
+
+If you're writing prose certain ways lead to better desired outcomes. Going by the above example we have `Bob has red hair` vs `Bob's hair is red`. If using these in an entry, the former example could result in Bob having any number of things or any number of things being red, if red gets mentioned at all. `Bod's hair is red` is an explicit statement. There is no room for interpretations with poor logic so typically this results in the AI outputting Bob's hair is red more often. In similar fashion `Bob's wings are blue` or Cavemanned `Bob's wings blue` is a good way of defining his wings are blue. Many users believe connecting/function words are unimportant inside WI entries and their shared scenario results support this. If you're willing to write "impure prose" you could also insert `Bob's brown:<hair&mustache>` inside the entry to even more strongly associate the color brown with Bob's facial hair.
+
+`Bob is bald` fails very often. This is a double problem with training data. Connecting words are less important and AID has been trained on data with all kinds of hairy and furry creatures, so it loves describing hair even if a character has already been named bald. `Bob's head<bald>` works better but isn't perfect because the AI has trouble understanding baldness that ISN'T a shaved head because of being a soldier/monk or so on. This is because in natural language adjectives are interchangeable. From the AI's perspective `Bob is bald` is nearly the same as `Bob is purple`. In terms of the language rule algorithm, they ARE the same thing. For the same reason WI for `Bob is dead` don't usually work, a problem the community has had since the beginning. What can be exploited is how sensibility the statement is. `Bob's head is cheerful` isn't something you'd say in English or any languages. The AI gets confused and tends to ignore such an illogical statement. So `Bob's head` has less possible traits associated with, making it more effective to talk about `Bob's head` when we want to give his head specific traits.
+
+Horns are another problematic thing in prose. You could find a way to phrase in `Bob's horns` or `Bob's pair of horns` and the AI understands Bob has horns. Maybe the first couple of times it even places the horns on his head. But then the rep penalty kicks in and AID can start throwing them anywhere it wants. It doesn't help that CYOAs have monsters that have horns in every part of their body. So you must be explicit with the location of the horns. Working examples are `Bob's horns on shoulders` or `horns are on Bob's shoulders`. In caveman which can be mixed with any format you do `bob horns red pair mid forehead`.
+
+
 ### Muteness
-Character muteness is a problem in AID. Due to the CYOA and prose training data, characters are expected to engage in dialogue. You can't simply make a character not talk, although you can decrease the likelihood of this occurring. The explicitness and order of words AID expects can be used here. You can test it out for yourself. Prose expects certain explicitness. In Onyx prose experiments writing `Bob's hair is red` works much better than `Bob has red hair`. In the latter 'has red hair' could be applied to any part of your scenario while the former associates the red thing closely with Bob. Another thing Onyx found out is the order `since X, then Y` for logic. For muteness you usually get the AI to understand what you're after the best with the following order:
+Character muteness is a problem in AID. Due to the CYOA and prose training data, characters are expected to engage in dialogue. You can't simply make a character not talk, although you can decrease the likelihood of this occurring. Earlier examples on how AID expects a certain order or explicitness for concepts in prose can be exploited to better create mute or `not talking` characters. For muteness you usually get the AI to understand what you're after the best with the following order:
 ```
 "AID," you begin, "How would you interpret this: Since John is mute, he cannot speak." 
 "John cannot speak," AID replies instantly. 
@@ -45,11 +56,12 @@ Also giving the character the trait `silent` tends to make them deaf instead, I 
 
 
 ### Logic and logic symbols
-Onyx did testing on math in AID after the January update. It was discovered that somehow OpenAI taught the model how to do some logic and maths. Some users then took these concepts to the extreme. Many examples have been shared on Discord where 'equations' of logic symbols were highly effective at defining entities. One suggested term for this has been World Info Script Object Notation. If you want a better understanding of what's going on with the below examples, go read about 'tautology logic symbols'. Qweepa example provided by birb, BABA by Mr. Accountant:
+Onyx did testing on math in AID after the January update with picture provided in the research sheet. It was discovered that somehow OpenAI taught the model how to do some logic and maths. Some users then took these concepts to the extreme. Many examples have been shared on Discord where 'equations' of logic symbols were highly effective at defining entities. One suggested term for this has been World Info Script Object Notation. If you want a better understanding of what's going on with the below examples, go read about 'tautology logic symbols'. Qweepa example provided by birb, BABA by Mr. Accountant:
 ```
-DEF:<Qweepa>:[ Qweepa ⇔ <mammal∧<bunny&lemming_hybrid>fluffy∧blob_shaped∧secret_evil∧wings_cherub∧herbivore<¬good¬carnivore>>.]
+// proposed formatting for a functional style of WI
+DEF:<Qweepa>:[ Qweepa ⇔ <mammal∧<bunny&lemming_hybrid>fluffy∧blob_shaped∧secret_evil∧wings_cherub∧herbivore<¬good¬carnivore>>.] 
 ```
-A variant of WILSON can be used to trick out traits through association inside the remember pin. It doesn't always mention each trait, but seems to associate them strongly.
+A related approach can be used to trick out traits through association inside the remember pin. It doesn't always mention each trait, but seems to associate them strongly. Mr. Accountant called this BABA or BABEL, lacking a strict name for his experiments:
 ```
 [<BABA is <RABBIT>>;
 <BABA has <FUR>>;

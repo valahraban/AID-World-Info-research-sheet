@@ -7,12 +7,13 @@
   * [Tokenization - understanding limitations and special characters](#tokenization---understanding-limitations-and-special-characters)
   * [On certain characters](#on-certain-characters)
   * [Authors Notes specifics](#authors-notes-specifics)
-  * [World Info and Formats](#world-info-and-formats)
-    + [JSON Format](#json-format)
-    + [Zaltys Formats](#zaltys-formats)
+  * [World Info and Formatting](#world-info-and-formatting)
+    + [JSON Formatting](#json-formatting)
+    + [Zaltys Formatting](#zaltys-formatting)
     + [Useful Categories](#useful-categories)
-    + [Monky Formats](#monky-formats)
-    + [Onyx Formats](#onyx-formats)
+	+ [Personality keywords](#personality-keywords)
+    + [Monky Formats](#monky-formatting)
+    + [Onyx Formatting Tricks](#onyx-formatting-tricks)
     + [birb research](#birb-research)
 	+ [CrisAi research](#crisai-research)
     + [Misc Tips](#misc-tips)
@@ -179,7 +180,7 @@ The many things we have learned about using JSON inside WI can be summarized wit
 JSON had its uses. If you're already using it feel free to continue doing so. If it looks frightening, don't feel obliged to invest learning it. Uusu's world builder still exists to easily write JSON-format WI online. Most WI users have moved on to using other methods specialized for their purposes. 
 
 
-### Zaltys Formats
+### Zaltys Formatting
 Zaltys 🐍#5362 has developed many interesting formats and spurred the community to try many different things out with the tools AID provides us. Because originally there were few enthusiasts trying unique tricks with the world entry screen, Zaltys distinct style of formatting text became simply known as Zaltys and was adopted so people immediately knew what was being discussed. This document will be kept up to date with the most recommended format variants of Zaltys with some explanation of his goals and motivations. First we have standard Zaltys that works with any model.
 ```
 Mike Haggar:[Human<male, 202cm, 140kg>. APPEARANCE<Haggar>:Stocky, muscular, big arms, hair<brown>, mustache<brown>; MENTAL<Haggar>: Just, upright, direct, upbeat; WORN:Eyeglasses, pants:<green>; TRAITS<Haggar>:Born in 1943, from Final Fight and Street Fighter games, ex prowrestler, grew up on streets in Metro City, mayor of Metro City, fought Mad Gear & Skull Cross gangs, fights gangs, "It's my job to keep Metro City safe!", loves curry, friends:<Cody, Guy>, daughter:<Jessica>.]
@@ -308,7 +309,7 @@ Zak has a very serious look on his face most of the time and he rarely, if ever,
 ```
 
 
-### Monky Formats
+### Monky Formatting
 Optimization and consistency are major goals for WI-experimenters. Monky was one of the first users to focus on this and his solution to many issues with WI is what he calls the `Caveman` format. Looking at an example will show us why:
 ```
 keys:Chagra, initiate, apprentice
@@ -342,8 +343,8 @@ https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Neand
 Users should write using any format they enjoy but by now Neanderthal is greatly recommended in part due to how easy it is to integrate other methods with it. With birb's observations some issues with EWIJSON were resolved and now Neanderthal is a format that plays very nicely with it.
 
 
-### Onyx Formats
-Onyx has come up with interesting and reliable tricks for specialized uses. With RND we can actually have pseudo-random lists. Testing so far suggests with less than 10 members the list usually stays consistent, more members or simple words make it output more random, but still conceptually related things. This works better on Dragon, but the concept can be used to invoke lists of names on Griffin. Updated January 2021. If any example has `()` replace them with `<>`.
+### Onyx Formatting Tricks
+Onyx has come up with interesting and reliable tricks for specialized uses. With RND we can actually have pseudo-random lists. Testing so far suggests with less than 10 members the list usually stays consistent, more members or simple words make it output more random, but still conceptually related things. This works better on Dragon, but the con cept can be used to invoke lists of names on Griffin. Updated January 2021. If any example has `()` replace them with `<>`.
 ```
 keys: monsters, forest
 Many monsters live in the forest. [RND<monsters>: slime, goblin, orc, Ent, giant carnivorous sloth, pixie, beholder.]
