@@ -376,7 +376,7 @@ Neanderthal style formatting has gone through even further tweaking so it may be
 <<  Alexandria age 29 human she tall strong thin brave knight, your ally>>>>
 ```
 Monky has written and provided (with some editorial assistance from birb) a thorough writeup on the history of the formatting he uses and what Futureman is all about. It is extremely recommended reading.  
-https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/futureman_by_Monky.md
+https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Futureman_by_monky.md
 
 
 ### Onyx Formatting Tricks
