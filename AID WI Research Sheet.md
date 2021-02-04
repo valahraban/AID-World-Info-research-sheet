@@ -12,7 +12,7 @@
     + [Zaltys Formatting](#zaltys-formatting)
     + [Useful Categories](#useful-categories)
 	+ [Personality keywords](#personality-keywords)
-    + [Monky Formats](#monky-formatting)
+    + [Monky Formatting](#monky-formatting)
     + [Onyx Formatting Tricks](#onyx-formatting-tricks)
     + [birb research](#birb-research)
 	+ [CrisAi research](#crisai-research)
@@ -39,9 +39,9 @@ If you don't know anything about world info yet and want to get up to speed with
 
 
 ## Recommendations or the TLDR
-**Scripting has been made free for all users, it is warmly recommended you scroll down to Zynj's github and check out EWIJSON. Loading WI through these scripts alone makes it work more like it should.** This document will focus on scripting-free methods. Scripting focused documents are included in the docs folder.
+**Scripting has been made free for all users, it is warmly recommended you scroll down to Zynj's github and check out EWIJSON. Loading WI through these scripts alone gives you a lot more control over their location. If you do decide to use EWIJSON, also check out Monky Formatting and the Futureman guide and birb's guide on EWIJSON basics inside the docs.** This document will focus on scripting-free methods. Scripting focused documents are included in the docs folder.
 
-For those of you who came here for the WI formats or have short attention spans. Click on the links contained in the table of contents above or hit CTRL+F to search for names that interest you. **Pure-JSON** is neither recommended or discouraged. If you're comfortable using it continue doing so. The **Zaltys Formats** of this document are recommended as a strong baseline. Zaltys formats are easy, popular and frequently updated. Past samples are provided as well. **Monky Caveman Format** is recommended for people intending to publish scenarios, worried about token or memory use and wanting to share their work. It is very understandable, easy to modify and works well with regular prose. Very easy to combine with scripts too. Recently Monky has developed Neanderthal which is also recommended. **Onyx** has written formats and WI tricks for specific purposes such as defining locations and lists of things. Aspects from formats may be combined together and different WI may use different formats within the same scenario. You the writer have complete creative freedom, although our experiences may benefit you.
+For those of you who came here for the WI formats or have short attention spans. Click on the links contained in the table of contents above or hit CTRL+F to search for names that interest you. **JSON formatting** is neither recommended or discouraged. If you're comfortable using it continue doing so. The **Zaltys Formatting** of this document is recommended as a strong baseline to start from. Zaltys formatting is easy, popularized and frequently updated to keep up with AID. Past samples are provided as well. **Monky Formatting** is recommended for people with specific goals and interests such as intending to publish scenarios, worried about WI space and token use and wanting to share their work. It is very understandable, easy to modify and works well with regular prose. Very easy to combine with scripts too. Monky formatting has developed into Neanderthal and Futureman which are recommended reading for people they benefit. **Onyx** has written formats and WI tricks for specific purposes such as defining locations and listing things. We now use the term formatting as some of the concepts are interchangeable and may be combined together. One scenario may also use different WI formatting for achieving different things with different entries. You the writer have complete creative freedom, although our experiences may benefit you.
 
 For comedic purposes here is what one very opinionated user has to say on the current state of formats:
 ```
@@ -125,7 +125,7 @@ The sun softly kisses your exposed skin with her rays. You gently bask in her gl
 ```
 Short list of useful A/N words: AUTHOR, WRITING STYLE (Writing style:grandiose), GENRE, THEME, STORYLINE
 
-A/N understands JSON too. Its entirely possible to do something like `A\N: [{"writing style":["descriptive", "elegant", "gritty"], "wording":["archaic", "Cockney accent"], "current state":"indoors"}]`
+A/N understands JSON too. Its entirely possible to do something like `A/N: [{"writing style":["descriptive", "elegant", "gritty"], "wording":["archaic", "Cockney accent"], "current state":"indoors"}]`
 
 Some users have been experimenting with A/N for doctoring output and specifically managing randomness. Lower randomness is more consistent and predictable as it makes the AI's predictions more deterministic, but this comes at the expense of it feeling 'more dumb', hence higher randomness being desirable for verbosity. According to CrisAIcilian `This novel has no plot twists, it follows a linear storyline.` is a very effective phrase to include in A/N to increase consistency. This way his stories can stay on track even at 1.3 randomness. He finds that `Writing style:` and `Genre:` are useful categories to use most of the time. Writing style improves writing, genre works like a mini-prompt. More useful notes on writing A/N from Cris:
 ```
@@ -155,7 +155,7 @@ Thus far the best method of handling `you` has been developed for use through sc
 
 Nowadays the author advises against coercing or wasting time on naming more formats. A format is only a syntax or style of writing WI and each individual is unique as a writer. Originally the names were used to distinguish between people sharing notes but doing very distinct things. Over time as said people shared their notes, the formats have gone back to converging as the community started adopting common practices that were found to be universally useful such as encapsulating in brackets, ending with a dot, using categories and using `<>` around lists or focus points. There's also good old prose that still works on dragon if you're a skilled writer. Frankly, the naming attempts I've seen recently (outside of the document) are moronic, as they do not even describe what the syntax is trying to achieve or is based on. Zaltys with heavy `<>` use looks like XML so it would be accurate to call it the XML syntax. Another user is experimenting with a format that's literally Prolog-programming language adapted to AID and appropriately calls it Prolog. It is much more effective to build a lexicon on the building blocks of a good WI than waste time on silly name nonsense. 
 
-Fun fact: `format` works as a keyword inside Author's Notes to 
+Fun fact: `format` works well inside Author's Notes as a keyword/category you can use to tell the AI whether you're writing a script or a sonnet or a manifesto, etc.
 
 
 ### JSON Formatting
@@ -227,35 +227,58 @@ You shake your head.
 
 
 ### Useful Categories
-With methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and commonly used among many different formats. Here we share some categories that have proven useful and take a deep dive into explaining the quirks of UPPERCASE categories. You can use Propercase or lowercase categories, their use is just less distinguished from natural writing and they follow the same tokenization scheme. UPPERCASE is good because it clearly distinguishes the category word from the list associated with it. UPPERCASE tokenizes differently and the effectiveness of especially the shorter forms is determined by how easily AID distinguishes it from other words and their tokens. 
+With formatting methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and now in common use. Here we share some categories that have proven useful to many WI enthusiasts. 
+
+There are three types of category: Propercase, lowercase and UPPERCASE. Any of them may be used and is down to user preference. Due to the history of WI research we focus on the UPPERCASE category. UPPERCASE is good because it clearly distinguishes the category word from the list associated with it or any other formatting you may use. UPPERCASE tokenizes differently from categories in other cases and should be tested with the tokenizer. It has been found that if a unique word contains tokens of a shorthand, that shorthand tends to work very effectively e.g. `APPEARANCE && APPEAR` and `SUMMARY && SUMM`.
 
 Here we have a picture of some common UPPERCASE category basis and their tokenization: https://files.catbox.moe/avn9j4.png
 
-This is the reason Zaltys and other enthusiasts picked APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. Based on experience we can give another recommendation. Ending an UPPERCASE word with an I is a bad idea, because the AI finds the word too ambiguous. In general avoid ending shortened categories with vowels. Tokenizations like TRA may be exceptions. You should experiment with a fresh scenarios. When a WI format author tells you a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results were bad with evidence to support this.
+The above tokenization is the reason Zaltys and other enthusiasts ended up picking APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. If a WI enthusiast tells you that a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results were bad with evidence to support this.
 
 Different authors prefer using different cases for categorization. In the past birb and Zaltys recommended you use uppercase categories. Citation from Zaltys on why we use uppercase categories:
 ```
 Problem with propercase categories is that if you load several WIs, the AI will be hesitant to use those words (because of the repetition penalty). The uppercase avoids that, and also makes it less likely that the AI starts copying the style into output. Not much of a problem for 'Traits' since that's unlikely to appear in the output anyway, but might be a problem for 'relationship' or 'wear*'.
 ```
-After recent experiments with scenario and category generation scenarios it turns out different types of categories have different weights. For the scenarios tested the AI did much better with Author's Notes when the lowercase category `writingstyle:` was used instead of a previously popular category `Writing Style:`. More focused research needs to be made on this end.
+Based on experimentation there may be some exceptions. For some scenarios tested where the AI was tricked into formatting its own writing `writingstyle:` was seemingly preferred and produced better output than `Writing Style:`. Both work for use with A/N and may come down to user preference.
 
-UPPERCASE category words will be provided as a list. Their use is mostly self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. The long list of categories:
+UPPERCASE category keywords will be provided as a list. Their use is mostly self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. 
+
+The long list of recommended categories:
 ```
-APPEAR, BODY(only good for humanoids), LOOKS, WORN(STYLE/FASHION), INV, EQUIP, MENTAL, LIKES, HATE, LACK, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY/GEO, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, STATE(character status like being dirty, sleepy or ill), EFFECT(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, FACTS, STATUS, LOOT, BANNED,
+APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, EFFECT(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, FACTS, LOOT, BANNED (forbidden behavior), COND (status condition like PRLZ from Pokemon)
 ```
-Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. If an example isn't given, you have to figure out the meaning yourself. Some examples: APPE, MENT, RAITS, CLIM, GEOGR, CITIZ, PERSONA, BANN
+Problematic categories (avoid or use with caution):
+```
+BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superceded), STATE/STATUS(superceded, multiple meanings)
+```
+Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: APPE, MENT, RAITS, SUMM, CLIM, GEO/GEOGR, CITIZ, PERSONA, ALIGN, BANN. Sometimes the shorthand might be preferred such as CONDITION vs COND.
 
-The AI tends to be very literal-minded. TRAITS is the usually agreed upon swiss-army knife category where you can put any attribute of an object. But the AI seems to treat it like the *nature* of said thing. The best example of this is the trait `cool`. In order to get a character to have a `cool` personality it must go in MENTAL. Inside TRAITS it might make the character literally `radiate cold` instead. The same is suspected of traits like `hotheaded`. Also, uncommon or complicated concepts like fauna do not work well as categories. `TRAITS: Fauna<species>` works better.
+Let's discuss TRAITS and SUMMARY first. Due to Zaltys popularized use of categories, TRAITS was used as a universal category for a long time. The exact effect of TRAITS is unknown, but it possible to throw essentially any intrinsic characteristic trait inside it and have the AI respect it. It's still a good category for characteristics lacking specific category, but testing of WI has since continued. 
 
-`SEE:` is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need TRAITS. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACKS:eyes;SEE:blind;` has produced the most consistent Zaltys format blind characters. Research continues into creating mutes albeit TRAITS works decently.
+Users of the world-info channel have been playing around with SUMMARY or SUMM for short since it was discovered and found it works near identically to TRAITS, except it feels even more versatile. You can put pretty much anything in it that'd fit in a character 'summary' and it combines great with other categories, even referencing them without causing leakage. Since they achieve the same thing, but SUMM is preferred by everyone we've talked to so far it is the recommendation for a universal swiss army knife category.
 
-Shortening when used with purpose and tact works with other aspects of the game too so a trick bears mentioning here. If you want to save characters you can save multiple keys like `Enterprise, Enterp` and use the shorter `Enterp` as they key in your WI. This works better if the small key is a substring of the long name. You also want to use a substring that isn't easily confused with other words as is with this example. This may be more difficult and less worth your time if you use scripts.
+MENTAL is the category that was in popular use for mental, personality and behavioral traits. MIND achieves the same goal more effectively while using less space so MIND is recommended for behavioral traits now. Consult the personality keywords segment for more information on behavior.
 
-`STATUS:` is a surprisingly useful category for varied topics. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon, but it's not a completely consistent category for this purpose. `STATE:mute` seems to be better for the purpose of muteness.
+The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with TRAITS, the AI treated `cool` as the nature of a thing. Entities with the TRAIT `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside MENTAL or MIND. This may be the case for other words like `hotheaded` that the AI could take too literally. Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
+
+`WORN:` is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
+https://files.catbox.moe/0ur88f.PNG
+
+`SEE:` is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need SUMM. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACKS:eyes;SEE:blind;` has produced the most consistent Zaltys formatting blind characters. Research continues into creating mutes (now featured in a separate miscellaneous doc).
+
+`STATUS:` doesn't necessarily work as expected. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon. Still it's not a completely consistent category for this purpose despite the interesting results. 
+
+`COND:` is much more interesting and powerful for actually having characters suffer from conditions or status effects. It has been tested working with injuries and other debilitations. It even works with game and Pokemon status conditions like PSN or PRLZ.
+```
+COND:sick/dying/poisoned
+"I'm... not sure what help I'll be, sir. I'm dying. I was poisoned by a snake in the garden."
+COND:PRLZ
+"I cannot. I am paralyzed from the waist down."
+```
 
 `LOOT:` works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
 
-`SUMMARY:` is a strong and versatile category for making literal NPCs for quest chains or defining points of interest you want described consistently. It can even reference previously used categories, making it even better than TRAITS in some cases.  Can be shortened as `SUMM:`
+`SUMMARY:` has already been pointed out as a strong and versatile category for defining points of interest you want described consistently. It can even reference previously used categories, meaning it has abilities the older `TRAITS:` lacked. Impressive examples below:
 ```
 SUMMARY:Jamaican/grew up on streets, Output:
 He grew up in Jamaica with his rich parents. When he was 16, he was on vacation in Hawaii and decided to stay there when his parents left without him. He learned how to surf and just bummed around the island for a while. He eventually ran out of money, so he started working at a surf shop and selling some of his paintings on the side.
@@ -274,15 +297,21 @@ With SUMM:
 Zak is a sentient floating continent. It is about the size of Eurasia, and can fly around at will, although it cannot currently fly very high or very fast. It is mostly covered in forests and taiga, although it has some large plains, and several mountain ranges. It is currently inhabited by a few tribes of stone age humans.
 ```
 
-If you're lost and in doubt what category to use, you can probably throw it inside SUMM and AID will handle it fine. Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger categories. The AI picks up common traits just fine by their lonesome. TRAITS is a catch-all for when you don't need a big list on a single topic.
+If you're lost and in doubt what category to use, you can probably throw it inside SUMM and AID will handle it fine. Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger categories. The AI picks up common traits just fine by their lonesome. Zaltys-style formatting also benefits from having an indicator phrase like the one mentioned above.
 
-The AI understands the concept of speech patterns and accent to some degree. `SPEECH:`, `WORDING:` and `ACCENT:` have been tried **BUT** thus far `TRAITS:` has proven to handle this attribute the best. Writing style theme in author's notes can also give characters accent across the entire setting. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica, crook/criminal. Below is a sample Zalty provided with the WI `Zack:[Male human. TRAITS: surfer, heavy accent<Jamaica>.]`
+The AI understands the concept of speech patterns and accent to some degree. Categories like`SPEECH:`, `WORDING:` and `ACCENT:` were tried, but didn't output desirable results
+
+Thus far `TRAITS:` (or now SUMM) has proven to handle this attribute the best. Writing style theme in author's notes can also give characters accent across the entire setting. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica, crook/criminal. 
+
+Below is an example of  giving a character an accent with TRAITS:  
 ```
+Zack:[Male human. TRAITS: surfer, heavy accent<Jamaica>.]
 QUOTES FROM ZACK:
 "Zis is a really bad time to be messin wit me mon!"
 "The waves, the wind and the sky, zey are all one like you and I, man."
 "I hope dat you don't mind some reggae music, man."
 ```
+
 
 ### Personality Keywords
 Character behaviors and personalities deserve their own category. One of the biggest goals of WI is getting the AI to remember `how` a character is and output their behavior consistently. To this end we need behavioral keywords. This section is entirely dedicated to personality-related keywords that the community has either discovered to work exceptionally well towards certain ends or keywords that are disappointingly weak.
@@ -325,7 +354,7 @@ In this WI all words lacking semantic value (content meaning) have been removed.
 Colors are one detail the WI has frequent problems getting right. Monky claims that he gets good results on caveman for results just stating the color and what it is for. A verbose example of monky defining adjectives to describe his character (typically the main character) is as follows `Alisha long dark brown silky shiny wavy hair.`
 
 There are two good resources for caveman, Monky's test scenario and kim's caveman generator, both linked in order:
-https://play.aidungeon.io/main/scenarioView?publicId=558a8d40-2fbd-11eb-9239-8b8f17f7a2b0
+https://play.aidungeon.io/main/scenarioView?publicId=558a8d40-2fbd-11eb-9239-8b8f17f7a2b0  
 https://play.aidungeon.io/main/scenarioView?publicId=3f094990-2e40-11eb-b81d-a3d32aaa3e7a
 
 During experimentation on caveman Monky made important observations. When he used the caveman format extensively on Griffin he found if he didn't mention the character/key every 50 characters/15 tokens the AI would 'lose focus' and start describing random attributes outside of the WI. On Dragon the limit before he needed to start mentioning the key again was around 200 characters. Discoveries like these have led some users to believe the key should be reinforced at the specified intervals depending on which model you use.
@@ -338,9 +367,16 @@ Caveman is perhaps the most forgiving basis for a format. It plays well with man
  Alexandria:[ Has Blackflame rune sword, steel armor, healing potion, amulet].
  Alexandria:[ Long red hair, fair skin, narrow green eyes, clean].
 ```
-It clearly still looks like caveman, but now including commas, symbols and implementing enclosure tricks first seen with Zaltys. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below is the full dissection of Neanderthal written by Monky:
+It clearly still looks like caveman, but now including commas, symbols and implementing enclosure tricks first seen with Zaltys. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below is the full dissection of Neanderthal written by Monky:  
 https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Neanderthal_Unscripted_Results_by_Monky.txt
 Users should write using any format they enjoy but by now Neanderthal is greatly recommended in part due to how easy it is to integrate other methods with it. With birb's observations some issues with EWIJSON were resolved and now Neanderthal is a format that plays very nicely with it.
+
+Neanderthal style formatting has gone through even further tweaking so it may be effectively adapted for use with scripts like EWIJSON. Since we've gone from writing like a caveman to writing more like a modern person to writing like a scripter the modified syntax is logically called Futureman. It is simply a modification of Neanderthal that is extremely compatible with EWIJSON which has many benefits over vanilla scriptless AID. Futureman uses `<<` and `>>>>` for encapsulation, both of these using only 1 token. Below is a simple example of Alexandria converted into Futureman and used together with EWIJSON.
+```keys:Alexandria#[t=1]
+<<  Alexandria age 29 human she tall strong thin brave knight, your ally>>>>
+```
+Monky has written and provided (with some editorial assistance from birb) a thorough writeup on the history of the formatting he uses and what Futureman is all about. It is extremely recommended reading.  
+https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Futureman_by_Monky.md
 
 
 ### Onyx Formatting Tricks
@@ -357,6 +393,11 @@ Another one is `IF<action>: THEN<things happen>` this is especially useful for c
 keys: cursed book,open cursed book
 IF<open cursed book>: THEN<the pages of the cursed book form into a face, shriek loudly and place a terrible curse on you.>
 ```
+With the discovery of logic algorithms we can improve on this. A =>B essentially means A leads into B or A implies B. This is a form of IF THEN.
+```
+IF{open cursed book} =>THEN{The pages of the cursed book form into a face, shriek loudly and place a terrible curse on you.}
+```
+
 From his work we have a reliable and easy way to define locales especially when combined with data mentioned above. These get interesting when combined with other short WI.
 ```
 keys: Rask
@@ -371,7 +412,7 @@ Writing style (deaf, visual descriptions): [The sunlight was streaming from the 
 ```
 Writing style (blind, auditory descriptions): [Sounds came to his ears. The pounding of the surf. A seabird crying overhead. The warm caress of the sun on his skin. The tingling taste of salt in the air. The smell of fish and honey. The feel of wet sand slipping between his toes. The sound of a gentle breeze blowing through his hair. The sheen of those scales, like pearl in the sun. The roughness of that scaly skin, like the bark of an ancient redwood tree.
 ```
-Visual and auditory descriptions seem to be the important part. The output is fancy enough to definitely consider as their own lines at the bottom of remember or integrated into A\N.
+Visual and auditory descriptions seem to be the important part. The output is fancy enough to definitely consider as their own lines at the bottom of remember or integrated into A/N.
 
 Zaltys has also made discoveries on how to semi-reliably define the structure of a building. These are listed with Onyx as an expansion of his concept. As a category EXIT works better than EXITS. Directions are good categories, but specifically for architecture.
 ```
@@ -383,6 +424,7 @@ Library room: large room. EXIT: corridor<north>, lounge<west>, trophy room<south
 ### birb research
 Many sources confirm that newlines (pressing enter) is powerful at grouping and separating certain traits. ALL CAPS is good for defining the group, encapsulation like ~~() is good~~ used to be for the reference point. Thanks to monky caveman we know the AI doesn't care about grammatical correctness in the WI either. Sometimes `red-color` or `hair-color` may refuse to work consistently. In an attempt to fix this the community discovered that AI groups words strongly together, yet knows to separate them if you smash them together into compound words even when grammatically incorrect. For example:`verylonghair`,`platinumblondehair`, `tatteredgrayrobes`. birb calls this smashing words the more correct term being mashup. With this discovery even traits like `flamingorangeeyes` are possible to get out consistently. birb is still experimenting and undergoing revision on both of his formats, because while preliminary results were good, they broke on long scenarios. Also note that the following format is basically Zaltys with newlines and commas (and predates catnip). The angriest wizard that ever lived is provided for historic purposes (now outdated due to `()` being weaker than before replace with `<>`):
 ```
+Original date: October 12 2020  
 keys: Rick,the angriest wizard that ever lived
 [TITLE(Rick):The angriest wizard that ever lived;
 RACE(Rick):human, wizard;
@@ -405,6 +447,8 @@ Lillie:[Human female. Her eyes are blue. Her hair is blonde. Her hairstyle is lo
 When you examine Lillie in the story and have the AI describe what she is wearing you will get an output like the following very consistently: `She's wearing a nightfall raiment. The dress consists of detached white sleeves and shows the armpits. The bust and the frills of the dress are white while the rest is black. Kneehigh boots are a part of the outfit.` When tested on other outfits `the clothing consists of` was a very good input to continue from for the story. This was demonstrated on Discord. The above example combines almost-Caveman with Zaltys. If you use a style like this, you must make it conform to your writing style. Zaltys calls the uncategorized part of his format the indicator. This is usually details like sex species and age. In the Lillie example species, sex and colors were indicators. birb always wants the AI to describe the traits of the characters in the format `Her eyes are X color. Her hair is Y color in Z style.` This is why this type of WI works for his scenarios. Also, if the AI starts describing the clothing of the character before you get to ask what the character is wearing, it will usually output the wrong set of clothes. First the story must mention the name of the outfit, then it will use the correct WI to describe the clothes.
 The document now provides evidence for certain methods working. Included is a gif of the outfit being in use. You will have to take the author's word that the AI can consistently mention the outfit and then describe it.
 https://files.catbox.moe/9dibjo.gif
+
+For a period of time birb also used formatting commonly referred to as Ritz as she was the character he first posted an example of. This was abandoned as a historic curiosity after a 300k character long adventure. If requested, more examples may be provided in the obsoleted methods category.
 
 Now that the category `EQUIP:` is confirmed working with clothes and other inventory it would be possible to use the above example to come up with custom named weapons for your characters, write WI for the custom weapons and have the AI invoke their traits reliably.
 
@@ -523,6 +567,9 @@ https://www.powerthesaurus.org
 
 Scripts like EWIJSON require the user learns regexp. birb did this in a week of playing with EWIJSON and reading zynj's wiki so tutorials are not included. A linter is very useful though for both learning and production. Use ECMAScript(JavaScript) mode only.  
 https://regex101.com
+
+birb is not a big fan of electron, but he uses the following program to manage and write his WI collections as .json files   
+https://github.com/gimzani/ai-dungeon-worldbuilder
 
 
 ## Obsoleted Methods

@@ -1,3 +1,5 @@
+﻿// CHANGELOG: Ver 1.2 still incomplete, many more symbols included now
+
 Dragon understanding of symbols from the POV of an author (these may or may not be accurate/useful but strong trends indicate a possible higher chance of an actual association)
 
 Running sets of 12 because of 1 output + 2 rerolls per entry for efficiency.
@@ -163,19 +165,896 @@ Enjoy.
 For example the symbol @ represents the speaker of a line of text.
 -----ANALYSIS: Quote/Character definer/emphasizer
 --------------------------------------
+=
 -----1
+For example the symbol = is the "equality" symbol, also the "human eye" since its an eyeball and when its a reflection it looks like an "=".
 -----2
+For example the symbol = is interpreted as "is equal to", the number 5 is interpreted as "representing a number, usually five."
+
+The symbols are:
+
+x - represents an unknown.
+
+* - represents multiplication.
 -----3
+For example the symbol = could mean an Argument, a choice, a relationship or a symbol.
+
+The way the symbol is used in the story reveals which of these meanings apply.
+
+If you are right you will understand the story better and will be rewarded.
 -----4
+For example the symbol = represents the balance of nature.
+
+In the case of the sun, it represents the cycle of day and night.
+
+The idea that one is necessary for the existence of the other.
+
+You don't know how long you sit there reading this book.
 -----5
+For example the symbol = has no significance to the author but the artist uses it a lot. In fact every time she uses it, it stands for something different.
 -----6
+For example the symbol = is interpreted as being a break between ideas.
+
+Another example is * which means the preceding symbol is repeated and another example is # which means that the sound is prolonged.
 -----7
+For example the symbol = is interpreted as meaning "is equal to", because according to the author when two things are marked with this symbol they are equal in some way.
+
+The symbol for multiplication is an "×"
 -----8
+For example the symbol = is interpreted as an equal sign.
+
+The symbol for a heart is interpreted as love.
+
+The symbol for a tree is interpreted as nature, and so on.
+
+This language consists of symbols and punctuation.
+
+Some symbols are combined to create sentences.
 -----9
+For example the symbol = represents how the human brain works. The brain receives input from the senses, processes it and then reacts to it.
+
+The symbol * represents how the human mind works. The mind is constantly looking for patterns in what it experiences, even if they aren't really there.
 -----10
+For example the symbol = could mean "is" or "equals".
+
+The symbol # can have two meanings, either it is a hashtag or it can be used to count something for example:
+
+"Cara uses the hashtags #counting and #countingthings"
 -----11
+For example the symbol = means a line of soldiers can be seen by it. A red circle with a line through it means that glyph is forbidden and should not be used in any writings.
 -----12
------ANALYSIS:
+For example the symbol = may mean happiness or a smile, - may mean a frown or sadness etc…
+
+So the first part of the book is written in code because it's pretty obvious the author didn't want just anyone reading it. You crack the code pretty quickly and continue reading.
+-----ANALYSIS: Dragon seems to have no consistent idea. It kind of gets 'equals' but not well.
+--------------------------------------
++
+-----1
+For example the symbol + has three different meanings.
+
+The first is of friendship, which you see on the first page. The author has drawn a + with a heart around it, to show their love for their wife.
+
+The second is of death.
+-----2
+For example the symbol +
+
+This is the symbol for a person
+
+However in some of my work I use it to mean a type of magic which is used primarily by the undead.
+-----3
+For example the symbol + has the meaning of bringing things together.
+
+It is used to enhance a story by bringing something from the past into the future or by bringing something from the future into the past.
+
+This can be interpreted in various ways depending on the situation.
+-----4
+For example the symbol + is a representation of light, heaven, or a divine being.
+
+The symbol - is a representation of dark, hell, or a demonic being.
+
+The at symbol @ is a representation of the earth or nature.
+-----5
+For example the symbol + means something good, while the symbol - means something bad.
+
+The symbol * means something unknown meaning.
+-----6
+For example the symbol + represents a maiden, * means a treasure, etc.
+-----7
+For example the symbol + can be interpreted as a relic of the old language meaning 'person'.
+
+The symbol - can be interpreted as a relic of the old language meaning 'group of people'.
+
+The number 2 can be interpreted as referring to a 'different person' rather than the same one.
+-----8
+For example the symbol + is interpreted to mean a positive charge.
+
+It is this style of writing that was used in the journal."
+
+Mei reads over your shoulder and says "There are notations for things you have never even heard of.
+-----9
+For example the symbol + is interpreted as "the sun coming out from behind a cloud".
+
+Other symbols are harder to interpret, for example:
+
+William does not know what this one means but it's the first in the list and sort of looks like an eye.
+-----10
+For example the symbol + means "coming together" of two things.
+
+The symbol - means the opposite.
+
+Paragraph one:
+
+The example on paragraph one is easy to understand. A key and a lock are "coming together" to open a door.
+-----11
+For example the symbol + is typically a "binary" indicator, meaning it has two possible states (on or off, open or closed, 1 or 0, etc…).
+
+So if you see a sentence that says "The door has a plus on it"
+-----12
+For example the symbol + means that the reader should pause and visualize the symbol in their minds eye, but for how long?
+
+The symbol : means to pause very briefly.
+
+Underlining a word means the reader should visualize the word in their mind and the letters should be glowing.
+-----ANALYSIS: Has minor linkage to positive and negative
+--------------------------------------
+-
+-----1
+For example the symbol -\ means a person changes in some way.
+
+What do you think of the symbols? Do you understand them? What about the text itself? You can pick it up if you like.
+
+Maybe later we can explore it further, but right now, clean up this mess.
+-----2
+For example the symbol - means that the two concepts are related and will influence each other, for example:
+
+"A girl falls from the sky onto a city. A man in a mask appears near her."
+-----3
+For example the symbol - means a line leading to whatever it is describing.
+
+This symbol - means a line leading away from whatever it is describing.
+
+This symbol * means that something is much larger than something else.
+
+And this symbol # means that something is smaller than something else.
+-----4
+For example the symbol - - (or –) means "opposite or a difference in polarity" or "reversible actions."
+
+A vertical line | (called pipe) means "at the same time."
+-----5
+For example the symbol - means that the character is sad or angry, while a symbol
+
+means the charcter is happy or content.
+
+A / separates paragraphs in each section.
+-----6
+For example the symbol -A- represents the author.
+
+The symbol -B- is the reader.
+
+The symbol -C- is a cat.
+
+The symbol -D- is an apple.
+
+You get the idea.
+-----7
+For example the symbol -A-
+
+Here's what that means:
+
+A means you have to go back to the very beginning of the book, this is what the religious would call "A Repetition of the Beginning".
+-----8
+For example the symbol - means "stop". The longer you look at it, the more you can see: first its meaning, then a person, then a room, household objects and finally the entire history of this person.
+
+You can clearly make out the events that occurred in this place.
+-----9
+For example the symbol -=- means someone's drinking a cup of coffee.
+
+This symbol --==-- means that someone has knocked over the cup of coffee.
+
+This one --*-- means that someone has slipped on the cup of coffee.
+-----10
+For example the symbol - is the "Black Sun" which is interpreted as the divinity of man. A circle with a dot in the center.
+
+The symbol, a downward facing triangle with anake at its peak, means "Enlightenment", and represents the "Seeker of Knowledge".
+-----11
+For example the symbol - means that the symbol is interpreted as ‘forever'; F - forever, O - observed, and B - by.
+
+This means that forever is the correct way to spell ‘observed by'.
+-----12
+For example the symbol - looks like a cross. It is upright with a shorter lower part and longer upper part. The symbol - looks like an equal sign or a plus sign.
+
+The author then gives an interpretation of what these symbols could mean in the story.
+-----ANALYSIS: Negative/encapsulation but pretty weak association
+--------------------------------------
+_
+-----1
+For example the symbol _
+
+_ means that the author was not sure what it meant and it could have several different interpretations.
+
+It's a bit of a pain to use in other documents.
+-----2
+For example the symbol _ can mean one thing in one place and it can mean something else in another place.
+
+The color red doesn't actually have anything to do with danger or trouble, but the color blue might represent a calm sea on a map.
+-----3
+For example the symbol _ means that you may be able to find a more complete description of the symbol in the index, and the number 6 means that you may be able to find a more complete description of it on page 6.
+
+The authors have an annoying habit of writing numbers as words rather than as numbers.
+-----4
+For example the symbol _ represents a man standing up with its head and arms cut off, it's posture suggesting it's about to sit down.
+
+(This is the first sentence in the description)
+
+The * represents a man with his hands covering his face, his whole body is shivering.
+-----5
+For example the symbol _ means that the next section of the story will be the "epilogue".
+
+The symbol
+
+When two of these are used like this:
+
+means that a new story starts here.
+-----6
+For example the symbol _ represents a star. Some stars on their own are far away and cold, but with another star they can be warm.
+
+So a chapter is dedicated to describing one of the symbols in the title.
+-----7
+For example the symbol _ and % mean, that the words should be spoken softly.
+
+The symbol # and $ mean, that the words should be spoken loudly.
+
+The symbol * and ! mean, that the words should be spoken fast.
+
+The symbols , and .
+-----8
+For example the symbol _ means a word has no importance and was just for euphony.
+
+Some other symbols are used to hide meanings from the uninitiated.
+-----9
+For example the symbol _--* is interpreted as a hand rising from the ground.
+
+The format of the language allows for symbols to be rotated, mirrored and repeated, so the language is very expressive. It's however not very easy to write by hand due to its complex nature.
+-----10
+For example the symbol _$ is read as dollars, the vertical lines are pillars like Washington's, the $ sign represents a treasury building and so on.
+
+The method of cryptanalysis is trial and error, reading a passage in English and then attempting to replace every symbol with its definition.
+-----11
+For example the symbol _x_ is a star on the map indicating where a mage lives.
+
+The book seems very old and the pages are starting to yellow already.
+
+The pages are sewn together and it has a brown cover.
+-----12
+For example the symbol _ could represent a human, or the letter ‘h'.
+
+Or * could represent fire or stars
+
+This is a very intriguing language that has at least some similarities with pictures and is easier understood by non-humans like elves and dragons.
+-----ANALYSIS: AI gives some high randomness responses for underscore. Possibly a 'skip' or 'space' character based on the mild consistency of some responses.
+--------------------------------------
+#
+-----1
+For example the symbol # could be the earth, or it could be a flower, or both.
+
+This is making shit up as you go along.
+
+The symbol % could be an old man, an eye, a candle, or a pyramid.
+
+This is creative license.
+-----2
+For example the symbol # means "small" or "short" (along the lines of the word small but not necessarily related etymologically).
+
+The symbol ~ means "like". For example, #~ means "small like" or "short like"
+-----3
+For example the symbol # is a 'hashtag' so it symbolises a campaign of the Anti-Drug Alliance, an organisation that tries to stop people taking drugs.
+
+It's not a perfect system, but it helps us governments keep track of what things mean in the real world.
+-----4
+For example the symbol # is interpreted as a sharp, sudden noise, an explosion. The symbol $ is interpreted as a heavy, content sigh, satiation.
+
+These symbols can be combined to create thousands of new pictures, sentences and stories; anything that can be expressed in words can be expressed with $+++.
+-----5
+For example the symbol # stands for a quote from another person or source.
+
+A "!" is an important thought.
+
+"..." are either pauses in speech or a description of a person or action.
+
+It should be noted that many other authors have their own style preferences and these should be respected.
+-----6
+For example the symbol # is used in music to denote sharp and in some cases an octave higher.
+
+A description of various elements:
+
+Measure-A unit of music that groups together a certain number of beats.
+-----7
+For example the symbol # is used in one place as a combination lock, but in another place it is interpreted to mean a bridge.
+These two interpretations are not contradictory, they are both correct.
+Given the right context you can interpret anything as anything else.
+This meaninglessness of everything makes me laugh with delight.
+-----8
+For example the symbol # could mean river, or it could mean gold.
+
+However you may not know which it means until later in the story.
+
+So to solve this we need to choose all the different symbols that could possibly mean each thing.
+
+For example for river the choices could be # $ !
+-----9
+For example the symbol #40, ‘the endless staircase' is interpreted as a spiral staircase going up infinitely.
+
+Here is the full list:
+
+0. The gate (interpreted as a bricked up doorway)
+
+1. The pilgrimage
+
+2. War
+
+3.
+-----10
+For example the symbol # is interpreted as "very interesting" or * is "of passing interest".
+
+So if a passage has this: #*#*#*####*####* it means that the author found it to be very interesting (and so on).
+-----11
+For example the symbol # is interpreted as a meaning of a turning point in a story.
+
+The symbol $ means material gain or loss.
+
+! usually means "look out" or "be careful."
+
+I then looked up at the symbols.
+-----12
+For example the symbol # stands for a number, like the year.
+
+Other symbols stand for letters, like the at symbol (@) and they stand for the letter after the one for the alphabet.
+-----ANALYSIS: Some hits on sharp, number, hashtag, interesting. May be an emphasizer.
+--------------------------------------
+$
+-----1
+For example the symbol $% is interpreted to mean "look in the environment for some sort of key".
+
+The symbol $^ is interpreted to mean "some things are more important than others".
+
+The symbol $. is interpreted to mean "a special case"
+-----2
+For example the symbol $ is interpreted as "read the bottom of this page for your answer," while a small star is "the answer you seek is in another book of riddles."
+
+If you don't have another book, you may make a DC 13 Intelligence check to try and remember the answer.
+-----3
+For example the symbol $PQ is interpreted to mean:
+
+\begin{pmatrix}
+
+P\\
+
+Q
+
+\end{pmatrix}$
+
+So if we wanted to write $PQ$, then we would just write "PQ".
+-----4
+For example the symbol $ is a C for currency.
+
+The symbol % is a percent sign, which is a mathematical way of showing that something is "over one hundred" or "bigger than you thought" or even perhaps "shocking and alarming."
+-----5
+For example the symbol $ means dollar while the symbol # means number.
+
+This looks like a beautiful flower(flower).
+
+Here is a very interesting passage that you feel relates to you.
+
+Here is an interesting passage that you feel strongly relates to you.
+-----6
+For example the symbol $ is used to indicate money in your inventory.
+
+The symbol * is used to show the health status of the character.
+
+The symbol ' is called a speech tag, and tell who is speaking.
+-----7
+For example the symbol $ is interpreted as: "The amount of money you possess. It can be used to buy things."
+-----8
+For example the symbol $Suit means that the card has a symbol on it and you can determine the symbols name by looking at the bottom of the card.
+
+The following symbols are on the cards, as are their descriptions.
+-----9
+For example the symbol $Y$ is read as "price of a room for a night at the inn."
+
+Another example is that the symbol $\mu^c$ is interpreted as "number of cups of wine in the tavern"
+
+I'm fairly certain you can figure out the rest.
+-----10
+For example the symbol $ is interpreted as the "gold coin" and if you see this symbol in a book it usually means the author wants you to have a gold coin added to your inventory.
+
+The forward slash / means you are walking forward in the game.
+-----11
+For example the symbol $ is interpreted as the "gold coin" and if you see this symbol in a book it usually means the author wants you to have a gold coin added to your inventory.
+
+The forward slash / means you are walking forward in the game.
+-----12
+For example the symbol $ is used in math to mean the number of dollars. (Which is a weird unit of currency)
+
+The symbol has been used traditionally by merchants, and moneylenders. It is not a coincidence that "Mammon"
+-----ANALYSIS: Strong relation to money (thankfully) and strangely, video game inventories/themes.
+--------------------------------------
+%
+-----1
+For example the symbol % means "percent". The symbol ^ means "to" or "from", depending on the context. The symbol ‘text' means the text "text" and so on.
+-----2
+For example the symbol % means that a word or punctuation comes next and that the reader should pause slightly before reading the next word.
+
+These symbols are used:
+
+~ vibrato : creates a smooth voice, used for indicating spells.
+-----3
+For example the symbol % stands for "penis" and its mirror image stands for "vagina."
+
+As you read the book, write down which symbols you see next to each other.
+-----4
+For example the symbol % (that's the percent symbol), which is used to denote the material each planetoid is primarily made of. If the planetoid has plant life on it, for each dot in the "Botany" skill you have, you can discern what type it is.
+-----5
+For example the symbol % is interpreted to mean "flee", or that someone is running away in fear.
+-----6
+For example the symbol % represents a dead end.
+
+If you need to take an action that has no symbols, you can make any choice.
+
+There are also some other rules, but those will be explained in the course of the game.
+-----7
+For example the symbol % means that you can substitute any word in its place. It's a symbol that is used in algebra for example 2x%2 would be the same as 4x2.
+-----8
+For example the symbol % is present in the first row of a code.
+
+This means the reader must fill in the blank with a number such as 1 for example.
+
+After the reader fills in all the symbols with numbers, they should then add those numbers together for a final solution.
+-----9
+For example the symbol % means there is more than one possibility.
+
+So for the word water%it can be water, sea, or rain.
+
+The symbol * means that it is not sure. For example you can't walk on 100* stairs, but you can walk on stone stairs.
+-----10
+For example the symbol % means that you think something is important.
+
+The symbol ^ means you think something is funny and not to be taken too seriously.
+
+The symbol $ means you think someone can learn a thing or two from the experience.
+-----11
+For example the symbol % is interpreted as a chair by the author.
+
+The "table" symbol is similar to the one used in chemistry: it consists of three parallel lines, slightly slanted towards each other at the top.
+-----12
+For example the symbol % means "100% of people who do this will die", while the symbol § would mean "some people who do this will die".
+
+A third symbol is the one that looks like eyes. The eye stands for good luck.
+-----ANALYSIS: Strong % and some probability linkages
+--------------------------------------
+^
+-----1
+For example the symbol ^ is a symbol that connotes the rising and setting sun. This is one of many symbols which an author can use as a tool to help give insight into their poems.
+
+The second symbol is the word "Tribal"
+-----2
+For example the symbol ^ is the "upwards spiral" which implies "...a special type of energy, movement or development...evolutionary change"
+
+The symbol is a "ring without a beginning or end", implying "perfection and completeness" but also that it is "unattainable"
+-----3
+For example the symbol ^ stands for "zombie horde" and can be combined with other symbols to create new types of zombies. (see below)
+
+The symbol O stands for a "town" and can be combined with other symbols (see above).
+-----4
+For example the symbol ^ is defined by the author as being the act of looking at something in a fixed position.
+
+The Calculus of Infinitesimals uses functions as variables and then moves on to non-standard analysis which allows for an answer no matter how many infinities you have in your solution.
+-----5
+For example the symbol ^ is interpreted as "as above so below".
+
+The symbol V is interpreted as "the spiral that connects the micro with the macro".
+
+The symbol o is interpreted as "the consciousness that realizes it's part of a larger whole".
+-----6
+For example the symbol ^ here:
+
+means a slight pause in the sentence, but the same tone. In this case it's at the end of a minor sentence in the middle of a paragraph in an example sentence.
+
+"The narrator opens the door carefully and sees a figure standing there, back turned."
+-----7
+For example the symbol ^ can be interpreted as meaning "is greater than" or "precedes".
+
+This symbol can be interpreted as meaning "if", "and" or "and/or".
+
+That sort of thing.
+-----8
+For example the symbol ^ can be interpreted as an arrow pointing up or down and a line.
+-----9
+For example the symbol ^ shows how something is going up or ascending. The symbol V shows how something is going down or descending.
+
+The at sign (@) shows a sense of completeness while the omega (Ω) shows a sense of incompleteness.
+-----10
+For example the symbol ^ means that the author believes that the original symbol means that.
+
+A vertical line | with a horizontal line on top of it.
+
+^The symbol is interpreted as meaning worship in general and in particular, Satan.
+-----11
+For example the symbol ^ is the author's interpretation of hope.
+
+Despair is represented by a - or a , etc.
+
+It's a pretty interesting read.
+
+You may be able to figure out some of the story's symbols and what they might mean to someone who is familiar with them.
+-----12
+For example the symbol ^ can be interpreted as up or above, the symbol V can be interpreted as down or below.
+
+Knowing the symbols and their interpretations would allow you to decipher some of the text.
+-----ANALYSIS: 'up' or 'arrow' or 'rise' are strong connections, some connection for if/then/and/or though.
+--------------------------------------
+&
+-----1
+For example the symbol & is interpreted as "and".
+
+A slightly more complex one ~ is used as "the".
+
+The most complex one is # which is used in the word "number".
+-----2
+For example the symbol & is interpreted as "life", a line across the "f" means "repeat this note in the second time signature".
+
+Another example is the use of the word "Turn", which repeats the previous note and direction.
+-----3
+For example the symbol & means that the author feels that both of the symbol's meanings are important to understanding the work.
+
+On the other hand a symbol with an X through it means that the author feels that the common interpretation of that symbol is not correct and provides an alternative.
+-----4
+For example the symbol & is interpreted to stand for the word and. If you wanted to search for the words night and darkness then you would enter night & darkness into the search box and all of the articles with those two words in them will be listed.
+-----5
+For example the symbol & can mean anger, love, or even jealousy.
+
+The symbol # can stand for courage, strength or even victory.
+
+There are too many to list and the author doesn't even know them all. The reader has to already have this knowledge otherwise the writing is nonsense.
+-----6
+For example the symbol & has several interpretations.
+
+The first meaning is "and" as in "Lunch & Dinner."
+
+The second meaning is "with," as in "John walked with his dog yesterday."
+
+The third meaning is "describes," as in "John and his dog."
+-----7
+For example the symbol & is a combination of A and B.
+
+An example sentence would be: My friends are the most important thing in the world to me.
+
+Chapter 1: "The more you sweat in training, the less you bleed in battle"
+-----8
+For example the symbol &, the author states, can represent a man riding a horse.
+
+The at sign @ represents a man kneeling.
+
+The % sign represents someone sleeping.
+
+This is all very esoteric and difficult to understand. I'm not sure I even know how to process this information.
+-----9
+For example the symbol & means "and" while the # means "number."
+
+So if you see something like "The man and the girl played under the water fountain," a cognat would interpret it as the man and girl playing under the water fountain.
+
+Other than that, it's pretty straight forward.
+-----10
+For example the symbol & can equal "and" in some cases and "ampersand" in others.
+
+So if you want to find every occurrence of "dog" AND "tan" you would put "dog&tan" into your find box.
+-----11
+For example the symbol & can stand for a word of place of birth, the eye can signify someone who is an important character or perhaps even a god.
+
+One thing is for sure, if you're going to read one of these things, you're going to have to keep a translator handy.
+-----12
+For example the symbol & has two possible meanings, it could mean "and" or it could mean "average".
+
+If you were to say
+KITTENS AND CHOCOLATE
+Then the symbol would mean "and" because of the context.
+-----ANALYSIS: 'and and and and' but some hint of 'average or combination' which may ultimately be the same.
+--------------------------------------
+*
+-----1
+For example the symbol *The sound of heavy breathing can be heard.* is related to the fact that the monster is approaching and the reader should get ready.
+
+Here are the symbols that would be cool to implement:
+
+*The sound of heavy breathing can be heard.* - The monster is approaching.
+-----2
+For example the symbol *
+
+It means the author thinks you should italicize something.
+
+The symbol #
+
+It means the author thinks you should put a line break.
+
+If the * appears next to another * they mean you should put an asterisk in.
+-----3
+For example the symbol * crossed out means it was not a positive experience, but rather a negative one. While the symbol o underlined means that it was a positive experience.
+
+Under each symbol is a description and an explanation for why I used that symbol.
+
+Some are very basic, others require thinking about.
+-----4
+For example the symbol * was interpreted as "Yawning opening to unknown depths."
+
+Asterisks, double lines, and other symbols are used for decoration in some areas.
+
+You can read the description of whatever symbol your cursor is hovering over by holding down the left mouse button.
+-----5
+For example the symbol * means that the passage is particularly interesting, or makes some sort of important.
+
+The passage indicates no such thing.
+
+Deleted this passage altogether.
+
+Note: Please make sure you keep the same format for other books; i.e.
+-----6
+For example the symbol * which means it is a picture of the sun shining through clouds.
+
+And # means a picture of the moon at night with craters on its surface.
+
+I also have a description of how they are used in volume two "The Great Begotten".
+-----7
+For example the symbol * means that this is part of a description and not something that happens in real life.
+
+Other symbols have different meanings.
+
+Try and learn the language of Symbols, for it is an important one in understanding the works of those who studied the Old Temple long ago.
+-----8
+For example the symbol * could be something you're supposed to remember from this book.
+
+The symbol # would be the result of a coin flip.
+
+The symbol $ represents money, specifically the amount of money you have with you.
+-----9
+For example the symbol * is used to denote repeating notes in music. When using this symbol, the number inside of it denotes how many times to repeat the note.
+
+For example, 2* means to play a note 2 times. 3* means 3 times, 4* means 4 times, and so on.
+-----10
+For example the symbol * is defined as everything that is.
+
+A description of everything that is would be: something, nothing and everything.
+
+The symbol c refers to things that cause other things.
+
+A description of things that cause other things would be: people, events and processes.
+-----11
+For example the symbol * could mean the author likes that word or ! could mean it's crucial to understanding the story.
+
+Any other symbols are up to you to find!
+
+You can click on any word to highlight it and all instances of that word.
+-----12
+For example the symbol *interlude* is used to mark an interlude in the book.
+
+In the text it would look like:
+
+"The text in this book so far can be summarized with the following symbols: +, - , *, and ?
+-----ANALYSIS: emphasize, describe are the main themes.
+--------------------------------------
+(
+-----1
+For example the symbol (above) could be interpreted as a representation of an eye.
+
+This scroll contains basic instructions and a few example symbols upon which the reader can practice.
+You got a Scroll of the Basics!
+-----2
+For example the symbol (a hand with an eye in the palm) when matched with the description and name of "The Eye of the Storm" means the symbol represents a calm amidst a storm.
+-----3
+For example the symbol (()) is interpreted as a clock.
+
+When you read this book you suddenly understand everything the book is saying, the secret symbols and diagrams of the authors inner most thoughts are laid bare to your mind!
+-----4
+For example the symbol () is interpreted as a building up of idea's or concepts so that they reach a conclusion (oo).
+
+This one (++) means a sequence of actions that lead to an outcome (ooo).
+-----5
+For example the symbol (A) means that the author feels that the symbol is for good while (A) means that the writer feels that the symbol is for ill.
+
+The same symbols can have different meanings in different religions or even with different authors.
+-----6
+For example the symbol (.) has several meanings.
+
+This is a description of various symbols and how an author interprets them. For example the symbol (.) has several meanings.
+
+For numerical data use commas every three digits, unless that would make it a weird number in which case just do every digit.
+-----7
+For example the symbol (☥) which the author states as meaning ‘darkness' and being a symbol of evil.
+You turn the page and see a circle with a line through it (☢).
+The book says that this means ‘death' and ‘bad'.
+-----8
+For example the symbol (a) means the symbol is present, but its meaning is not clear.
+
+The symbol (b) means you are pretty sure about its meaning but you'd like to see it again just to make sure.
+-----9
+For example the symbol (circle with a dot in the middle) is used to represent "The Spark of Life" and can be seen as creation in action.
+-----10
+For example the symbol (Yang)
+
+Is a symbol of a hand reaching up to the sun. This can be interpreted to mean the pursuit of happiness or victory over adversity.
+
+If you get an answer wrong then you have to wait and try again.
+-----11
+For example the symbol (M) is the symbol for monsters and (C) is the symbol for caves.
+
+To create a map, you just need to fill in the blanks.
+-----12
+For example the symbol (see page 197) can have the following meaning.
+-----ANALYSIS: pretty much only views ( as start of parenthetical encapsulation.
+--------------------------------------
+)
+-----1
+For example the symbol )( represents a common yet indecipherable grouping of symbols that can easily be overlooked.
+
+The other symbols are lines, circles, and dots and how they can be interpreted.
+
+----
+
+Hold on I'm going to write down these symbols because I think they might be important later.
+-----2
+For example the symbol )( is the symbol for a demon's horn and it is used on page 17.
+
+The book also mentions something about moving the stars.
+
+This is probably just nonsense as even the most powerful wizards can't move stars, or can they?
+-----3
+For example the symbol )( means The Creation of Something and is found in the first book of the parchments.
+-----4
+For example the symbol ) in this book is described as a symbol of a courtship.
+
+While the most commonly known meaning of it is a pronoun, the author states that if you draw it with the tail pointing towards the person its referring too, then it means they are in love with you.
+-----5
+For example the symbol )( means humor, and any sentence of the book which has that symbol in it is supposed to be funny.
+
+Other symbols are harder to spot. The ^(^ symbol is an indicator that the story is allegorical in nature.
+-----6
+For example the symbol )( can be interpreted as describing a "happiness", while (()) is a "sadness", the first one is "active", while second is "reactive".
+-----7
+For example the symbol )( represents the ability to see auras. You can see this on people and know what kind of mood they are in, or whether they are healthy or sick.
+
+The symbol ()( represents the act of seeing spirits. You can see ghosts and other undead roaming the earth.
+-----8
+For example the symbol )( means mother.
+
+The first sentence talks about how he lost his mother and father at a young age and had to learn from a young age.
+
+It is clear that the son is struggling with his parent's loss and the symbols represent his own internal thoughts.
+-----9
+For example the symbol )( is interpreted to mean "At that moment, the door opened."
+
+Another example: ()( means "You see a box." (In this section, the symbols are bold, not italicized and surrounded by parentheses.
+-----10
+For example the symbol )} is the 'face of life'. It symbolizes that there is life after death, and that the good deeds will be rewarded.
+
+The author goes on to say that this symbol, and others, are very deep, and can not be understood by everyone.
+-----11
+For example the symbol )( means a mother's love.
+
+This book is very old and hasn't really been used in ages.
+-----12
+For example the symbol )( means a choice to be made by the reader.
+
+The symbol * means a footnote to look at the bottom of the page for more information.
+-----ANALYSIS: Seems to like completing to )( which may need some testing, super strong association.
+--------------------------------------
+~
+-----1
+For example the symbol ~ c is the word "if" and, according to the second sentence, is pronounced "if".
+
+The symbol ¬ e is the word "or", and is pronounced "or".
+
+The symbol ÷ a is the word "and", and is pronounced "and".
+-----2
+For example the symbol ~ means something is the opposite of something else.
+
+Let's start shall we?
+
+1) Your character's name: Here you type the name of your character. For now this is optional since you're currently not playing as your created character.
+-----3
+For example the symbol ~ can be interpreted as a tilde.
+-----4
+For example the symbol ~ can be seen as having many different meanings from being a wild-eyed look of surprise, to an exclamation mark.
+
+The system is not perfect and some symbols defy categorization but if you can get your hands on the book "Common Sense, Common Language"
+-----5
+For example the symbol ~ƴ is interpreted as Standing stones, long forgotten and weathered by the elements.
+
+Symbols are organized alphabetically.
+
+~ƴ - Standing Stones, Long Forgotten And Weather By The Elements.
+-----6
+For example the symbol ~ is a section break.
+
+~
+
+The best way to learn is through examples right?
+
+We'll start with this story's prologue.
+
+Prologue
+
+"It's done." You mutter, tossing the documents on the table.
+-----7
+For example the symbol ~n means a new line or carriage return. The ~~ is used to describe an italicized word. These are the symbols most commonly used in books. (Chapter headings don't count)
+
+A regular "b"
+-----8
+For example the symbol ~ could have more than one meaning, as in this sentence:
+
+"The loud noise that soon came from the sky was a large and mighty cry. ~" means one thing.
+-----9
+For example the symbol ~ is for the word "and".
+
+These symbols look different on every computer, so don't try copying and pasting.
+
+Just read how they're supposed to look in this description.
+-----10
+For example the symbol ~ represents a new line. So (Hello~World) is a string containing the words Hello and World next to each other.
+
+The symbol # represents a pound or number sign, so #9# would represent #9# .
+-----11
+For example the symbol ~ is a musical note and could be used in a story on music.
+
+For example if you created a story with the music theme it should contain at least one ~ symbol somewhere.
+-----12
+For example the symbol ~ can have multiple meanings. It can mean not, as in "love", or it can mean a change in some things, like a change in number, from singular to plural, or vice versa, like from "day" to "days".
+-----ANALYSIS: somewhat strong 'section/newline' association
+--------------------------------------
+`
+-----1
+For example the symbol `&' is interpreted as "ampersand"
+
+If you want to see what a particular glyph looks like, you can find out in the cheat sheet.
+
+This uses a pretty simple code. You can easily go online and find a simple description of how this works.
+-----2
+For example the symbol `A black spiral on a white background. It is drawn with thick, clotted ink'
+
+This is on the first page and as you turn to the next one a black spiral forms on the page. It gradually gets darker and darker until the page is completely black.
+-----3
+For example the symbol ` means that the following word is being used to mean something else other than its usual meaning.
+-----4
+For example the symbol `~' means "not" or inversed.
+
+The symbol '^' means "and".
+
+You can look up all the greek letters on www.kobialphacode.com and copy paste them in.
+-----5
+For example the symbol ` is a line and a circle combined. The combination of the straight line and round circle suggests the balance between unpredictable change and the regularity of nature. This symbol is interpreted by the author as meaning "in harmony with nature."
+-----6
+For example the symbol ` looks like a duck's footprint. It could mean a number of things such as, the footprint is in the sand and so it could mean 'in'. Alternatively it could mean 'sign' or maybe even 'empire'.
+
+These are the basic building blocks for the language.
+-----7
+For example the symbol `~' means "Nasalized voice", and the symbol "c" with a hacek (^) above it means a palatalization.
+-----8
+For example the symbol `~' means "taken out of context."
+
+So the sentence, "The cat was sitting on the mat" would be written as, ~The cat was sit on the mat.
+
+The sentence, "This is a sentence fragment."
+-----9
+For example the symbol ` is interpreted as "by", while the symbol ' is interpreted as "and".
+
+THE SYMBOL THE INTERPRETATION
+Bold The word's meaning has a special emphasis on it.
+-----10
+For example the symbol `^' has been used quite a bit. The ‘v' shape actually represents a snake while the ‘^' shape is a cross and means "resurrect" or "rose".
+-----11
+For example the symbol `~' means "tilde." The tilde is located above the escape key on most keyboards and will appear as ~ when typed.
+
+The symbols ~E~ and ~e~ both refer to the tilde and neither construction affects readability.
+-----12
+For example the symbol `&' means a logical and. The symbol 'V' means or.
+-----ANALYSIS: seems to treat it almost exclusively as an open apostraphe or literalizer/redefinier, possibly.
 --------------------------------------
 -----1
 -----2
@@ -862,189 +1741,7 @@ For example the symbol @ represents the speaker of a line of text.
 -----11
 -----12
 -----ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
------1
------2
------3
------4
------5
------6
------7
------8
------9
------10
------11
------12
------ANALYSIS:
---------------------------------------
+--------------------------------------�
 -----1
 -----2
 -----3

@@ -8,8 +8,9 @@ This guide focuses on Zynj's AI Dungeon script EWIJSON and primarily on using it
 - Max. Summary length: 500
 - If (Summary + WI + Remember) < 50%, then extra story aka history will fill up the empty space
 - If (Story + A/N + Input + frontMemory) < 50%, the unused space will not be allocated to (Summary + WI + Remember)
-- GPT3 has a hard cap of 1024 tokens for AID users, 2048 for the devs
+- GPT-3 has a hard cap of 1024 tokens for AID users, 2048 for the devs
 ```
+
 EWIJSON and the wiki written by Zynj can be found at:  
 https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON/release  
 https://github.com/Zynj-git/AIDungeon/wiki/EWIJSON

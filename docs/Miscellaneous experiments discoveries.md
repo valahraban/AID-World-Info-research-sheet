@@ -56,11 +56,22 @@ Also giving the character the trait `silent` tends to make them deaf instead, I 
 
 
 ### Logic and logic symbols
-Onyx did testing on math in AID after the January update with picture provided in the research sheet. It was discovered that somehow OpenAI taught the model how to do some logic and maths. Some users then took these concepts to the extreme. Many examples have been shared on Discord where 'equations' of logic symbols were highly effective at defining entities. One suggested term for this has been World Info Script Object Notation. If you want a better understanding of what's going on with the below examples, go read about 'tautology logic symbols'. Qweepa example provided by birb, BABA by Mr. Accountant:
+Onyx did testing on math in AID after the January update with picture provided in the research sheet. It was discovered that somehow OpenAI taught the model how to do some logic and maths. Some users then took these concepts to the extreme. Many examples have been shared on Discord where 'equations' of logic symbols were highly effective at defining entities. The suggested terms for this syntax are Language Algorithm Math Expressions or World Info Script Object Notation. If you want a better understanding of what's going on with the below examples, go read about 'tautology logic symbols'. Qweepa example provided by birb with help from Onyx:
 ```
 // proposed formatting for a functional style of WI
-DEF:<Qweepa>:[ Qweepa ⇔ <mammal∧<bunny&lemming_hybrid>fluffy∧blob_shaped∧secret_evil∧wings_cherub∧herbivore<¬good¬carnivore>>.] 
+DEF:<Qweepa>:[ Qweepa ⇔ <mammal∧<bunny&lemming_hybrid>∧fluffy∧blob_shaped∧secret_evil∧wings_cherub∧herbivore<¬nice¬carnivore>>.] 
+// improved version by Onyx
+Qweepa:[adorable * (bunny + lemming) * wings)] *herbivore ^ secretly * (evil + carnivore)]
 ```
+Onyx did a lot of testing on using different equations to represent Qweepa. Pictures are provided to show that LAME does indeed work well on Griffin even for complicated samples.
+https://media.discordapp.net/attachments/760367080808644608/806786024557772800/Screenshot_2021-02-04_at_1.19.16_AM.png  
+https://media.discordapp.net/attachments/760367080808644608/806789797988925440/Screenshot_2021-02-04_at_1.33.45_AM.png  
+https://media.discordapp.net/attachments/760367080808644608/806792057217089646/Screenshot_2021-02-04_at_1.42.16_AM.png  
+https://media.discordapp.net/attachments/760367080808644608/806794348062441502/Screenshot_2021-02-04_at_1.51.44_AM.png  
+https://media.discordapp.net/attachments/760367080808644608/806798107698266142/Screenshot_2021-02-04_at_2.07.01_AM.png  
+https://media.discordapp.net/attachments/760367080808644608/806798361730088963/Screenshot_2021-02-04_at_2.07.21_AM.png  
+Onyx hypothesizes that the real strength of the syntax is in explaining which parts of a character's personality are activated by which environmental factors or how to explain a character's emotions towards different family members
+
 A related approach can be used to trick out traits through association inside the remember pin. It doesn't always mention each trait, but seems to associate them strongly. Mr. Accountant called this BABA or BABEL, lacking a strict name for his experiments:
 ```
 [<BABA is <RABBIT>>;
