@@ -367,7 +367,9 @@ Caveman is perhaps the most forgiving basis for a format. It plays well with man
  Alexandria:[ Has Blackflame rune sword, steel armor, healing potion, amulet].
  Alexandria:[ Long red hair, fair skin, narrow green eyes, clean].
 ```
-It clearly still looks like caveman, but now including commas, symbols and implementing enclosure tricks first seen with Zaltys. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. Below is the full dissection of Neanderthal written by Monky:  
+It clearly still looks like caveman, but now including commas, symbols and implementing enclosure tricks first seen with Zaltys. Some important observations follow. Every newline and every sentence inside brackets starts with an empty whitespace. This is done to guarantee proper tokenization of the word. The `.` follows the brackets due to the model's natural writing bias. Since it looks more like prose, commas are allowed. On Griffin sentences inside brackets are no longer than 50 characters/15 tokens to maintain focus. 
+
+Below is the full dissection of Neanderthal written by Monky:  
 https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Neanderthal_Unscripted_Results_by_Monky.txt  
 Users should write using any format they enjoy but by now Neanderthal is greatly recommended in part due to how easy it is to integrate other methods with it. With birb's observations some issues with EWIJSON were resolved and now Neanderthal is a format that plays very nicely with it.
 
