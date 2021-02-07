@@ -43,6 +43,9 @@ If you don't know anything about world info yet and want to get up to speed with
 
 For those of you who came here for the WI formats or have short attention spans. Click on the links contained in the table of contents above or hit CTRL+F to search for names that interest you. **JSON formatting** is neither recommended or discouraged. If you're comfortable using it continue doing so. The **Zaltys Formatting** of this document is recommended as a strong baseline to start from. Zaltys formatting is easy, popularized and frequently updated to keep up with AID. Past samples are provided as well. **Monky Formatting** is recommended for people with specific goals and interests such as intending to publish scenarios, worried about WI space and token use and wanting to share their work. It is very understandable, easy to modify and works well with regular prose. Very easy to combine with scripts too. Monky formatting has developed into Neanderthal and Futureman which are recommended reading for people they benefit. **Onyx** has written formats and WI tricks for specific purposes such as defining locations and listing things. We now use the term formatting as some of the concepts are interchangeable and may be combined together. One scenario may also use different WI formatting for achieving different things with different entries. You the writer have complete creative freedom, although our experiences may benefit you.
 
+If you don't care about the complicated lunacy of this document and want something simpler, more elegant and less of a headache, learn how to write good prose, or read a simple guide on it! Now provided by our friends at /aidg/  
+https://rentry.co/aidg-format
+
 For comedic purposes here is what one very opinionated user has to say on the current state of formats:
 ```
 From CrisAIcilian: Zaltys is better in every way, it's actually designed for its purpose. JSON is like Chinese medicine, goo of mumbo jumbo happens to contain three elements that had an effect (colon, comma, square brackets).
@@ -245,7 +248,7 @@ UPPERCASE category keywords will be provided as a list. Their use is mostly self
 
 The long list of recommended categories:
 ```
-APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, EFFECT(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, FACTS, LOOT, BANNED (forbidden behavior), COND (status condition like PRLZ from Pokemon)
+APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, EFFECT(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, LIMIT, FACTS, LOOT, BANNED (forbidden behavior), COND (status condition like PRLZ from Pokemon), DIET 
 ```
 Problematic categories (avoid or use with caution):
 ```
@@ -264,9 +267,15 @@ The AI tends to be very literal-minded about certain things. The associative pow
 `WORN:` is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
 https://files.catbox.moe/0ur88f.PNG
 
-`SEE:` is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need SUMM. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACKS:eyes;SEE:blind;` has produced the most consistent Zaltys formatting blind characters. Research continues into creating mutes (now featured in a separate miscellaneous doc).
+`DESC:` sees some use. It relates to the physical functionality of an entity and may be more useful than `APPEAR:` for specific cases where the functionality is more important than the looks of a thing. `DESC:` might as well as be used for describing the functional limbs of a huge insect or to describe the mechanisms and staff inside a spaceship. Testing from many enthusiasts also suggests that with `DESC:` and optionally prose descriptions at the front, the AI recognizes and uses other categories better.
+
+`SEE:` is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need SUMM. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACK:eyes;SEE:blind;` has produced the most consistent Zaltys formatting blind characters. Research continues into creating mutes (now featured in a separate miscellaneous doc).
+
+`LACK:` is a category that has often been used to denote something is missing with mediocre results. `LIMIT:` has proven more powerful for this use with some caveats. `LIMIT:` seems to get treated like a mathematical term and denotes a discrete limit for something. `LIMIT: zero_arms` could be used to key the AI on the fact the character has zero arms while you could just as easily use the category to convince the AI the character is supposed to have `LIMIT: four_arms`. `LIMIT:` doesn't work for hard-to-quantify things like attributes (or the amount of) associated with things like `skin`.
 
 `STATUS:` doesn't necessarily work as expected. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon. Still it's not a completely consistent category for this purpose despite the interesting results. 
+
+`DIET:` can be used to make unusual things like herbivorous snakes. It's a powerful category, because AID has a lot of training data on snakes being carnivores.
 
 `COND:` is much more interesting and powerful for actually having characters suffer from conditions or status effects. It has been tested working with injuries and other debilitations. It even works with game and Pokemon status conditions like PSN or PRLZ.
 ```
@@ -299,7 +308,7 @@ Zak is a sentient floating continent. It is about the size of Eurasia, and can f
 
 If you're lost and in doubt what category to use, you can probably throw it inside SUMM and AID will handle it fine. Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger categories. The AI picks up common traits just fine by their lonesome. Zaltys-style formatting also benefits from having an indicator phrase like the one mentioned above.
 
-The AI understands the concept of speech patterns and accent to some degree. Categories like`SPEECH:`, `WORDING:` and `ACCENT:` were tried, but didn't output desirable results
+The AI understands the concept of speech patterns and accent to some degree. Categories like `SPEECH:`, `WORDING:` and `ACCENT:` were tried, but didn't output desirable results.
 
 Thus far `TRAITS:` (or now SUMM) has proven to handle this attribute the best. Writing style theme in author's notes can also give characters accent across the entire setting. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica, crook/criminal. 
 
@@ -320,13 +329,20 @@ For category-based formatting `MENTAL:` used to be the most commonly used keywor
 
 First we mention the special cases that you may want to avoid due to tokenization issues. AID has been known to be notoriously bad at negatives. For example the community has known for a long time that `White hates apples` is a better alternative to `White dislikes apples` as the AI doesn't seem to respect the intent of the latter statement at all. Words starting with dis- or un- rarely get respected by the AI due to tokens and how bad it's with negative prefixes. -less is a suffix that works somewhat better, but isn't recommended if you have synonyms known to be more explicit or to have unique tokens.
 
-Long and growing list of behavioral keywords in no particular order. There are too many to list, these are just some common useful ones as well as some commonly tried keywords you might want to avoid. The basis of a good personality trait is something strong and focused the AI has a strong unique association for. Broad words like good or evil aren't very useful, when the behavior is what we are after. 
+Long and growing list of behavioral keywords is provided in no particular order. There are too many to list, these are just some common useful ones as well as some commonly tried keywords you might want to avoid. The basis of a good personality trait is something strong and focused the AI has a strong unique association for. Broad words like good or evil aren't very useful, when the behavior is what we are after. 
 
-`cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath extremist traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely in turns them into otaku collectors.
+`cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely in turns them into otaku figurine collectors.
 
 Continuing with the bad guy theme the seven sins all work. `glutton(ous), lust(ful), greedy/avaritious, envious, slothful, proud` all work. Wrath is the exception and doesn't produce satisfying results, but can easily be replaced with `angry&cruel`. Based on research with the angriest wizard that ever lived, anger related tags especially `the angriest` are effective.
 
+`chivalric, just, benevolent` work for creating paladin- or white knight types. These may be combined with more morally ambiguous or gray traits like `sour` to create a character that isn't as pristine or stereotypically lawful good. 
+
+Then there's `stoic, serious, calm` for more brooding or detached traditionally masculine types. Of course these may be used just as well to create a dour experienced femme. `professional` creates the polite valet/waiter-type character. This would be good for a lawful evil type character too.
+
+
 `horny, stoic, apathetic, wry, clever, witty, addicted` all do exactly what you'd expect out of them, they work good. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended effect. `judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character. 
+
+Other assorted useful traits include `timid, selfconscious, polite, friendly, seductive, arrogant, oblivious, dumb, dry, cynical, motherly&generous` each doing exactly what you'd expect. Motherly is best combined tightly with a word like generous, because it has a higher chance of turning the character into an actual or expecting mother.
 
 The combination of `anxious, nervous` with `SUMM: "h-he...llo"` is very interesting, it's one of the cutest and most appealing ways of creating a timid character that stutters a lot in dialogue. 
 

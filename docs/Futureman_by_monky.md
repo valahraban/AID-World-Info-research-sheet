@@ -1,4 +1,3 @@
-
 \<\<Futureman>>>> Feb 03 2021
 
 GENESIS (recommended for new users eager to learn what is going on under the skin, skip to examples if you just want the format)
@@ -111,3 +110,6 @@ So that's a lot of information to take in so I'll try and briefly TL;DR the Futu
 	5; Don't overload the front end, just let the *very most* important things you DO NOT want the AI to get wrong except very occasionally when AI does its AI thing. For everything else, there's the #[m] tag.
 
 If you made it this far, kudos, and happy WI formatting!
+
+EWIJSON scripts available at: https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON  
+EWIJSON wiki available at: https://github.com/Zynj-git/AIDungeon/wiki/EWIJSON

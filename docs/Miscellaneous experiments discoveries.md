@@ -63,7 +63,7 @@ DEF:<Qweepa>:[ Qweepa ⇔ <mammal∧<bunny&lemming_hybrid>∧fluffy∧blob_shape
 // improved version by Onyx
 Qweepa:[adorable * (bunny + lemming) * wings)] *herbivore ^ secretly * (evil + carnivore)]
 ```
-Onyx did a lot of testing on using different equations to represent Qweepa. Pictures are provided to show that LAME does indeed work well on Griffin even for complicated samples.
+Onyx did a lot of testing on using different equations to represent Qweepa. Pictures are provided to show that LAME does indeed work even for complicated examples.
 https://media.discordapp.net/attachments/760367080808644608/806786024557772800/Screenshot_2021-02-04_at_1.19.16_AM.png  
 https://media.discordapp.net/attachments/760367080808644608/806789797988925440/Screenshot_2021-02-04_at_1.33.45_AM.png  
 https://media.discordapp.net/attachments/760367080808644608/806792057217089646/Screenshot_2021-02-04_at_1.42.16_AM.png  
@@ -91,4 +91,14 @@ You look out the window and notice the city's landscape is beginning to transfor
 ```
 You are walking down the street from work. You had a long day at the office due to a busy season filing taxes. You just arrived from your subway stop. While you are waiting you see a strange person standing next to you. But pay them no heed.You board the train and the strange person sits across from you. Apparently, its a Baba! But pay them no heed.Quite often they will foretell you your future, but today is not the day you wed!
 And then a nose begins to protrudes from their face! You are horrified at what you see. But it disappears as quickly as it appears.The nose was red...
+```
+
+### More Miscellaneous Stuff
+The useful categories section of the main document is growing too large for my tastes. I prefer to keep it on point for the most immediately useful categories. There are potentially countless other useful ones so I'll list the ones that are of personal interest here.
+
+`CREDO:` and `SYMBOL:` are powerful and useful when used with religious entities or goddesses. 
+```
+Yerrtha.DESC:[major_goddess ancient;CREDO:magic night dreams&collective_unconscious creative_thinking;Yerrtha.SYMBOL:two_parallel_waves.]
+The goddess of the night, Yerrtha is a goddess inspired by the collective unconsciousness. She represents things as wild and unknown. The dreaming mind where all traumas are healed and taboos broken. She is the goddess of witches and shamans, no doubt, but even magicians and other holy men find themselves seeking her guidance from time to time. She is not evil or good, but the things she offers are sometimes not for the faint of heart.
+Yerrtha is worshipped under different names in different places, many of which are lost to history. Her symbol is a pair of parrallel waves, which represents the ocean of the mind and the shore of consciousness. The black wave is the darkness of the unconscious, while the other is the lightness of the conscious.
 ```
