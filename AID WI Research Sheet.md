@@ -55,14 +55,14 @@ From CrisAIcilian: Zaltys is better in every way, it's actually designed for its
 ## Remember WorldInfo AuthorsNotes Worlds and how the game handles them
 Remember was the first of these features implemented in the game. This segment goes into technical details so you may want to skip it if you're here for World Info formats. This section is very important if you want to understand AID as a tool and it's limits. It will also answer most problems people have with their WI not working. Grossly simplified remember is a world info that gets constantly fed to the game after your every input. World info is like remember, but has user-defined key-words `keys` that after getting triggered make the game use them as part of the context. Keys use string-matching which will be important later. Having this element of context makes world info less restricting to work with because when you're happy with it you can forget and leave it while things in remember require more frequent attention and updates as the story progresses. History means old prompts written by you and the AI. The order the AI reads your input is in:
 
-+ Summary										| Experimental feature to help devs
++ Summary										| Experimental/deprecated feature to help devs
 + WI
 + Remember
 + History
 + AN if you've exactly 3 newlines in history
 + Rest of history
 + Fresh Input
-+ Front memory from scripting					| Advanced/premium users
++ Front memory from scripting					
 
 The following data is based on information available to scripters or based on their limit testing, documented on discord. All of the above consumes characters or as we will soon discuss tokens from the AI's `memory`. Anything that goes over the `memory` limitations will not be read by GPT-3 and is therefore irrelevant to the output process. The entirety of the data(text) that gets fed to GPT-3 is called the `context`. The following is a list of rules the `context` follows as related to the many parts that form it:
 ```
@@ -460,7 +460,7 @@ During testing we discovered characters can be forced to wear certain outfits wi
 Lillie:[Human female. Her eyes are blue. Her hair is blonde. Her hairstyle is long twintails. WORN:<Nightfall Raiment>.]
 ```
 ```
-[The Nightfall Raiment is a one-piece halterneck dress. The dress is in gothic fashion. The Raiment has a black and white color-scheme. The Raiment has detached white sleeves and shows off the wearer's armpits. The bust and frills of the relatively long nightfall raiment dress are white while the rest of it is black. Kneehigh black leather boots are a part of the raiment.]
+[The Nightfall Raiment is a onepiece halterneck dress. The dress is in gothic fashion. The Raiment has a black and white colorscheme. The Raiment has detached white sleeves and shows off the wearer's armpits. The bust and frills of the relatively long nightfall raiment dress are white while the rest of it is black. Kneehigh black leather boots are a part of the raiment.]
 ```
 When you examine Lillie in the story and have the AI describe what she is wearing you will get an output like the following very consistently: `She's wearing a nightfall raiment. The dress consists of detached white sleeves and shows the armpits. The bust and the frills of the dress are white while the rest is black. Kneehigh boots are a part of the outfit.` When tested on other outfits `the clothing consists of` was a very good input to continue from for the story. This was demonstrated on Discord. The above example combines almost-Caveman with Zaltys. If you use a style like this, you must make it conform to your writing style. Zaltys calls the uncategorized part of his format the indicator. This is usually details like sex species and age. In the Lillie example species, sex and colors were indicators. birb always wants the AI to describe the traits of the characters in the format `Her eyes are X color. Her hair is Y color in Z style.` This is why this type of WI works for his scenarios. Also, if the AI starts describing the clothing of the character before you get to ask what the character is wearing, it will usually output the wrong set of clothes. First the story must mention the name of the outfit, then it will use the correct WI to describe the clothes.
 The document now provides evidence for certain methods working. Included is a gif of the outfit being in use. You will have to take the author's word that the AI can consistently mention the outfit and then describe it.
@@ -596,6 +596,13 @@ This section covers methods WI enthusiasts have used in the past but are no long
 Title: `TRAITS:` category  
 Updated 1 Feb 2021:  
 Important enough to warrant an entry of its own. Citation from Zaltys since he popularized TRAITS in the first place: "I honestly can't think of any use for TRAITS now that we have SUMM. SUMM does the exact same job better." birb believes we may have an unknown use for traits and that people can use it if they desire, but most category users we talk to nowadays prefer SUMM.
+
+Title: Old style heavy encapsulation and categories  
+Created before 14 Dec 2020, deprecated shortly afterwards  
+Updated 8 Feb 2021  
+A lot of methods have been tried before you and have been phased out whenever the AI stopped working with them. Here we list a few with pictures, including the curiosity known as Ritz. Maybe they might be useful one day again. birb doesn't claim credit for coming up with anything because there is always someone trying out different things inside AID before you. Fun fact: Rick the Angriest Wizard is actually based on Dave the Angriest Wizard from 4chan's prompts.  
+https://files.catbox.moe/5vo8kw.PNG  
+https://files.catbox.moe/udidts.PNG  
 
 Title: Symbol use  
 Updated 10 Jan 2021:  
