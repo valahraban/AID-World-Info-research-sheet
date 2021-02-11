@@ -37,6 +37,8 @@ Special credit to kimtaengsshi for help with editorship and fact checking the te
 
 If you don't know anything about world info yet and want to get up to speed with the bare basics it is recommended you read the wiki article first: https://wiki.aidiscord.cc/wiki/World_Info
 
+How to get featured or help improve this documentation? Send a text file (preferably .md) or suggested edits in a pastebin variant to birb/valahraban through github or discord. This is how he primarily communicates with other enthusiasts and writes this document. Other communication methods aren't supported. Included information isn't chosen at random: it must be novel and immediately useful to birb and WI enthusiasts.
+
 
 ## Recommendations or the TLDR
 **Scripting has been made free for all users, it is warmly recommended you scroll down to Zynj's github and check out EWIJSON. Loading WI through these scripts alone gives you a lot more control over their location. If you do decide to use EWIJSON, also check out Monky Formatting and the Futureman guide and birb's guide on EWIJSON basics inside the docs.** This document will focus on scripting-free methods. Scripting focused documents are included in the docs folder.
@@ -399,7 +401,7 @@ https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Futur
 
 
 ### Onyx Formatting Tricks
-Onyx has come up with interesting and reliable tricks for specialized uses. With RND we can actually have pseudo-random lists. Testing so far suggests with less than 10 members the list usually stays consistent, more members or simple words make it output more random, but still conceptually related things. This works better on Dragon, but the con cept can be used to invoke lists of names on Griffin. Updated January 2021. If any example has `()` replace them with `<>`.
+Onyx has come up with interesting and reliable tricks for specialized uses. With RND we can actually have pseudo-random lists. Testing so far suggests with less than 10 members the list usually stays consistent, more members or simple words make it output more random, but still conceptually related things. This works better on Dragon, but the concept can be used to invoke lists of names on Griffin. Updated January 2021. If any example has `()` replace them with `<>`.
 ```
 keys: monsters, forest
 Many monsters live in the forest. [RND<monsters>: slime, goblin, orc, Ent, giant carnivorous sloth, pixie, beholder.]

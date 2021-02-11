@@ -16,7 +16,10 @@ https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON/re
 https://github.com/Zynj-git/AIDungeon/wiki/EWIJSON
 
 Other useful scripts exist as well and will be mentioned. STARSTRUCK has written a userscript for Tampermonkey/Greasemoney that can be combined with any AID specific script for the purpose of modifying the UI and adding artwork from https://www.artbreeder.com/ . The script can be found at:  
-https://gitlab.com/STARSTRUCK/ai-dungeon-userscripts
+https://gitlab.com/STARSTRUCK/ai-dungeon-userscripts  
+
+There are other skilled scripters like Gnurro. Scripts may be merged, although the process requires some coding knowledge. A guide on script merging must be written and provided by someone with more knowledge on the topic. We provide a link to Gnurro's useful scripts:  
+https://github.com/Gnurro/AIDscripts  
 
 
 ## Installing EWIJSON
@@ -46,9 +49,9 @@ If this doesn't help you, I can't help you. This is the complete standard workfl
 5. Manually edit your whitelist or do `/set _whitelist. character,worn,mental`. Every time you edit white whitelist this way you must set every desired object. Alternatively you can `/whitelist word` one at a time to either add the word to the whitelist or remove it if its included already. Objects/traits must be whitelisted to automatically trigger.
 6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)|(secrets?).*(John)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`
 	1. Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.
-7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.
+7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.  
 
-
+  
 ## Complete beginner's guide to getting started
 First consider if you even need or want the script. Every little bit of the tool is consistently formed around it's designed purpose - to dynamically and with relatively low effort manage your WI on the fly through your input field. As long as you have good memory and have understood how regexp works you can easily manage all your WI related data structures from the input field. Its designed to be object-oriented for the purpose of being pseudo-dynamic. If you use a lot of WI and you tweak them often EWIJSON is perfect for you, if this isn't you, you might even prefer using regular old WI. While it can't automatically change the objects for now, you can change any object whenever you want and get immediately changed results from the output. 
 
