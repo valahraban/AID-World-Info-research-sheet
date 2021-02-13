@@ -129,7 +129,7 @@ An example of output generated with `strikingly elegant style`:
 You look around.
 The sun softly kisses your exposed skin with her rays. You gently bask in her glory, raising your face towards her. Below, the plants softly sway in a gentle breeze as though worshipping her as well.
 ```
-Short list of useful A/N words: AUTHOR, WRITING STYLE (Writing style:grandiose), GENRE, THEME, STORYLINE
+List of common categories to throw inside Author's Notes: author, writing style, genre, theme, setting, scene, format, goal, situation, storyline.
 
 A/N understands JSON too. Its entirely possible to do something like `A/N: [{"writing style":["descriptive", "elegant", "gritty"], "wording":["archaic", "Cockney accent"], "current state":"indoors"}]`
 
@@ -231,15 +231,36 @@ You nod.
 You shake your head.
 ```
 
+Zaltys version of defining `you` or the main character inside Remember:
+```
+You are male human named Zaltys.
+[ you.DESC: adult, gamer;
+you.INV: wallet, keys<in pocket>;
+you.MIND: confused;
+you.LOCATION: floating in outer space.]
+```
+Result after a 2K character context:
+```
+> You think about your current situation.
+You are most definitely NOT in Kansas anymore.
+The last thing you remember, you were laying down to take a nap during a break from work. Now you find yourself floating in darkness.
+Actually it's more like a darkness with stars. You look around and see the entire night sky around you. You don't feel the ground beneath you or anything else for that matter.
+You try to cry out, but no sound comes out.
+In the distance you see Earth hanging in space like a bright blue and green ball.
+
+> You check your pockets.
+You pat yourself down and realize you still have all of your possessions, even your wallet and keys.
+```
+
 
 ### Useful Categories
 With formatting methods like JSON, pseudo-JSON, Zaltys and its relatives we've noticed a capitalized `CATEGORY:` followed by a list of attributes is very effective and now in common use. Here we share some categories that have proven useful to many WI enthusiasts. 
 
-There are three types of category: Propercase, lowercase and UPPERCASE. Any of them may be used and is down to user preference. Due to the history of WI research we focus on the UPPERCASE category. UPPERCASE is good because it clearly distinguishes the category word from the list associated with it or any other formatting you may use. UPPERCASE tokenizes differently from categories in other cases and should be tested with the tokenizer. It has been found that if a unique word contains tokens of a shorthand, that shorthand tends to work very effectively e.g. `APPEARANCE && APPEAR` and `SUMMARY && SUMM`.
+There are three types of category: Propercase, lowercase and UPPERCASE. Any of them may be used and is down to user preference. Due to the history of WI research we focus on the UPPERCASE category. UPPERCASE is good because it clearly distinguishes the category word from the list associated with it or any other formatting you may use. UPPERCASE tokenizes differently from categories in other cases and should be tested with the tokenizer especially when trying to incorporate fresh categories the writer came up with themselves. It has been found that if a unique word contains tokens of a shorthand, that shorthand tends to work very effectively e.g. `APPEARANCE && APPEAR` and `SUMMARY && SUMM`.
 
 Here we have a picture of some common UPPERCASE category basis and their tokenization: https://files.catbox.moe/avn9j4.png
 
-The above tokenization is the reason Zaltys and other enthusiasts ended up picking APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. If a WI enthusiast tells you that a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results were bad with evidence to support this.
+The above tokenization is the reason Zaltys and other enthusiasts ended up picking APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. If a WI enthusiast tells you that a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results weren't good with evidence to support this.
 
 Different authors prefer using different cases for categorization. In the past birb and Zaltys recommended you use uppercase categories. Citation from Zaltys on why we use uppercase categories:
 ```
@@ -248,6 +269,8 @@ Problem with propercase categories is that if you load several WIs, the AI will 
 Based on experimentation there may be some exceptions. For some scenarios tested where the AI was tricked into formatting its own writing `writingstyle:` was seemingly preferred and produced better output than `Writing Style:`. Both work for use with A/N and may come down to user preference.
 
 UPPERCASE category keywords will be provided as a list. Their use is mostly self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. 
+
+On further play-testing the preferred hypothesis is that everything comes down to tokenization. Let's explore variants of the word effect. In tokens `EFFECT` is EFF + ECT and `EFFECTS` is EFF+ EC + TS. The latter combo works, the former is very weak. `EFFEC` is EFF + EC and seems to work even better than the aforementioned. For whatever reason for GPT-3 2 token combinations usually work best. `POWER` is single token, `POWERS` is POW + ERS, the 2 token POWERS tends to work better. Most of the chosen categories are based on user reports and this hypothesis.
 
 The long list of recommended categories:
 ```
@@ -266,6 +289,8 @@ Users of the world-info channel have been playing around with SUMMARY or SUMM fo
 MENTAL is the category that was in popular use for mental, personality and behavioral traits. MIND achieves the same goal more effectively while using less space so MIND is recommended for behavioral traits now. Consult the personality keywords segment for more information on behavior.
 
 The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with TRAITS, the AI treated `cool` as the nature of a thing. Entities with the TRAIT `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside MENTAL or MIND. This may be the case for other words like `hotheaded` that the AI could take too literally. Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
+
+`APPEAR:` is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
 
 `WORN:` is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
 https://files.catbox.moe/0ur88f.PNG
@@ -289,6 +314,8 @@ COND:PRLZ
 ```
 
 `LOOT:` works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
+
+`DETAIL:` shortened to `DETA:` works fine with just about anything related to details, but it's unknown how this is different from summary.
 
 `SUMMARY:` has already been pointed out as a strong and versatile category for defining points of interest you want described consistently. It can even reference previously used categories, meaning it has abilities the older `TRAITS:` lacked. Impressive examples below:
 ```
@@ -477,7 +504,7 @@ Now that the category `EQUIP:` is confirmed working with clothes and other inven
 ### CrisAI research
 CrisAIcilian is a user from discord who has been developing methods for manipulating context, mostly for the purposes of maintaining consistency and staying on scene even with a high randomness value of 1.3. Now his research is robust and long enough to get it's own section. CrisAIcilian has discovered `Character sheet - ` as an effective header for WI, using an otherwise Zaltys-like format together with it in his test character. After roughly 100 rolls he claimed to achieve a 70% success rate on his character traits & actions being mentioned correctly as long as the story input features new letters instead of being a simple `continue`. The author speculates this could be a good way to define something akin to `you` for those interested. All of the random experimentation and associated pictures can be found on Discord.
 
-CrisAIcilian is developing an alternative format focusing on consistency and scene building. Thus far the format looks like Zaltys with few additions/variations and utilizes both WI and Remember heavily. This is exclusively for use without scripting, parts of the format rely on the proper ordering of each data type. Cris explains what the format does with comments inside the example he has provided. This is what his most recent format from Discord looks like:
+CrisAIcilian is developing an alternative formatting method focusing on consistency and scene building. It looks like Zaltys visually with few additions/variations and utilizes both WI and Remember heavily. This is exclusively for use without scripting as the method relies on the proper ordering of each data type. Cris explains what each part does with comments inside the example he has provided. This is what his most recent work from Discord looks like:
 ```
 // The WI section (put this in WI) -
 ⑶	// This unicode number, and its positioning, dramatically improves the AI's ability to process info. Theory: the positioning of this number makes the entry less list, more like a "chapter", the AI gets more creative and will utilize traits it normally would rather ignore.}
@@ -499,7 +526,7 @@ The current location: in a hotel room in Washington D.C.
 The current event: You're sitting in a chair.
 ```
 
-Experiments on Discord show similar efficiency to the older formats discussed above. In some ways it may be better, like sticking on to the scene you have created through the combined use of mentioned WI and remember. The caveat is how strictly the `#` letter is utilized, slightly restricting your writing and making it incompatible with scripting although this is intentional. Scripts like EWIJSON likely don't work as well with formats using newlines anyways. The important thing is to make deliberate choices on your formatting across the board and making them play nice with any scripts you're interested in using. Cris has expressed interest in improving his formatting and supporting new users on discord. He also worked on a prompt method called the `Character Generator 3000` that didn't end up getting a scenario released by birb's understanding, 
+Experiments on Discord show similar efficiency and accuracy to the formatting methods used above. In some ways it may be better, like sticking on to the scene you have created through the combined use of mentioned WI and remember. The caveat is how strictly the `#` letter is utilized, slightly restricting your writing and making it incompatible with scripting although this is intentional. The important thing is to make deliberate choices on your formatting across the board and making them play nice with any scripts you're interested in using. Cris has expressed interest in improving his syntax and supporting new users on discord. He also worked on a prompt method called the `Character Generator 3000` that didn't end up getting a scenario released by birb's understanding, 
 
 
 ### Misc Tips
