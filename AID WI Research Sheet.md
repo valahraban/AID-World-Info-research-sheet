@@ -98,7 +98,7 @@ kim has also made a tokenizer scenario/script you can use inside AID: https://pl
 
 It can not be understated what an important tool the tokenizer has been for WI enthusiasts. Thanks to it we have a fairly good idea why certain words work as poorly as they do and a legitimate information-based argument for why this is the case. If the document talks about word or character tokens, they were ran through the tokenizer colab or scenario alongside synonyms or longer compound words containing it.
 
-A common misconception is that """natural writing""" is the clearly the best writing method and all other methods and tricks should be ignored because some marketing person said so. To these people I must tell: Stop. You don't know what you're talking about and are likely arguing from emotion. Machine Learning language transformation algorithms expose their training biases through tokens. You can check the tokens through the tokenizers. They are the same for GPT-2/3 and the Griffin and Dragon model trained off GPT-3. The GPT-3 has eaten a massive amount of online datasets, not restricted to plain English. Tokens exist for html comment wrappers like `<!--` and `-->`. This means they were a relevant part of the GPT-3 training and will be recognized by any AI program using the same algorithms.
+A common misconception is that """natural writing""" is clearly the best writing method and all other methods and tricks should be ignored because some marketing person said so. To these people I must tell: Stop. You don't know what you're talking about and are likely arguing from emotion. Machine Learning language transformation algorithms expose their training biases through tokens. You can check the tokens through the tokenizers. They are the same for GPT-2/3 and the Griffin and Dragon model trained off GPT-3. The GPT-3 has eaten a massive amount of online datasets, not restricted to plain English. Tokens exist for html comment wrappers like `<!--` and `-->`. This means they were a relevant part of the GPT-3 training and will be recognized by any AI program using the same algorithms.
 
 Input the string `  SolidGoldMagikarp` into the tokenizers above. This nonsense word is one token I kid you not. One possible explanation for this we've found is reddit.com/r/SolidGoldMagikarp/ although the true source of the token remains unknown. `================================` and many other chapter breakers are one token too. This means GPT-3 strongly recognizes these strings and gave them a unique definition inside of its tokens. The AI has eaten data from a plethora of writing sources. You can further train GPT-3 to specialize on other forms of writing, as Latitude did with CYOAs for the AID models. That is an official statement. The author would have preferred they focused on high quality prose novels like the Witcher series or Dune (copyright problems), but we live with the tool given to us. We provide pictures of two posts by Gnurro as he researched the topic of unusual tokens:  
 https://files.catbox.moe/xj9a6a.PNG	https://files.catbox.moe/qz4hwx.PNG
@@ -162,17 +162,19 @@ The section most users will be interested in. For the longest time users of AID 
 
 One of the first formats commonly shared online was popularized on Reddit by a user curious_nekomimi in August 2020. The format had no common name, but each new line of the example started with Ben so that's what people usually called it. Every newline would start with the key being mentioned and every sentence would be followed by a newline. This raised public awareness of reinforcing the AI with WI. A simple prose format like this can get the AI to be mindful of most attributes assigned to said character or object. But it tends to be heavy on used-up characters and especially Griffin might start mixing up actors from different WI together, now called leaking.
 
-Here it bears mentioning that many users want to define `you` inside WI. There are caveats to this, especially in a heavier format like the above one. If you use `you` as a key this WI would likely fire every turn and make the AI focus strongly on things mentioned in this WI as well as constantly eating up space. This poses the risk of burying other WI. Users should make personal decisions on what they value of their WI and scenarios.
+Before we go further let's discuss a common, yet counterintuitive pitfall of WI use. That is defining the main character or `you` in keys and ultimately the WI entry. This makes sense in short scenarios focused on the main character and a small group of characters that have one-on-one interactions. But if we use many naive WI keys in a longer fantasy adventure with many unique characters, we notice the AI paying less attention to the information you've given to each entity inside WI.
 
-Thus far the best method of handling `you` has been developed for use through scripts like JSONthing or EWIJSON. This script relies on defining objects. You can define keyword `you.character` with the entry `You (John)`. It also has a function `you._synonyms` that lets you define `(John|John Doe|protagonist|player|hero)`, making you and John synonyms. This concept could be burrowed for script-free WI but as of now there is no common way most people use to define `you`. Often this information is placed in the remember pin.
+This is due to WI overloading going by the rules we discussed at the beginning of the document. When simple keys like `you` are used they are active almost all the time, taking up precious space which is restricted to roughly 1386 characters going by the rules. If we use a fully stacked A/N and WI entry for you, we've used up 650 of the possible 2772 maximum. When you have WIs for the location and multiple characters, these space limits get eaten up fast, leading the AI to ignore some of your WIs. Enthusiasts generally avoid keys that are active too often for this reason. They are best used as a strong reminder when needed, the shorter the better. 
 
-The author advices against flooding the world with more format names. At best it's a waste of time and confusing at worst it's the harmful and misleading kind of confusing. Originally formats were a quick way to reference different directions of WI research. Now the different methods are starting to converge back as the enthusiasts are attempting to optimize their personal stacks and styles. Formatting is a much more accurate term and beneficial to everyone in the community. This document hopes to demonstrate this.
+It is often preferred to define the character `you` towards the bottom of the Remember pin as that gives you the fullest amount of control where those details get inserted. No best practice exists for this type of WI, so it is left to the reader to deliberate on what their needs for AID are.
+
+The author advises against flooding the world with more format names. At best it's a waste of time and confusing at worst it's the harmful and misleading kind of confusing. Originally formats were a quick way to reference different directions of WI research. Now the different methods are starting to converge back as the enthusiasts are attempting to optimize their personal stacks and styles. Formatting is a much more accurate term and beneficial to everyone in the community without excluding any form of manipulating language. This document hopes to demonstrate this.
 
 Fun fact: `format:` works extremely well inside Author's Notes as a keyword/category you can use to tell the AI whether you're writing a script or a sonnet or a manifesto, etc.
 
 
 ### JSON Formatting
-WI can be exported and imported out of AID as JSON files. What we discuss here is something different. Interest in WI formats blew up after people started publicly sharing anecdotes of a JSON-like WI format having great results in August. Many people did private research at the time but Zaltys 🐍#5362 is often credited with the public interest. Here we define `the pure JSON format`:
+WI can be exported and imported out of AID as JSON files. What we discuss here is something different. Interest in WI formats blew up after people started publicly sharing anecdotes of a JSON-like WI format having great results in August 2020. Many people did private research at the time but Zaltys 🐍#5362 is often credited with raising public interest. Here we define `the pure JSON format`:
 ```
 keys: AKA: you,Anon
 Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"],"eyes":{"eye-color":"brown"},"hair":{"hair-color":"dark brown","hair-length":"intermediate","hair-style":"spiky"},"relationships":{"orphan":"no relatives"},"body":{"physique":"average","height":"average-178cm","weight":"average-80kg"},"personality":["sarcastic","friendly","wishes he had a gf","plays AI dungeon"]}}]
@@ -190,11 +192,11 @@ The many things we have learned about using JSON inside WI can be summarized wit
 + In Discord community testing reduced JSON without quotation marks produced mostly similar quality output
 + Has online production tools like https://aid-world-builder.ey.r.appspot.com (thanks uusu)
 
-JSON had its uses. If you're already using it feel free to continue doing so. If it looks frightening, don't feel obliged to invest learning it. Uusu's world builder still exists to easily write JSON-format WI online. Most WI users have moved on to using other methods specialized for their purposes. 
+JSON had its uses. If you're already using it feel free to continue doing so. If it looks frightening, don't feel obliged to invest learning it. Uusu's world builder still exists to easily write JSON-formatted WI online. Most WI users have moved on to using other methods specialized for their purposes. 
 
 
 ### Zaltys Formatting
-Zaltys 🐍#5362 has developed many interesting formats and spurred the community to try many different things out with the tools AID provides us. Because originally there were few enthusiasts trying unique tricks with the world entry screen, Zaltys distinct style of formatting text became simply known as Zaltys and was adopted so people immediately knew what was being discussed. This document will be kept up to date with the most recommended format variants of Zaltys with some explanation of his goals and motivations. First we have standard Zaltys that works with any model.
+Zaltys 🐍#5362 has popularized many interesting formatting methods and spurred the community to try many different things out with the tools AID provides us. Because originally there were few enthusiasts trying unique tricks with the world entry screen, Zaltys distinct style of formatting text became simply known as Zaltys and was adopted so people immediately knew what was being discussed. This document will be kept up to date with the most recommended format variants of Zaltys with some explanation of his goals and motivations. First we have standard Zaltys that works with any model.
 ```
 Mike Haggar:[Human<male, 202cm, 140kg>. APPEARANCE<Haggar>:Stocky, muscular, big arms, hair<brown>, mustache<brown>; MENTAL<Haggar>: Just, upright, direct, upbeat; WORN:Eyeglasses, pants:<green>; TRAITS<Haggar>:Born in 1943, from Final Fight and Street Fighter games, ex prowrestler, grew up on streets in Metro City, mayor of Metro City, fought Mad Gear & Skull Cross gangs, fights gangs, "It's my job to keep Metro City safe!", loves curry, friends:<Cody, Guy>, daughter:<Jessica>.]
 ```
@@ -208,7 +210,7 @@ Mike Haggar:[Human<male, 202cm, 140kg>. APPEARANCE<Haggar>:Stocky, muscular, big
 + If you need to add age, use age<num> in same section as weight/height.
 + All of it goes into single WI entry with no line breaks, under a keyword such as haggar.
 
-We also have an alternate advanced format specifically designed for Griffin. It saves space inside the WI and context, but is both harder to read and write.
+We also have an alternate advanced version specifically designed for Griffin. It saves space inside the WI and context, but is both harder to read and write.
 ```
 Mike Haggar:[Human<male/202cm/140kg>;APPE<Haggar>:Stocky&muscular/bigarms/brown<shorthair&mustache>;MENT<Haggar>:Just/direct/upbeat/hardy/upright;WORN:Eyeglasses<at work>/brownboots&greenpants/bandolier;TRA<Haggar>:Born 1943/from:<Final Fight&Street Fighter> games/ex:prowrestler/grew up on streets<in Metro City>/mayor<Metro City>/fought gangs:<Mad Gear&Skull Cross>/fights gangs/"It's my job to keep Metro City safe!"/loves:curry&rice/friends:<Cody&Guy&Carlos:from Brazil>/daughter:<Jessica>.]
 ```
@@ -219,7 +221,7 @@ Based on experiments and accumulating experience the community has found all-cap
 
 Zaltys likes to write a lot of species from different series. He has written on discord that his most used categories are APPEAR, LACK, GRAB, MOV, MENTAL and TRAITS. For defining a type of character all these have purpose. Appear is self explanatory. Lack has to do what the characters can and can't do; a lamia without legs shouldn't be able to walk. Grab is their preferred way of interacting through appendages, a bird would use it's beak or talons, a lamia would use their hands or tail. Mov works for movement. Lamia would crawl/slither on top of their tails, slimes ooze and other species may do more imaginative things. Mental is traits of the mind, traits is more intrinsic physical, sensory or nature related traits. Traits has proven to be the Swiss army knife of categories after months of use. INV and EQUIP work similarly to one another as alternatives to WORN and can be used to define the types of equipment a RPG character would carry on top of the usual stuff like clothes. WORN is better at handling style like `goth` clothing. `gothic` is more applicable to architecture. 
 
-The AI is good at overwriting preset associations. On Zaltys format the community has succeeded in writing interesting recipes. For some reason the AI seems very good at describing recipes. This is another example of an indicator helping the AI understand WI better. Example from Mono:
+The AI is good at overwriting preset associations. Following Zaltys examples the community has succeeded in writing interesting recipes. For some reason the AI seems very good at describing recipes. This is another example of an indicator helping the AI understand WI better. Example from Mono:
 ```
 Siren:[A popular drink;DESCRIPT<Siren>:Sapphire-colored/silvery bubbles/sprig of mint/smells alcoholic/tastes like rusty metal;EFFECTS<Siren>:Inspires drinker to dance.]
 
@@ -281,7 +283,7 @@ On further play-testing the preferred hypothesis is that everything comes down t
 
 The long list of recommended categories:
 ```
-APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, EFFECT(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, LIMIT, FACTS, LOOT, BANNED (forbidden behavior), COND (status condition like PRLZ from Pokemon), DIET 
+APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, EFFEC(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, LIMIT, FACTS, LOOT, BANNED (forbidden behavior), COND (status condition like PRLZ from Pokemon), DIET 
 ```
 Problematic categories (avoid or use with caution):
 ```
@@ -310,8 +312,6 @@ https://files.catbox.moe/0ur88f.PNG
 
 `STATUS:` doesn't necessarily work as expected. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon. Still it's not a completely consistent category for this purpose despite the interesting results. 
 
-`DIET:` can be used to make unusual things like herbivorous snakes. It's a powerful category, because AID has a lot of training data on snakes being carnivores.
-
 `COND:` is much more interesting and powerful for actually having characters suffer from conditions or status effects. It has been tested working with injuries and other debilitations. It even works with game and Pokemon status conditions like PSN or PRLZ.
 ```
 COND:sick/dying/poisoned
@@ -319,6 +319,8 @@ COND:sick/dying/poisoned
 COND:PRLZ
 "I cannot. I am paralyzed from the waist down."
 ```
+
+`DIET:` can be used to make unusual things like herbivorous snakes. It's a powerful category, because AID has a lot of training data on snakes being carnivores.
 
 `LOOT:` works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
 
@@ -368,14 +370,13 @@ First we mention the special cases that you may want to avoid due to tokenizatio
 
 Long and growing list of behavioral keywords is provided in no particular order. There are too many to list, these are just some common useful ones as well as some commonly tried keywords you might want to avoid. The basis of a good personality trait is something strong and focused the AI has a strong unique association for. Broad words like good or evil aren't very useful, when the behavior is what we are after. 
 
-`cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely in turns them into otaku figurine collectors.
+`cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely it turns them into otaku figurine collectors.
 
 Continuing with the bad guy theme the seven sins all work. `glutton(ous), lust(ful), greedy/avaritious, envious, slothful, proud` all work. Wrath is the exception and doesn't produce satisfying results, but can easily be replaced with `angry&cruel`. Based on research with the angriest wizard that ever lived, anger related tags especially `the angriest` are effective.
 
-`chivalric, just, benevolent` work for creating paladin- or white knight types. These may be combined with more morally ambiguous or gray traits like `sour` to create a character that isn't as pristine or stereotypically lawful good. 
+`chivalric, just, benevolent` work for creating paladin- or white knight types. These may be combined with more morally ambiguous or gray traits like `sour` to create a character that isn't as pristine or stereotypically lawful good. According to Zaltys using a combination of `MIND:chivalric&noble just knightly` might even make these behavioral traits too strong for some tastes.
 
 Then there's `stoic, serious, calm` for more brooding or detached traditionally masculine types. Of course these may be used just as well to create a dour experienced femme. `professional` creates the polite valet/waiter-type character. This would be good for a lawful evil type character too.
-
 
 `horny, stoic, apathetic, wry, clever, witty, addicted` all do exactly what you'd expect out of them, they work good. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended effect. `judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character. 
 
@@ -389,6 +390,7 @@ Zak:[Human male. MIND<Zak>:secretive/dangerous/manipulative/stoic/callous/servil
 Zak is a middle-age, balding man with brown hair and dark eyes. He wears a black overcoat and small, wire-rimmed glasses. He is of average height and build.
 Zak has a very serious look on his face most of the time and he rarely, if ever, smiles. His eyes are constantly darting around, as if he mistrusts everything and everyone. Despite his serious demeanor, he is very polite, although in a very formal, stoic way. He always speaks in a very respectful tone, even to those who are not as educated as he is or when talking about something distasteful.
 ```
+You can also consult the Author's Note research justpaste.it for more tips. Some of the keywords tailor the AI's output too much as a note, but work great as personality traits.
 
 
 ### Monky Formatting
