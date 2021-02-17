@@ -96,6 +96,8 @@ If you want to test out and learn more about GPT-2/3 tokens (they work the same)
 
 kim has also made a tokenizer scenario/script you can use inside AID: https://play.aidungeon.io/main/scenarioView?publicId=6927d610-34b7-11eb-b8e1-c185d026672d
 
+Tokenstuff script by Gnurro that can be used to mass search and catch what tokens exist inside GPT-2. Remember, by the word of the developers(God) GPT-2 and GPT-3 share the same tokens: https://github.com/Gnurro/AIDscripts/blob/main/tokenStuff.zip  
+
 It can not be understated what an important tool the tokenizer has been for WI enthusiasts. Thanks to it we have a fairly good idea why certain words work as poorly as they do and a legitimate information-based argument for why this is the case. If the document talks about word or character tokens, they were ran through the tokenizer colab or scenario alongside synonyms or longer compound words containing it.
 
 A common misconception is that """natural writing""" is clearly the best writing method and all other methods and tricks should be ignored because some marketing person said so. To these people I must tell: Stop. You don't know what you're talking about and are likely arguing from emotion. Machine Learning language transformation algorithms expose their training biases through tokens. You can check the tokens through the tokenizers. They are the same for GPT-2/3 and the Griffin and Dragon model trained off GPT-3. The GPT-3 has eaten a massive amount of online datasets, not restricted to plain English. Tokens exist for html comment wrappers like `<!--` and `-->`. This means they were a relevant part of the GPT-3 training and will be recognized by any AI program using the same algorithms.
