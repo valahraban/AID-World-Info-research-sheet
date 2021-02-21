@@ -495,7 +495,7 @@ To do categories: `ADJ`, `GRAM`, `MODIF`
 
 
 ### Personality Keywords
-Character behaviors and personalities deserve their own category. One of the biggest goals of WI is getting the AI to remember `how` a character is and output their behavior consistently. To this end we need behavioral keywords. This section is entirely dedicated to personality-related keywords that the community has either discovered to work exceptionally well towards certain ends or keywords that are disappointingly weak.
+Character behaviors and personalities deserve their own category. One of the biggest goals of WI is getting the AI to remember **how** a character is and output their behavior consistently. To this end we need behavioral keywords. This section is entirely dedicated to personality-related keywords that the community has either discovered to work exceptionally well towards certain ends or keywords that are disappointingly weak.
 
 For category-based formatting `MENTAL:` used to be the most commonly used keyword for listing out a character's mentality, personality and behavior. Recently we found `MIND:` works better towards this end in all aspects while also being a shorter word.
 
