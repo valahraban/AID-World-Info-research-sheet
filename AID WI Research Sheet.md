@@ -302,7 +302,7 @@ APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, E
 ```
 Problematic categories (avoid or use with caution):
 ```
-BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superceded), STATE/STATUS(superceded, multiple meanings)
+BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superseded), STATE/STATUS(superceded, multiple meanings)
 ```
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: APPE, MENT, RAITS, SUMM, CLIM, GEO/GEOGR, CITIZ, PERSONA, ALIGN, BANN. Sometimes the shorthand might be preferred such as CONDITION vs COND.
 
