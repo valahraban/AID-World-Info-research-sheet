@@ -11,6 +11,19 @@
     + [JSON Formatting](#json-formatting)
     + [Zaltys Formatting](#zaltys-formatting)
     + [Useful Categories](#useful-categories)
+    + [Categories Table](#categories-table)
+      + [TRAITS and SUMMARY (SUMM)](#traits-and-summary)
+      + [MIND (MENTAL)](#mental)
+      + [APPEAR](#appear)
+      + [WORN](#worn)
+      + [DESC](#desc)
+      + [SEE](#see)
+      + [LIMIT (LACK)](#lack)
+      + [COND](#cond) ([STATUS](#status))
+      + [DIET](#diet)
+      + [LOOT](#loot)
+      + [DETAIL](#detail)
+      + [More on SUMMARY](#more-on-summary)
 	+ [Personality keywords](#personality-keywords)
     + [Monky Formatting](#monky-formatting)
     + [Onyx Formatting Tricks](#onyx-formatting-tricks)
@@ -305,7 +318,9 @@ Problematic categories (avoid or use with caution):
 BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superseded), STATE/STATUS(superceded, multiple meanings)
 ```
 
-Here's a table of the same categories (see below why some alternatives are undesired).
+### Categories Table
+
+Here's a table of the forementioned categories (see below why some alternatives are undesired).
 The categories marked with *`ITALIC`* aren't exactly perfect for all cases (again, see below: it might be better, worse and even both).
 
 
