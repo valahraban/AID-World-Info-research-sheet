@@ -26,6 +26,17 @@
   * [Ending Notes](#ending-notes)
 
 
+## Readability note
+This document contains a lot of examples in code blocks, with very long lines of text. If you're reading this from GithHub website (I bet you are), you might want to add this CSS style in your browser to enable word wraps:
+```css
+code {
+    white-space : pre-wrap !important;
+}
+```
+
+You can also use [Dark Reader](https://darkreader.org/) or similar browser extensions to switch GitHub to a dark theme.
+
+
 ## Preamble
 Perhaps the greatest addition to the AI Dungeon for generating high quality stories has been world info. Learning and figuring out how to use world info effectively is of great interest to many users: using it one can get vastly more consistent output from the AI and define terms that the pre-trained AI might otherwise have difficulty understanding. Features like `Remember` (pins) and `A/N:` (author's notes) will also be covered as they are heavily related and connected to world info. Everything here is of use to both free and premium users. The differences between griffin and dragon will be discussed as there are some differences one should be mindful of. Good world info can make griffin almost as good as dragon, but requires more attention and effort from the user. While world info is a powerful tool there are also caveats and concerns to using it effectively. With good world info the user can create any kind of scenario and a `world` of their own. This document is written with enthusiasts in mind and will not be dumbed down as that would be counterproductive to building deeper understanding.
 
