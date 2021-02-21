@@ -37,7 +37,7 @@ Special credit to kimtaengsshi for help with editorship and fact checking the te
 
 If you don't know anything about world info yet and want to get up to speed with the bare basics it is recommended you read the wiki article first: https://wiki.aidiscord.cc/wiki/World_Info  
 
-This document isn't anti-prose, but prose clearly has nothing to do with the subject matter and as such won't be focused on. This document is about getting results my manipulating AID'd context using *any* method available. There exists a countless amount of resources online to help you become a better writer overall which should also improve your AID experience.
+This document isn't anti-prose, but prose clearly has nothing to do with the subject matter and as such won't be focused on. This document is about getting results by manipulating AID's context using *any* method available. There exists a countless amount of resources online to help you become a better writer overall which should also improve your AID experience.
 
 How to get featured or help improve this documentation? Send a text file (preferably .md) or suggested edits in a pastebin variant to birb/valahraban through github or discord. This is how he primarily communicates with other enthusiasts and writes this document. Other communication methods aren't supported. Included information isn't chosen at random: it must be novel and immediately useful to birb and WI enthusiasts.
 
@@ -45,9 +45,11 @@ How to get featured or help improve this documentation? Send a text file (prefer
 ## Recommendations or the TLDR
 **Scripting has been made free for all users, it is warmly recommended you scroll down to Zynj's github and check out EWIJSON. Loading WI through these scripts alone gives you a lot more control over their location. If you do decide to use EWIJSON, also check out Monky Formatting and the Futureman guide and birb's guide on EWIJSON basics inside the docs.** This document will focus on scripting-free methods. Scripting focused documents are included in the docs folder.
 
-For those of you who came here for the WI formats or have short attention spans. Click on the links contained in the table of contents above or hit CTRL+F to search for names that interest you. **JSON formatting** is neither recommended or discouraged. If you're comfortable using it continue doing so. The **Zaltys Formatting** of this document is recommended as a strong baseline to start from. Zaltys formatting is easy, popularized and frequently updated to keep up with AID. Past samples are provided as well. **Monky Formatting** is recommended for people with specific goals and interests such as intending to publish scenarios, worried about WI space and token use and wanting to share their work. It is very understandable, easy to modify and works well with regular prose. Very easy to combine with scripts too. Monky formatting has developed into Neanderthal and Futureman which are recommended reading for people they benefit. **Onyx** has written formats and WI tricks for specific purposes such as defining locations and listing things. We now use the term formatting as some of the concepts are interchangeable and may be combined together. One scenario may also use different WI formatting for achieving different things with different entries. You the writer have complete creative freedom, although our experiences may benefit you.
+For those of you who came here for the WI formats or have short attention spans. Click on the links contained in the table of contents above or hit CTRL+F to search for names that interest you. **JSON formatting** is neither recommended or discouraged. If you're comfortable using it continue doing so. The **Zaltys Formatting** of this document is recommended as a strong baseline to start from. Zaltys formatting is easy, popularized and frequently updated to keep up with AID. Past samples are provided as well. **Monky Formatting** is recommended for people with specific goals and interests such as intending to publish scenarios, worried about WI space and token use and wanting to share their work. It is very understandable, easy to modify and works well with regular prose. Very easy to combine with scripts too. Monky formatting has developed into Neanderthal and Futureman which are recommended reading for people they benefit. **Onyx** has written formats and WI tricks for specific purposes such as defining locations and listing things. 
 
-If you don't care about the complicated lunacy of this document and want something simpler, more elegant and less of a headache, learn how to write good prose, or read a simple guide on it! Now provided by our friends at /aidg/  
+We now use the term formatting as some of the concepts are interchangeable and may be combined together. One scenario may also use different WI formatting for achieving different things with different entries. You the writer have complete creative freedom, although our experiences may benefit you.
+
+If you don't care about the complicated lunacy of this document and want something simpler, more elegant and less of a headache, learn how to write good prose or read a simple guide on it! Now provided by our fellows at /aidg/  
 https://rentry.co/aidg-format
 
 For comedic purposes here is what one very opinionated user has to say on the current state of formats:
@@ -361,6 +363,7 @@ QUOTES FROM ZACK:
 "The waves, the wind and the sky, zey are all one like you and I, man."
 "I hope dat you don't mind some reggae music, man."
 ```
+To do categories: ADJ, GRAM, MODIF
 
 
 ### Personality Keywords

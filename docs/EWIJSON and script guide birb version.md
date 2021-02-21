@@ -102,6 +102,18 @@ You have a hairy secret
 What the heck happened there? We exploited EWIJSON's design on how the trailing attribute and JSON-object default positioning works. By default, they get placed above the inputs with the keys that trigger the WI. This is true even with the [t=1] position, but it gives the associated WI less priority putting it behind the others or trailing it 1 action back. The default JSON-objects go where they're supposed to. The default trailing [t=0] makes the secret trail 0 actions back or right above the key mentioning it. Now as long as the AI is behaving well, it might output how your slick brown hair is actually a fake wig. This example was chosen for being easy to understand and is not a recommendation on what WI to use in practice.  
 
 
+## Understanding EWI Attributes
+Here we provide the reader with short, sweet and easy to understand metaphors for every major EWI attribute as of writing compliments to Mr.Accountant. You should check out the wiki to see each attribute and examples of their use. The metaphors may give some readers a more common sense understanding though.
+
+Let's get on with the (very) informal EWIJSON attribute school:  
+[d] = "I am going to insert this shit right before I find the key match. So your sword now become a stupid-ass sword."  
+[l] = "How long before your entry gets bounced. [l=1] means bye bye next turn and your entry is removed from context."  
+[p] = "The Karen of the attributes, rude as heck, barges in exactly where it wants to go. If p says it wants to be three lines from the last input, that's where it's going."  
+[m] = "[m] however is chill, tells the world entry to hang out at the remember's position in context."  
+[t] = "[t] is that obxionous fan that follows you EVERYWHERE. When your name is mention, they are always right behind you or behind a bush. Imagine if your name was said [t] would be right behind you, or if you put a restraining order of [t=3] then he will be three steps behind the last mention of your name"  
+[r] = "Slots! Picks a item from a group of OR conditionals. They need to be identical keys before # or [r] doesn't give a fuck."  
+[x] = "This is the bouncer, world entry doesn't get in until he says enough time has passed. [x=4] means four actions must pass in the adventure before you can get this world entry to fire."
+
+
 ## Credits
-Zynj for writing EWIJSON, updating it frequently and educating people on how to use it. STARSTRUCK for his artdungeon.user.js. Latitude for making scripting free. birb for writing this. 
-CHANGELOG: 2.1 the earlier version contained an error related to branching objects which has been fixed, refer to this current publicized version instead of any other version of this document you might have read.
+Zynj for writing EWIJSON, updating it frequently and educating people on how to use it. STARSTRUCK for his artdungeon.user.js. Latitude for making scripting free. birb for writing this.
