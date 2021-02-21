@@ -11,7 +11,24 @@
     + [JSON Formatting](#json-formatting)
     + [Zaltys Formatting](#zaltys-formatting)
     + [Useful Categories](#useful-categories)
+    + [Categories Table](#categories-table)
+      + [TRAITS and SUMMARY (SUMM)](#traits-and-summary)
+      + [MIND (MENTAL)](#mental)
+      + [APPEAR](#appear)
+      + [WORN](#worn)
+      + [DESC](#desc)
+      + [SEE](#see)
+      + [LIMIT (LACK)](#lack)
+      + [COND](#cond) ([STATUS](#status))
+      + [DIET](#diet)
+      + [LOOT](#loot)
+      + [DETAIL](#detail)
+      + [More on SUMMARY](#more-on-summary)
 	+ [Personality keywords](#personality-keywords)
+	  + [Bad guy / evil / cruel / saristic](#bad-guy--evil--cruel--sadistic)
+	  + [Paladin / lawful good](#paladin--lawful-good)
+	  + [Manly / serious](#manly--serious)
+	  + [Other assorted useful traits](#other-assorted-useful-traits)
     + [Monky Formatting](#monky-formatting)
     + [Onyx Formatting Tricks](#onyx-formatting-tricks)
     + [birb research](#birb-research)
@@ -24,6 +41,17 @@
   * [Obsoleted Methods](#obsoleted-methods)
   * [Special Inputs Commands](#special-inputs-commands)
   * [Ending Notes](#ending-notes)
+
+
+## Readability note
+This document contains a lot of examples in code blocks, with very long lines of text. If you're reading this from GithHub website (I bet you are), you might want to add this CSS style in your browser to enable word wraps:
+```css
+code {
+    white-space : pre-wrap !important;
+}
+```
+
+You can also use [Dark Reader](https://darkreader.org/) or similar browser extensions to switch GitHub to a dark theme.
 
 
 ## Preamble
@@ -149,7 +177,9 @@ Some users have been experimenting with A/N for doctoring output and specificall
 "Author:" is added when you want to do a convincing real author (combined with "Writing style: literary, author-name.) "Setting:" "Theme:" "Subject:" have their uses, depends on the content. "Title:" works at least on LOTR and "gone with the wind". Didn't test other titles. Famous ones should work. Has to be a real title, "star wars" is not a title, it's a movie franchise. The writing styles, most don't work on Griffin.
 Only the descriptive-branch works on Griffin. "descriptive" works, "narrative" and another one I can't remember (according to Zalty) also works on Griffin.
 ```
-Reminder: while less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or even insert any string they want in a specific part of the context. A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
+
+#### Reminder:
+While less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or even insert any string they want in a specific part of the context. A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
  
 
 ## World Info and Formatting
@@ -183,6 +213,43 @@ WI can be exported and imported out of AID as JSON files. What we discuss here i
 keys: AKA: you,Anon
 Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"],"eyes":{"eye-color":"brown"},"hair":{"hair-color":"dark brown","hair-length":"intermediate","hair-style":"spiky"},"relationships":{"orphan":"no relatives"},"body":{"physique":"average","height":"average-178cm","weight":"average-80kg"},"personality":["sarcastic","friendly","wishes he had a gf","plays AI dungeon"]}}]
 ```
+
+The same entry, with tab indents (don't put it into WI entry, it's here just for readability):
+```json
+[{
+	"You": {
+		"name": "Anon", 
+		"age": 24, 
+		"gender": "male", 
+		"species": [
+			"human", 
+			"man"
+		], 
+		"eyes": {
+			"eye-color": "brown"
+		}, 
+		"hair": {
+			"hair-color": "dark brown", 
+			"hair-length": "intermediate", 
+			"hair-style": "spiky"
+		}, 
+		"relationships": {
+			"orphan": "no relatives"
+		}, 
+		"body": {
+			"physique": "average", 
+			"height": "average-178cm", 
+			"weight": "average-80kg"
+		}, 
+		"personality": [
+			"sarcastic", 
+			"friendly", 
+			"wishes he had a gf", 
+			"plays AI dungeon"
+		]
+	}
+}]
+```
 The many things we have learned about using JSON inside WI can be summarized with the following list:
 + Super consistent, the AI understands it well and tends to stick on point with it
 + Simple syntax, making it easier to produce for non-native English speakers
@@ -210,7 +277,7 @@ Mike Haggar:[Human<male, 202cm, 140kg>. APPEARANCE<Haggar>:Stocky, muscular, big
 + Avoid using -s. (Jan 2021 change.)
 + Categories must be typed in UPPER CAPS, with the exact spelling.
 + Including the name after the categories helps Griffin parse the entry.
-+ Other useful categories include MOV (for movement-types, such as 'slithering'), GRAB (for object manipulation, such as 'talons', 'beak', or 'coiling'), ORIGIN (for birthplace, game of origin, etc).
++ Other useful categories include `MOV` (for movement-types, such as 'slithering'), `GRAB` (for object manipulation, such as 'talons', 'beak', or 'coiling'), `ORIGIN` (for birthplace, game of origin, etc).
 + If you need to add age, use age<num> in same section as weight/height.
 + All of it goes into single WI entry with no line breaks, under a keyword such as haggar.
 
@@ -273,7 +340,7 @@ There are three types of category: Propercase, lowercase and UPPERCASE. Any of t
 
 Here we have a picture of some common UPPERCASE category basis and their tokenization: https://files.catbox.moe/avn9j4.png
 
-The above tokenization is the reason Zaltys and other enthusiasts ended up picking APPEAR, TRAITS, WORN, EQUIP, MENTAL and their even shorter forms. If a WI enthusiast tells you that a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results weren't good with evidence to support this.
+The above tokenization is the reason Zaltys and other enthusiasts ended up picking `APPEAR`, `TRAITS`, `WORN`, `EQUIP`, `MENTAL` and their even shorter forms. If a WI enthusiast tells you that a category is bad, it's probably because they already tried it themselves, looked at the tokens and the results weren't good with evidence to support this.
 
 Different authors prefer using different cases for categorization. In the past birb and Zaltys recommended you use uppercase categories. Citation from Zaltys on why we use uppercase categories:
 ```
@@ -281,7 +348,7 @@ Problem with propercase categories is that if you load several WIs, the AI will 
 ```
 Based on experimentation there may be some exceptions. For some scenarios tested where the AI was tricked into formatting its own writing `writingstyle:` was seemingly preferred and produced better output than `Writing Style:`. Both work for use with A/N and may come down to user preference.
 
-UPPERCASE category keywords will be provided as a list. Their use is mostly self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. HOBBIES, POWERS whereas for verb categories its preferred to skip the `s` e.g. APPEAR, LACK. 
+UPPERCASE category keywords will be provided as a list. Their use is mostly self-explanatory. Some interesting categories will receive further attention. We recommend experimentation, but these words have been chosen because they felt more effective than other synonyms the Discord tested. Based on experience we have the following recommendation: plural forms are preferred for noun categories e.g. `HOBBIES`, `POWERS` whereas for verb categories its preferred to skip the `s` e.g. `APPEAR`, `LACK`. 
 
 On further play-testing the preferred hypothesis is that everything comes down to tokenization. Let's explore variants of the word effect. In tokens `EFFECT` is EFF + ECT and `EFFECTS` is EFF+ EC + TS. The latter combo works, the former is very weak. `EFFEC` is EFF + EC and seems to work even better than the aforementioned. For whatever reason for GPT-3 2 token combinations usually work best. `POWER` is single token, `POWERS` is POW + ERS, the 2 token POWERS tends to work better. Most of the chosen categories are based on user reports and this hypothesis.
 
@@ -291,32 +358,95 @@ APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, E
 ```
 Problematic categories (avoid or use with caution):
 ```
-BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superceded), STATE/STATUS(superceded, multiple meanings)
+BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superseded), STATE/STATUS(superceded, multiple meanings)
 ```
-Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: APPE, MENT, RAITS, SUMM, CLIM, GEO/GEOGR, CITIZ, PERSONA, ALIGN, BANN. Sometimes the shorthand might be preferred such as CONDITION vs COND.
 
-Let's discuss TRAITS and SUMMARY first. Due to Zaltys popularized use of categories, TRAITS was used as a universal category for a long time. The exact effect of TRAITS is unknown, but it possible to throw essentially any intrinsic characteristic trait inside it and have the AI respect it. It's still a good category for characteristics lacking specific category, but testing of WI has since continued. 
+### Categories Table
 
-Users of the world-info channel have been playing around with SUMMARY or SUMM for short since it was discovered and found it works near identically to TRAITS, except it feels even more versatile. You can put pretty much anything in it that'd fit in a character 'summary' and it combines great with other categories, even referencing them without causing leakage. Since they achieve the same thing, but SUMM is preferred by everyone we've talked to so far it is the recommendation for a universal swiss army knife category.
+Here's a table of the forementioned categories (see below why some alternatives are undesired).
+The categories marked with *`ITALIC`* aren't exactly perfect for all cases (again, see below: it might be better, worse and even both).
 
-MENTAL is the category that was in popular use for mental, personality and behavioral traits. MIND achieves the same goal more effectively while using less space so MIND is recommended for behavioral traits now. Consult the personality keywords segment for more information on behavior.
 
-The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with TRAITS, the AI treated `cool` as the nature of a thing. Entities with the TRAIT `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside MENTAL or MIND. This may be the case for other words like `hotheaded` that the AI could take too literally. Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
+| Yes | Alt./Short | No/Superseded | Comment |
+| --- | --- | --- | --- |
+| [SUMMARY](#traits-and-summary) | `SUMM` | `TRAITS` | Swiss army knife category, for anything that doesn't have it's own cat. [See also this](#more-on-summary) about summary. |
+| [MIND](#mental) |  | `MENTAL` |  |
+| [APPEAR](#appear) | `APPE`<br>*`PHYSIQ`, `FORMS`* | `BODY`, `LOOKS` |  |
+| [WORN](#worn) | `WEAR`<br>*`CLOTHES`, `CLOTHING`, `DRESS`, `COSTUME`* | `OUTFIT`, `SUIT`, `ATTIRE`, `WARDROBE` |  |
+| [DESC](#desc) |  |  | for something that is a part of appearance but it's functionality is more important than the looks |
+| [SEE](#see) |  |  | used to describe how a character perceives the world |
+| *[LIMIT](#lack)* | *`LACK`* |  |  |
+| [COND](#cond) |  | *[STATE / STATUS](#status)* | status condition like `PSN` / `PRLZ` from Pokemon |
+| [DIET](#diet) |  |  |  |
+| [LOOT](#loot) |  |  | what `INV` items can be dropped when a creature is defeated |
+| [DETA](#detail) | `DETAIL` |  |  |
+| INV |  |  |  |
+| EQUIP |  |  |  |
+| LIKES |  |  |  |
+| HATE |  |  |  |
+| RELATIONS |  |  |  |
+| FRIENDS |  |  |  |
+| ENEMIES |  |  |  |
+| TALENTS |  |  |  |
+| HOBBIES |  |  |  |
+| POWERS |  |  |  |
+| THEME |  |  |  |
+| ORIGIN |  |  | for series/titles |
+| ATMOSPHERE |  |  |  |
+| TONE |  |  |  |
+| MOOD |  |  |  |
+| CLIMATE | `CLIM` |  |  |
+| GEOGRAPHY | `GEO`, `GEOGR` |  |  |
+| FEATURES |  |  | for locations |
+| EXIT |  |  | for rooms |
+| CITIZENS | `CITIZ` |  |  |
+| CENSUS |  |  |  |
+| PASSION |  |  |  |
+| BONDS |  |  |  |
+| ALIGNMENT | `ALIGN` |  |  |
+| EFFEC |  |  | for objects and entities, used to add magic or science effects |
+| BIOME |  |  |  |
+| FLORA |  |  | must match the biome |
+| CREATE |  |  |  |
+| FACTS |  |  |  |
+| BANNED | `BANN` |  | forbidden behavior |
 
-`APPEAR:` is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
 
-`WORN:` is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
+Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: `APPE`, `MENT`, `RAITS`, `SUMM`, `CLIM`, `GEO`/`GEOGR`, `CITIZ`, `PERSONA`, `ALIGN`, `BANN`. Sometimes the shorthand might be preferred such as `CONDITION` vs `COND`.
+
+#### `TRAITS` and `SUMMARY`
+Let's discuss `TRAITS` and `SUMMARY` first. Due to Zaltys popularized use of categories, `TRAITS` was used as a universal category for a long time. The exact effect of `TRAITS` is unknown, but it possible to throw essentially any intrinsic characteristic trait inside it and have the AI respect it. It's still a good category for characteristics lacking specific category, but testing of WI has since continued. 
+
+Users of the world-info channel have been playing around with `SUMMARY` or `SUMM` for short since it was discovered and found it works near identically to `TRAITS`, except it feels even more versatile. You can put pretty much anything in it that'd fit in a character 'summary' and it combines great with other categories, even referencing them without causing leakage. Since they achieve the same thing, but `SUMM` is preferred by everyone we've talked to so far it is the recommendation for a universal swiss army knife category.
+
+Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
+
+#### `MENTAL`
+is the category that was in popular use for mental, personality and behavioral traits. `MIND` achieves the same goal more effectively while using less space so `MIND` is recommended for behavioral traits now. Consult the [Personality Keywords](#personality-keywords) segment for more information on behavior.
+
+The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with `TRAITS`, the AI treated `cool` as the nature of a thing. Entities with the `TRAIT` `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside `MENTAL` or `MIND`. This may be the case for other words like `hotheaded` that the AI could take too literally.
+
+#### `APPEAR:`
+is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
+
+#### `WORN:`
+is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
 https://files.catbox.moe/0ur88f.PNG
 
-`DESC:` sees some use. It relates to the physical functionality of an entity and may be more useful than `APPEAR:` for specific cases where the functionality is more important than the looks of a thing. `DESC:` might as well as be used for describing the functional limbs of a huge insect or to describe the mechanisms and staff inside a spaceship. Testing from many enthusiasts also suggests that with `DESC:` and optionally prose descriptions at the front, the AI recognizes and uses other categories better.
+#### `DESC:`
+sees some use. It relates to the physical functionality of an entity and may be more useful than `APPEAR:` for specific cases where the functionality is more important than the looks of a thing. `DESC:` might as well as be used for describing the functional limbs of a huge insect or to describe the mechanisms and staff inside a spaceship. Testing from many enthusiasts also suggests that with `DESC:` and optionally prose descriptions at the front, the AI recognizes and uses other categories better.
 
-`SEE:` is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need SUMM. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACK:eyes;SEE:blind;` has produced the most consistent Zaltys formatting blind characters. Research continues into creating mutes (now featured in a separate miscellaneous doc).
+#### `SEE:`
+is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need `SUMM`. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACK:eyes;SEE:blind;` has produced the most consistent Zaltys formatting blind characters. Research continues into creating mutes (now featured in a separate miscellaneous doc).
 
-`LACK:` is a category that has often been used to denote something is missing with mediocre results. `LIMIT:` has proven more powerful for this use with some caveats. `LIMIT:` seems to get treated like a mathematical term and denotes a discrete limit for something. `LIMIT: zero_arms` could be used to key the AI on the fact the character has zero arms while you could just as easily use the category to convince the AI the character is supposed to have `LIMIT: four_arms`. `LIMIT:` doesn't work for hard-to-quantify things like attributes (or the amount of) associated with things like `skin`.
+#### `LACK:`
+is a category that has often been used to denote something is missing with mediocre results. `LIMIT:` has proven more powerful for this use with some caveats. `LIMIT:` seems to get treated like a mathematical term and denotes a discrete limit for something. `LIMIT: zero_arms` could be used to key the AI on the fact the character has zero arms while you could just as easily use the category to convince the AI the character is supposed to have `LIMIT: four_arms`. `LIMIT:` doesn't work for hard-to-quantify things like attributes (or the amount of) associated with things like `skin`.
 
-`STATUS:` doesn't necessarily work as expected. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon. Still it's not a completely consistent category for this purpose despite the interesting results. 
+#### `STATUS:`
+doesn't necessarily work as expected. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon. Still it's not a completely consistent category for this purpose despite the interesting results. 
 
-`COND:` is much more interesting and powerful for actually having characters suffer from conditions or status effects. It has been tested working with injuries and other debilitations. It even works with game and Pokemon status conditions like PSN or PRLZ.
+#### `COND:`
+is much more interesting and powerful for actually having characters suffer from conditions or status effects. It has been tested working with injuries and other debilitations. It even works with game and Pokemon status conditions like `PSN` or `PRLZ`.
 ```
 COND:sick/dying/poisoned
 "I'm... not sure what help I'll be, sir. I'm dying. I was poisoned by a snake in the garden."
@@ -324,13 +454,17 @@ COND:PRLZ
 "I cannot. I am paralyzed from the waist down."
 ```
 
-`DIET:` can be used to make unusual things like herbivorous snakes. It's a powerful category, because AID has a lot of training data on snakes being carnivores.
+#### `DIET:`
+can be used to make unusual things like herbivorous snakes. It's a powerful category, because AID has a lot of training data on snakes being carnivores.
 
-`LOOT:` works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
+#### `LOOT:`
+works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
 
-`DETAIL:` shortened to `DETA:` works fine with just about anything related to details, but it's unknown how this is different from summary.
+#### `DETAIL:`
+shortened to `DETA:` works fine with just about anything related to details, but it's unknown how this is different from summary.
 
-`SUMMARY:` has already been pointed out as a strong and versatile category for defining points of interest you want described consistently. It can even reference previously used categories, meaning it has abilities the older `TRAITS:` lacked. Impressive examples below:
+#### More on `SUMMARY:`
+has already been pointed out as a strong and versatile category for defining points of interest you want described consistently. It can even reference previously used categories, meaning it has abilities the older `TRAITS:` lacked. Impressive examples below:
 ```
 SUMMARY:Jamaican/grew up on streets, Output:
 He grew up in Jamaica with his rich parents. When he was 16, he was on vacation in Hawaii and decided to stay there when his parents left without him. He learned how to surf and just bummed around the island for a while. He eventually ran out of money, so he started working at a surf shop and selling some of his paintings on the side.
@@ -344,16 +478,16 @@ Its anatomy is as varied as the landscape, and just like a regular body, differe
 PERSONALITY (Zak):
 Zak is just an overall calm, cool and collected being. Doesn't really get angry at things, though it has a healthy respect for gravity (no pun intended). It loves exploring, seeing new sights and visiting foreign places.
 ```
-With SUMM:
+With `SUMM`:
 ```
 Zak is a sentient floating continent. It is about the size of Eurasia, and can fly around at will, although it cannot currently fly very high or very fast. It is mostly covered in forests and taiga, although it has some large plains, and several mountain ranges. It is currently inhabited by a few tribes of stone age humans.
 ```
 
-If you're lost and in doubt what category to use, you can probably throw it inside SUMM and AID will handle it fine. Not all details need their own category. RACE, GENDER, AGE can be condensed to `elf/female/25y` then followed by the bigger categories. The AI picks up common traits just fine by their lonesome. Zaltys-style formatting also benefits from having an indicator phrase like the one mentioned above.
+If you're lost and in doubt what category to use, you can probably throw it inside `SUMM` and AID will handle it fine. Not all details need their own category. `RACE`, `GENDER`, `AGE` can be condensed to `elf/female/25y` then followed by the bigger categories. The AI picks up common traits just fine by their lonesome. Zaltys-style formatting also benefits from having an indicator phrase like the one mentioned above.
 
 The AI understands the concept of speech patterns and accent to some degree. Categories like `SPEECH:`, `WORDING:` and `ACCENT:` were tried, but didn't output desirable results.
 
-Thus far `TRAITS:` (or now SUMM) has proven to handle this attribute the best. Writing style theme in author's notes can also give characters accent across the entire setting. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica, crook/criminal. 
+Thus far `TRAITS:` (or now `SUMM`) has proven to handle this attribute the best. Writing style theme in author's notes can also give characters accent across the entire setting. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica, crook/criminal. 
 
 Below is an example of  giving a character an accent with TRAITS:  
 ```
@@ -363,11 +497,11 @@ QUOTES FROM ZACK:
 "The waves, the wind and the sky, zey are all one like you and I, man."
 "I hope dat you don't mind some reggae music, man."
 ```
-To do categories: ADJ, GRAM, MODIF
+To do categories: `ADJ`, `GRAM`, `MODIF`
 
 
 ### Personality Keywords
-Character behaviors and personalities deserve their own category. One of the biggest goals of WI is getting the AI to remember `how` a character is and output their behavior consistently. To this end we need behavioral keywords. This section is entirely dedicated to personality-related keywords that the community has either discovered to work exceptionally well towards certain ends or keywords that are disappointingly weak.
+Character behaviors and personalities deserve their own category. One of the biggest goals of WI is getting the AI to remember **how** a character is and output their behavior consistently. To this end we need behavioral keywords. This section is entirely dedicated to personality-related keywords that the community has either discovered to work exceptionally well towards certain ends or keywords that are disappointingly weak.
 
 For category-based formatting `MENTAL:` used to be the most commonly used keyword for listing out a character's mentality, personality and behavior. Recently we found `MIND:` works better towards this end in all aspects while also being a shorter word.
 
@@ -375,27 +509,31 @@ First we mention the special cases that you may want to avoid due to tokenizatio
 
 Long and growing list of behavioral keywords is provided in no particular order. There are too many to list, these are just some common useful ones as well as some commonly tried keywords you might want to avoid. The basis of a good personality trait is something strong and focused the AI has a strong unique association for. Broad words like good or evil aren't very useful, when the behavior is what we are after. 
 
+#### Bad guy / `evil` / `cruel` / `sadistic`
 `cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely it turns them into otaku figurine collectors.
 
 Continuing with the bad guy theme the seven sins all work. `glutton(ous), lust(ful), greedy/avaritious, envious, slothful, proud` all work. Wrath is the exception and doesn't produce satisfying results, but can easily be replaced with `angry&cruel`. Based on research with the angriest wizard that ever lived, anger related tags especially `the angriest` are effective.
 
+#### Paladin / lawful good
 `chivalric, just, benevolent` work for creating paladin- or white knight types. These may be combined with more morally ambiguous or gray traits like `sour` to create a character that isn't as pristine or stereotypically lawful good. According to Zaltys using a combination of `MIND:chivalric&noble just knightly` might even make these behavioral traits too strong for some tastes.
 
+#### Manly / `serious`
 Then there's `stoic, serious, calm` for more brooding or detached traditionally masculine types. Of course these may be used just as well to create a dour experienced femme. `professional` creates the polite valet/waiter-type character. This would be good for a lawful evil type character too.
 
 `horny, stoic, apathetic, wry, clever, witty, addicted` all do exactly what you'd expect out of them, they work good. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended effect. `judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character. 
 
-Other assorted useful traits include `timid, selfconscious, polite, friendly, seductive, arrogant, oblivious, dumb, dry, cynical, motherly&generous` each doing exactly what you'd expect. Motherly is best combined tightly with a word like generous, because it has a higher chance of turning the character into an actual or expecting mother.
+#### Other assorted useful traits
+include `timid, selfconscious, polite, friendly, seductive, arrogant, oblivious, dumb, dry, cynical, motherly&generous` each doing exactly what you'd expect. `motherly` is best combined tightly with a word like `generous`, because it has a higher chance of turning the character into an actual or expecting mother.
 
 The combination of `anxious, nervous` with `SUMM: "h-he...llo"` is very interesting, it's one of the cutest and most appealing ways of creating a timid character that stutters a lot in dialogue. 
 
-Below is an example of AID taking a large selection of MIND keywords and producing something very interesting out of them:
+Below is an example of AID taking a large selection of `MIND` keywords and producing something very interesting out of them:
 ```
 Zak:[Human male. MIND<Zak>:secretive/dangerous/manipulative/stoic/callous/servile/polite.]
 Zak is a middle-age, balding man with brown hair and dark eyes. He wears a black overcoat and small, wire-rimmed glasses. He is of average height and build.
 Zak has a very serious look on his face most of the time and he rarely, if ever, smiles. His eyes are constantly darting around, as if he mistrusts everything and everyone. Despite his serious demeanor, he is very polite, although in a very formal, stoic way. He always speaks in a very respectful tone, even to those who are not as educated as he is or when talking about something distasteful.
 ```
-You can also consult the Author's Note research justpaste.it for more tips. Some of the keywords tailor the AI's output too much as a note, but work great as personality traits.
+You can also consult the [Author's Note research justpaste.it](#reminder) for more tips. Some of the keywords tailor the AI's output too much as a note, but work great as personality traits.
 
 
 ### Monky Formatting
@@ -497,7 +635,7 @@ LACK(Rick):anyshoes;
 MENTAL(Rick):furious, loud, irritated, unstable, complaining;
 HOBBIES(Rick):shoutingatkids, breakingwands, misusingmagic.]
 ```
-Smashing words together is efficient but there is ALWAYS a risk of the AI misinterpreting the words depending on tokenization when you try this. For example `catears` gets tokenized as ca|tear|s. One caveat of the format birb used is high token use. A "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If you encounter the AI shortening names excessively while using Caveman, you can start each newline with an empty whitespace ` ` to change how the name tokenizes. For example `Vladimir` tokenizes as V|lad|imir but ` Vladimir` is all a single token.
+Smashing words together is efficient but there is **ALWAYS** a risk of the AI misinterpreting the words depending on tokenization when you try this. For example `catears` gets tokenized as ca|tear|s. One caveat of the format birb used is high token use. A "worst case scenario" WI that used many Japanese words and symbols produced 387 characters, 160 tokens so 2.42 ch/tk. Smashed words may be used with any format even Caveman (potentially leading to the greatest character and token savings). If you encounter the AI shortening names excessively while using Caveman, you can start each newline with an empty whitespace ` ` to change how the name tokenizes. For example `Vladimir` tokenizes as V|lad|imir but ` Vladimir` is all a single token.
 
 During testing we discovered characters can be forced to wear certain outfits with complete consistency. This format needs at least 2 WI the character being dressed and the custom outfit. This theory could be applied for customizing the appearance of any object in your game world. Example.
 ```
@@ -548,7 +686,7 @@ Notice also the use of unicode symbols. GPT-3 and AID does understand them even 
 ### Misc Tips
 Thanks to scripting we can insert lines anywhere in context(history) now. One of the earlier implementations of this was Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the original script) `EN behaves more like tool tips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily with the key: `.#[p=3]` and the entry containing whatever you want to insert 3 lines in front of your next action.
 
-After we discovered that GPT-3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside APPEAR was an effective way of making making the AI realize some character lag legs, but better alternatives have been worked out like ¬legs `¬` being the unicode symbol for negation. It's also easier on tokens than the middle dot. The conjunction symbol `∧` is great for separating traits, but keeping them associated with the same origin. The equivalent symbol `⇔` is great for making the AI understand that an entity or name is equivalent to another another entity or even a group of traits.
+After we discovered that GPT-3 got updated to better handle numbers methods have been developed to utilize this inside WI. Right now the most interesting trick is using the unicode multiplication symbol `⋅`. Putting `0 ⋅ legs` inside `APPEAR` was an effective way of making making the AI realize some character lag legs, but better alternatives have been worked out like ¬legs `¬` being the unicode symbol for negation. It's also easier on tokens than the middle dot. The conjunction symbol `∧` is great for separating traits, but keeping them associated with the same origin. The equivalent symbol `⇔` is great for making the AI understand that an entity or name is equivalent to another another entity or even a group of traits.
 
 The biggest and most thorough testing on symbols has been done by Monky and he has provided us with two documents for Griffin and Dragon he calls the CODEX_SIGNUM. We also have a second document for miscellaneous messy research including goodies like enforcing mute characters or writing logic expressions in AID. These and many other useful user-provided documents can be found in the docs section:
 https://github.com/valahraban/AID-World-Info-research-sheet/tree/main/docs/
@@ -641,7 +779,7 @@ This section covers methods WI enthusiasts have used in the past but are no long
 
 Title: `TRAITS:` category  
 Updated 1 Feb 2021:  
-Important enough to warrant an entry of its own. Citation from Zaltys since he popularized TRAITS in the first place: "I honestly can't think of any use for TRAITS now that we have SUMM. SUMM does the exact same job better." birb believes we may have an unknown use for traits and that people can use it if they desire, but most category users we talk to nowadays prefer SUMM.
+Important enough to warrant an entry of its own. Citation from Zaltys since he popularized `TRAITS` in the first place: "I honestly can't think of any use for `TRAITS` now that we have `SUMM`. `SUMM` does the exact same job better." birb believes we may have an unknown use for traits and that people can use it if they desire, but most category users we talk to nowadays prefer `SUMM`.
 
 Title: Old style heavy encapsulation and categories  
 Created before 14 Dec 2020, deprecated shortly afterwards  
