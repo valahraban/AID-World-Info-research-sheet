@@ -215,43 +215,43 @@ Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"]
 ```
 <details>
   <summary>Spoiler: Expanded version</summary>
-The same entry, with tab indents (don't put it into WI entry, it's here just for readability):
-```
-json
-[{
-	"You": {
-		"name": "Anon", 
-		"age": 24, 
-		"gender": "male", 
-		"species": [
-			"human", 
-			"man"
-		], 
-		"eyes": {
-			"eye-color": "brown"
-		}, 
-		"hair": {
-			"hair-color": "dark brown", 
-			"hair-length": "intermediate", 
-			"hair-style": "spiky"
-		}, 
-		"relationships": {
-			"orphan": "no relatives"
-		}, 
-		"body": {
-			"physique": "average", 
-			"height": "average-178cm", 
-			"weight": "average-80kg"
-		}, 
-		"personality": [
-			"sarcastic", 
-			"friendly", 
-			"wishes he had a gf", 
-			"plays AI dungeon"
-		]
-	}
-}]
-```
+  The same entry, with tab indents (don't put it into WI entry, it's here just for readability):
+  ```
+  json
+  [{
+  	"You": {
+  		"name": "Anon", 
+  		"age": 24, 
+  		"gender": "male", 
+  		"species": [
+  			"human", 
+  			"man"
+  		], 
+  		"eyes": {
+  			"eye-color": "brown"
+  		}, 
+  		"hair": {
+  			"hair-color": "dark brown", 
+  			"hair-length": "intermediate", 
+  			"hair-style": "spiky"
+  		}, 
+  		"relationships": {
+  			"orphan": "no relatives"
+  		}, 
+  		"body": {
+  			"physique": "average", 
+  			"height": "average-178cm", 
+  			"weight": "average-80kg"
+  		}, 
+  		"personality": [
+  			"sarcastic", 
+  			"friendly", 
+  			"wishes he had a gf", 
+  			"plays AI dungeon"
+  		]
+  	}
+  }]
+  ```
 </details>
 
 The many things we have learned about using JSON inside WI can be summarized with the following list:
