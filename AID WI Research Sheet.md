@@ -213,7 +213,8 @@ WI can be exported and imported out of AID as JSON files. What we discuss here i
 keys: AKA: you,Anon
 Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"],"eyes":{"eye-color":"brown"},"hair":{"hair-color":"dark brown","hair-length":"intermediate","hair-style":"spiky"},"relationships":{"orphan":"no relatives"},"body":{"physique":"average","height":"average-178cm","weight":"average-80kg"},"personality":["sarcastic","friendly","wishes he had a gf","plays AI dungeon"]}}]
 ```
-
+<details>
+  <summary>Spoiler: Expanded version</summary>
 The same entry, with tab indents (don't put it into WI entry, it's here just for readability):
 ```json
 [{
@@ -250,6 +251,8 @@ The same entry, with tab indents (don't put it into WI entry, it's here just for
 	}
 }]
 ```
+</details>
+
 The many things we have learned about using JSON inside WI can be summarized with the following list:
 + Super consistent, the AI understands it well and tends to stick on point with it
 + Simple syntax, making it easier to produce for non-native English speakers
@@ -870,7 +873,7 @@ Why write all this world info if we can't utilize them? Here are some interestin
 - This scene had the following effects on you for the following reasons:
 - Detailed/Verbose/Poetic Description ():
 - P.S./P.S.A.
-- TL;DR: (or Too long didn't read:)
+- TL;DR: or Too long didn't read:
 
 
 ## Ending Notes
@@ -881,4 +884,7 @@ https://guide.aidg.club
 
 Remember that Anonymous imageboards aren't known for vetting or quality control. Not all the guides are written to the same standards or measures of decency. If a guide is written by a biased prick who is clearly too lazy to test all known methods, you can always just stop reading the guide mine included.
 
-CREDITS: Everyone whose name has been mentioned here, the many AID related communities and the author for compiling this. Everyone who shares their experiments and results online. Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links. 2021 is a wild year. See You Space Cowboy.
+CREDITS: Everyone whose name has been mentioned here and the many AID related communities. Everyone who shares their experiments and results online.  
+birb/valahraban for starting this project, CoomerDeveloper for help with aidg and rentry, Lex-DRL for his fork and back-merges  
+Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links.  
+2021 is a wild year. I hope you survive. See You Space Cowboy.
