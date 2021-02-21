@@ -413,10 +413,12 @@ Let's discuss `TRAITS` and `SUMMARY` first. Due to Zaltys popularized use of cat
 
 Users of the world-info channel have been playing around with `SUMMARY` or `SUMM` for short since it was discovered and found it works near identically to `TRAITS`, except it feels even more versatile. You can put pretty much anything in it that'd fit in a character 'summary' and it combines great with other categories, even referencing them without causing leakage. Since they achieve the same thing, but `SUMM` is preferred by everyone we've talked to so far it is the recommendation for a universal swiss army knife category.
 
+Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
+
 #### `MENTAL`
 is the category that was in popular use for mental, personality and behavioral traits. `MIND` achieves the same goal more effectively while using less space so `MIND` is recommended for behavioral traits now. Consult the [Personality Keywords](#personality-keywords) segment for more information on behavior.
 
-The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with `TRAITS`, the AI treated `cool` as the nature of a thing. Entities with the `TRAIT` `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside `MENTAL` or `MIND`. This may be the case for other words like `hotheaded` that the AI could take too literally. Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
+The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with `TRAITS`, the AI treated `cool` as the nature of a thing. Entities with the `TRAIT` `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside `MENTAL` or `MIND`. This may be the case for other words like `hotheaded` that the AI could take too literally.
 
 #### `APPEAR:`
 is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
