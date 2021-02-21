@@ -216,7 +216,8 @@ Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"]
 <details>
   <summary>Spoiler: Expanded version</summary>
 The same entry, with tab indents (don't put it into WI entry, it's here just for readability):
-```json
+```
+json
 [{
 	"You": {
 		"name": "Anon", 
