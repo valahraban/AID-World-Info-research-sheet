@@ -25,6 +25,10 @@
       + [DETAIL](#detail)
       + [More on SUMMARY](#more-on-summary)
 	+ [Personality keywords](#personality-keywords)
+	  + [Bad guy / evil / cruel / saristic](#bad-guy--evil--cruel--sadistic)
+	  + [Paladin / lawful good](#paladin--lawful-good)
+	  + [Manly / serious](#manly--serious)
+	  + [Other assorted useful traits](#other-assorted-useful-traits)
     + [Monky Formatting](#monky-formatting)
     + [Onyx Formatting Tricks](#onyx-formatting-tricks)
     + [birb research](#birb-research)
@@ -173,7 +177,9 @@ Some users have been experimenting with A/N for doctoring output and specificall
 "Author:" is added when you want to do a convincing real author (combined with "Writing style: literary, author-name.) "Setting:" "Theme:" "Subject:" have their uses, depends on the content. "Title:" works at least on LOTR and "gone with the wind". Didn't test other titles. Famous ones should work. Has to be a real title, "star wars" is not a title, it's a movie franchise. The writing styles, most don't work on Griffin.
 Only the descriptive-branch works on Griffin. "descriptive" works, "narrative" and another one I can't remember (according to Zalty) also works on Griffin.
 ```
-Reminder: while less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or even insert any string they want in a specific part of the context. A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
+
+#### Reminder:
+While less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or even insert any string they want in a specific part of the context. A helpful user is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
  
 
 ## World Info and Formatting
@@ -503,17 +509,21 @@ First we mention the special cases that you may want to avoid due to tokenizatio
 
 Long and growing list of behavioral keywords is provided in no particular order. There are too many to list, these are just some common useful ones as well as some commonly tried keywords you might want to avoid. The basis of a good personality trait is something strong and focused the AI has a strong unique association for. Broad words like good or evil aren't very useful, when the behavior is what we are after. 
 
+#### Bad guy / `evil` / `cruel` / `sadistic`
 `cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely it turns them into otaku figurine collectors.
 
 Continuing with the bad guy theme the seven sins all work. `glutton(ous), lust(ful), greedy/avaritious, envious, slothful, proud` all work. Wrath is the exception and doesn't produce satisfying results, but can easily be replaced with `angry&cruel`. Based on research with the angriest wizard that ever lived, anger related tags especially `the angriest` are effective.
 
+#### Paladin / lawful good
 `chivalric, just, benevolent` work for creating paladin- or white knight types. These may be combined with more morally ambiguous or gray traits like `sour` to create a character that isn't as pristine or stereotypically lawful good. According to Zaltys using a combination of `MIND:chivalric&noble just knightly` might even make these behavioral traits too strong for some tastes.
 
+#### Manly / `serious`
 Then there's `stoic, serious, calm` for more brooding or detached traditionally masculine types. Of course these may be used just as well to create a dour experienced femme. `professional` creates the polite valet/waiter-type character. This would be good for a lawful evil type character too.
 
 `horny, stoic, apathetic, wry, clever, witty, addicted` all do exactly what you'd expect out of them, they work good. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended effect. `judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character. 
 
-Other assorted useful traits include `timid, selfconscious, polite, friendly, seductive, arrogant, oblivious, dumb, dry, cynical, motherly&generous` each doing exactly what you'd expect. Motherly is best combined tightly with a word like generous, because it has a higher chance of turning the character into an actual or expecting mother.
+#### Other assorted useful traits
+include `timid, selfconscious, polite, friendly, seductive, arrogant, oblivious, dumb, dry, cynical, motherly&generous` each doing exactly what you'd expect. `motherly` is best combined tightly with a word like `generous`, because it has a higher chance of turning the character into an actual or expecting mother.
 
 The combination of `anxious, nervous` with `SUMM: "h-he...llo"` is very interesting, it's one of the cutest and most appealing ways of creating a timid character that stutters a lot in dialogue. 
 
@@ -523,7 +533,7 @@ Zak:[Human male. MIND<Zak>:secretive/dangerous/manipulative/stoic/callous/servil
 Zak is a middle-age, balding man with brown hair and dark eyes. He wears a black overcoat and small, wire-rimmed glasses. He is of average height and build.
 Zak has a very serious look on his face most of the time and he rarely, if ever, smiles. His eyes are constantly darting around, as if he mistrusts everything and everyone. Despite his serious demeanor, he is very polite, although in a very formal, stoic way. He always speaks in a very respectful tone, even to those who are not as educated as he is or when talking about something distasteful.
 ```
-You can also consult the Author's Note research justpaste.it for more tips. Some of the keywords tailor the AI's output too much as a note, but work great as personality traits.
+You can also consult the [Author's Note research justpaste.it](#reminder) for more tips. Some of the keywords tailor the AI's output too much as a note, but work great as personality traits.
 
 
 ### Monky Formatting
