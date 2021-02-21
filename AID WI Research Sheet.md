@@ -304,30 +304,89 @@ Problematic categories (avoid or use with caution):
 ```
 BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superseded), STATE/STATUS(superceded, multiple meanings)
 ```
+
+Here's a table of the same categories (see below why some alternatives are undesired).
+The categories marked with *`ITALIC`* aren't exactly perfect for all cases (again, see below: it might be better, worse and even both).
+
+
+| Yes | Alt./Short | No/Superseded | Comment |
+| --- | --- | --- | --- |
+| [SUMMARY](#traits-and-summary) | `SUMM` | `TRAITS` | Swiss army knife category, for anything that doesn't have it's own cat. [See also this](#more-on-summary) about summary. |
+| [MIND](#mental) |  | `MENTAL` |  |
+| [APPEAR](#appear) | `APPE`<br>*`PHYSIQ`, `FORMS`* | `BODY`, `LOOKS` |  |
+| [WORN](#worn) | `WEAR`<br>*`CLOTHES`, `CLOTHING`, `DRESS`, `COSTUME`* | `OUTFIT`, `SUIT`, `ATTIRE`, `WARDROBE` |  |
+| [DESC](#desc) |  |  | for something that is a part of appearance but it's functionality is more important than the looks |
+| [SEE](#see) |  |  | used to describe how a character perceives the world |
+| *[LIMIT](#lack)* | *`LACK`* |  |  |
+| [COND](#cond) |  | *[STATE / STATUS](#status)* | status condition like `PSN` / `PRLZ` from Pokemon |
+| [DIET](#diet) |  |  |  |
+| [LOOT](#loot) |  |  | what `INV` items can be dropped when a creature is defeated |
+| [DETA](#detail) | `DETAIL` |  |  |
+| INV |  |  |  |
+| EQUIP |  |  |  |
+| LIKES |  |  |  |
+| HATE |  |  |  |
+| RELATIONS |  |  |  |
+| FRIENDS |  |  |  |
+| ENEMIES |  |  |  |
+| TALENTS |  |  |  |
+| HOBBIES |  |  |  |
+| POWERS |  |  |  |
+| THEME |  |  |  |
+| ORIGIN |  |  | for series/titles |
+| ATMOSPHERE |  |  |  |
+| TONE |  |  |  |
+| MOOD |  |  |  |
+| CLIMATE |  |  |  |
+| GEOGRAPHY |  |  |  |
+| FEATURES |  |  | for locations |
+| EXIT |  |  | for rooms |
+| CITIZENS |  |  |  |
+| CENSUS |  |  |  |
+| PASSION |  |  |  |
+| BONDS |  |  |  |
+| ALIGNMENT |  |  |  |
+| EFFEC |  |  | for objects and entities, used to add magic or science effects |
+| BIOME |  |  |  |
+| FLORA |  |  | must match the biome |
+| CREATE |  |  |  |
+| FACTS |  |  |  |
+| BANNED |  |  | forbidden behavior |
+
+
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: `APPE`, `MENT`, `RAITS`, `SUMM`, `CLIM`, `GEO`/`GEOGR`, `CITIZ`, `PERSONA`, `ALIGN`, `BANN`. Sometimes the shorthand might be preferred such as `CONDITION` vs `COND`.
 
+#### `TRAITS` and `SUMMARY`
 Let's discuss `TRAITS` and `SUMMARY` first. Due to Zaltys popularized use of categories, `TRAITS` was used as a universal category for a long time. The exact effect of `TRAITS` is unknown, but it possible to throw essentially any intrinsic characteristic trait inside it and have the AI respect it. It's still a good category for characteristics lacking specific category, but testing of WI has since continued. 
 
 Users of the world-info channel have been playing around with `SUMMARY` or `SUMM` for short since it was discovered and found it works near identically to `TRAITS`, except it feels even more versatile. You can put pretty much anything in it that'd fit in a character 'summary' and it combines great with other categories, even referencing them without causing leakage. Since they achieve the same thing, but `SUMM` is preferred by everyone we've talked to so far it is the recommendation for a universal swiss army knife category.
 
-`MENTAL` is the category that was in popular use for mental, personality and behavioral traits. `MIND` achieves the same goal more effectively while using less space so `MIND` is recommended for behavioral traits now. Consult the personality keywords segment for more information on behavior.
+#### `MENTAL`
+is the category that was in popular use for mental, personality and behavioral traits. `MIND` achieves the same goal more effectively while using less space so `MIND` is recommended for behavioral traits now. Consult the [Personality Keywords](#personality-keywords) segment for more information on behavior.
 
 The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with `TRAITS`, the AI treated `cool` as the nature of a thing. Entities with the `TRAIT` `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside `MENTAL` or `MIND`. This may be the case for other words like `hotheaded` that the AI could take too literally. Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
 
-`APPEAR:` is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
+#### `APPEAR:`
+is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
 
-`WORN:` is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
+#### `WORN:`
+is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
 https://files.catbox.moe/0ur88f.PNG
 
-`DESC:` sees some use. It relates to the physical functionality of an entity and may be more useful than `APPEAR:` for specific cases where the functionality is more important than the looks of a thing. `DESC:` might as well as be used for describing the functional limbs of a huge insect or to describe the mechanisms and staff inside a spaceship. Testing from many enthusiasts also suggests that with `DESC:` and optionally prose descriptions at the front, the AI recognizes and uses other categories better.
+#### `DESC:`
+sees some use. It relates to the physical functionality of an entity and may be more useful than `APPEAR:` for specific cases where the functionality is more important than the looks of a thing. `DESC:` might as well as be used for describing the functional limbs of a huge insect or to describe the mechanisms and staff inside a spaceship. Testing from many enthusiasts also suggests that with `DESC:` and optionally prose descriptions at the front, the AI recognizes and uses other categories better.
 
-`SEE:` is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need SUMM. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACK:eyes;SEE:blind;` has produced the most consistent Zaltys formatting blind characters. Research continues into creating mutes (now featured in a separate miscellaneous doc).
+#### `SEE:`
+is the most interesting sense specified as a category. Using it you can get characters to do interesting things like 'see' the world through vibrations. Using sounds in SEE does interesting things, but doesn't produce synesthesia consistently, for that you need `SUMM`. Other senses have been tried, but haven't demonstrated impressive results. Combining `LACK:eyes;SEE:blind;` has produced the most consistent Zaltys formatting blind characters. Research continues into creating mutes (now featured in a separate miscellaneous doc).
 
-`LACK:` is a category that has often been used to denote something is missing with mediocre results. `LIMIT:` has proven more powerful for this use with some caveats. `LIMIT:` seems to get treated like a mathematical term and denotes a discrete limit for something. `LIMIT: zero_arms` could be used to key the AI on the fact the character has zero arms while you could just as easily use the category to convince the AI the character is supposed to have `LIMIT: four_arms`. `LIMIT:` doesn't work for hard-to-quantify things like attributes (or the amount of) associated with things like `skin`.
+#### `LACK:`
+is a category that has often been used to denote something is missing with mediocre results. `LIMIT:` has proven more powerful for this use with some caveats. `LIMIT:` seems to get treated like a mathematical term and denotes a discrete limit for something. `LIMIT: zero_arms` could be used to key the AI on the fact the character has zero arms while you could just as easily use the category to convince the AI the character is supposed to have `LIMIT: four_arms`. `LIMIT:` doesn't work for hard-to-quantify things like attributes (or the amount of) associated with things like `skin`.
 
-`STATUS:` doesn't necessarily work as expected. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon. Still it's not a completely consistent category for this purpose despite the interesting results. 
+#### `STATUS:`
+doesn't necessarily work as expected. It has a decent association with things like `STATUS:broken leg` or other conditions you'd generally see in RPGs or CYOAs. But it can also be used to associate a character with something. `STATUS: from Pokemon` makes the AI often mention the character is somehow associated with the world of Pokemon. Still it's not a completely consistent category for this purpose despite the interesting results. 
 
-`COND:` is much more interesting and powerful for actually having characters suffer from conditions or status effects. It has been tested working with injuries and other debilitations. It even works with game and Pokemon status conditions like PSN or PRLZ.
+#### `COND:`
+is much more interesting and powerful for actually having characters suffer from conditions or status effects. It has been tested working with injuries and other debilitations. It even works with game and Pokemon status conditions like `PSN` or `PRLZ`.
 ```
 COND:sick/dying/poisoned
 "I'm... not sure what help I'll be, sir. I'm dying. I was poisoned by a snake in the garden."
@@ -335,13 +394,17 @@ COND:PRLZ
 "I cannot. I am paralyzed from the waist down."
 ```
 
-`DIET:` can be used to make unusual things like herbivorous snakes. It's a powerful category, because AID has a lot of training data on snakes being carnivores.
+#### `DIET:`
+can be used to make unusual things like herbivorous snakes. It's a powerful category, because AID has a lot of training data on snakes being carnivores.
 
-`LOOT:` works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
+#### `LOOT:`
+works wonderfully for monster hunting or fighting scenarios, very often giving the listed item(s) after the creature in question dies. This could be combined with the probability bots that the devs of AID are working on.
 
-`DETAIL:` shortened to `DETA:` works fine with just about anything related to details, but it's unknown how this is different from summary.
+#### `DETAIL:`
+shortened to `DETA:` works fine with just about anything related to details, but it's unknown how this is different from summary.
 
-`SUMMARY:` has already been pointed out as a strong and versatile category for defining points of interest you want described consistently. It can even reference previously used categories, meaning it has abilities the older `TRAITS:` lacked. Impressive examples below:
+#### More on `SUMMARY:`
+has already been pointed out as a strong and versatile category for defining points of interest you want described consistently. It can even reference previously used categories, meaning it has abilities the older `TRAITS:` lacked. Impressive examples below:
 ```
 SUMMARY:Jamaican/grew up on streets, Output:
 He grew up in Jamaica with his rich parents. When he was 16, he was on vacation in Hawaii and decided to stay there when his parents left without him. He learned how to surf and just bummed around the island for a while. He eventually ran out of money, so he started working at a surf shop and selling some of his paintings on the side.
