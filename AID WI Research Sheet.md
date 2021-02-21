@@ -207,6 +207,43 @@ WI can be exported and imported out of AID as JSON files. What we discuss here i
 keys: AKA: you,Anon
 Entry: [{"You":{"name":"Anon","age":24,"gender":"male","species":["human","man"],"eyes":{"eye-color":"brown"},"hair":{"hair-color":"dark brown","hair-length":"intermediate","hair-style":"spiky"},"relationships":{"orphan":"no relatives"},"body":{"physique":"average","height":"average-178cm","weight":"average-80kg"},"personality":["sarcastic","friendly","wishes he had a gf","plays AI dungeon"]}}]
 ```
+
+The same entry, with tab indents (don't put it into WI entry, it's here just for readability):
+```json
+[{
+	"You": {
+		"name": "Anon", 
+		"age": 24, 
+		"gender": "male", 
+		"species": [
+			"human", 
+			"man"
+		], 
+		"eyes": {
+			"eye-color": "brown"
+		}, 
+		"hair": {
+			"hair-color": "dark brown", 
+			"hair-length": "intermediate", 
+			"hair-style": "spiky"
+		}, 
+		"relationships": {
+			"orphan": "no relatives"
+		}, 
+		"body": {
+			"physique": "average", 
+			"height": "average-178cm", 
+			"weight": "average-80kg"
+		}, 
+		"personality": [
+			"sarcastic", 
+			"friendly", 
+			"wishes he had a gf", 
+			"plays AI dungeon"
+		]
+	}
+}]
+```
 The many things we have learned about using JSON inside WI can be summarized with the following list:
 + Super consistent, the AI understands it well and tends to stick on point with it
 + Simple syntax, making it easier to produce for non-native English speakers
