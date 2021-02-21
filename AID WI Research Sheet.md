@@ -389,21 +389,21 @@ The categories marked with *`ITALIC`* aren't exactly perfect for all cases (agai
 | ATMOSPHERE |  |  |  |
 | TONE |  |  |  |
 | MOOD |  |  |  |
-| CLIMATE |  |  |  |
-| GEOGRAPHY |  |  |  |
+| CLIMATE | `CLIM` |  |  |
+| GEOGRAPHY | `GEO`, `GEOGR` |  |  |
 | FEATURES |  |  | for locations |
 | EXIT |  |  | for rooms |
-| CITIZENS |  |  |  |
+| CITIZENS | `CITIZ` |  |  |
 | CENSUS |  |  |  |
 | PASSION |  |  |  |
 | BONDS |  |  |  |
-| ALIGNMENT |  |  |  |
+| ALIGNMENT | `ALIGN` |  |  |
 | EFFEC |  |  | for objects and entities, used to add magic or science effects |
 | BIOME |  |  |  |
 | FLORA |  |  | must match the biome |
 | CREATE |  |  |  |
 | FACTS |  |  |  |
-| BANNED |  |  | forbidden behavior |
+| BANNED | `BANN` |  | forbidden behavior |
 
 
 Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: `APPE`, `MENT`, `RAITS`, `SUMM`, `CLIM`, `GEO`/`GEOGR`, `CITIZ`, `PERSONA`, `ALIGN`, `BANN`. Sometimes the shorthand might be preferred such as `CONDITION` vs `COND`.
