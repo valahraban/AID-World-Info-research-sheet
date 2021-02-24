@@ -49,9 +49,9 @@ If this doesn't help you, I can't help you. This is the complete standard workfl
 5. Manually edit your whitelist or do `/set _whitelist. character,worn,mental`. Every time you edit white whitelist this way you must set every desired object. Alternatively you can `/whitelist word` one at a time to either add the word to the whitelist or remove it if its included already. Objects/traits must be whitelisted to automatically trigger.
 6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)|(secrets?).*(John)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`
 	1. Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.
-7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.  
+7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.
 
-  
+
 ## Complete beginner's guide to getting started
 First consider if you even need or want the script. Every little bit of the tool is consistently formed around it's designed purpose - to dynamically and with relatively low effort manage your WI on the fly through your input field. As long as you have good memory and have understood how regexp works you can easily manage all your WI related data structures from the input field. Its designed to be object-oriented for the purpose of being pseudo-dynamic. If you use a lot of WI and you tweak them often EWIJSON is perfect for you, if this isn't you, you might even prefer using regular old WI. While it can't automatically change the objects for now, you can change any object whenever you want and get immediately changed results from the output. 
 
@@ -102,12 +102,27 @@ You have a hairy secret
 What the heck happened there? We exploited EWIJSON's design on how the trailing attribute and JSON-object default positioning works. By default, they get placed above the inputs with the keys that trigger the WI. This is true even with the [t=1] position, but it gives the associated WI less priority putting it behind the others or trailing it 1 action back. The default JSON-objects go where they're supposed to. The default trailing [t=0] makes the secret trail 0 actions back or right above the key mentioning it. Now as long as the AI is behaving well, it might output how your slick brown hair is actually a fake wig. This example was chosen for being easy to understand and is not a recommendation on what WI to use in practice.  
 
 
+## EWIJSON Exploits
+Using the power of EWIJSON, regex and understanding the memory load, it is entirely possible to 'hack' AID to do things previously thought impossible. This includes breaking past the dreaded Levenshtein limit. The following is a trick birb developed together with Mr.Accountant who did most of the testing to get it working. The idea is to push the entire old context out and replace it whatever you desire to completely wipe the memory of the AI and replace it with anything. This way you can summarize the story in the middle of your adventure without restarting or having to worry about exporting WIs. The result might as well as be called lobotomizing or brainwashing the AI.
+
+First you must replace your Remember Pin. You are actually allowed to go over the "1000 character limit". Make it as long as you can, ideally near 1432 but longer than 1336. Then write or import entries with your 'reset#[t]' keyword using the #[t] attribute. An EWI using the [t] attribute is loaded in story Context, so it doesn't count to the world info limit and with a full back memory doesn't trigger the 85% context limit because only 50% is being changed. So the first half, you write inside Remember. The second half is contained in the keyword(s) fed into the AI in order. Testing this yourself, you will find that you can replace the entire LMI with whatever you want.
+
+This is the flashforward, the flashback, King Crimson, Gold Experience Requiem, whatever meme superpower you want to call it.
+
+Mr.Accountant's writeup on how to do to the patented (Zynj and friends) Context Nuke:  
+1. Remember at 1432 characters. Don't pay attention to the 1000 limit, its only a suggestion now.  [m] should work if you load it before the world entries.
+2. Have EWIJSON so you can control when this thing dissipates with the [l] attribute.
+3. You need around 1300 characters in the frontMemory (Where you see your story). 
+4. Have 1300 character in world entries hooked to to a VERY specific keyword that only can trigger. They need to be hooked to [t].
+5. Watch as the context becomes whatever you want.
+
+
 ## Understanding EWI Attributes
 Here we provide the reader with short, sweet and easy to understand metaphors for every major EWI attribute as of writing compliments to Mr.Accountant. You should check out the wiki to see each attribute and examples of their use. The metaphors may give some readers a more common sense understanding though.
 
 Let's get on with the (very) informal EWIJSON attribute school:  
 [d] = "I am going to insert this shit right before I find the key match. So your sword now become a stupid-ass sword."  
-[l] = "How long before your entry gets bounced. [l=1] means bye bye next turn and your entry is removed from context."  
+[l] = "How long before your entry gets bounced. [l=1] means bye bye next turn and your entry is removed from context. [l=-2] means the WI has to wait in line for 2 turns before being let in."  
 [p] = "The Karen of the attributes, rude as heck, barges in exactly where it wants to go. If p says it wants to be three lines from the last input, that's where it's going."  
 [m] = "[m] however is chill, tells the world entry to hang out at the remember's position in context."  
 [t] = "[t] is that obxionous fan that follows you EVERYWHERE. When your name is mention, they are always right behind you or behind a bush. Imagine if your name was said [t] would be right behind you, or if you put a restraining order of [t=3] then he will be three steps behind the last mention of your name"  
