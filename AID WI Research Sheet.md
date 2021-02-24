@@ -294,8 +294,8 @@ Mike Haggar:[Human<male, 202cm, 140kg>. APPEAR<Haggar>:Stocky, muscular, big arm
 - This format must have a . near the end to work correctly. Do not use extra periods within categories, not even in quotes.
 - Avoid using -s. (Jan 2021 change.)
 - Including the name (inside `<>`) after the categories helps Griffin parse the entry.
-- Categories must be typed in UPPER CAPS, with the exact spelling. APPE and SUMM can be used as abbreviations, most other abbreviations do not work properly.
-- Other useful categories include MOV (for movement-types, such as 'slithering'), GRAB (for object manipulation, such as 'talons', 'beak', or 'coiling').
+- Categories must be typed in UPPER CAPS, with the exact spelling. `APPE` and `SUMM` can be used as abbreviations, most other abbreviations do not work properly.
+- Other useful categories include `MOV` (for movement-types, such as 'slithering'), `GRAB` (for object manipulation, such as 'talons', 'beak', or 'coiling').
 - If you need to add age, use age\<num\> in same section as weight/height. Ages get more unreliable after 20s, I recommend rounding them to nearest five-dividable age (30, 35, 40, etc.)
 - All of it goes into single WI entry with no line breaks, under a keyword such as `haggar`.
 
@@ -757,6 +757,20 @@ Xaxas is a world of peace and prosperity. It is a land in which all races live t
 You are Jessica, a female human mage from the northern human nation of Waterdeep. You've come to Uruk to meet your boyfriend, Elminster, who previously taught you magic in Waterdeep. You've been secretly practising magic in your spare time and have recently come to the conclusion that you want to dedicate your life to becoming a great mage and opening a school of magic in Waterdeep.
 ```
 Based on Alexander's experiences, the author can cautiously suggest that every keyword trick we've discovered should work with the `Name:` field, affecting how your World is generated. All WI provided with a World stay the same for every play-through though. 
+
+Alexander has continued discovering and developing more methods to manipulate Worlds. To illustrate examples of these, pictures will be included. The following are for the recently released Custom Worlds feature. It is recommend to also consult the AIDiscord wiki once they have an article on the topic.
+
+If you don't want your character to have a class, create a completely empty WI. This can be picked in lieu of the included or user-defined classes.  
+https://files.catbox.moe/wviadt.jpeg
+
+If you want to have a miscellaneous world info for your World that doesn't appear on Character Creation window, you can create a kocation WI and then assign it to a Faction that doesn't exist. These are all WIs and have no difference in function, they are just grouped differently in the world creation interface.  
+https://files.catbox.moe/m19cns.jpeg
+
+You can use JSON (or any formatting) in the Genre box but they aren't reliable and you'll probably need to increase the number of characters (default 50) manually. The field says Genre, but all options from Zalty's writing style paste work. For example, Alexander put in Genre field for a generation:  
+`[{"NAME":"Nolanis","TRAITS":["cold","dark","magic"],"INHABITANTS":["liches","minotaurs"]}]` https://files.catbox.moe/yhqs6j.jpeg
+
+Manually editing maxlength in your browser also allows you to go past 2000 character limit for Scenario prompts. Finding the right attribut should work for any prompt. Use this sparingly and remember your context is limited to 2772 characters and your WI stack is limited to 1336 characters.  
+https://files.catbox.moe/248vlw.jpg
 
 
 ## Other Scenarios and Scripts
