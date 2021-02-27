@@ -1,6 +1,6 @@
 # AI Dungeon World Info Research and Reference
 - [AI Dungeon World Info Research and Reference](#ai-dungeon-world-info-research-and-reference)
-  * [Preamble](#preamble)
+  * [Preface](#preface)
   * [Recommendations or the TLDR](#recommendations-or-the-tldr)
   * [Remember WorldInfo AuthorsNotes Worlds and how the game handles them](#remember-worldinfo-authorsnotes-worlds-and-how-the-game-handles-them)
   * [Griffin vs Dragon](#griffin-vs-dragon)
