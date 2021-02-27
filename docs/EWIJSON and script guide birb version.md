@@ -1,7 +1,7 @@
 # EWIJSON and Script Guide
 
 
-## Preamble
+## Preface
 This guide focuses on Zynj's AI Dungeon script EWIJSON and primarily on using it for manipulating World Info and the context. This guide is intended to motivate someone more dedicated to write an advanced guide on how to better utilize it's many useful features. This guide works as an introductory bootcamp to get you started. It is assumed that you've already read most of the AID research sheet and understand how most of AID's context works. To recap:
 ```
 - Max. input character length: 2772
@@ -102,21 +102,6 @@ You have a hairy secret
 What the heck happened there? We exploited EWIJSON's design on how the trailing attribute and JSON-object default positioning works. By default, they get placed above the inputs with the keys that trigger the WI. This is true even with the [t=1] position, but it gives the associated WI less priority putting it behind the others or trailing it 1 action back. The default JSON-objects go where they're supposed to. The default trailing [t=0] makes the secret trail 0 actions back or right above the key mentioning it. Now as long as the AI is behaving well, it might output how your slick brown hair is actually a fake wig. This example was chosen for being easy to understand and is not a recommendation on what WI to use in practice.  
 
 
-## EWIJSON Exploits
-Using the power of EWIJSON, regex and understanding the memory load, it is entirely possible to 'hack' AID to do things previously thought impossible. This includes breaking past the dreaded Levenshtein limit. The following is a trick birb developed together with Mr.Accountant who did most of the testing to get it working. The idea is to push the entire old context out and replace it whatever you desire to completely wipe the memory of the AI and replace it with anything. This way you can summarize the story in the middle of your adventure without restarting or having to worry about exporting WIs. The result might as well as be called lobotomizing or brainwashing the AI.
-
-First you must replace your Remember Pin. You are actually allowed to go over the "1000 character limit". Make it as long as you can, ideally near 1432 but longer than 1336. Then write or import entries with your 'reset#[t]' keyword using the #[t] attribute. An EWI using the [t] attribute is loaded in story Context, so it doesn't count to the world info limit and with a full back memory doesn't trigger the 85% context limit because only 50% is being changed. So the first half, you write inside Remember. The second half is contained in the keyword(s) fed into the AI in order. Testing this yourself, you will find that you can replace the entire LMI with whatever you want.
-
-This is the flashforward, the flashback, King Crimson, Gold Experience Requiem, whatever meme superpower you want to call it.
-
-Mr.Accountant's writeup on how to do to the patented (Zynj and friends) Context Nuke:  
-1. Remember at 1432 characters. Don't pay attention to the 1000 limit, its only a suggestion now.  [m] should work if you load it before the world entries.
-2. Have EWIJSON so you can control when this thing dissipates with the [l] attribute.
-3. You need around 1300 characters in the frontMemory (Where you see your story). 
-4. Have 1300 character in world entries hooked to to a VERY specific keyword that only can trigger. They need to be hooked to [t].
-5. Watch as the context becomes whatever you want.
-
-
 ## Understanding EWI Attributes
 Here we provide the reader with short, sweet and easy to understand metaphors for every major EWI attribute as of writing compliments to Mr.Accountant. You should check out the wiki to see each attribute and examples of their use. The metaphors may give some readers a more common sense understanding though.
 
@@ -128,6 +113,21 @@ Let's get on with the (very) informal EWIJSON attribute school:
 [t] = "[t] is that obxionous fan that follows you EVERYWHERE. When your name is mention, they are always right behind you or behind a bush. Imagine if your name was said [t] would be right behind you, or if you put a restraining order of [t=3] then he will be three steps behind the last mention of your name"  
 [r] = "Slots! Picks a item from a group of OR conditionals. They need to be identical keys before # or [r] doesn't give a fuck."  
 [x] = "This is the bouncer, world entry doesn't get in until he says enough time has passed. [x=4] means four actions must pass in the adventure before you can get this world entry to fire."
+
+
+## EWIJSON Exploits
+Using the power of EWIJSON, regex and understanding the memory load, it is entirely possible to 'hack' AID to do things previously thought impossible. This includes breaking past the dreaded Levenshtein limit. The following is a trick birb developed together with Mr.Accountant who did most of the testing to get it working. The idea is to push the entire old context out and replace it whatever you desire to completely wipe the memory of the AI and replace it with anything. This way you can summarize the story in the middle of your adventure without restarting or having to worry about exporting WIs. The result might as well as be called lobotomizing or brainwashing the AI.
+
+First you must replace your Remember Pin. You are actually allowed to go over the "1000 character limit". Make it as long as you can, ideally near 1432 but longer than 1336. Then write or import entries with your 'reset#[t]' keyword using the #[t] attribute. An EWI using the [t] attribute is loaded in story Context, so it doesn't count to the world info limit and with a full back memory doesn't trigger the 85% context limit because only 50% is being changed. So the first half, you write inside Remember. The second half is contained in the keyword(s) fed into the AI in order. Testing this yourself, you will find that you can replace the entire LMI with whatever you want.
+
+With an easy to understand reference this is the reality stone from avengers. You flick your fingers while calling the stone and the context becomes whatever you want. Many other memes and pop cultures also apply.
+
+Mr.Accountant's writeup on how to do to the patented (Zynj and friends) Context Nuke:  
+1. Remember at 1432 characters. Don't pay attention to the 1000 limit, its only a suggestion now.  [m] should work if you load it before the world entries.
+2. Have EWIJSON so you can control when this thing dissipates with the [l] attribute.
+3. You need around 1300 characters in the frontMemory (Where you see your story). 
+4. Have 1300 character in world entries hooked to to a VERY specific keyword that only can trigger. They need to be hooked to [t].
+5. Watch as the context becomes whatever you want.
 
 
 ## Credits

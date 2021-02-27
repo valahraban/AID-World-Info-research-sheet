@@ -14,7 +14,7 @@
     + [Categories Table](#categories-table)
       + [TRAITS and SUMMARY (SUMM)](#traits-and-summary)
       + [MIND (MENTAL)](#mental)
-      + [APPEAR](#appear)
+      + [APPE](#appe)
       + [WORN](#worn)
       + [DESC](#desc)
       + [SEE](#see)
@@ -25,14 +25,17 @@
       + [DETAIL](#detail)
       + [More on SUMMARY](#more-on-summary)
 	+ [Personality keywords](#personality-keywords)
-	  + [Bad guy / evil / cruel / saristic](#bad-guy--evil--cruel--sadistic)
-	  + [Paladin / lawful good](#paladin--lawful-good)
-	  + [Manly / serious](#manly--serious)
-	  + [Other assorted useful traits](#other-assorted-useful-traits)
+	  + [Wicked traits](#wicked-traits)
+	  + [Just traits](#just-traits)
+	  + [Masculinity](#masculinity)
+	  + [Wildness](#wildness)
+	  + [Femininity](#femininity)
+	  + [Sexual restraint](#sexual-restraint)
+	  + [Other useful traits](#other-useful-traits)
     + [Monky Formatting](#monky-formatting)
     + [Onyx Formatting Tricks](#onyx-formatting-tricks)
     + [birb research](#birb-research)
-	+ [CrisAi research](#crisai-research)
+	<!--+ [CrisAi research](#crisai-research)-->
     + [Misc Tips](#misc-tips)
     + [character-to-token ratio tests](#character-to-token-ratio-tests)
     + [Worlds Specific Tips](#worlds-specific-tips)
@@ -151,16 +154,15 @@ Any section of this document discussing tokenization has been verified with eith
 ## On certain characters
 Functionalities of certain characters have been found and described thanks to the development of `world info formatting` but it's useful to discuss these beforehand. Their functionality can be somewhat verified through the tokenizer Colab. Before we proceed, keep in mind the document was started in September of 2020. Updates to OpenAI's back-end can and have changed the meanings of characters in the past.
 
-Some characters connect. The most important of these used to be `-`. `hair-color` or `red-color` are words that got better results for colorization than other methods before January 2021. `-hue` doesn't work as well but may be used. Other characters have been tried for connecting words, but few show as much power in scenario testing. As a matter of fact often you can string random words together which will be discussed later. Enthusiasts have also found that `_` is good for creating a strong connection between words, especially for categories. Some are also experimenting with `.` for connecting categories.
-
-AID recognizes many separators. Letters , '' "" ; / | all separate words and concepts in rough degree of power. You would want to separate members of a list with , like in common grammar, but ; might be better for separating categories. Inside brackets `/` is useful for keeping the traits related to what they are describing. () {} [] <> : are connectors. You can put lists inside all of them or use `:` to create a logical implication. For example it might be preferred to do a list like `MENTAL:[happy, go-lucky, energetic];` and define logical connections like `AGE(25y)` or `sword(polished)` the AI usually recognizes that the thing you're describing is roughly 25 years old or that the sword is polished. Enclosures can be interchanged, but these are two commonly seen and powerful methods. For list specifically, `&` is powerful to get the AI to mention everything connected with `&` together. It is likely, but untested that `|` works more like logical OR now too.
-
-**The above used to be the case.** Whenever OpenAI or Latitude updates their back-end models, the significance of a character may change. As of January 2021 `-` works more like the mathematical minus sign. In the same update `()` became very weak as an encapsulator. An example is provided in the document of doing pseudo-math inside AID. It is preferable to mashup words that are normally separated by `-` together inside the WI entry.  
+Some characters connect. The most important of these used to be `-`. `hair-color` or `red-color` are words that got better results for colorization than other methods before January 2021. After this update, many characters including `-` started being treated more like math symbols by the AI. Often you can  even string random words together which will be discussed later. Enthusiasts have also found that `_` is good for creating a strong connection between words, especially for categories. Some are also experimenting with `.` for connecting categories. Onyx has provided us with examples of the AI's math storytelling ability.  
 https://files.catbox.moe/8y17ji.png
+
+AID recognizes many separators. Letters , '' "" ; / | all separate words and concepts in rough degree of power. You would want to separate members of a list with , like in common grammar, but ; might be better for separating categories. Inside brackets `/` is useful for keeping the traits related to what they are describing. () {} [] <> : are connectors. You can put lists inside all of them or use `:` to create a logical implication. For example it might be preferred to do a list like `MENTAL:[happy, go-lucky, energetic];` and define logical connections like `AGE(25y)` or `sword(polished)` the AI usually recognizes that the thing you're describing is roughly 25 years old or that the sword is polished. Enclosures can be interchanged, but these are two commonly seen and powerful methods. For list specifically, `&` is powerful to get the AI to mention everything connected with `&` together. It is likely, but untested that `|` works more like logical OR now too. In the January 2021 update we mentoned before () became worse at encapsulation, but may be used for logic connections.
 
 < and > are special characters. You may have noticed in do or say mode the AI always prefaces your inputs in the story with `>`. In AID the character is reserved for this purpose. You may have noticed that the AI *never* outputs < or > on its own. Since the information inside WI is handled differently we can still use any unicode letter inside it. In WI this can be used to our benefit as we will see when we discuss the work Zaltys has done and his formatting. The uses we have discovered for < and > are particularly useful, because they are unlikely to change even with future updates unless Latitude decides to drastically change their AI model.
 
-The GPT is an autoregressive transformer language model trained on English writing. Any particularities AID are have due to unique parameters set by the dev or habits learned from big datasets like fanfiction.net. Characters like ! and ? aren't necessarily useful or interesting. They are only useful in conveying meanings they have within the variants of English GPT-3 has been trained with. The GPT isn't magic and it wasn't purpose trained on programming languages. The fascinating thing is algorithms and linguistic expression have many things in common by happenstance. As mentioned in the above section the GPT-3 also has many really weird tokens due to the datasets given to it.
+All quirks of the AI are due to how GPT-3 was trained as much of the above illustrates. These may also change as it is a work-in-progress type of application. Some particularities are introduced by Latitude's training and weighting parameterss. One often acknowledged example of this is the appearance of Count Grey and other characters from the Blooded CYOA. Banned words may be used inventively to help doctor the output you get from the AI.  
+https://aidungeon.medium.com/controlling-gpt-3-with-logit-bias-55866d593292
 
 
 ## Authors Notes specifics
@@ -375,26 +377,22 @@ UPPERCASE category keywords will be provided as a list. Their use is mostly self
 
 On further play-testing the preferred hypothesis is that everything comes down to tokenization. Let's explore variants of the word effect. In tokens `EFFECT` is EFF + ECT and `EFFECTS` is EFF+ EC + TS. The latter combo works, the former is very weak. `EFFEC` is EFF + EC and seems to work even better than the aforementioned. For whatever reason for GPT-3 2 token combinations usually work best. `POWER` is single token, `POWERS` is POW + ERS, the 2 token POWERS tends to work better. Most of the chosen categories are based on user reports and this hypothesis.
 
-The long list of recommended categories:
-```
-APPEAR, WORN/WEAR, INV, EQUIP, MIND, SUMMARY, LIKES, HATE, RELATIONS, FRIENDS, ENEMIES, TALENTS, HOBBIES, POWERS, THEME, ORIGIN (for series/titles), ATMOSPHERE, TONE, MOOD, CLIMATE, GEOGRAPHY, FEATURES (for locations), EXIT (for rooms), CITIZENS, CENSUS, PASSION, BONDS, ALIGNMENT, EFFEC(for objects and entities, used to add magic or science effects), SEE, BIOME, FLORA (must match the biome), CREATE, LIMIT, FACTS, LOOT, BANNED (forbidden behavior), COND (status condition like PRLZ from Pokemon), DIET 
-```
 Problematic categories (avoid or use with caution):
 ```
-BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superseded), STATE/STATUS(superceded, multiple meanings)
+BODY(only good for humanoids), LOOKS(for humanoids, has multiple meanings), LACK(superseded), STATE/STATUS(superceded, multiple meanings), HOBBY/HOBBIES(poor tokenization)
 ```
 
 ### Categories Table
 
-Here's a table of the forementioned categories (see below why some alternatives are undesired).
+Here's a table of tested and recommended categories (see below why some alternatives are undesired).
 The categories marked with *`ITALIC`* aren't exactly perfect for all cases (again, see below: it might be better, worse and even both).
 
 
-| Yes | Alt./Short | No/Superseded | Comment |
+| Yes | Alt./Basis | No/Superseded | Comment |
 | --- | --- | --- | --- |
-| [SUMMARY](#traits-and-summary) | `SUMM` | `TRAITS` | Swiss army knife category, for anything that doesn't have it's own cat. [See also this](#more-on-summary) about summary. |
+| [SUMMARY](#traits-and-summary) | ` SUMM` | `TRAITS` | Swiss army knife category, for anything that doesn't have it's own cat. [See also this](#more-on-summary) about summary. |
 | [MIND](#mental) |  | `MENTAL` |  |
-| [APPEAR](#appear) | `APPE`<br>*`PHYSIQ`, `FORMS`* | `BODY`, `LOOKS` |  |
+| [APPE](#appe) | `APPEAR`<br>*`PHYSIQ`, `FORMS`* | `BODY`, `LOOKS` |  |
 | [WORN](#worn) | `WEAR`<br>*`CLOTHES`, `CLOTHING`, `DRESS`, `COSTUME`* | `OUTFIT`, `SUIT`, `ATTIRE`, `WARDROBE` |  |
 | [DESC](#desc) |  |  | for something that is a part of appearance but it's functionality is more important than the looks |
 | [SEE](#see) |  |  | used to describe how a character perceives the world |
@@ -403,54 +401,56 @@ The categories marked with *`ITALIC`* aren't exactly perfect for all cases (agai
 | [DIET](#diet) |  |  |  |
 | [LOOT](#loot) |  |  | what `INV` items can be dropped when a creature is defeated |
 | [DETA](#detail) | `DETAIL` |  |  |
+| ADJ | `ADJECTIVE`, `ADJECT` |  | adjective qualities that are a core part of the entity |
+| MODIF | `MOFIDIER` |  | like the above, but how it's different from the usual or expected |
+| GRAM | `GRAMMAR` |  | tested to tokenize exclusively for word GRAMMAR, useful for speech patterns |
 | INV |  |  |  |
 | EQUIP |  |  |  |
-| LIKES |  |  |  |
+| LIKE |  |  |  |
 | HATE |  |  |  |
-| RELATIONS |  |  |  |
-| FRIENDS |  |  |  |
-| ENEMIES |  |  |  |
-| TALENTS |  |  |  |
-| HOBBIES |  |  |  |
-| POWERS |  |  |  |
+| RELATION(S) |  |  | both long forms preferred due to tokens |
+| ALLIES | `FRIENDS` |  | `ALLIES` preferred due to two tokens |
+| BOND |  | `BONDS` | similar to the above, BOND preferred due to tokens |
+| ENEMIES |  |  | merely decent tokens, `ENEMY` has the same issue |
+| POWERS |  | `POWER` |  |
 | THEME |  |  |  |
 | ORIGIN |  |  | for series/titles |
-| ATMOSPHERE |  |  |  |
+| ATMOSPHERE | `ATMOS` |  |  |
 | TONE |  |  |  |
 | MOOD |  |  |  |
 | CLIMATE | `CLIM` |  |  |
 | GEOGRAPHY | `GEO`, `GEOGR` |  |  |
-| FEATURES |  |  | for locations |
+| ECON | `ECONOMY` |  | for locations, economical circumstances |
+| FEATURES |  |  | for locations, all variants of `FEAT` tokenize the same, likely has multiple uses |
 | EXIT |  |  | for rooms |
-| CITIZENS | `CITIZ` |  |  |
-| CENSUS |  |  |  |
-| PASSION |  |  |  |
-| BONDS |  |  |  |
-| ALIGNMENT | `ALIGN` |  |  |
-| EFFEC |  |  | for objects and entities, used to add magic or science effects |
-| BIOME |  |  |  |
-| FLORA |  |  | must match the biome |
-| CREATE |  |  |  |
+| CITIZ | `CITIZENS` |  | special case, short form always preferred, describes racial diversity of locales |
+| ETHN | `ETHNICITY` |  | similar to above, better for human variation |
+| FOLK |  |  | like `CITIZENS` but more emphasis on fantasy |
+| PASSION |  |  | character motivation |
+| ALIGNMENT | `ALIGN` |  | supports imaginative alignments like Lawful Stupid |
+| EFFEC |  | `EFFECT(S)` | for objects and entities, used to add magic or science effects |
+| BIOME |  |  | traits that reinforce the biome such as flora go in desc or summ |
+| CREATE |  |  | what the entity is capable of producing |
 | FACTS |  |  |  |
 | BANNED | `BANN` |  | forbidden behavior |
 
 
-Categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: `APPE`, `MENT`, `RAITS`, `SUMM`, `CLIM`, `GEO`/`GEOGR`, `CITIZ`, `PERSONA`, `ALIGN`, `BANN`. Sometimes the shorthand might be preferred such as `CONDITION` vs `COND`.
+As illustrated in the table categories can be shortened to save characters. The effectiveness of this is based on tokenization and following up with relevant traits. Not all short-hands work due to the AI mixing it up with other words with different meanings. Some examples: `APPE`, `MENT`, `RAITS`, `SUMM`, `CLIM`, `GEO`/`GEOGR`, `CITIZ`, `PERSONA`, `ALIGN`, `BANN`. Sometimes the shorthand might be preferred such as `COND` vs `CONDITION`.
 
 #### `TRAITS` and `SUMMARY`
 Let's discuss `TRAITS` and `SUMMARY` first. Due to Zaltys popularized use of categories, `TRAITS` was used as a universal category for a long time. The exact effect of `TRAITS` is unknown, but it possible to throw essentially any intrinsic characteristic trait inside it and have the AI respect it. It's still a good category for characteristics lacking specific category, but testing of WI has since continued. 
 
-Users of the world-info channel have been playing around with `SUMMARY` or `SUMM` for short since it was discovered and found it works near identically to `TRAITS`, except it feels even more versatile. You can put pretty much anything in it that'd fit in a character 'summary' and it combines great with other categories, even referencing them without causing leakage. Since they achieve the same thing, but `SUMM` is preferred by everyone we've talked to so far it is the recommendation for a universal swiss army knife category.
+Users of the world-info channel have been playing around with `SUMMARY` or ` SUMM` for short since it was discovered and found it works near identically to `TRAITS`, except it feels even more versatile. You can put pretty much anything in it that'd fit in a character 'summary' and it combines great with other categories, even referencing them without causing leakage. Since they achieve the same thing, but ` SUMM` is preferred by everyone we've talked to so far it is the recommendation for a universal swiss army knife category.
 
-Also, uncommon or complicated concepts like fauna do not work well as categories. `SUMM: Fauna<species>` works better.
+Also, uncommon or complicated concepts like fauna do not work well as categories. ` SUMM: Fauna<species>` works better. In order to properly tokenize as SUM|M there has to be a white space in front of this category.
 
 #### `MENTAL`
 is the category that was in popular use for mental, personality and behavioral traits. `MIND` achieves the same goal more effectively while using less space so `MIND` is recommended for behavioral traits now. Consult the [Personality Keywords](#personality-keywords) segment for more information on behavior.
 
 The AI tends to be very literal-minded about certain things. The associative power of a category is one of its advantages. For example with `TRAITS`, the AI treated `cool` as the nature of a thing. Entities with the `TRAIT` `cool` tended to radiate coldness. So to have characters *behave* in a cool manner, the trait should go inside `MENTAL` or `MIND`. This may be the case for other words like `hotheaded` that the AI could take too literally.
 
-#### `APPEAR:`
-is typically used for appearances and shortened to `APPE:`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
+#### `APPE:`
+Currently `APPE` is preferred due to its tokenization AP|PE. Typically used for appearances and is the long form of `APPEAR`. `PHYSIQ:` and `FORMS:` are good alternatives although their unique uses are unknown as of writing.
 
 #### `WORN:`
 is and remains the most used category for describing worn attire. Testing suggests `WEAR:` works just as well, while tokenizing better regardless of location or preceding characters. There are many clothing related categories that have been tried and experimented on. `CLOTHES:` is an effective, but dry and mechanical alternative. During testing many users found that `DRESS:` works similarly well, but sacrifices some accuracy for more creative prose. Provided is a picture from Zaltys testing and his suggestions.  
@@ -532,21 +532,38 @@ First we mention the special cases that you may want to avoid due to tokenizatio
 
 Long and growing list of behavioral keywords is provided in no particular order. There are too many to list, these are just some common useful ones as well as some commonly tried keywords you might want to avoid. The basis of a good personality trait is something strong and focused the AI has a strong unique association for. Broad words like good or evil aren't very useful, when the behavior is what we are after. 
 
-#### Bad guy / `evil` / `cruel` / `sadistic`
+#### Wicked traits
 `cold-blooded, psychopathic, mad, or ruthless` are all weak. The character may smile or act friendly, behaving more like an IRL sociopath might. `Bloodlust, crazy` are weak too, they don't create the degree of havoc you'd expect. `cruel, sadistic` are great, these tend to make the characters into violent sociopaths. `stabby` is a cool comedic trait in this category, it makes the character speak in stab puns without actually stabbing other characters more. `cruel` is good for creating violent sociopaths too. `brutal, dangerous` are effective evil sociopath traits. With these and other flavor traits you have your evil violent character. `lunatic` doesn't have much research but may be a better trait for insanity, `maniac` is good, but makes characters very energetic or bipolar. Or rarely it turns them into otaku figurine collectors.
 
 Continuing with the bad guy theme the seven sins all work. `glutton(ous), lust(ful), greedy/avaritious, envious, slothful, proud` all work. Wrath is the exception and doesn't produce satisfying results, but can easily be replaced with `angry&cruel`. Based on research with the angriest wizard that ever lived, anger related tags especially `the angriest` are effective.
 
-#### Paladin / lawful good
+#### Just traits
 `chivalric, just, benevolent` work for creating paladin- or white knight types. These may be combined with more morally ambiguous or gray traits like `sour` to create a character that isn't as pristine or stereotypically lawful good. According to Zaltys using a combination of `MIND:chivalric&noble just knightly` might even make these behavioral traits too strong for some tastes.
 
-#### Manly / `serious`
-Then there's `stoic, serious, calm` for more brooding or detached traditionally masculine types. Of course these may be used just as well to create a dour experienced femme. `professional` creates the polite valet/waiter-type character. This would be good for a lawful evil type character too.
+#### Masculinity
+Following that there's `stoic, serious, calm` for more brooding or detached traditionally masculine types. Of course these may be used just as well to create a dour experienced femme. `professional` creates the polite valet/waiter-type character. The aforementioned specifically would be good for a lawful evil type character too. Professional combines well with any trait that determines personality warmth, meaning you can have positive and outgoing businessmen, or cold snipers depending on the combination.
 
-`horny, stoic, apathetic, wry, clever, witty, addicted` all do exactly what you'd expect out of them, they work good. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended effect. `judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character. 
+#### Wildness
+`rowdy` gets you the loud deliquent from school who doesn't necessarily mean harm. `vulgar` puts emphasis on inappropriate NSFW jokes and behaviors. `wild` is used for characters that behave like animals in the wild or tribals. `territorial` is great for tribes that aren't welcoming to outsider. `tribal` makes the AI come up with stereotypical depictions of tribal people.
 
-#### Other assorted useful traits
-include `timid, selfconscious, polite, friendly, seductive, arrogant, oblivious, dumb, dry, cynical, motherly&generous` each doing exactly what you'd expect. `motherly` is best combined tightly with a word like `generous`, because it has a higher chance of turning the character into an actual or expecting mother.
+#### Femininity
+Femininity is a weird one. Due to sharing similarities with the word male, describing characters as female is weakly effective. You can get better results describing a rock as being `cute` or `pretty` to have the AI believe the rock is gendered female. Blame GPT-3 training biases.
+
+It is useful to explore femininity as a spectrum of traits and there are many good ones. `motherly, generous, matronly` are all good ones for creating a party mother or giving big sister type characters. None of these force the character into being a mother, but `motherly` has been known to increase risk of mystery pregnancies and is therefore best combined with another generosity trait. 
+
+The AI seems focus on stereotypes which can be exploited for our purposes. `womanly` gets out common female behavior, often the types that are seen as sexist nowadays. Very good when you want a womanly woman though. `dainty` gets you the girl next door. `emotional` again tends to show off the negative extreme of excess emotionality; this could be used to create an emo character if combined with other relevant traits. A combination of `haughty, elegant` will get you a stuck up socialite type lady who's always demanding things (Karen only more pleasant to look at).
+
+`refined` is among the more positive traits that make the writing more feminine, giving you a depiction of positive nobility. Usually you don't need the AI to be more racy, but `seductive` creates interesting dialogue for promiscuous female characters.
+
+#### Sexual restraint
+GPT-3 and especially the AID models seem to produce many characters that are all too willing to jump the bone. Blame humanity. Giving a character `horny` does exactly what you would expect. But if you're playing with all the safe mode features turned off it can be very hard to make the AI less horny, but some traits have been observed to reduce character's willingless to sleep around. 
+
+Traits for this purpose include `stoic, aloof, rational, independent`. Prude and prudish never seem to work good enough for birb and his associates. `chaste` is another good one, fitting when combined with the knightly traits. `Asexual` is **not** a good one, it tokenizes as a|sexual.
+
+#### Other useful traits
+include `timid, selfconscious, polite, friendly, arrogant, oblivious, dumb, dry, cynical, apathetic, wry, clever, witty, addicted`. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended and expected effect.
+
+`judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character, but this doesn't automatically turn the character into a villain or a bad guy.
 
 The combination of `anxious, nervous` with `SUMM: "h-he...llo"` is very interesting, it's one of the cutest and most appealing ways of creating a timid character that stutters a lot in dialogue. 
 
@@ -600,6 +617,9 @@ Neanderthal style formatting has gone through even further tweaking so it may be
 ```
 Monky has written and provided (with some editorial assistance from birb) a thorough writeup on the history of the formatting he uses and what Futureman is all about. It is extremely recommended reading.  
 https://github.com/valahraban/AID-World-Info-research-sheet/blob/main/docs/Futureman_by_monky.md
+
+Over time we have further deliberated on the signifigance of using `<< >>>>` as a form of encapsulation. It is leak proof due to the design of AID and in-use feels like it more strongly separates WIs inserted into context from other information. Monky recommends it for use with his style and birb recommend it as the final level of encapsulation around any WI format. We've done math and experiments on how much space it uses and it turns out that in our experience the space cost of `<< >>>>` is minimal.  
+https://files.catbox.moe/lqgx0u.png
 
 
 ### Onyx Formatting Tricks
@@ -674,36 +694,6 @@ https://files.catbox.moe/9dibjo.gif
 For a period of time birb also used formatting commonly referred to as Ritz as she was the character he first posted an example of. This was abandoned as a historic curiosity after a 300k character long adventure. If requested, more examples may be provided in the obsoleted methods category.
 
 Now that the category `EQUIP:` is confirmed working with clothes and other inventory it would be possible to use the above example to come up with custom named weapons for your characters, write WI for the custom weapons and have the AI invoke their traits reliably.
-
-
-### CrisAI research
-CrisAIcilian is a user from discord who has been developing methods for manipulating context, mostly for the purposes of maintaining consistency and staying on scene even with a high randomness value of 1.3. Now his research is robust and long enough to get it's own section. CrisAIcilian has discovered `Character sheet - ` as an effective header for WI, using an otherwise Zaltys-like format together with it in his test character. After roughly 100 rolls he claimed to achieve a 70% success rate on his character traits & actions being mentioned correctly as long as the story input features new letters instead of being a simple `continue`. The author speculates this could be a good way to define something akin to `you` for those interested. All of the random experimentation and associated pictures can be found on Discord.
-
-CrisAIcilian is developing an alternative formatting method focusing on consistency and scene building. It looks like Zaltys visually with few additions/variations and utilizes both WI and Remember heavily. This is exclusively for use without scripting as the method relies on the proper ordering of each data type. Cris explains what each part does with comments inside the example he has provided. This is what his most recent work from Discord looks like:
-```
-// The WI section (put this in WI) -
-⑶	// This unicode number, and its positioning, dramatically improves the AI's ability to process info. Theory: the positioning of this number makes the entry less list, more like a "chapter", the AI gets more creative and will utilize traits it normally would rather ignore.}
-<Personal Profile of Vilze>	// This adds extra identification, and was added to combat leak.}
-Vilze:[Description<A>:blue horns & skin, white hair, yellow eyes, black wings; she is without genitals; Vilze is 178 cm tall. Wear<B>:nothing. Mentality<C>:troublemaker, loud, lazy, easy-going. Relationship<D>:hates angels(especially Archangel Izrafiel),dislikes Isabella's rules, many friends(Meiling<succubus>). Trait<E>:grew up in hell, pokes fun at everyone, wild life style(parties).]	// Don't change the structure. Spread categories over multiple lines for example, will render the "Above are facts.." less effective.}
-Above are facts on the female demon Vilze.	// Don't alter this sentence, adding "The" at the front for example, makes it less effective.}
-#	// Separator, important.}
-// The /remember section (in /remember) -
-⒇
-<Your Personal Profile>
-You:[Name<A>:?, alias Jack. Gender<B>:?. Age<C>:?. Ethnicity<D>:?. Nationality<E>:?. Description<F>:skinny, etc; you're 170 cm tall. Appearance<G>:freckles etc.]
-Above are facts regarding yourself.
-#
-// The /remember section that leads the story context (also in /remember) -
-⑴	// I just feel arranging the two numbers this way is better, with no hard evidence behind it.}
-<The Story>
-Calendar: November 17, 2017.	// No ABC in this section, ever. The AI will pay too much attention to it and output "You're still sitting."}
-The current location: in a hotel room in Washington D.C.
-The current event: You're sitting in a chair.
-```
-
-Experiments on Discord show similar efficiency and accuracy to the formatting methods used above. In some ways it may be better, like sticking on to the scene you have created through the combined use of mentioned WI and remember. The caveat is how strictly the `#` letter is utilized, slightly restricting your writing and making it incompatible with scripting although this is intentional. The important thing is to make deliberate choices on your formatting across the board and making them play nice with any scripts you're interested in using. Cris has expressed interest in improving his syntax and supporting new users on discord. He also worked on a prompt method called the `Character Generator 3000` that didn't end up getting a scenario released by birb's understanding, 
-
-Notice also the use of unicode symbols. GPT-3 and AID does understand them even including emoji such as :surfing:. Unicode symbols tend to be heavy in tokens and it's hard to find immediate uses for them so they are outside of birb's research but curious users are recommended to do their own research on the topic.
 
 
 ### Misc Tips
