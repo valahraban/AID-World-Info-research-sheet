@@ -168,9 +168,11 @@ https://aidungeon.medium.com/controlling-gpt-3-with-logit-bias-55866d593292
 
 
 ## Authors Notes specifics
-Let's discuss the premium feature `A/N:` before the other features. If you're looking to inject flavor into the AI's outputs A/N will be your first and probably most efficient stop. It is a worthwhile for the convenience, yet it's usefulness is not entirely restricted to premium users with our advice. What A/N does is it insert a line of text into the history the AI reads e.g. `Author's Note: Some details like mood about this story.` exactly 3 newlines up. On the scenario screen it has a 150 character limit, but the in-built maximum limit is 300 characters according to kim's LMI testing and community experiences.
+Let's discuss the premium feature `A/N:` before the other features. If you're looking to inject flavor into the AI's outputs A/N will be your first and probably most efficient stop. It is a worthwhile for the convenience, yet its usefulness is not entirely restricted to premium users with our advice. What A/N does is it insert a line of text into the history the AI reads e.g. `Author's Note: Some details like mood about this story.` exactly 3 newlines up. On the scenario screen it has a 150 character limit, but the in-built maximum limit is 300 characters according to kim's LMI testing and community experiences.
 
-Discovering manual Author's Note inputs during dev testing and how heavily it affected output is why it was added to the core game. Even as a free user you can manually add Author's Notes into your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. Research suggests that A/N: can be used to reinforce writing style even of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
+Discovering manual Author's Note inputs during dev testing and how heavily it affected output is why it was added to the core game. Even as a free user you can manually add/edit Author's Notes into your story. With manual A/Ns you have more characters to work with, but it is doubtful that making a super long A/N: offers any extra benefit. 
+
+Research suggests that A/N: can be used to reinforce writing style even of well-known authors through repetition. It can also be used to change perspectives and the `focus` of the storytelling. These findings suggest that the prompt informs the AI what kind of writing to expect directly after A/N: has been invoked. Exemplified below is a medium-length A/N: with reinforcing that has been confirmed to be capable of producing outputs where characters break the 4th wall:
 ```
 [Author's note: This novel is esoteric and descriptive. Author: Terry Pratchett. Writing style:  Metafiction, in the style of Deadpool. Genre: Witty, talkative.]
 ```
@@ -185,11 +187,11 @@ An example of output generated with `strikingly elegant style`:
 You look around.
 The sun softly kisses your exposed skin with her rays. You gently bask in her glory, raising your face towards her. Below, the plants softly sway in a gentle breeze as though worshipping her as well.
 ```
-List of common categories to throw inside Author's Notes: author, writing style, genre, theme, setting, scene, format, goal, situation, storyline.
+List of common categories to throw inside Author's Notes: `author, writing style, genre, theme, setting, scene, format, goal, situation, storyline`.
 
 A/N understands JSON too. Its entirely possible to do something like `A/N: [{"writing style":["descriptive", "elegant", "gritty"], "wording":["archaic", "Cockney accent"], "current state":"indoors"}]`
 
-Some users have been experimenting with A/N for doctoring output and specifically managing randomness. Lower randomness is more consistent and predictable as it makes the AI's predictions more deterministic, but this comes at the expense of it feeling 'more dumb', hence higher randomness being desirable for verbosity. According to CrisAIcilian `This novel has no plot twists, it follows a linear storyline.` is a very effective phrase to include in A/N to increase consistency. This way his stories can stay on track even at 1.3 randomness. He finds that `Writing style:` and `Genre:` are useful categories to use most of the time. Writing style improves writing, genre works like a mini-prompt. More useful notes on writing A/N from Cris: 
+Some users have been experimenting with A/N for doctoring output and specifically managing randomness. Lower randomness is more consistent and predictable as it makes the AI's predictions more deterministic, but this comes at the expense of it feeling 'more dumb', hence higher randomness being desirable for verbosity. According to CrisAIcilian `This novel has no plot twists, it follows a linear storyline.` is an effective phrase to include in A/N to increase consistency. This way his stories can stay on track even at 1.3 randomness. He finds that `Writing style:` and `Genre:` are useful categories to use most of the time. Writing style improves writing, genre works like a mini-prompt. More useful notes on writing A/N from Cris: 
 ```
 "Author:" is added when you want to do a convincing real author (combined with "Writing style: literary, author-name.) "Setting:" "Theme:" "Subject:" have their uses, depends on the content. "Title:" works at least on LOTR and "gone with the wind". Didn't test other titles. Famous ones should work. Has to be a real title, "star wars" is not a title, it's a movie franchise. The writing styles, most don't work on Griffin.
 Only the descriptive-branch works on Griffin. "descriptive" works, "narrative" and another one I can't remember (according to Zaltys) also works on Griffin.
@@ -219,7 +221,7 @@ This is due to WI overloading going by the rules we discussed at the beginning o
 
 It is often preferred to define the character `you` towards the bottom of the Remember pin as that gives you the fullest amount of control where those details get inserted. No best practice exists for this type of WI, so it is left to the reader to deliberate on what their needs for AID are.
 
-The author advises against flooding the world with more format names. At best it's a waste of time and confusing at worst it's the harmful and misleading kind of confusing. Originally formats were a quick way to reference different directions of WI research. Now the different methods are starting to converge back as the enthusiasts are attempting to optimize their personal stacks and styles. Formatting is a much more accurate term and beneficial to everyone in the community without excluding any form of manipulating language. This document hopes to demonstrate this.
+The author advises against flooding the world with more format names. This serves mostly to only confuse new players. Originally formats were a quick way to reference different directions of WI research. Now the different methods are starting to converge back as the enthusiasts are attempting to optimize their personal stacks and styles. Formatting is a much more accurate term and beneficial to everyone in the community without excluding any form of manipulating language. This document hopes to demonstrate this.
 
 Fun fact: `format:` works extremely well inside Author's Notes as a keyword/category you can use to tell the AI whether you're writing a script or a sonnet or a manifesto, etc.
 
@@ -539,6 +541,9 @@ Long and growing list of behavioral keywords is provided in no particular order.
 
 Continuing with the bad guy theme the seven sins all work. `glutton(ous), lust(ful), greedy/avaritious, envious, slothful, proud` all work. Wrath is the exception and doesn't produce satisfying results, but can easily be replaced with `angry&cruel`. Based on research with the angriest wizard that ever lived, anger related tags especially `the angriest` are effective.
 
+#### Hostility traits
+There
+
 #### Just traits
 `chivalric, just, benevolent` work for creating paladin- or white knight types. These may be combined with more morally ambiguous or gray traits like `sour` to create a character that isn't as pristine or stereotypically lawful good. According to Zaltys using a combination of `MIND:chivalric&noble just knightly` might even make these behavioral traits too strong for some tastes.
 
@@ -566,6 +571,8 @@ Traits for this purpose include `stoic, aloof, rational, independent`. Prude and
 include `timid, selfconscious, polite, friendly, arrogant, oblivious, dumb, dry, cynical, apathetic, wry, clever, witty, addicted`. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended and expected effect.
 
 `judgmental` turns a character into a judgmental... prick. It is a very effective keyword for making an 'asshole' character, but this doesn't automatically turn the character into a villain or a bad guy.
+
+TODO personality keywords: belligerent, busy, brave, curious, hardy, helpful, jolly (Pokemon natures),  loyal, logical, manipulative, mellow, moody, mysterious, philosophical, playful, polite, proud, rude, sensitive, servile, shy, stern, smug, tenacious, upbeat, etc, etc.
 
 The combination of `anxious, nervous` with `SUMM: "h-he...llo"` is very interesting, it's one of the cutest and most appealing ways of creating a timid character that stutters a lot in dialogue. 
 
