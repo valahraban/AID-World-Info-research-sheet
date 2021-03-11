@@ -107,18 +107,15 @@ In the above example, Alexandria's information is broken up into 5 separate WI's
 
 The BIGGEST risk you have here is rigging too many entries to come too far forward in the context, flooding out what's going on in the story with a bunch of blocks of format. For this reason, I only recommend allowing two lines max to be brought up to t=1, three lines to t=3, and 4 line to positions 5, 7, and 9 respectively. You can add more after that at 11 and 13 or beyond if you want, but at a certain point it becomes viable to just let them sit at the back if they're not super important. For those entries that are not important, just put #[m] after their keys in the same fashion as you would otherwise do with `#[l=Xt=Y]`.
 
-So that's a lot of information to take in so I'll try and briefly TL;DR the Futureman benefits.
+So that's a lot of information to take in so I'll try and briefly TL;DR the Futureman benefits.  
 
-	1; Can't leak its encapsulating symbols as the AI can't output `<` or `>`.
+1. Can't leak its encapsulating symbols as the AI can't output `<` or `>`.  
+2. Should be effectively able to replace Neanderthal (though Neanderthal is still fine in general w/o use of EWIJSON, and may survive use in EWIJSON if you prune occasional mistakes early in the story).  
+3. Is capable of being brought to the very front without leaking or breaking flow of the story, giving your WI info access to the zone of context the AI pays *the most* attention to, allowing very accurate descriptions or behavior, depending on what you prioritize.  
+4. While seemingly intimidating at first, once you learn the basics of separating keys with | instead of commas, and then slapping `#[l=Xt=Y]` with appropriate numbers in place of X and Y (3 to 5 generally works for l and odd numbers tend to work well for the t), you're golden.  
+5. Don't overload the front end, just let the *very most* important things you DO NOT want the AI to get wrong except very occasionally when AI does its AI thing. For everything else, there's the #[m] tag.
 
-	2; Should be effectively able to replace Neanderthal (though Neanderthal is still fine in general w/o use of EWIJSON, and may survive use in EWIJSON if you prune occasional mistakes early in the story).
-
-	3; Is capable of being brought to the very front without leaking or breaking flow of the story, giving your WI info access to the zone of context the AI pays *the most* attention to, allowing very accurate descriptions or behavior, depending on what you prioritize.
-
-	4; While seemingly intimidating at first, once you learn the basics of separating keys with | instead of commas, and then slapping `#[l=Xt=Y]` with appropriate numbers in place of X and Y (3 to 5 generally works for l and odd numbers tend to work well for the t), you're golden.
-
-	5; Don't overload the front end, just let the *very most* important things you DO NOT want the AI to get wrong except very occasionally when AI does its AI thing. For everything else, there's the #[m] tag.
-
+  
 If you made it this far, kudos, and happy WI formatting!  
 
 EWIJSON scripts available at: https://github.com/Zynj-git/AIDungeon/tree/master/AID-Script-Examples/EWIJSON  
