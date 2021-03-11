@@ -917,7 +917,7 @@ https://guide.aidg.club
 
 Remember that Anonymous imageboards aren't known for vetting or quality control. Not all the guides are written to the same standards or measures of decency. If a guide is written by a biased prick who is clearly too lazy to test all known methods, you can always just stop reading the guide mine included.
 
-CREDITS: Everyone whose name has been mentioned here and the many AID related communities. Everyone who shares their experiments and results online.  
-birb/valahraban for starting this project, CoomerDeveloper for help with aidg and rentry, Lex-DRL for his fork and back-merges  
+CREDITS: Everyone whose name has been mentioned here and the many AID related communities. Everyone who shares their experiments and results online.
+birb/valahraban for starting this project, CoomerDeveloper for help with aidg and rentry.
 Anonymous imageboards, aidiscord-wiki and the Discord itself which can be found through provided links.  
-2021 is a wild year. I hope you survive. See You Space Cowboy.
+See You Space Cowboy.
