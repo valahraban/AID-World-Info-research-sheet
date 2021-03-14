@@ -45,7 +45,8 @@ The rest of the guide is dedicated to a more thorough analysis and use of EWIJSO
 
 
 ## The Ultra Condensed Numbered Point Edition
-If this doesn't help you, I can't help you. This is the complete standard workflow for defining things in EWIJSON without using heavy branching.  
+If this doesn't help you, I can't help you. This is the complete standard workflow for defining things in EWIJSON without using heavy branching.
+
 1. Decide on a WI. Character or location for starters. Decide on initial attribute for your characters. `.character` is good. We will now create everything though the input field, or `>`
 2. Set your first character. Let's go with John. `/set John.character John`. Here, .character denotes the name `John` as a JSON-object.
 3. John needs more traits. Let's go with clothes and mental first. `/set John.worn business suit`. He now wears a business suit defined under a new entry. We repeat for `/set John.mental workaholic` because John loves his job. Now we could repeat this for what his workplace is...
@@ -54,9 +55,8 @@ If this doesn't help you, I can't help you. This is the complete standard workfl
 6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)|(secrets?).*(John)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`
 7. Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.
 8. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.
-<!-- end of the list -->
 
-<a/>
+
 ## Complete beginner's guide to getting started
 First consider if you even need or want the script. Every little bit of the tool is consistently formed around it's designed purpose - to dynamically and with relatively low effort manage your WI on the fly through your input field. As long as you have good memory and have understood how regexp works you can easily manage all your WI related data structures from the input field. Its designed to be object-oriented for the purpose of being pseudo-dynamic. If you use a lot of WI and you tweak them often EWIJSON is perfect for you, if this isn't you, you might even prefer using regular old WI. While it can't automatically change the objects for now, you can change any object whenever you want and get immediately changed results from the output. 
 
