@@ -46,15 +46,14 @@ The rest of the guide is dedicated to a more thorough analysis and use of EWIJSO
 
 ## The Ultra Condensed Numbered Point Edition
 If this doesn't help you, I can't help you. This is the complete standard workflow for defining things in EWIJSON without using heavy branching.  
-1. Decide on a WI. Character or location for starters. Decide on initial attribute for your characters. `.character` is good. We will now create everything though the input field, or `>`  
-2. Set your first character. Let's go with John. `/set John.character John`. Here, .character denotes the name `John` as a JSON-object.  
-3. John needs more traits. Let's go with clothes and mental first. `/set John.worn business suit`. He now wears a business suit defined under a new entry. We repeat for `/set John.mental workaholic` because John loves his job. Now we could repeat this for what his workplace is...  
-4. John has a full name. We want the AI to understand this. We do `_synonyms` which also means `_conditions`. We do `/set John._synonyms (John Doe|The Workaholic|John The Workaholic)`. Now the AI recognizes his full name and titles. John Doe implies => John.<object> and calls the entry for that WI.  
-5. Manually edit your whitelist or do `/set _whitelist. character,worn,mental`. Every time you edit white whitelist this way you must set every desired object. Alternatively you can `/whitelist word` one at a time to either add the word to the whitelist or remove it if its included already. Objects/traits must be whitelisted to automatically trigger.  
-6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)|(secrets?).*(John)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`  
-- Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.  
-7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID. [//]: # (end)
-[//]: # (end)
+1. Decide on a WI. Character or location for starters. Decide on initial attribute for your characters. `.character` is good. We will now create everything though the input field, or `>`
+2. Set your first character. Let's go with John. `/set John.character John`. Here, .character denotes the name `John` as a JSON-object.
+3. John needs more traits. Let's go with clothes and mental first. `/set John.worn business suit`. He now wears a business suit defined under a new entry. We repeat for `/set John.mental workaholic` because John loves his job. Now we could repeat this for what his workplace is...
+4. John has a full name. We want the AI to understand this. We do `_synonyms` which also means `_conditions`. We do `/set John._synonyms (John Doe|The Workaholic|John The Workaholic)`. Now the AI recognizes his full name and titles. John Doe implies => John.<object> and calls the entry for that WI.
+5. Manually edit your whitelist or do `/set _whitelist. character,worn,mental`. Every time you edit white whitelist this way you must set every desired object. Alternatively you can `/whitelist word` one at a time to either add the word to the whitelist or remove it if its included already. Objects/traits must be whitelisted to automatically trigger.
+6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)|(secrets?).*(John)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`
+7. Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.
+8. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.
 
 
 ## Complete beginner's guide to getting started
@@ -129,7 +128,7 @@ In EWIJSON we define one of these with the path `_exp`. Currently it accepts val
 
 | key | entry | sample use |
 | --- | --- | --- |
-| \_exp.consume | (drink\|quaff\|consume\|swallow) | potion.\*${consume}|${consume}.\*potion<br>(?'a'potion).\*(?'b'${consume})|(?&b).\*(?&a) |
+| \_exp.consume | (drink\|quaff\|consume\|swallow) | potion.\*${consume}\|${consume}.\*potion<br>(?'a'potion).\*(?'b'${consume})\|(?&b).\*(?&a) |
 | \_exp.likes | (likes\|enjoys\|prefers\|savors) | (John).\*${likes} |
 | \_exp.dislikes | (dislikes\|('\|i\|doe)s (bad\|poor(ly)?) with\|hates\|loathes\|abhors\|despises\|detests) | (Alice).\*${dislikes} |
 
