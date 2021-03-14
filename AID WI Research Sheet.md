@@ -735,7 +735,9 @@ Worst-case-scenario birb: 387 chars, 160 tokens = 2.42 ch/tk
 
 The goal here is optimization. Full prose has the best character-ratio, but has all the caveats AID is known for. Many users love the output pure json gives, but it has some of the worst ratios and character usage. Zaltys results aren't much better although this can be attributed to heavy symbol and possibly unicode use. Caveman is technically the winner here. It allows the most characters to be used for the context while preserving content meaning while it may not have the absolute best token use. birb format is a historic curiosity that despite promising testing results been removed while the author focuses on ironing out goals like consistent color output.
 
-Full prose is outside the scope of this document. Its the default format people write on story mode or for the common WI. On Dragon it can provide good results if you're a very skilled writer, but isn't specialized to achieve specific goals. The following is an opinionated take on prose:
+Further testing is unneccessary. In these tests, birb format using Japanese loanwords was the only loser while still retaining high fidelity. Going by known AID constraints we can offer one guideline: token density should stay above 2772 ch/1024 tk. This math leaves us with a token density of 2.7 ch/tk. Not to mention that the math is excessively pessimistic. In vanilla, your WI eats up a maximum of 1336 characters from context and AID's prose tends to hover above 4.0 ch/tk, leaving WI formatting with greatly increased overhead.
+
+Full prose is outside the scope of this document. It's the default format people write on story mode or for the common WI. On Dragon it can provide good results if you're a very skilled writer, but isn't specialized to achieve specific goals. The following is an opinionated take on prose:
 ```
 From Monky: using prose descriptions for griffin is like trying to get a drunk guy to follow and regurgitate a paragraph
 ```

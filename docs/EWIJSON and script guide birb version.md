@@ -21,6 +21,10 @@ https://gitlab.com/STARSTRUCK/ai-dungeon-userscripts
 There are other skilled scripters like Gnurro. Scripts may be merged, although the process requires some coding knowledge. A guide on script merging must be written and provided by someone with more knowledge on the topic. We provide a link to Gnurro's useful scripts:  
 https://github.com/Gnurro/AIDscripts  
 
+OnePunchVAM has created a script similar to EWIJSON with different design goals. It's based on simplicity and ease of use, but lacks the unlimited potential and freedom of regex. It's an alternative worth studying and looking into, especially for simpler stories focused on a smaller amount of characters:  
+https://github.com/OnePunchVAM/aid-simple-context
+This guide already focuses primarily on EWIJSON. 
+
 
 ## Installing EWIJSON
 To use a script in AID you must first write or install it. Either download the 4 json files from Zynj's github or acquire a release zip through the official AID Discord channel #scripting. As of writing it is on version 1.1.9. From inside the AID UI go to the menu > my stuff > make scenario > scripts. Usually this is where you write/develop your own scripts. For a release of EWIJSON we press the upwards arrow and import the zip or the json files. After this is done and you see the code inside shared library, input modifier, context modifier and output modifier the script(s) is ready to be used only within this scenario. You must repeat this for every scenario you wish to use scripts with.
@@ -41,15 +45,15 @@ The rest of the guide is dedicated to a more thorough analysis and use of EWIJSO
 
 
 ## The Ultra Condensed Numbered Point Edition
-If this doesn't help you, I can't help you. This is the complete standard workflow for defining things in EWIJSON without using heavy branching.
-1. Decide on a WI. Character or location for starters. Decide on initial attribute for your characters. `.character` is good. We will now create everything though the input field, or `>`
-2. Set your first character. Let's go with John. `/set John.character John`. Here, .character denotes the name `John` as a JSON-object.
-3. John needs more traits. Let's go with clothes and mental first. `/set John.worn business suit`. He now wears a business suit defined under a new entry. We repeat for `/set John.mental workaholic` because John loves his job. Now we could repeat this for what his workplace is...
-4. John has a full name. We want the AI to understand this. We do `_synonyms` which also means `_conditions`. We do `/set John._synonyms (John Doe|The Workaholic|John The Workaholic)`. Now the AI recognizes his full name and titles. John Doe implies => John.<object> and calls the entry for that WI.
-5. Manually edit your whitelist or do `/set _whitelist. character,worn,mental`. Every time you edit white whitelist this way you must set every desired object. Alternatively you can `/whitelist word` one at a time to either add the word to the whitelist or remove it if its included already. Objects/traits must be whitelisted to automatically trigger.
-6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)|(secrets?).*(John)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`
-	1. Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.
-7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.
+If this doesn't help you, I can't help you. This is the complete standard workflow for defining things in EWIJSON without using heavy branching.  
+1. Decide on a WI. Character or location for starters. Decide on initial attribute for your characters. `.character` is good. We will now create everything though the input field, or `>`  
+2. Set your first character. Let's go with John. `/set John.character John`. Here, .character denotes the name `John` as a JSON-object.  
+3. John needs more traits. Let's go with clothes and mental first. `/set John.worn business suit`. He now wears a business suit defined under a new entry. We repeat for `/set John.mental workaholic` because John loves his job. Now we could repeat this for what his workplace is...  
+4. John has a full name. We want the AI to understand this. We do `_synonyms` which also means `_conditions`. We do `/set John._synonyms (John Doe|The Workaholic|John The Workaholic)`. Now the AI recognizes his full name and titles. John Doe implies => John.<object> and calls the entry for that WI.  
+5. Manually edit your whitelist or do `/set _whitelist. character,worn,mental`. Every time you edit white whitelist this way you must set every desired object. Alternatively you can `/whitelist word` one at a time to either add the word to the whitelist or remove it if its included already. Objects/traits must be whitelisted to automatically trigger.  
+6. We want a WI that triggers with a condition and ISN'T whitelisted. John's secret. We do the regexp `/set _synonyms.John.secret (John).*(secrets?)|(secrets?).*(John)` that will call the entry we also create `/set John.secret John used to wet his bed until he was 8`  
+	1. Whenever `John` or the synonyms is mentioned in the context EWIJSON will insert everything under John.(character|worn|mental) in the history. The secret will only get inserted with the other WI entries if we mention `John's secret` or John followed by a short sequence of letters then the word `secret`.  
+7. We want an example of how to use EWI attributes and we want an Author's Notes for our scenario (without using the standard AN UI). We do `/set .#[p=3] [Author's Note: John the Workaholic just wants to live a quiet life. But in a fight he wouldn't lose to anyone.]` Explanation: In regexp just `.` matches everything. It's always active. The EWI function #[p=x] sets the entry x lines up in context. Here we use p=3 lines, literally copying the standard Author's Notes used in AID.  
 
 
 ## Complete beginner's guide to getting started
@@ -114,6 +118,18 @@ Let's get on with the (very) informal EWIJSON attribute school:
 [r] = "Slots! Picks a item from a group of OR conditionals. They need to be identical keys before # or [r] doesn't give a fuck."  
 [x] = "This is the bouncer, world entry doesn't get in until he says enough time has passed. [x=4] means four actions must pass in the adventure before you can get this world entry to fire."
 
+Zynj occasionally releases new attributes. The latest of these is [f] and it restricts how many entries can be inserted at the same location by the AI. As always, you're best off consulting Zynj's own wiki for the quick and dirty of what attributes do.
+
+
+## Expression libraries or _exp
+As of writing this section Zynj has yet to document on github how regular expression libraries work in EWIJSON. RegEx libraries are a functionality of some regex engines and included in EWIJSON. In programming terms, it is assigning an expression as a function so it can be reused more easily with a short call. 
+
+In EWIJSON we define one of these with the path `_exp`. Currently it accepts values in its top level hierarchy, that is to say e.g `_exp.colors` is currently the deepest point you can go. If you want to use this expression inside the keys of other expression or `<root>._synonyms` you call it the same as a placeholder in vanilla AID with `${colors}`. Below are some simple examples, note that the sample keys would also have their own entry associated with them:  
+| key | entry | sample use |
+| \_exp.consume | (drink|quaff|consume|swallow) | potion.\*${consume}|${consume}.\*potion<br>(?'a'potion).\*(?'b'${consume})|(?&b).\*(?&a) |
+| \_exp.likes | (likes|enjoys|prefers|savors) | (John).\*${likes} |
+| \_exp.dislikes | (dislikes|('|i|doe)s (bad|poor(ly)?) with|hates|loathes|abhors|despises|detests) | (Alice).\*${dislikes} |
+
 
 ## EWIJSON Exploits
 Using the power of EWIJSON, regex and understanding the memory load, it is entirely possible to 'hack' AID to do things previously thought impossible. This includes breaking past the dreaded Levenshtein limit. The following is a trick birb developed together with Mr.Accountant who did most of the testing to get it working. The idea is to push the entire old context out and replace it whatever you desire to completely wipe the memory of the AI and replace it with anything. This way you can summarize the story in the middle of your adventure without restarting or having to worry about exporting WIs. The result might as well as be called lobotomizing or brainwashing the AI.
@@ -123,12 +139,12 @@ First you must replace your Remember Pin. You are actually allowed to go over th
 With an easy to understand reference this is the reality stone from avengers. You flick your fingers while calling the stone and the context becomes whatever you want. Many other memes and pop cultures also apply.
 
 Mr.Accountant's writeup on how to do to the patented (Zynj and friends) Context Nuke:  
-1. Remember at 1432 characters. Don't pay attention to the 1000 limit, its only a suggestion now.  [m] should work if you load it before the world entries.
-2. Have EWIJSON so you can control when this thing dissipates with the [l] attribute.
-3. You need around 1300 characters in the frontMemory (Where you see your story). 
-4. Have 1300 character in world entries hooked to to a VERY specific keyword that only can trigger. They need to be hooked to [t].
+1. Remember at 1432 characters. Don't pay attention to the 1000 limit, its only a suggestion now.  [m] should work if you load it before the world entries.  
+2. Have EWIJSON so you can control when this thing dissipates with the [l] attribute.  
+3. You need around 1300 characters in the frontMemory (Where you see your story).  
+4. Have 1300 character in world entries hooked to to a VERY specific keyword that only can trigger. They need to be hooked to [t].  
 5. Watch as the context becomes whatever you want.
 
 
 ## Credits
-Zynj for writing EWIJSON, updating it frequently and educating people on how to use it. STARSTRUCK for his artdungeon.user.js. Latitude for making scripting free. birb for writing this.
+Zynj for writing EWIJSON, updating it frequently and educating people on how to use it. STARSTRUCK for his artdungeon.user.js. OnePunchVAM and Gnurro or also making cool scripts. Latitude for making scripting free. birb for writing this.
