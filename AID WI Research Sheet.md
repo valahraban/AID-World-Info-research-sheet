@@ -728,10 +728,10 @@ Now that the category `EQUIP:` is confirmed working with clothes and other inven
 For most of his WI birb uses a variant based on older Zaltys. It's not as token efficient as other formatting, but easily combines and adapts features from any formatting as the need arises while retaining information density. This is mostly used for unique species, characters and actions. Examples (also using EWIJSON) shown below:  
 ```
 key: qweepa#[t=1]
-<qweepa>:[ Qweepa is fluffy bloblike creature that appears like hybrid cross between rabbit and lemming with long floppy ears. Qweepa have big round staring eyes and stubby little feet. Qweepa have chubby little cherub wings they can use fly short distances. Qweepa come in myriad colors. They have plush cheek pouches. Qweepa are relaxed and easygoing creatures, but can become fearsome when excited.]
+entry: <qweepa>:[ Qweepa is fluffy bloblike creature that appears like hybrid cross between rabbit and lemming with long floppy ears. Qweepa have big round staring eyes and stubby little feet. Qweepa have chubby little cherub wings they can use fly short distances. Qweepa come in myriad colors. They have plush cheek pouches. Qweepa are relaxed and easygoing creatures, but can become fearsome when excited.]
 
 key: (Count Grey|Ct. Grey)#[t=1]
-<Count Grey>:[ Male human, secretive vampire<185cm>;APPE<Grey>:Attractive/gaunt/pale/pointed_ears/hair<raven&long_ponytail>/eyes<piercing&dark_red>;EQUIP<Grey>:Dark_clothing,gloves,cape,raven_mask,crystals;MIND<Grey>:Cynical,genius,vindictive,cruel;SUMM<Grey>:Secret society mastermind, in contact with Eternals, rumored to possess powerful dark arts, controls Larion<secretly> with iron fist, Larion bows down to him, ancient bloodline, owns every financial institute&trucking company, discovered the ark of the covenant.]
+entry: <Count Grey>:[ Male human, secretive vampire<185cm>;APPE<Grey>:Attractive/gaunt/pale/pointed_ears/hair<raven&long_ponytail>/eyes<piercing&dark_red>;EQUIP<Grey>:Dark_clothing,gloves,cape,raven_mask,crystals;MIND<Grey>:Cynical,genius,vindictive,cruel;SUMM<Grey>:Secret society mastermind, in contact with Eternals, rumored to possess powerful dark arts, controls Larion<secretly> with iron fist, Larion bows down to him, ancient bloodline, owns every financial institute&trucking company, discovered the ark of the covenant.]
 ```
 
 ### Misc Tips
