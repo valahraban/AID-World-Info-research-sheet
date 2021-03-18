@@ -725,6 +725,14 @@ For a period of time birb also used formatting commonly referred to as Ritz as s
 
 Now that the category `EQUIP:` is confirmed working with clothes and other inventory it would be possible to use the above example to come up with custom named weapons for your characters, write WI for the custom weapons and have the AI invoke their traits reliably.
 
+For most of his WI birb uses a variant based on older Zaltys. It's not as token efficient as other formatting, but easily combines and adapts features from any formatting as the need arises while retaining information density. This is mostly used for unique species, characters and actions. Examples (also using EWIJSON) shown below:  
+```
+key: qweepa#[t=1]
+<qweepa>:[ Qweepa is fluffy bloblike creature that appears like hybrid cross between rabbit and lemming with long floppy ears. Qweepa have big round staring eyes and stubby little feet. Qweepa have chubby little cherub wings they can use fly short distances. Qweepa come in myriad colors. They have plush cheek pouches. Qweepa are relaxed and easygoing creatures, but can become fearsome when excited.]
+
+key: (Count Grey|Ct. Grey)#[t=1]
+<Count Grey>:[ Male human, secretive vampire<185cm>;APPE<Grey>:Attractive/gaunt/pale/pointed_ears/hair<raven&long_ponytail>/eyes<piercing&dark_red>;EQUIP<Grey>:Dark_clothing,gloves,cape,raven_mask,crystals;MIND<Grey>:Cynical,genius,vindictive,cruel;SUMM<Grey>:Secret society mastermind, in contact with Eternals, rumored to possess powerful dark arts, controls Larion<secretly> with iron fist, Larion bows down to him, ancient bloodline, owns every financial institute&trucking company, discovered the ark of the covenant.]
+```
 
 ### Misc Tips
 Thanks to scripting we can insert lines anywhere in context(history) now. One of the earlier implementations of this was Editor's Notes. This concept is used manually or with a simple script. The in-game tooltips describe author's notes as style hints or being useful for controlling what and how the AI will generate. Paraphrasing from Gnurro(who came up with the idea and authored the original script) `EN behaves more like tool tips suggest AN should work as some kind of more or less direct command about how things should go on. AN needs other wording, but which work best for it has been fiddled with a lot by now. Someone should try combining AN and EN though, would be interesting to see if that gives some kind of belt/brace effect.` Private testing has shown that EN works more like a conductor, keeping the output on whatever track you've given it. More testing is needed combined with things like the `Editor's Notes: This novel has no plot twists, it follows a linear storyline.` consistency string and `RATING:` when used in notes. EWIJSON can achieve this easily with the key: `.#[p=3]` and the entry containing whatever you want to insert 3 lines in front of your next action.
