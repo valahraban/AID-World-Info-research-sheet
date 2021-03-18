@@ -28,6 +28,7 @@
 	  + [GRAM](#gram)
 	  + [MODIF](#modif)
       + [More on SUMMARY](#more-on-summary)
+	+ [Speech patterns and accents](#speech-patterns-and-accents]
 	+ [Personality keywords](#personality-keywords)
 	  + [Wicked traits](#wicked-traits)
 	  + [Just traits](#just-traits)
@@ -200,6 +201,7 @@ Some users have been experimenting with A/N for doctoring output and specificall
 "Author:" is added when you want to do a convincing real author (combined with "Writing style: literary, author-name.) "Setting:" "Theme:" "Subject:" have their uses, depends on the content. "Title:" works at least on LOTR and "gone with the wind". Didn't test other titles. Famous ones should work. Has to be a real title, "star wars" is not a title, it's a movie franchise. The writing styles, most don't work on Griffin.
 Only the descriptive-branch works on Griffin. "descriptive" works, "narrative" and another one I can't remember (according to Zaltys) also works on Griffin.
 ```
+After months of playing around with Author's Notes the world-info discord community mostly agrees it works like any other bit of WI entries, but inserted exactly 3 lines up. We've discovered that all categories using the word `notes` tends to be pretty powerful and a category that works very well to alter dialogue `Dialog notes:`.
 
 #### Reminder:
 While less effective on Griffin anyone can benefit from using Author's Notes properly. With scripting, any user can mimic the functionality of Author's or Editor's Notes or even insert any string they want in a specific part of the context. Zaltys is experimenting with Author's Notes words all the time and has provided a resource that's being updated frequently: https://justpaste.it/9ofj1
@@ -528,16 +530,13 @@ Zaltys-style formatting also benefits from having an indicator phrase as demonst
 
 We have an example of a user who was helped by this. He was writing a WI for an AI cube named Atlas in Zaltys-formatting, but the AI kept occasionally giving it limbs, a common problem. We managed to eliminate this problem seemingly entirely by adding a DESC of the cube at the beginning and ` SUMM: Atlas is literally cube with advanced AI.` to the end of his WI. It's likely that instead of the weakly behaving LACK or LIMIT, it's more effective to reinforce the form of the WI at the end to avoid extra limbs appearing.
 
-To do categories: `ADJ`, `GRAM`, `MODIF`
 
----
-TODO: accents
-
+### Speech patterns and accents
 The AI understands the concept of speech patterns and accent to some degree. Categories like `SPEECH:`, `WORDING:` and `ACCENT:` were tried, but didn't output desirable results.
 
-Thus far `TRAITS:` (or now `SUMM`) has proven to handle this attribute the best. Writing style theme in author's notes can also give characters accent across the entire setting. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica, crook/criminal. 
+` SUMM:` proved to handle this attribute the best. Writing style theme in author's notes can also give characters accent across the entire setting. Known working accents: pirates, sailors, Shakespearean accent, archaic, Cockney accent, valley girl (valley girl is the best method for getting a Southern accent on both sexes), hillbilly, Jamaica, crook/criminal. 
 
-Below is an example of  giving a character an accent with TRAITS:  
+Below is an example of giving a character an accent with TRAITS:  
 ```
 Zack:[Male human. TRAITS: surfer, heavy accent<Jamaica>.]
 QUOTES FROM ZACK:
@@ -545,6 +544,11 @@ QUOTES FROM ZACK:
 "The waves, the wind and the sky, zey are all one like you and I, man."
 "I hope dat you don't mind some reggae music, man."
 ```
+The discord discovered an even better way of modifying dialogues with help of users Rinter and DarkFlameSailor. This is achieved with the category `Dialog notes:`. As mentioned before this can be used in Author's Notes to enforce speech patterns globally, but an even better way is combining it with a character WI and formatting. 
+
+The problem remains that `notes` is powerful and might cause leaking to other characters, but with enough testing and effort, you can create accents that apply mostly to a single character. Using another type of formatting we can do this coarse example: `<< Airi dialogue note: Airi swears a lot "Fuck! Shit! Asshole!">>>>` to generate a schoolgirl with a foul mouth as pictured here https://files.catbox.moe/3ldyk4.png  
+
+Many examples of this in use/testing exist on the Discord and can be found by searching for images or `dialog notes` the aforementioned users have posted. Thus far dialog notes looks quite powerful.
 
 
 ### Personality Keywords
