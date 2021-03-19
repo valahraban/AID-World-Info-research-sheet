@@ -29,7 +29,7 @@
 	  + [GRAM](#gram)
 	  + [MODIF](#modif)
       + [More on SUMMARY](#more-on-summary)
-	+ [Speech patterns and accents](#speech-patterns-and-accents]
+	+ [Speech patterns and accents](#speech-patterns-and-accents)
 	+ [Personality keywords](#personality-keywords)
 	  + [Wicked traits](#wicked-traits)
 	  + [Just traits](#just-traits)
