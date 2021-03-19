@@ -615,7 +615,7 @@ Zak:[Human male. MIND<Zak>:secretive/dangerous/manipulative/stoic/callous/servil
 Zak is a middle-age, balding man with brown hair and dark eyes. He wears a black overcoat and small, wire-rimmed glasses. He is of average height and build.
 Zak has a very serious look on his face most of the time and he rarely, if ever, smiles. His eyes are constantly darting around, as if he mistrusts everything and everyone. Despite his serious demeanor, he is very polite, although in a very formal, stoic way. He always speaks in a very respectful tone, even to those who are not as educated as he is or when talking about something distasteful.
 ```
-You can also consult the [Author's Note research justpaste.it](#reminder) for more tips. Some of the keywords tailor the AI's output too much as a note, but work great as personality traits.
+You can also consult the [Author's Note research justpaste.it](https://justpaste.it/9ofj1) for more tips. Some of the keywords tailor the AI's output too much as a note, but work great as personality traits.
 
 
 ### Monky Formatting
