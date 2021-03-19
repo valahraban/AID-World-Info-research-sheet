@@ -10,6 +10,7 @@
   * [World Info and Formatting](#world-info-and-formatting)
     + [JSON Formatting](#json-formatting)
     + [Zaltys Formatting](#zaltys-formatting)
+	  + [Zaltys Locations](#zaltys-locations)
     + [Useful Categories](#useful-categories)
     + [Categories Table](#categories-table)
       + [TRAITS and SUMMARY (SUMM)](#traits-and-summary)
@@ -366,6 +367,17 @@ In the distance you see Earth hanging in space like a bright blue and green ball
 > You check your pockets.
 You pat yourself down and realize you still have all of your possessions, even your wallet and keys.
 ```
+
+### Zaltys Locations
+Zaltys has developed an effective methodology for defining locations. This is worth discussing in its own category. Using categorized keywords for locales is preffered for many users: they are fast to write and easily produce high quality and creative outputs from the AI. Coming up with fancy prose for multiple locations in one sitting may prove difficult.
+
+https://files.catbox.moe/8obloq.png The method is best demonstrated by immediately looking at an example picture of it. The example WI is as follows and is provided so readers can easily copy the template:
+```
+Greenbriar Hills:[ DESC: hilly_region; CLIM<Greenbriar Hills>: temperate; BIOME: hilly forests large_river:SW<from_mountain>⇒E; EXIT: <NW⇒Yrthwood> <E⇒The Sunless Basin> <SW⇒mountains:Teeth of Gwahlur>; FEATURES<Greenbriar Hills>: prickly_plants strange_lights_at_night<'Old Light'>; NATIVE: lizardfolk<friendly tribal> halflings<prosperous_village:'Greenbriar'>; LIFE: varied giant_lizards<in_river> crested_birds; THRE: wolves<minor>.]
+```
+DESC is a preamble to set the tone for the WI. This is followed by climate and biome. EXIT and other directions are optional, but give the AI clues where you might want to move next, allowing you to start crafting a loose map. FEATURES are important tsights. NATIVE describes the native beings of the land that may be helpful. LIFE is the fauna. THRE is short for 
+
+The method is logical and should cover all the bases you should want out of a locale. Cities and towns might require more specific categories some that will be mentioned in the below section. For locales FEATURES works better than SUMMARY. In some circumstances users may want to finish the locale off with a prose description and have to invent their own method for doing so. The authors feel this is pretty complete, but are always open for useful suggestions.
 
 
 ### Useful Categories
