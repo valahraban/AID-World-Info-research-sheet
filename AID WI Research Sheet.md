@@ -425,6 +425,7 @@ The categories marked with *`ITALIC`* aren't exactly perfect for all cases (agai
 | [ADJ](#adj) | `ADJECTIVE`, `ADJECT` |  | adjective qualities that are a core part of the entity |
 | [MODIF](#modif) | `MOFIDIER` |  | like the above, but how it's different from the usual or expected |
 | [GRAM](#gram) | `GRAMMAR` |  | tested to tokenize exclusively for word GRAMMAR, useful for speech patterns |
+| VOCAB |   | SPEECH | potentially better than above, can get characters to speak Japanese or French |
 | INV |  |  |  |
 | EQUIP |  |  |  |
 | LIKE |  |  |  |
@@ -596,9 +597,9 @@ The AI seems focus on stereotypes which can be exploited for our purposes. `woma
 `refined` is among the more positive traits that make the writing more feminine, giving you a depiction of positive nobility. Usually you don't need the AI to be more racy, but `seductive` creates interesting dialogue for promiscuous female characters.
 
 #### Sexual restraint
-GPT-3 and especially the AID models seem to produce many characters that are all too willing to jump the bone. Blame humanity. Giving a character `horny` does exactly what you would expect. But if you're playing with all the safe mode features turned off it can be very hard to make the AI less horny, but some traits have been observed to reduce character's willingless to sleep around. 
+GPT-3 and especially the AID models seem to produce many characters that are all too willing to jump the bone. Giving a character `horny` does exactly what you would expect. But if you're playing with all the safe mode features turned off it can be very hard to make the AI less horny, but some traits have been observed to reduce character's willingless to sleep around. 
 
-Traits for this purpose include `stoic, aloof, rational, independent`. Prude and prudish never seem to work good enough for birb and his associates. `chaste` is another good one, fitting when combined with the knightly traits. `Asexual` is **not** a good one, it tokenizes as a|sexual.
+Traits for this purpose include `stoic, aloof, rational, independent`. Prude and prudish never seem to work good enough for birb and his associates. `chaste` is another good one, fitting when combined with the knightly traits. `Asexual` is **not** a good one, it tokenizes as a|sexual. `vestal` works often and tends to make at least female characters very embarassed and avoidant of erotic things. Testing continues and none of these methods are perfect due to AID's training biases.
 
 #### Other useful traits
 include `timid, selfconscious, polite, friendly, arrogant, oblivious, dumb, dry, cynical, apathetic, wry, clever, witty, addicted`. `teasing, joking` are both good and even better when put together. There isn't much to say about mental keywords that have the intended and expected effect.
@@ -809,7 +810,8 @@ If you want to have a miscellaneous world info for your World that doesn't appea
 https://files.catbox.moe/m19cns.jpeg
 
 You can use JSON (or any formatting) in the Genre box but they aren't reliable and you'll probably need to increase the number of characters (default 50) manually. The field says Genre, but all options from Zalty's writing style paste work. For example, Alexander put in Genre field for a generation:  
-`[{"NAME":"Nolanis","TRAITS":["cold","dark","magic"],"INHABITANTS":["liches","minotaurs"]}]` https://files.catbox.moe/yhqs6j.jpeg
+`[{"NAME":"Nolanis","TRAITS":["cold","dark","magic"],"INHABITANTS":["liches","minotaurs"]}]` https://files.catbox.moe/yhqs6j.jpeg  
+Another example of using the same concept successfully for World generation https://files.catbox.moe/6c2k26.png
 
 Manually editing maxlength in your browser also allows you to go past 2000 character limit for Scenario prompts. Finding the right attribut should work for any prompt. Use this sparingly and remember your context is limited to 2772 characters and your WI stack is limited to 1336 characters.  
 https://files.catbox.moe/248vlw.jpg
@@ -900,7 +902,10 @@ Why write all this world info if we can't utilize them? Here are some interestin
 - 2nd Person POV:
 - Your POV:
 - Description of x:
+- Uncomfortably detailed description of X:
 - X described by Y:
+- X's feelings about Y:
+- X's best/worst feature is:
 - Do mode >examine/inspect X
 - Current scene as described by [author]/[writing style]
 - [character]'s secrets:
@@ -958,7 +963,7 @@ As mentioned before AID is in constant development and flux of change. Changes t
 4chan has threads and guides too. They have been beneficial and entertaining to the author. Go on /vg/ and search for /aidg/ if you want their guides and sources, some of it is good especially for NSFW. The special inputs section benefited greatly from their work. Prompts collections exist online but are not provided here due to their NSFW nature. Below is a link to the Anonymous resources & guides, please cross-reference their work with ours:
 https://guide.aidg.club
 
-Remember that Anonymous imageboards aren't known for vetting or quality control. Not all the guides are written to the same standards or measures of decency. If a guide is written by a biased prick who is clearly too lazy to test all known methods, you can always just stop reading the guide mine included.
+Ever since work began on the world info generators, formatting has become officially recognized by the devs. There is no doubt that using specific strings to achieve goals inside WI entries is a worthwhile endavour. The community thanks the developers, but also expresses a wish to maintain the systems that have worked for us so far.
 
 CREDITS: Everyone whose name has been mentioned here and the many AID related communities. Everyone who shares their experiments and results online.
 birb/valahraban for starting this project, CoomerDeveloper for help with aidg and rentry.
