@@ -148,6 +148,9 @@ Mr.Accountant's writeup on how to do to the patented (Zynj and friends) Context 
 4. Have 1300 character in world entries hooked to to a VERY specific keyword that only can trigger. They need to be hooked to [t].  
 5. Watch as the context becomes whatever you want.
 
+Memory lookback is a vanilla AID feature that holds back scripts like EWIJSON. Originally the user Draco18s came up with a solution around this. EWIJSON can easily be modified to support memory lookback killing and this is a very recommended tweak. What memory lookback is and how to achieve it is described in the article below.  
+https://github.com/RinterWaptor/AID-research/wiki/Memory-Lookback-killer
+
 
 ## Credits
 Zynj for writing EWIJSON, updating it frequently and educating people on how to use it. STARSTRUCK for his artdungeon.user.js. OnePunchVAM and Gnurro or also making cool scripts. Latitude for making scripting free. birb for writing this.
