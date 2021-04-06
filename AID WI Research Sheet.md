@@ -755,6 +755,9 @@ After we discovered that GPT-3 got updated to better handle numbers methods have
 The biggest and most thorough testing on symbols has been done by Monky and he has provided us with two documents for Griffin and Dragon he calls the CODEX_SIGNUM. We also have a second document for miscellaneous messy research including goodies like enforcing mute characters or writing logic expressions in AID. These and many other useful user-provided documents can be found in the docs section:
 https://github.com/valahraban/AID-World-Info-research-sheet/tree/main/docs/
 
+There are many other people writing guides with useful information too. One of these is Rinter. His wiki/guide is based largely on an information dense futureman-based format he is working on. Rewriting it here isn't useful for the purposes of this document. What is useful though, is the reasearch he has compiled on managing colors and related semantics. The wiki also contains a useful bit of script for EWIJSON users, it is highly recommended you check out every article of interest he has written.  
+https://github.com/RinterWaptor/AID-research/wiki
+
 
 ### Character-to-token ratio tests
 Here are some testing results with the tokenizer from kimtaengsshi and the community's testing. This is largely older data that motivated strides in format production. One result was the format monky now uses. Results like these are a big motivator for why people get obsessed over formatting. We tested a bunch of WI-formats from the discord and analyzed their tokens to characters ratio with the following results:
@@ -853,6 +856,9 @@ https://regex101.com
 
 birb is not a big fan of electron, but he uses the following program to manage and write his WI collections as .json files   
 https://github.com/gimzani/ai-dungeon-worldbuilder
+
+Useful GPT-3 tokenizer in the browser.  
+https://ermela.net/gpt-3-encoder/
 
 
 ## Obsoleted Methods
