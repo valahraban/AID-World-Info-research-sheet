@@ -86,6 +86,8 @@ This document isn't anti-prose, but prose itself has little to do with the subje
 
 The owner of the repo(valahraban) is pseudonymously referred to as the author or simply birb due to personal preference. How to get featured or help improve the research sheet? Send a text file (preferably .md) or suggested edits in a pastebin variant to birb/valahraban through github or discord. This is how he primarily communicates with other enthusiasts and writes this document. Other communication methods aren't supported. Included information isn't chosen at random: it must be novel and immediately useful to birb and WI enthusiasts. Some aspects of writing have been left out of the document precisely because they lack useful utility in the context of AID and WI.
 
+Work on this project is an endless work-in-progress and moves on at the author's own pace. Recent events have shook this pace. If you desire more up to date new tricks, it is recommended to visit other guides like ones by Rinter that have also been linked within this document.
+
 
 ## Recommendations or the TLDR
 **Scripting has been made free for all users, it is warmly recommended you scroll down to Zynj's github and check out EWIJSON. Loading WI through these scripts alone gives you a lot more control over their location. If you do decide to use EWIJSON, also check out Monky's Futureman guide and birb's guide on EWIJSON basics inside the docs. This isn't  mandatory.** This document will focus on scripting-free methods. Scripting focused documents are included in the docs folder and mentioned where relevant.
@@ -335,6 +337,15 @@ Based on experiments and accumulating experience the community has found all-cap
 Zaltys likes to write a lot of species from different series. He has written on discord that his most used categories are APPEAR, LACK, GRAB, MOV, MENTAL and TRAITS later superceded by MIND and SUMMARY. For defining a type of character all these have purpose. APPEAR is self explanatory. LACK has to do what the characters can and can't do; a lamia without legs shouldn't be able to walk. GRAB is their preferred way of interacting through appendages, a bird would use it's beak or talons, a lamia would use their hands or tail. MOV works for movement. Lamia would crawl/slither on top of their tails, slimes ooze and other species may do more imaginative things. MIND is traits of the mind, SUMMARY is more intrinsic physical, sensory or nature related traits or important things of the character in general. 
 
 TRAITS proved to be the Swiss army knife of categories after months of use, but later SUMMARY proved to be even better for generic use. INV and EQUIP work similarly to one another as alternatives to WORN and can be used to define the types of equipment a RPG character would carry on top of the usual stuff like clothes. WORN is better at handling style like `goth` clothing. `gothic` is more applicable to architecture. 
+
+How Zaltys defines `you` inside the remember pin:  
+```
+You are male human named Zaltys.
+[ you.DESC: adult, gamer;
+you.INV: wallet, keys<in pocket>;
+you.MIND: confused;
+you.LOCATION: floating in outer space.]
+```
 
 The AI is good at overwriting preset associations. Following Zaltys examples the community has succeeded in writing interesting recipes. For some reason the AI seems very good at describing recipes. This is another example of an indicator helping the AI understand WI better. Example from Mono:
 ```
